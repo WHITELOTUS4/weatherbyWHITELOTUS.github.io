@@ -2816,6 +2816,7 @@ var v = 1;
 let quip = 0;
 let boxa = document.getElementById("navelement");
 function statup(){
+    firstSearch();
     let slider = document.getElementById("ststimg");
     setTimeout(function of(){
         slider.innerHTML = "<img src='./fav-icon/effect002.jpg'class='abja'>";
@@ -2832,7 +2833,6 @@ function statup(){
     setTimeout(function of(){
         slider.innerHTML = "<img src='./fav-icon/effect001.jpg'class='abja'>";
     },120000);
-    firstSearch();
     generateCaptcha();
     document.getElementById("mylocation").innerHTML = window.location;
 }
