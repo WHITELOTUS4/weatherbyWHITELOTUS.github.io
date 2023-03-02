@@ -1,0 +1,3480 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Latest status of weather" lang="en-us" name="description">
+    <meta content="current weather, ozone hole, ozone, quiz, green environment quiz, white lotus, kidKrishkode" lang="en-us" name="keywords">
+    <title version="1.0">Weather by WhiteLotus</title>
+    <link rel="icon" href="./fav-icon/logo.jpg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./origin.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+a{
+	text-decoration: none;
+}
+.navber{
+    display: none;
+}
+#navelement{
+    width: 30%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    color: #0c8ff0;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px 5px;
+    position: absolute;
+    top: 6%;
+    right: 0%;
+    z-index: -5;
+    opacity: -2;
+}
+.element{
+    margin: 8px 2px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.flp{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #0c8ff0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #212121;
+    padding: 5px 8px;
+}
+.flp span img{
+    width: 35px;
+    height: 35px;
+    margin-right: 3px;
+    cursor: progress;
+    border-radius: 50%;
+}
+.iconholder{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.rtp{
+    margin-top: 6px;
+    cursor: pointer;
+}#home{
+    color: #fff;
+}
+.weatherimg{
+    background-color: #0c8ff0;
+    height: 40%;
+    width: 100%;
+}
+.weatherimg img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    border-bottom-right-radius: 20%;
+}
+.weathercontain h1{
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 44px;
+    margin-left: 5px;
+    text-shadow: 0px 0px 3px #000;
+    position: absolute;
+    top: 10%;
+}
+.weathercontain p{
+    color: #00ff09;
+    position: absolute;
+    top: 20%;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: cursive;
+    opacity: 2;
+    text-shadow: 0px 0px 1px #000;
+}
+.abja{
+    opacity: 0.7!important;
+}
+.searcharea{
+    background-color: #0c8ff0;
+    width: 100%;
+    height: 15%;
+}
+.inputs{
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+    padding: 1rem 0 2rem 0;
+    text-align: center;
+    justify-content: center;
+    background: transparent;
+}
+.inputs input[type="text"]{
+    height: 3rem;
+    width: 20rem;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 2px solid #c2c2c2;
+    border-radius: 2px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+.inputs input[type="submit"]{
+    height: 3rem;
+    width: 6rem;
+    background: transparent;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+    margin-top: 20px;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.resultarea{
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+.map{
+    width: 45%;
+    height: 350px;
+    background-color: transparent;
+    border-left: 2px solid #0c8ff0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.submap{
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	height: 25%;
+	background: transparent;
+	margin-left: 10%;
+}
+.smallmap{
+    width: 25%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid gray;
+}
+.smallmap img{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.mapbtn{
+    position: absolute;
+    margin-top: 30px;
+    right: 30px;
+    width: 120px;
+    color: #0c8ff0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 1px gray;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+.btnholder{
+    display: none;
+}
+.display{
+    text-align: center;
+    width: 400px;
+    color: #16a864;
+    background-color: transparent;
+    margin-top: 50px;
+    border: 1px solid #c8c3c3;
+}
+.wetheading{
+    background-color: #0c8ff0;
+    color: #fff;
+    text-align: left;
+    padding-left: 5px;
+}
+.wetmain{
+    height: auto;
+    background-color: transparent;
+    padding-top: 5%;
+}
+.wetmain span{
+    font-size: 52px;
+    color: #0c8ff0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.wetmain p,.privacy-report p{
+    color: #000;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.wetmain i{
+    color: #0c8ff0;
+    font-size: 60px;
+}#wicon{
+	height: 95px;
+	width: 95px;
+	position: relative;
+}
+.wetmain h5{
+	color: blueviolet;
+}
+.wetextra{
+    display: flex;
+    flex-direction: column;
+}
+#icon{
+	height: 55px;
+	z-index: -1;
+}
+.fly{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.flybox{
+    width: 50%;
+    border: 1px solid #c8c3c3;
+    height: auto;
+    padding-top: 5px;
+}
+.flybox p{
+	margin-bottom: 1px;
+}
+#minicon{
+	font-size: 16px;
+	color: #16a864;
+}
+.grapharea{
+	margin: 20px 0px;
+	color: #0c8ff0;
+}
+.grapharea span{
+	font-weight: bold;
+	margin: 5px 15px;
+}
+.grapharea p{
+	margin-left: 20px;
+	color: black;
+	padding: 2px 4px;
+}
+#myChart{
+    width:100%;
+    max-width: 800px;
+    height: 200px;
+    margin-left: calc(100% - 1150px);
+}
+.weathertable{
+	width: 80%;
+	height: auto;
+	margin: 20px 10%;
+}.tablerow{
+	display: flex;
+	flex-direction: row;
+}.tableele{
+	width: 50%;
+	height: auto;
+	border: 1px solid #c8c8c8;
+	color: #16a864;
+	padding-left: 2px;
+}.m{
+	color: blueviolet;
+	text-align: center;
+}
+.tablehead{
+	width: 50%;
+	height: auto;
+	border: 1px solid #c8c8c8;
+	background: #0c8ff0;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+o{
+	padding: 0 5px;
+	height: 5px;
+	margin: 0px 2px;
+	background: linear-gradient(123deg, #0c8ff0, #EAFF00);
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.apiarea{
+	margin: 10px 0px;
+	padding: 2px 120px;
+}
+.api-txt{
+	width: 60%;
+	padding: 5px 2px;
+}.api-txt h2{
+	margin: 4px 0px;
+	color: #0c8ff0;
+	font-family: 'Arial Narrow';
+}.api-txt h2 i{
+	color: #16a864;
+	font-family: cursive;
+}.api-txt omni{
+    color: #16a864;
+    font-weight: bold;
+    width: 50%;
+    margin-top: 10px;
+}
+zita{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}zita m{
+    width: 50%;
+    height: 32px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    border-bottom: 1px solid #0c8ff0;
+}
+.api-img{
+	width: 40%;
+    height: 350px;
+	background: transparent;
+}.api-img img{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin: 10% 0%;
+}
+#topBtna{
+	display: none;
+	width: 30px;
+	position: fixed;
+	bottom: 20px;
+	right: 40px;
+	z-index: 99;
+	border: none;
+	color: #fff;
+	background: #0c8ff0;
+	padding: 10px 8px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px #999;
+}
+#topBtna:hover{
+	color: #0c8ff0;
+	background: #fff;
+}
+.serviceoffers{
+	background: #e2e0e0;
+	padding: 0px 0;
+	margin: 50px 0px;
+}
+.bluewell h1{
+	font-size: 1.4rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	justify-content: center;
+	align-items: center;
+	color: #3B1540;
+}
+.bluewell{
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px!important;
+	position: relative;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, -0%);
+	-o-transform: translate(-50%, -0%);
+	-ms-transform: translate(-50%, -0%);
+	-webkit-transform: translate(-50%, -0%);
+}
+.names h1{
+	font-size: 0.9rem;
+	color: #2e2e2e;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.service-icon{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #0c8ff0;
+}
+.progress{
+	height: 0.8rem!important;
+	margin-bottom: 25px!important;
+	background: #000!important;
+}
+.servicediv{
+	margin-left: 0%!important;
+	margin-right: 280px;
+	position: relative;
+}
+.about-us,.contact-us,.quizdoc{
+    display: none;
+}
+.sidehead{
+	width: 100%;
+	height: 250px;
+	background-image: linear-gradient(54deg,rgba(0,125,255,0.3),rgba(0,124,255,0.2)), url('./fav-icon/effect003.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	clip-path: polygon(100% 0%, 100% 77%, 50% 100%, 0% 75%, 0 0);
+	position: relative;
+    padding-bottom: 260px;
+}
+.sidehead:before{
+	content: " ";
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	right: 0%;
+	left: 0%;
+	opacity: 0.4;
+	z-index: -1;
+	background: linear-gradient(to right, #000 0%, #98008F 0%, #000 100%);
+}
+.sideheadtext,.headertext{
+	width: 100%;
+	height: inherit;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.center-div{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+.center-div p{
+	font-size: 1.0rem;
+	line-height: 1.0;
+	color: #00ff09;
+	font-weight: bold;
+	padding: 5px 0 10px 0;
+    margin-bottom: 5px;
+}
+.center-div p m{
+	font-size: 1.2rem;
+	color: #fff;
+}
+.sideheadbtn a,.headertext a{
+	border: 1px solid #fff;
+	border-radius: 100px;
+	margin: 0 5px;
+	padding: 12px 35px;
+	outline: none;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1.4;
+	text-align: center;
+}
+.sideheadbtn a:hover,.headertext a:hover{
+	border: 1px solid #00ff09;
+	color: #00FF09;
+	background: linear-gradient(20deg, #0c8ff0, #260063);
+	TEXT-DECORATION: none;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+.semiheader{
+	width: 100%;
+	height: 250px;
+	background-image: linear-gradient(54deg,rgba(0,125,255,0.3),rgba(0,124,255,0.2)), url('./fav-icon/effect003.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	clip-path: polygon(50% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 30%);
+	position: relative;
+}
+.semiheader:before{
+	content: " ";
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	right: 0%;
+	left: 0%;
+	opacity: 0.4;
+	z-index: -1;
+	background: linear-gradient(to left, #000 0%, #98008F 0%, #000 100%);
+}
+.halfheader{
+	width: 100%;
+	height: 250px;
+	background-image: linear-gradient(54deg,rgba(0,125,255,0.3),rgba(0,124,255,0.2)), url('./fav-icon/effect003.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+    clip-path: ellipse(100% 55% at 48% 44%);
+	position: relative;
+}
+.halfheader:before{
+	content: " ";
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	right: 0%;
+	left: 0%;
+	opacity: 0.4;
+	z-index: -1;
+	background: linear-gradient(to left, #000 0%, #98008F 0%, #000 100%);
+}
+#main_image,#main_image_palette{
+    width: 250px;
+    margin-left: 42%;
+    margin-top: 10px;
+}
+#home_images h4{
+    margin-left: 38%;
+    margin-top: 20px;
+}
+.long_img{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+}
+.little_img{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 25%;
+    height: 100px;
+    margin-bottom: 5px;
+}
+.little_img img{
+	position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.litrature{
+	padding: 5px 6px;
+	background: #f6f6f6;
+	border-radius: 10px;
+	margin: 8px 10%;
+	width: 80%;
+	height: auto;
+}
+.litrature h3{
+	color: #0c8ff0;
+	font-family: monospace;
+	font-size: 20px;
+}
+.litrature p{
+	padding: 0px 5px;
+}.litrature p m,.privacy-report p m{
+	margin-left: 30px;
+}
+.litrature img{
+	position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20%;
+    height: 200px;
+    margin-left: 40%;
+    border-radius: 10px;
+}
+#ozone_history19to20{
+    width: 40%;
+    height: 300px;
+    margin: 5px 30%;
+}
+@media only screen and (max-width: 900px){
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden!important;
+    }.rtp, .iconholder{
+        display: none;
+    }.flp span img{
+    	width: 45px;
+         height: 45px;
+    }.navber{
+        display: block;
+        width: 10%;
+        border: 1px solid #fff;
+    }.ber{
+        background-color: #fff;
+        width: 80%;
+        height: 5px;
+        margin: 20% 10%; 
+    }
+    .weatherimg img{
+        border-bottom-right-radius: 0%;
+    }
+    .weathercontain h1{
+        font-size: 25px;
+    }.weathercontain p{
+        font-size: 16px;
+        top: 15%;
+    }.inputs{
+        width: 100%;
+        margin-left: 0%;
+    }.inputs input[type="text"]{
+        height: 2rem;
+        width: 15rem;
+        font-size: 16px;
+    }.inputs input[type="submit"]{
+        height: 2rem;
+        width: 6rem;
+        font-size: 16px;
+    }.resultarea{
+        flex-direction: column;
+    }.display{
+        width: 90%;
+        margin-left: 5%;
+    }.map{
+        border: none;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }.map .submap{
+        width: 95%;
+        height: 100px;
+        margin: 0px 2.5%;
+    }
+    .mapbtn{display: none;}
+    .btnholder{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 40px;
+    }
+    .mapbts{
+        margin: 2px 2px;
+        width: 12%;
+        color: #0c8ff0;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 6px 1px gray;
+        outline: none;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        cursor: pointer;
+    }
+    #myChart{
+        margin: 0px 0px;
+        max-width: 600px;
+    }
+    .apiarea{
+	    margin: 10px 0px;
+	    padding: 2px 10px;
+        flex-direction: column;
+    }.api-txt{
+	    width: 100%;
+        margin-bottom: 10px;
+    }.api-img{
+        width: 100%;
+    }.api-img img{
+        width: 100%;
+        height: 100%;
+        margin: 0px 0px;
+    }
+    zita{
+        width: 100%;
+    }
+    .serviceoffers{
+        display: none;
+    }
+    .litrature img{
+        width: 100%;
+        height: 250px;
+        margin-left: 0px;
+    }
+    #home_images h4{
+        margin-left: 10px;
+    }
+    #main_image,#main_image_palette{
+        width: 200px;
+        margin-left: 22%;
+    }
+    .long_img{
+	    flex-direction: column;
+	}
+    .little_img{
+	    width: 100%;
+    }#ozonetable .tablehead{
+        overflow-y: scroll;
+    }
+    #ozone_history19to20{
+        width: 90%;
+        height: 200px;
+        margin: 5px 5%;
+    }
+}
+</style>
+<style>
+.graph{
+    width: 100%;
+    height: auto;
+    margin: 0px 0px;
+    padding: 0 20px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+}
+.grid{
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #00ff09;
+    box-shadow: 10px 10px 15px #000;
+    font-weight: bold;
+    margin: 30px 0px;
+}
+.grid h1{
+    font-size: 2rem;
+    font-family: "poppins";
+    background: linear-gradient(20deg, #0c8ff0, #260063);
+    text-align: center;
+    color: #fff;
+    padding: 2px 0px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+#score {
+    color: #00ff09;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.grid #question {
+    font-family: "monospace";
+    font-size: 1rem;
+}
+.buttons {
+    margin-top: 30px;
+}  
+#bt0, #bt1, #bt2, #bt3, #refresh{
+    background: linear-gradient(20deg, #0c8ff0, #260063);
+    color: #00ff09;
+    border: 2px solid #00ff09; 
+    border-radius: 100px;
+    margin: 10px 40px;
+    padding: 10px 10px;
+    width: 250px;
+    cursor: pointer;
+    outline: none;
+}
+#bt0:hover{
+    background: linear-gradient(90deg, #0c8ff0, #260063);
+    color: #fff;
+    border: 3px solid #00ff09;
+}
+#bt1:hover{
+    background: linear-gradient(90deg, #0c8ff0, #260063);
+    color: #fff;
+    border: 3px solid #00ff09;
+}
+#bt2:hover{
+    background: linear-gradient(90deg, #0c8ff0, #260063);
+    color: #fff;
+    border: 3px solid #00ff09;
+}
+#bt3:hover{
+    background: linear-gradient(90deg, #0c8ff0, #260063);
+    color: #fff;
+    border: 3px solid #00ff09;
+}
+#refresh:hover{
+    background: linear-gradient(90deg, #0c8ff0, #260063);
+    color: #fff;
+    border: 3px solid #00ff09;
+}
+#bt0:focus, #bt1:focus, #bt2:focus, #bt3:focus{
+    outline: 0;
+}
+#progress{
+    color: #00ff09;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    background: #fff!important;
+}
+#parform{
+    color: #0200FF;
+    text-align: center;
+    background: #f6f6f6;
+    border-radius: 50px;
+    font-family: "monospace";
+    padding: 3px 3px;
+}
+#puma{
+    font-weight: bold;
+    font-family: "sans-serif";
+    text-align: center;
+    color: #00E8FF;
+    cursor: pointer;
+}
+.anssheet{
+    padding: 3px 3px;
+    color: #00ff09;
+    background: #f6f6f6;
+    text-align: center;
+    cursor: pointer;
+    font-family: "monospace";
+    border-radius: 25px;
+}
+.aler{
+    color: red;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+ul{
+    list-style-type: none;
+}
+@media only screen and (max-width: 900px){
+    #bt0, #bt1, #bt2, #bt3, #refresh{
+        margin: 10px 20px;
+    }.grid h1{
+        font-size: 1.5rem;
+    }
+}
+</style>
+<style>
+.about-us span{
+	padding: 10px 10px;
+}
+.about-us span H1{
+	color: #0c8ff0;
+	font-weight: bold;
+	margin-top: 10%;
+}
+#about1,#about2{
+    height: 200px;
+    margin-bottom: 10px;
+}
+#about1 img{
+	width: 20%;
+	padding: 10px 10px;
+	border-radius: 50%;
+    margin-top: 2%;
+}
+#about2{
+	margin: 50px 0px;
+	background-color: #f6f6f6;
+	background-image: url("./img/clip-globe.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 2px;
+}
+#about2 img{
+	width: 20%;
+	padding: 10px 20px;
+}
+#about2 h4{
+	color: #fff;
+	margin-top: 10%;
+	text-shadow: 0px 0px 2px #000;
+}
+#about2 p{
+	color: blueviolet;
+}
+.about-us h3{
+    color: #0c8ff0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+}
+#about3 p{
+    padding: 5px 5%;
+    font-family: 'Times New Roman', Times, serif;
+}
+#about3 p m{
+    margin-left: 30px;
+}
+.devlopersarea{
+    width: 100%;
+    height: auto;
+    margin: 0px 0px;
+}
+.devport{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.profile_card{
+    width: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 55px 15px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 0px 40px -8px gray;
+    margin: 50px 0px;
+}
+.user_img{
+    position: absolute;
+    top: -45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user_img::before {
+    content: "";
+    position: absolute;
+    height: calc(100% + 10px);
+    width: calc(100% + 10px);
+    border-radius: 50%;
+    background: linear-gradient(45deg, #0c8ff0, #F04CD8);
+    box-shadow: 0px 0px 18px -6px #fff200;
+    animation: animate 1s linear infinite;
+}
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }to {
+        transform: rotate(360deg);
+    }
+}
+.user_img img {
+    border-radius: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+}
+.user_details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 14px;
+    margin-bottom: 2px;
+}
+.user_details h5{
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin: 12px 0px;
+    font-weight: 600;
+    font-family: "Roboto", cursive;
+    color: #00ff09;
+}
+.user_details span{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: gray;
+    font-size: 12px;
+    color: #0c8ff0;
+}
+.user_details p{
+    margin: 12px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+    color: gray;
+}
+.user_details textarea{
+    width: 80%;
+    height: 76px;
+    max-height: 76px;
+    outline: none;
+    border: none;
+}
+.user_details zita a{
+    text-decoration: none;
+    background: #0c8ff0;
+    color: white;
+    padding: 10px 0px;
+    margin: 14px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    box-shadow: 0px 6px 22px -6px gray;
+    transition: 0.3s ease-in-out;
+    width: 150px;
+}
+.user_details a:hover {
+    background: #fff;
+    color: #0c8ff0;
+}
+hr{
+    width: 100%;
+    border: 1px solid darkgray;
+    background: darkgray;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+.social-media-icons, zita{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-media-icons li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px;
+}
+.social-media-icons li a {
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 5px 0;
+}
+.user_details m{
+	justify-content: left;
+}
+.user_details ul{
+    display: flex;
+    flex-direction: row;
+    height: 28px;
+    margin: 0px 0px;
+}
+.user_details ul li{
+	width: auto;
+    background: #3ca2ef9e;
+    padding: 1px 4px;
+    border-radius: 10px;
+    margin: 4px 2px;
+    font-weight: bold;
+    color: #0200FF;
+    font-size: 12px;
+    cursor: pointer;
+}
+@media only screen and (max-width: 900px){
+    .devport{
+        flex-direction: column;
+    }
+    .user_details zita a{
+        width: 92px;
+    }
+    .profile_card{
+        margin-left: 30px;
+    }
+    #about1 img,#about2 img{
+    	display: none;
+    }
+    #about1,#about2{
+        height: 250px;
+        margin-bottom: 10px;
+    }
+}
+</style>
+<style>
+.contact-us,.privacy-report{
+    color: #0c8ff0;
+    margin-top: 20px;
+}
+.contact-us h2,.rt,.privacy-report h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.flw{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 5%;
+    padding-bottom: 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 100%);
+}
+.flw::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(10deg, #0c8ff0 30%, #fff 55%, #afaff9 35%, transparent 0%);
+}
+.lt{
+    width: 45%;
+    height: auto;
+    background-color: transparent;
+}
+.rt{
+    width: 45%;
+    height: auto;
+    background-color: #0c8ff0;
+    padding: 8px 8px;
+    border-radius: 10px;
+}
+#formbox{
+    background-color: white;
+    padding: 10px 4px;
+    border-radius: 10px;
+}
+.form-horizontal input,.form-horizontal textarea{
+    background-color: #f6f6f6;
+    outline: none;
+    border: 1px solid #0c8ff0;
+    border-radius: 5px;
+    width: 100%;
+}
+.form-horizontal p{
+    margin-left: 15px;
+    margin-bottom: 1px;
+    font-weight: bold;
+    text-align: left;
+    color:#00ff09;
+}
+.form-horizontal .send-button{
+    margin-top: 20px;
+}
+#capapi{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 15px 5px;
+    padding: 0px 10%;
+}
+.form-horizontal .mainCaptcha{
+	width: 100%;
+	font-size: 1rem;
+	font-weight: bold;
+	font-family: 'Special Elite', sans-serif;
+	color: #000;
+	background: linear-gradient(54deg,rgba(0,125,255,0.3),rgba(0,124,255,0.2));
+    text-align: center;
+}
+#caprefresh{
+	background: linear-gradient(47deg, #00E8FF, #0068FF, #0700FF);
+	color: #fff;
+	padding: 10px 12px;
+    margin: 0px 10px;
+	font-weight: bold;
+	text-align: center;
+    width: 80px;
+}
+#caprefresh:hover{
+	background: linear-gradient(47deg, #0068FF, #00E8FF);
+}
+.form-horizontal #txtinput{
+	width: 80%;
+	outline: none;
+    padding: 2px 5px;
+}
+.form-horizontal .capvali{
+	align-items: center;
+	position: center;
+	background: linear-gradient(47deg, #00E8FF, #0068FF, #0700FF);
+	color: #00FF09;
+	border-radius: 2rem;
+	margin-left: 15%;
+	position: relative;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, -0%);
+	-o-transform: translate(-50%, -0%);
+	-ms-transform: translate(-50%, -0%);
+	-webkit-transform: translate(-50%, -0%);
+}
+.form-horizontal .capvali:hover{
+	background: linear-gradient(47deg, #0068FF, #00E8FF);
+}
+#agreecheck{
+	font-size: 1rem;
+}
+.conmap{
+    width: 95%;
+    height: 50%;
+    margin: 10px 2.5%;
+    background-color: transparent;
+}
+.conmap p{
+    color: #00ff09;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.conmap iframe{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 10px;
+}
+.condetail{
+    width: 95%;
+    margin: 5px 2.5%;
+    background-color: #fff;
+    padding: 4px 5px;
+    overflow-y: hidden;
+}.condetail p{
+    margin-bottom: 0px;
+}.condetail h6{
+    color: #00ff09;
+    font-weight: bold;
+}
+.ratingbox{
+  width: 400px;
+  margin: 20px 0px;
+  margin-left: calc(100% - 950px);
+  background: #f6f6f6;
+  padding: 20px 30px;
+  border: 4px solid #0c8ff0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.ratingbox .post{
+  display: none;
+}
+.ratingbox .text{
+  font-size: 25px;
+  color: #00FF09;
+  font-weight: 500;
+}
+.ratingbox .edit{
+  position: relative;
+  font-size: 16px;
+  color: #0c8ff0;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+.ratingbox .star-widget input{
+  display: none;
+}.ratingbox .star-widget div input{
+  display: block;
+  outline: none;
+  color: #00ff09;
+  border: 1px solid #0c8ff0;
+  background: #fff;
+  padding: 10px;
+  margin: 5px 0px;
+  border-radius: 0.25rem;
+}
+.star-widget label{
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #ffdd44;
+}
+input:checked ~ label{
+  color: #ffdd44;
+}
+input#rate-5:checked ~ label{
+  color: yellow;
+  text-shadow: 0 0 10px orange;
+}
+#rate-1:checked ~ form header:before{
+  content: "Wrost";
+}
+#rate-2:checked ~ form header:before{
+  content: "Bad";
+}
+#rate-3:checked ~ form header:before{
+  content: "Good";
+}
+#rate-4:checked ~ form header:before{
+  content: "Best";
+}
+#rate-5:checked ~ form header:before{
+  content: "Amizing";
+}
+.ratingbox form{
+  display: none;
+}
+input:checked ~ form{
+  display: block;
+}
+.star-widget form header{
+  width: 100%;
+  font-size: 25px;
+  color: #0c8ff0;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.star-widget form .textarea{
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+.star-widget form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #00ff09;
+  border: 1px solid #0c8ff0;
+  background: #fff;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+  border-radius: 0.25rem;
+}
+.textarea textarea:focus{
+  border-color: #444;
+}
+.star-widget form .btn{
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+.star-widget form .btn button{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #0c8ff0;
+    border-radius: 0.25rem;
+    outline: none;
+    background: #007bff;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.star-widget form .btn button:hover{
+  background: #0c8ff0;
+}
+@media only screen and (max-width: 900px){
+    .flw{
+        flex-direction: column-reverse;
+    }
+    .lt,.rt{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .ratingbox{
+        width: 80%;
+        margin: 20px 10%;
+        padding: 10px 0px;
+    }
+    .star-widget form .textarea textarea,.ratingbox .star-widget div input{
+        margin: 2px 2.5%;
+        width: 95%;
+    }
+}
+</style>
+<style>
+.user_rating{
+    width: 80%;
+    margin: 40px 10%;
+}
+.user_rating .heading{
+  font-size: 25px;
+  margin-right: 25px;
+}
+.user_rating .fa{
+  font-size: 25px;
+}
+.checked{
+  color: orange;
+}
+.side{
+  float: left;
+  width: 15%;
+  margin-top:2px;
+}
+.middle{
+  margin-top:2px;
+  float: left;
+  width: 70%;
+}
+.right{
+  text-align: right;
+}
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.bar-container{
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+@media(max-width: 400px){
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+</style>
+<style>
+img{
+  max-width: 100%;
+}
+.containers{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px calc(100% - 1000px);
+}
+.title {
+  margin: 10px 0px;
+}
+.title h2{
+  font-size: 40px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  color: #3B1540;
+}
+.title .underline{
+  width: 250px;
+  height: 4px;
+  background-color: #00ff09;
+  margin: 0 auto;
+}
+.review{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #f6f6f6;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: "Open Sans", sans-serif;
+  border-radius: 12px;
+}
+#person-img{
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+}
+#author{
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-top: 10px;
+  color:#0c8ff0;
+}
+#job{
+  text-transform: uppercase;
+  line-height: 150%;
+  margin-bottom: 10px;
+  color: #00ff09;
+}
+#info{
+  height: 100px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 30px;
+  overflow-y: scroll;
+  height: auto;
+}
+.containers .btn{
+  text-decoration: none;
+  border-style: none;
+  font-size: 30px;
+  margin: 0 10px;
+  color: #00ff09;
+  cursor: pointer;
+  background-color:#fff;
+}
+.credit a{
+  text-decoration: none;
+  color: #000;
+  font-weight: 800;
+}
+.credit{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#000;
+    text-align: center;
+}
+@media only screen and (max-width: 900px){
+    .containers{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 5%;
+    }
+    .title h2{
+        font-size: 34px;
+        text-transform: capitalize;
+    }
+}
+</style>
+<style>
+.privacy-report{
+	padding: 2px 10px;
+	display: none;
+}
+.privacy-report h4{
+	color: #00ff09;
+}
+</style>
+<style>
+footer{
+  position: relative;
+  background: #212121;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+footer::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 1px;
+  width: 100%;
+  background: #AFAFB6;
+}
+footer .content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+footer .content .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.content .top .logo-details{
+  color: #fff;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.content .top .logo-details img{
+    width: 35px;
+    height: 35px;
+    margin-right: 3px;
+    cursor: progress;
+    border-radius: 50%;
+}
+.content .top .media-icons{
+  display: flex;
+}
+.content .top .media-icons a{
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 8px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.top .media-icons a:nth-child(1){
+  background: #4267B2;
+}
+.top .media-icons a:nth-child(1):hover{
+  color: #4267B2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(2){
+  background: #1DA1F2;
+}
+.top .media-icons a:nth-child(2):hover{
+  color: #1DA1F2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(3){
+  background: #E1306C;
+}
+.top .media-icons a:nth-child(3):hover{
+  color: #E1306C;
+  background: #fff;
+}
+.top .media-icons a:nth-child(4){
+  background: #0077B5;
+}
+.top .media-icons a:nth-child(4):hover{
+  color: #0077B5;
+  background: #fff;
+}
+.top .media-icons a:nth-child(5){
+  background: #FF0000;
+}
+.top .media-icons a:nth-child(5):hover{
+  color: #FF0000;
+  background: #fff;
+}
+footer .content .link-boxes{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .link-boxes .box{
+  width: calc(100% / 5 - 10px);
+}
+.content .link-boxes .box .link_name{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
+}
+.link-boxes .box .link_name::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: #fff;
+}
+.content .link-boxes .box li{
+  margin: 6px 0;
+  list-style: none;
+}
+.content .link-boxes .box li a{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease
+}
+.content .link-boxes .box li a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.content .link-boxes .input-box{
+  margin-right: 55px;
+  color: #AFAFB6;
+}
+footer .bottom-details{
+  width: 100%;
+  background: #212121;
+}
+footer .bottom-details .bottom_text{
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a{
+  margin-right: 10px;
+}
+@media (max-width: 900px) {
+  footer .content .link-boxes{
+    flex-wrap: wrap;
+  }
+  footer .content .link-boxes .input-box{
+    width: 40%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 700px){
+  footer{
+    position: relative;
+  }
+  .content .top .logo-details{
+    font-size: 26px;
+  }
+  .content .top .media-icons a{
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    padding-top: 10px;
+    line-height: 35px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 3 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 60%;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 12px;
+  }
+}
+@media (max-width: 520px){
+  footer::before{
+    top: 145px;
+  }
+  footer .content .top{
+    flex-direction: column;
+  }
+  .content .top .media-icons{
+    margin-top: 16px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 2 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 100%;
+  }
+}
+</style>
+<body onload="statup()">
+    <div class="flp">
+        <span style="display: flex;flex-direction: row;width: 20%;">
+            <img src="./fav-icon/logo.png"alt="Error dp not loaded"><span class="rtp"style="color: white;">WHITE LOTUS</span>
+        </span>
+        <div class="iconholder">
+        	<span class="rtp" id="home" onclick="mainpage();">Main</span>
+            <span class="rtp" id="about" onclick="aboutpage();">About</span>
+            <span class="rtp" id="cont" onclick="contactpage();">Contact</span>
+            <span class="rtp" id="quizapi" onclick="myquiz();">Quiz</span>
+        </div>
+        <div class="navber"onclick="naveffect();">
+            <div class="ber"></div>
+            <div class="ber"></div>
+            <div class="ber"></div>
+        </div>
+    </div>
+    <div id="navelement">
+    	<span class="element"onclick="mainpage();">Main</span>
+        <span class="element"onclick="aboutpage();">About</span>
+        <span class="element"onclick="contactpage();">Contact</span>
+        <span class="element"onclick="myquiz();">Quiz</span>
+    </div>
+    <section class="weather-report">
+        <div class="weathercontain">
+            <div class="weatherimg"id="ststimg">
+                <img src="./fav-icon/effect001.jpg"alt="Error media not loaded, check your internet connection!..">
+            </div>
+            <h1>Weather forecast by White Lotus</h1>
+            <p>Weather forecasts, Ozone history and green environment <br>quiz in a fast and elegant way</p>
+        </div>
+        <div class="searcharea">
+            <div class="inputs">
+                <input type="text" placeholder="Enter your city name here..." id="cityinput">
+                <input type="submit" value="Search" id="add"title="I agree all terms and conditions..">
+                <!--button placeholder="submit" id="add"></button-->
+            </div>
+        </div>
+        <div class="resultarea">
+            <section class="display">
+                <div class="wetheading"><h2>Weather Report</h2></div>
+                <div class="wetmain">
+                   <div id="icon"><i class="fa fa-cloud"></i></div><br>
+                    <span id="temp">25C</span>
+                    <p id="description">hezy</p>
+                    <h5 id="cityoutput">Kolkata</h5>
+                </div>
+                <div class="wetextra">
+                    <div class="fly">
+                        <div class="flybox"><p id="wind">120</p></div>
+                        <div class="flybox"><p id="humi">80</p></div>
+                    </div>
+                    <div class="fly">
+                        <div class="flybox"><p id="pressure">1050</p></div>
+                        <div class="flybox"><p id="feelslike"><i class="fa fa-thermometer"></i>Fell temp: Nan</p></div>
+                    </div>
+                </div>
+            </section>
+            <section class="map">
+                <div class="submap">
+                    <span class="smallmap"id="mtb1">0,0</span>
+                    <span class="smallmap"id="mtb2">0,1</span>
+                    <span class="smallmap"id="mtb3">0,2</span>
+                    <span class="smallmap"id="mtb4">0,3</span>
+                    <div class="mapbtn"onclick="globeMap('temp_new');"title="Temparature Map"><i class="fa fa-thermometer"></i>Temp</div>
+                </div>
+                <div class="submap">
+                    <span class="smallmap"id="mtb5">1,0</span>
+                    <span class="smallmap"id="mtb6">1,1</span>
+                    <span class="smallmap"id="mtb7">1,2</span>
+                    <span class="smallmap"id="mtb8">1,3</span>
+                    <div class="mapbtn"onclick="globeMap('wind_new');"title="Wind Map"><i class="fa fa-leaf"></i>Wind</div>
+                </div> 
+                <div class="submap">
+                    <span class="smallmap"id="mtb9">2,0</span>
+                    <span class="smallmap"id="mtb10">2,1</span>
+                    <span class="smallmap"id="mtb11">2,2</span>
+                    <span class="smallmap"id="mtb12">2,3</span>
+                    <div class="mapbtn"onclick="globeMap('clouds_new');"title="Clouds Map"><i class="fa fa-cloud"></i>Cloud</div>
+                </div>
+                <div class="submap">
+                    <span class="smallmap"id="mtb13">3,0</span>
+                    <span class="smallmap"id="mtb14">3,1</span>
+                    <span class="smallmap"id="mtb15">3,2</span>
+                    <span class="smallmap"id="mtb16">3,3</span>
+                    <div class="mapbtn"onclick="globeMap('pressure_new');"title="Air Pressure Map"><i class="fa fa-globe"></i>Press</div>
+                </div>
+            </section>
+            <div class="btnholder">
+                <div class="mapbts"onclick="globeMap('temp_new');"><i class="fa fa-thermometer"></i></div>
+                <div class="mapbts"onclick="globeMap('wind_new');"><i class="fa fa-leaf"></i></div>
+                <div class="mapbts"onclick="globeMap('clouds_new');"><i class="fa fa-cloud"></i></div>
+                <div class="mapbts"onclick="globeMap('pressure_new');"><i class="fa fa-globe"></i></div>
+                <div class="mapbts"onclick="globeMap('precipitation_new');"><i class="fa fa-tint"></i></div>
+            </div>
+        </div>
+        <div class="grapharea">
+        	<span>6 days forecast:</span>
+            <canvas id="myChart"></canvas>
+            <p>The graph showing above represent 6 days temparature forecast. Although the data are not accurate due to the unexpected wether change, as it may changes with time.</p>
+        </div>
+        <div class="weathertable"id="datatable">
+         	<span class="tablerow"><span class="tablehead">Terms</span><span class="tablehead"id>Value</span></span>
+         	<span class="tablerow"><span class="tableele">Temparature</span><span class="tableele m"id="m1">25</span></span>
+            <span class="tablerow"><span class="tableele">Sky Conditions</span><span class="tableele m"id="m2">clear</span></span>
+            <span class="tablerow"><span class="tableele">Location</span><span class="tableele m"id="m3"></span></span>
+            <span class="tablerow"><span class="tableele">Date</span><span class="tableele m"id="m4"></span></span>
+            <span class="tablerow"><span class="tableele">Air Pressure</span><span class="tableele m"id="m5"></span></span>
+            <span class="tablerow"><span class="tableele">Wind Speed</span><span class="tableele m"id="m6"></span></span>
+            <span class="tablerow"><span class="tableele">Angle of Wind</span><span class="tableele m"id="m7"></span></span>
+            <span class="tablerow"><span class="tableele">Humidity</span><span class="tableele m"id="m8"></span></span>
+            <span class="tablerow"><span class="tableele">Feel Temparature</span><span class="tableele m"id="m9"></span></span>
+            <span class="tablerow"><span class="tableele">Minimum Temparature</span><span class="tableele m"id="m10"></span></span>
+            <span class="tablerow"><span class="tableele">Maximum Temparature</span><span class="tableele m"id="m11"></span></span>
+            <span class="tablerow"><span class="tableele">Sea Level<o>*</o></span><span class="tableele m"id="m12"></span></span>
+            <span class="tablerow"><span class="tableele">Ground Level<o>*</o></span><span class="tableele m"id="m13"></span></span>
+            <span class="tablerow"><span class="tableele">Longitude</span><span class="tableele m"id="m14"></span></span>
+            <span class="tablerow"><span class="tableele">Latitude</span><span class="tableele m"id="m15"></span></span>
+            <span class="tablerow"><span class="tableele">Sun Rise Time</span><span class="tableele m"id="m16"></span></span>
+            <span class="tablerow"><span class="tableele">Sun Set Time</span><span class="tableele m"id="m17"></span></span>
+            <span class="tablerow"><span class="tableele">Country Code<o>*</o></span><span class="tableele m"id="m18"></span></span>
+            <span class="tablerow"><span class="tableele">Time Zone</span><span class="tableele m"id="m19"></span></span>
+            <span class="tablerow"><span class="tableele">Last Update</span><span class="tableele m"id="m20"></span></span>
+            <span class="tablerow"><span class="tableele">Cloudiness</span><span class="tableele m"id="m21"></span></span>
+            <span class="tablerow"><span class="tableele">Map Type</span><span class="tableele m"id="m22"></span></span>
+            <p>The table data where these symbols(<o>*</o>) are in the above table may not appear in this data-table, depending on the location given in search box.</p>
+        </div>
+        <!--iframe src="https://en.m.wikipedia.org/wiki/File:Future_ozone_layer_concentrations.gif"width="100%" height="100%" style="border:0; position: relative;" loading="lazy" ></iframe-->
+        <div style="color: #fff;text-align: center;font-size: medium;background-color: #0c8ff0;width: 100%;height: auto;padding: 5px 10px;">
+            <p style="margin-bottom: 2px;">Leaving everything behind, people are fleeing conflict in Ukraine. They need shelter, food, and water. When you subscribe to our service, you can join<br>
+                us to help with donation of just of £10. WHITE LOTUS will add £1 to each donation and send it to <u>Disastrous Emergency Committee</u>'s (DEC) Ukrainian<br>
+                Humanitarian Appeal.</p>
+        </div>
+        <div class="apiarea fly">
+         	<div class="api-txt">
+         	   <h2>One Search <i>Natur<span class="fa fa-leaf"></span></i> Conditions</h2>
+                <p>Subscribe to our website and get all <b>weather data</b> for any coordinats
+                <b>with a single search</b>.<br>
+                Access current weather data for any location including over 2000,000
+                cities, state, counters.<br>More interesting part is use needed weather 
+                data in <b><span style="color: #0c8ff0;">free of cost</span></b>.</p><br>
+                <zita><omni>Included Data</omni><omni style="text-align: right;">Showing Mode</omni></zita>
+                <zita><m>Primary Weather data</m><m style="text-align: right;">Card</m></zita>
+                <zita><m>Location</m><m style="text-align: right;">Google Map</m></zita>
+                <zita><m>6 Days Forecast</m><m style="text-align: right;">Graph</m></zita>
+                <zita><m>Secondary Weather data</m><m style="text-align: right;">Data Table</m></zita>
+                <zita><m>Ozone data</m><m style="text-align: right;">Historical Events</m></zita>
+            </div>
+            <div class="api-img">
+                <img src="./fav-icon/img001.png">
+            </div>
+        </div>
+        <section class="serviceoffers" id="servicediv">
+            <TABLE BORDER="0"WIDTH="100%">
+            <TR>
+            <TH WIDTH="100%"class="bluewell">
+            <div class="heading text-center">
+                <center>
+                <h1 class="text-center font-weight-bold">What to do we offer</h1>
+                <p class="text-center">Here is a brief outline of what we want to serve to our audience</p>
+                </center>
+            </div><br>
+                </TH>
+                </TR>
+                <br>
+                <br>
+                <TR>
+                <TD WIDTH="33%">
+            <div class="container">
+                <div class="row">
+                   <div class="col-lg-12 col-md-8 col-10  offset-1 offset-lg-0">
+                      <div class="names my-3">
+                          <h1>CURRENT WEATHER</h1>
+                           <div class="progress w-75">                  
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:100%">100%</div>
+                           </div>
+                       </div>
+                       <div class="names my-3">
+                          <h1>LOCATION</h1>
+                           <div class="progress w-75">                  
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:90%">90%</div>
+                           </div>
+                       </div>
+                       <div class="names my-3">
+                          <h1>6 DAYS FORECAST</h1>
+                           <div class="progress w-75">                  
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:89%">89%</div>
+                           </div>
+                       </div>
+                       <div class="names my-3">
+                          <h1>OZONE DATA</h1>
+                           <div class="progress w-75">                  
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:60%">60%</div>
+                           </div>
+                       </div>
+                       <div class="names my-3">
+                          <h1>NATURE VIDEOS</h1>
+                           <div class="progress w-75">                  
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:75%">75%</div>
+                           </div>
+                        </div>
+                        <div class="names my-3">
+                          <h1>QUIZE</h1>
+                           <div class="progress w-75">                  
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:95%">95%</div>
+                           </div>
+                       </div>
+                        <div class="names my-3">
+                            <h1>GREEN RELATED EVENT</h1>
+                            <div class="progress w-75">                  
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:20%">20%</div>
+                            </div>
+                        </div>
+                        <div class="names my-3">
+                          <h1>OTHERSE</h1>
+                           <div class="progress w-75">                  
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:57%">57%</div>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+                    </TD>   <br>       
+                    <TD WIDTH="33%">
+                    <div class="col-lg-12 col-md-12 col-10 servicediv">
+                        <div class="row">
+                            <div class="col-lg-1 col-2 service-icon">
+                                <i class="fa-2x fa fa-sun-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-lg-11 col-10">
+                              <h2>Current Weather</h2>
+                              <p>Here we provide our followers with all the 
+                                useful information about today's weather 
+                                absolutely free. In particular, the important 
+                                points of the day such as temperature, wind 
+                                speed, amount of rain, sunsets time etc. are 
+                                arranged at that particular section. From where 
+                                we all can know about the state of our nature 
+                                and take proper action when needed.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1 col-2 service-icon">
+                                <i class="fa-2x fa fa-globe" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-lg-11 col-10">
+                              <h2>Global Location</h2>
+                              <p>When we see something at eye level we understand 
+                                    it better, so with that in mind here is the world map.
+                                    Temperature, wind current, cloud position etc. are all 
+                                    understood by this map. And there is also a map of a 
+                                    particular place but it is available only if you subscribe 
+                                    to us. Also, the map used by the public provides weather 
+                                    forecasts for the entire world.
+                                </p>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="col-lg-1 col-2 service-icon">
+                                <i class="fa-2x fa fa-area-chart" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-lg-11 col-10">
+                              <h2>Weekly Forecast</h2>
+                              <p>Basically we provide our audience with the information 
+                                about the upcoming 6 days weather of given location, where
+                                a beautiful line-graph is given of the average temperature 
+                                of those 6 days. Since the weather changes at any time, it 
+                                is not always possible to provide accurate information for 
+                                all places, so the average temperature information is given 
+                                based on long-term research.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    </TD>
+                    <TD WIDTH="33%">
+                        <div class="col-lg-12 col-md-12 col-10 servicediv">
+                            <div class="row">
+                                <div class="col-lg-1 col-2 service-icon">
+                                    <i class="fa-2x fa fa-file-text-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-lg-11 col-10">
+                                  <h2>Ozone Forecast</h2>
+                                  <p>We all know the importance of ozone gases in our 
+                                        earth's atmosphere. So we need to know the changes 
+                                        in ozone gas level due to constant pollution so that 
+                                        we can be aware. So this ozone gas data is interpreted 
+                                        with historical events and some data of the previous month.
+                                        So this whole thing is shown here with some pictures and 
+                                        illustrations which will change from time to time.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-1 col-2 service-icon">
+                                    <i class="fa-2x fa fa-graduation-cap" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-lg-11 col-10">
+                                  <h2>Environment Quiz</h2>
+                                  <p>
+                                    Here is a very nice and informative quiz present. The 
+                                    main reason for its existence is to increase public
+                                    awareness towards the environment So that everyone 
+                                    can think about the good and bad of the environment 
+                                    to make our world more beautiful. Sometimes special 
+                                    quizzes are organized where certificates are given to 
+                                    those who win that quiz.
+                                    </p>
+                                </div>
+                            </div>
+                             <div class="row">
+                                <div class="col-lg-1 col-2 service-icon">
+                                    <i class="fa-2x fa fa-youtube-square" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-lg-11 col-10">
+                                  <h2>Videoes</h2>
+                                  <p>There are very nice videos on weather or how to use 
+                                         this web etc on our youtube channel also some videos 
+                                         can be seen here. Through these videos you can gain a 
+                                         vast knowledge on our content. Not only this, this information 
+                                         can also play a very important role in your daily life. Our own 
+                                         developers have made these videos for us or you so that you can 
+                                         get a better understanding of this web. And if you like these 
+                                         videos, they will make more videos like this in future.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </TD>
+      
+           </TR>
+          </TABLE>
+        </section>
+        <div class="sidehead">
+            <div class="sideheadtext">
+              <div class="center-div">
+                 <h2>WHITE LOTUS</h2>
+                  <p><m>“</m> Space is the study of everything in the<br> universe that's beyond our own mind <m>”</m></p><br>
+                  <div class="sideheadbtn">
+                   <a href="#"onclick="aboutpage();">ABOUT US</a>
+                   <a href="#"onclick="contactpage();">JOIN US</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="ozonedata" id="home_images">
+            <h4>27 February 2023</h4>
+            <div id="main_image">
+                <a href="https://ozonewatch.gsfc.nasa.gov/ozone_maps/">
+                  <img alt="Antarctic ozone map" src="https://ozonewatch.gsfc.nasa.gov/ozone_maps/images/Y2023/M02/OZONE_D2023-02-27_G%5E348X348.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG">
+                </a>
+            </div>
+            <div id="main_image_palette">
+                <img alt="Palette relating map colors to ozone values" width="215" src="./fav-icon/ozone_legend_full.png">
+            </div>
+            <p style="margin: 2px 10px; padding: 0px 5px;"><I>The latest false-color view of total ozone over the Antarctic pole. The purple and blue colors are where there is the least ozone, and the yellow and reds are where there is more ozone..</I></p>
+            <span class="long_img">
+                  <span class="little_img">
+                        <img alt="Antarctic ozone map" src="https://ozonewatch.gsfc.nasa.gov/ozone_maps/images/Y2023/M02/OZONE_D2023-02-26_G%5E348X348.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG"><p>26</p>
+                        <img alt="Antarctic ozone map" src="https://ozonewatch.gsfc.nasa.gov/ozone_maps/images/Y2023/M02/OZONE_D2023-02-25_G%5E348X348.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG"><p>25</p>
+                        <img alt="Antarctic ozone map" src="https://ozonewatch.gsfc.nasa.gov/ozone_maps/images/Y2023/M02/OZONE_D2023-02-24_G%5E348X348.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG"><p>24</p>
+                  </span>
+                  <span class="little_img">
+                        <img alt="Antarctic ozone map" src="https://ozonewatch.gsfc.nasa.gov/ozone_maps/images/Y2023/M02/OZONE_D2023-02-23_G%5E348X348.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG"><p>23</p>
+                        <img alt="Antarctic ozone map" src="https://ozonewatch.gsfc.nasa.gov/ozone_maps/images/Y2023/M02/OZONE_D2023-02-22_G%5E348X348.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG"><p>22</p>
+                        <img alt="Antarctic ozone map" src="https://ozonewatch.gsfc.nasa.gov/ozone_maps/images/Y2023/M02/OZONE_D2023-02-21_G%5E348X348.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG"><p>21</p>
+                 </span>
+            </span>
+            <p style="margin: 2px 10px; padding: 0px 5px;">View the latest status of the ozone layer over the Antarctic, with a focus 
+                on the ozone hole. Satellite instruments monitor the ozone layer, and we use their data to create the images that 
+                depict the amount of ozone.</p>
+            <div class="weathertable"id="ozonetable">
+                <span class="tablerow"><span class="tablehead">Years</span><span class="tablehead">1997 federal standard(>0.08ppm)</span><span class="tablehead">2008 federal standard(>0.08ppm)</span><span class="tablehead">2015 federal standard(>0.08ppm)</span></span>
+                <span class="tablerow"><span class="tableele">2020</span><span class="tableele m">97</span><span class="tableele m">142</span><span class="tableele m">157</span></span>
+                <span class="tablerow"><span class="tableele">2019</span><span class="tableele m">71</span><span class="tableele m">101</span><span class="tableele m">126</span></span>
+                <span class="tablerow"><span class="tableele">2018</span><span class="tableele m">59</span><span class="tableele m">108</span><span class="tableele m">141</span></span>
+                <span class="tablerow"><span class="tableele">2017</span><span class="tableele m">82</span><span class="tableele m">122</span><span class="tableele m">145</span></span>
+                <span class="tablerow"><span class="tableele">2016</span><span class="tableele m">63</span><span class="tableele m">103</span><span class="tableele m">132</span></span>
+                <span class="tablerow"><span class="tableele">2015</span><span class="tableele m">47</span><span class="tableele m">81</span><span class="tableele m">113</span></span>
+                <span class="tablerow"><span class="tableele">2014</span><span class="tableele m">54</span><span class="tableele m">92</span><span class="tableele m">126</span></span>
+                <span class="tablerow"><span class="tableele">2013</span><span class="tableele m">65</span><span class="tableele m">111</span><span class="tableele m">122</span></span>
+                <span class="tablerow"><span class="tableele">2012</span><span class="tableele m">63</span><span class="tableele m">102</span><span class="tableele m">123</span></span>
+                <span class="tablerow"><span class="tableele">2011</span><span class="tableele m">71</span><span class="tableele m">106</span><span class="tableele m">123</span></span>
+                <span class="tablerow"><span class="tableele">2010</span><span class="tableele m">63</span><span class="tableele m">102</span><span class="tableele m">129</span></span>
+                <span class="tablerow"><span class="tableele">2009</span><span class="tableele m">81</span><span class="tableele m">113</span><span class="tableele m">140</span></span>
+                <span class="tablerow"><span class="tableele">2008</span><span class="tableele m">79</span><span class="tableele m">119</span><span class="tableele m">126</span></span>
+                <span class="tablerow"><span class="tableele">2007</span><span class="tableele m">78</span><span class="tableele m">108</span><span class="tableele m">129</span></span>
+                <span class="tablerow"><span class="tableele">2006</span><span class="tableele m">85</span><span class="tableele m">114</span><span class="tableele m">113</span></span>
+                <span class="tablerow"><span class="tableele">2005</span><span class="tableele m">83</span><span class="tableele m">116</span><span class="tableele m">135</span></span>
+                <span class="tablerow"><span class="tableele">2004</span><span class="tableele m">88</span><span class="tableele m">115</span><span class="tableele m">148</span></span>
+                <span class="tablerow"><span class="tableele">2003</span><span class="tableele m">109</span><span class="tableele m">133</span><span class="tableele m">151</span></span>
+                <span class="tablerow"><span class="tableele">2002</span><span class="tableele m">96</span><span class="tableele m">132</span><span class="tableele m">146</span></span>
+                <img src="./fav-icon/ozone_graph.png"width="500px"height="300px">
+            </div>
+        	<div class="litrature"><h3>What is Ozone?</h3>
+            <p><m>Ozone</m> is a colorless gas. Chemically, ozone is very active; it reacts readily with a great many other substances. 
+                  Near the Earth's surface, those reactions cause rubber to crack, hurt plant life, and damage people's lung tissues. 
+                  But ozone also absorbs harmful components of sunlight, known as “ultraviolet B”, or “UV-B”. High above the surface, 
+                  above even the weather systems, a tenuous layer of ozone gas absorbs UV-B, protecting living things below.</p>
+              <img src="./fav-icon/ozone_diagrame.png">
+             </div>
+             <div class="litrature"><h3>Roll of Ozone:</h3>
+            <p><m>The </m>Earth's atmosphere is composed of several layers. Most atmospheric ozone is concentrated in a 
+                    layer in the stratosphere, about 9 to 18 miles (15 to 30 km) above the Earth's surface (see the figure below). 
+                   Ozone is a molecule that contains three oxygen atoms. At any given time, ozone molecules are constantly formed 
+                   and destroyed in the stratosphere. The total amount has remained relatively stable during the decades that it has 
+                   been measured.</p>
+                   <!--img src="./fav-icon/ozone_layer.png"-->
+                   <p>The ozone layer in the stratosphere absorbs a portion of the radiation from the sun, preventing it from reaching the planet's 
+                   surface. Most importantly, it absorbs the portion of UV light called UVB. UVB has been linked to many harmful effects, including 
+                   skin cancers, cataracts, and harm to some crops and marine life.</p>
+             </div>
+             <div class="litrature"><h3>What is the Ozone hole?</h3>
+             <p><m>Each</m> year for the past few decades during the Southern Hemisphere spring, chemical reactions involving chlorine 
+                   and bromine cause ozone in the southern polar region to be destroyed rapidly and severely. This depleted region is 
+                   known as the “ozone hole”. The area of the ozone hole is determined from a map of total column ozone. <br>It is 
+                   calculated from the area on the Earth that is enclosed by a line with a constant value of 220 Dobson Units. The value 
+                   of 220 Dobson Units is chosen since total ozone values of less than 220 Dobson Units were not found in the historic 
+                  observations over Antarctica prior to 1979. Also, from direct measurements over Antarctica, a column ozone level of 
+                   less than 220 Dobson Units is a result of the ozone loss from chlorine and bromine compounds.</p>
+              </div>
+              <div class="litrature"><h3>What is Ozone depletion?</h3>
+              <p><m>Ozone</m> layer depletion is the thinning of the ozone layer present in the upper atmosphere.
+                    Ozone depletion consists of two related events observed since the late 1970s: a steady lowering of about four percent in 
+                     the total amount of ozone in Earth's atmosphere, and a much larger springtime decrease in stratospheric ozone around 
+                     Earth's polar regions. The latter phenomenon is referred to as the ozone hole.<br>
+                     <img src="./fav-icon/ozone_depletion.png"><br>
+                     The main causes of ozone depletion and the ozone hole are manufactured chemicals, especially manufactured 
+                     halocarbon refrigerants, solvents, propellants, and foam-blowing agents (chlorofluorocarbons (CFCs), HCFCs, halons), 
+                     referred to as ozone-depleting substances (ODS).<br>
+                     Buy air-conditioning and refrigeration equipment that do not use HCFCs as refrigerant. Buy aerosol products that do not 
+                     use HCFCs or CFCs as propellants. Conduct regular inspection and maintenance of air-conditioning and refrigeration 
+                     appliances to prevent and minimize refrigerant leakage.</p>
+              </div>
+              <img src="./fav-icon/ozone_history19to20.jpg"id="ozone_history19to20">
+        </div>
+        <div style="color: #fff;text-align: center;font-size: medium;background-color: #0c8ff0;width: 100%;height: auto;padding: 5px 10px;margin:20px 0px;">
+            <p style="margin-bottom: 2px;">If you want to advertise your company in this website, you can contact us, we do it at very low cost.
+               We have a lot of online traffic coming here every day, they can come and see your ads very easily. Contact us immediately for more details.
+              <I><a href="#" onclick="contactpage();"style="color:#fff;"> Click here</a></I>.</p>
+        </div>
+        <div class="user_rating">
+            <span class="heading">Our User Ratings</span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star-half-o checked"></span>
+            <span class="fa fa-star"></span>
+          <p>4.2 average based on 325 reviews.</p>
+          <hr style="border:3px solid #f1f1f1">
+          
+          <div class="row">
+            <div class="side">
+              <div>5 star</div>
+            </div>
+            <div class="middle">
+                <div class="progress w-100">                  
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:75%">187</div>
+                </div>
+            </div>
+            <div class="side right">
+              <div>187</div>
+            </div>
+            <div class="side">
+              <div>4 star</div>
+            </div>
+            <div class="middle">
+                <div class="progress w-100">                  
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:53%">93</div>
+                </div>
+            </div>
+            <div class="side right">
+              <div>93</div>
+            </div>
+            <div class="side">
+              <div>3 star</div>
+            </div>
+            <div class="middle">
+                <div class="progress w-100">                  
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:14%">15</div>
+                </div>
+            </div>
+            <div class="side right">
+              <div>15</div>
+            </div>
+            <div class="side">
+              <div>2 star</div>
+            </div>
+            <div class="middle">
+                <div class="progress w-100">                  
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:7%">7</div>
+                </div>
+            </div>
+            <div class="side right">
+              <div>7</div>
+            </div>
+            <div class="side">
+              <div>1 star</div>
+            </div>
+            <div class="middle">
+                <div class="progress w-100">                  
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:23%">23</div>
+                </div>
+            </div>
+            <div class="side right">
+              <div>23</div>
+            </div>
+          </div>
+          <p>If you want to give us star rating then <i style="cursor: pointer;color:#0c8ff0;" onclick="contactpage();">click here</i>. (Rating system is temporary close for new update)</p>
+        </div>
+        <div class="semiheader">
+            <div class="headertext">
+              <div class="center-div">
+                 <h2>WHITE LOTUS</h2>
+                  <p><m>“</m> Space is the study of everything in the<br> universe that's beyond our own mind <m>”</m></p><br>
+                  <div class="headerbtn">
+                   <a href="#ratedareas"onclick="contactpage();">RATE</a>
+                   <a href="#"onclick="myquiz();">QUIZ</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <section class="containers">
+            <div class="title">
+              <h2>Best Client Reviews</h2>
+              <div class="underline"></div>
+            </div>
+            <article class="review">
+              <div class="img-container">
+                <img src="./fav-icon/Krishdp.jpg" alt="" id="person-img"/>
+              </div>
+              <h4 id="author">Krishnendu Mitra</h4>
+              <p id="job">Fullstack Web Designer</p>
+                <span style="display: flex;flex-direction: row;"id="starclient">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star"></i>
+                </span>
+              <p id="info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                asperiores debitis incidunt, eius earum ipsam cupiditate libero?
+                Iste, doloremque nihil?
+              </p>
+              <div class="button-container">
+                <button class="prev-btn btn">
+                  <i class="fa fa-chevron-left"></i>
+                </button>
+                <button class="next-btn btn">
+                  <i class="fa fa-chevron-right"></i>
+                </button>
+              </div>
+            </article>
+          </section>
+    </section>
+    <section class="about-us">
+    	<div class="fly"id="about1">
+    	      <span><H1>WHITE LOTUS</H1><h2>global service</h2><p>Weather forecasts, Ozone history and green<br> environment quiz in a fast and elegant way</p></span>
+              <img src="./fav-icon/logo.png"alt="error">
+    	</div>
+        <div class="fly"id="about2">
+        	  <img src="./img/sidelap.png"alt="error">
+    	      <span><H4>We make <b style="color:#00ff09;">hyper-local weather data open</b> for any position</H4><p>For each city on the globe, we provide current and weekly forecasted weather<br> data via light-speed APIs.</p></span>
+    	</div>
+        <div id="about3">
+            <h3>About WHITE LOTUS:</h3>
+            <p><m>First</m> of all, it is better to say that our WHITE LOTUS was established in 14 February 2023. So it didn't take us 
+                long for this team to come into existence. There were many reasons behind the establishment of this WHITE LOTUS 
+                but let me tell you the main reasons The reason one 1 is that by presenting enviorment science in front of everyone 
+                through this weather app, everyone can gain knowledge on nature theory in a scientific way by searching tricks. 
+                Therefore, all the details of the current green science are highlighted in the various social media platforms of 
+                this organization. From newly formed weather, ozone status, future technologies, we have everything we share with 
+                you. Not only this, with the help of this small team of scientists we have been able to present special events in 
+                green event(like: blood donation, tree planting, etc) our listeners. So we are making this website for many needs 
+                and requests of our audience so that they can keep an eye on all our knowledge from one place. The next reason is 
+                that, we have the greentech fest in our collage and our topic is made website where we show the current weather 
+                and green related quiz.</p>
+        </div>
+        <div class="halfheader">
+            <div class="headertext">
+              <div class="center-div">
+                 <h2>WHITE LOTUS</h2>
+                  <p><m>“</m> Space is the study of everything in the<br> universe that's beyond our own mind <m>”</m></p><br>
+                  <div class="headerbtn">
+                   <a href="#ratedareas"onclick="contactpage();">RATE</a>
+                   <a href="#"onclick="myquiz();">QUIZ</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <h3>Our Developers:</h3>
+        <div class="devlopersarea">
+            <span class="devport">
+                <div class="profile_card">
+                    <div class="user_img">
+                        <img src="./fav-icon/Souvikdp.png" height="100" width="100" alt="profile">
+                    </div>
+                    <div class="user_details">
+                        <h5>Sovik Kar</h5>
+                        <span>Frontend web Developer</span>
+                        <p>Design Websites and Web Templates.</p>
+                        <textarea readonly>Hi, my name is Souvik Kar, and I am a frontend web developer.</textarea>
+                        <m><ul><li>HTML-CSS-JS</li><li>C and C++</li><li>Python</li><li>Java</li></ul>
+                        <ul><li>Logo</li><li>Photoshope</li></ul></m>
+                        <zita><a href="#"onclick="notvalid();">Hire Me</a><a href="#"onclick="notvalid();">Contact Me</a></zita>
+                    </div>
+                    <hr>
+                    <ul class="social-media-icons"style="margin-bottom:2px;">
+                        <li>
+                            <a href="#" onclick="notvalid();"style="background: linear-gradient(45deg, #2911c3, #46719c);">
+                            <i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="notvalid();"style="background: linear-gradient(45deg, #000, #000);">
+                            <i class="fa fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"onclick="notvalid();" style="background: linear-gradient(45deg, #0c8ff0, #260067);">
+                            <i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile_card">
+                    <div class="user_img">
+                        <img src="./fav-icon/Rajanyadp.png" height="100" width="100" alt="profile">
+                    </div>
+                    <div class="user_details">
+                        <h5>Rajanya Chakraborty</h5>
+                        <span>Web Content Writer</span>
+                        <p>Narrate the web Paragraphs and design artistic framwork</p>
+                        <textarea readonly>Hello everyone, I am Rajanya Chakraborty, and I am work here as a Website Content Writer.</textarea>
+                        <m><ul><li>C and C++</li><li>Python</li><li>Canva</li><li>Photoshope</li></ul>
+                        <ul><li>Litrature</li><li>Music</li></ul></m>
+                        <zita><a href="#"onclick="notvalid();">Hire Me</a><a href="#"onclick="notvalid();">Contact Me</a></zita>
+                    </div>
+                    <hr>
+                    <ul class="social-media-icons"style="margin-bottom:2px;">
+                        <li>
+                            <a href="#"onclick="notvalid();" style="background: linear-gradient(45deg, #2911c3, #46719c);">
+                            <i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"onclick="notvalid();" style="background: linear-gradient(45deg, #000, #000);">
+                            <i class="fa fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"onclick="notvalid();" style="background: linear-gradient(45deg, #0c8ff0, #260067);">
+                            <i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            <span class="devport">
+                <div class="profile_card">
+                    <div class="user_img">
+                        <img src="./fav-icon/Hritickdp.jpg" height="100" width="100" alt="profile">
+                    </div>
+                    <div class="user_details">
+                        <h5>Hritick Modak</h5>
+                        <span>Frontend Web Developer</span>
+                        <p>Design Websites and Web Templates, Thumbnails.</p>
+                        <textarea readonly>Hi, My self Hritick Modak and I am a frontend web developer, I do very professionaly my jobs.</textarea>
+                        <m><ul><li>HTML-CSS-JS</li><li>C and C++</li><li>Pythone</li><li>R</li></ul>
+                        <ul><li>Java</li></ul></m>
+                        <zita><a href="#"onclick="notvalid();">Hire Me</a><a href="mailto:modakhritick@gmail.com?&Subject=User inquary from Weather by WHITE LOTUS.&body=My Name is*:          ,My phone number is:        ,My comment is*:     .">Contact Me</a></zita>
+                    </div>
+                    <hr>
+                    <ul class="social-media-icons"style="margin-bottom:2px;">
+                        <li>
+                            <a href="#" onclick="notvalid();"style="background: linear-gradient(45deg, #2911c3, #46719c);">
+                            <i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="notvalid();"style="background: linear-gradient(45deg, #000, #000);">
+                            <i class="fa fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"onclick="notvalid();" style="background: linear-gradient(45deg, #0c8ff0, #260067);">
+                            <i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile_card">
+                    <div class="user_img">
+                        <img src="./fav-icon/Krishdp.jpg" height="100" width="100" alt="profile">
+                    </div>
+                    <div class="user_details">
+                        <h5>Krishnendu Mitra</h5>
+                        <span>Fullstack Web Developer</span>
+                        <p>Develop's Dynamic Websites and Design Web Templates, Thumbnails.</p>
+                        <textarea readonly>Ahoy hoy everyone, my self Krishnendu Mitra, and I'm a freelance web Developer with extensive experience for over 5 years. My expertise is to create and website design, thumbnails design, poster making and many more. In past I am work with world's famous companies like Alphabet and Edequ. I do my job very professionaly and smartways...</textarea>
+                        <m><ul><li>HTML-CSS-JS</li><li>Node js</li><li>React app</li><li>PHP</li></ul>
+                        <ul><li>PyScript</li><li>C and C++</li><li>Json</li></ul></m>
+                        <zita><a href="#"onclick="notvalid();">Hire Me</a><a href="mailto:krishnendumitra24@gmail.com?&Subject=User inquary from Weather by WHITE LOTUS.&body=My Name is*:          ,My phone number is:        ,My comment is*:     .">Contact Me</a></zita>
+                    </div>
+                    <hr>
+                    <ul class="social-media-icons"style="margin-bottom:2px;">
+                        <li>
+                            <a href="https://www.facebook.com/dibyendu.mitra.52090?mibextid=ZbWKwL" style="background: linear-gradient(45deg, #2911c3, #46719c);">
+                            <i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Krishnendu-Mitra" style="background: linear-gradient(45deg, #000, #000);">
+                            <i class="fa fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/krishnendu-mitra-b94004261" style="background: linear-gradient(45deg, #0c8ff0, #260067);">
+                            <i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+        </div>
+    </section>
+    <section class="contact-us">
+        <h2>Contact us</h2>
+        <div class="flw">
+            <div class="lt">
+                <div class="conmap">
+                    <p>Our Location:</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60975932.02976291!2d81.914063!3d21.125498!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275163aa6a1e5%3A0x53f222a7cd50adcc!2sMitra%20Bisram!5e0!3m2!1sbn!2sin!4v1655223011417!5m2!1sbn!2sin" width="100%" height="100%" style="border: 1px solid #00ff09;position: relative;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div><br>
+                <div class="condetail">
+                    <h6>Contact Details</h6>
+                    <hr>
+                    <p><b>Email id:</b> krishnendumitra24@gmail.com</p>
+                    <p><b>Address:</b> Camellia Institute of Technology, Digberia, Badu Road, Near NSG Hub, Madhyamgram, 
+                        Kolkata,West Bengal 700129</p>
+                    <p><b>Other Address:</b> Mitra Bishram</p>
+                    <p><b>Time:</b> 9:00am to 6:00pm</p>
+                    <p><b>website Link:</b><br><span id="mylocation">https://WeatherbyWHITELOTUS.github.io/</span></p>
+                </div>
+            </div>
+            <div class="rt">
+                <div id="formbox">
+                    <form class="form-horizontal" method="post" action="contact.php">
+                        <div class="form-group">
+                            <p>Your Name:</p>
+                          <div class="col-sm-12">
+                            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value=""required/>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <p>Your Email id:</p>
+                          <div class="col-sm-12">
+                            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email"value=""required/>
+                          </div>
+                        </div>
+                        <p>Your Comment:</p>
+                        <div class="col-sm-12">
+                            <textarea class="form-control" rows="6" placeholder="MESSAGE" name="message"required></textarea>
+                        </div>
+                        <div class="col-sm-12" id="capapi">
+                            <input type="text"class="mainCaptcha"id="mainCaptcha"readonly="readonly"/>
+                            <input type="button"id="caprefresh"value="Refresh"onclick="generateCaptcha();"title="Get new captcha"/>
+                        </div>
+                        <div class="col-sm-12">
+                            <input type="text"placeholder="Enter the Captcha"id="txtinput"required autocomplete="off"/>
+                        </div>
+                        <div class="col-sm-12">
+                            <span id="error"style="color:red"></span>
+                            <span id="success"style="color:green"></span>
+                        </div>
+                        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND" onclick="CheckValidCaptcha();" title="send the form data to WHITE LOTUS">
+                          <i class="fa fa-paper-plane"></i>
+                          <span class="send-text">SEND</span>
+                        </button><br>
+                      </form>
+                </div>
+            </div>
+        </div>
+        <h2>Rate us</h2>
+        <div class="ratingbox"id="ratedareas">
+            <div class="post">
+              <div class="text">Thanks for rating us!</div>
+              <div class="edit"><i class="fa fa-paper-pen"></i>EDIT</div>
+            </div>
+            <div class="star-widget">
+              <input type="radio" name="rate" id="rate-5">
+              <label for="rate-5" class="fa fa-star"></label>
+              <input type="radio" name="rate" id="rate-4">
+              <label for="rate-4" class="fa fa-star"></label>
+              <input type="radio" name="rate" id="rate-3">
+              <label for="rate-3" class="fa fa-star"></label>
+              <input type="radio" name="rate" id="rate-2">
+              <label for="rate-2" class="fa fa-star"></label>
+              <input type="radio" name="rate" id="rate-1">
+              <label for="rate-1" class="fa fa-star"></label>
+              <form method="post" action="contact.php">
+                <header></header>
+                <div><input type="email" class="form-control" placeholder="Email" name="email"value=""/></div>
+                <div class="textarea">
+                  <textarea cols="30" class="form-control" placeholder="Describe your experience here.."name="message"></textarea>
+                </div>
+                <div class="btn">
+                  <button type="submit"class="rate"><i class="fa fa-envelope"></i> Post</button>
+                </div>
+              </form>
+            </div>
+          </div>
+    </section>
+    <section class="privacy-report">
+    	<h2>Privacy policy</h2>
+        <h4><u>INTRODUCTION:</u></h4>
+         <h6>Welcome to the WHITE LOTUS'S privacy notice.</h6>
+         <p>WHITE LOTUS respects your privacy and is committed to protecting your 
+               personal data. This privacy notice will inform you as to how we look after your 
+               personal data when you visit our website (regardless of where you visit it from) 
+               and tell you about your privacy rights and how the law protects you, only and
+               only when you maintain the given <I><a href="#terms">Terms</a></I> points 
+               in that condition.</p>
+         <h4><u>THIRD-PARTY LINKS:</u></h4>
+         <p><m>This</m> website may include links to third-party websites, plug-ins and applications. 
+                Clicking on those links or enabling those connections may allow third parties to 
+                collect or share data about you. We do not control these third-party websites and 
+                are not responsible for their privacy statements. When you leave our website, we 
+                encourage you to read the privacy notice of every website you visit.</p>
+         <h4><u>ADVERTISING:</u></h4>
+         <p><m>We</m> may use your Search, Contact, Technical, Usage and Profile Data to form a 
+                view on what we think you may want or need, or what may be of interest to you. 
+               This is how we decide which products, advertisement and offers may be relevant for 
+               you (we call this marketing).<br> You will receive marketing communications 
+               from us if you have requested advertisement from us or purchased services from 
+               us or if you provided us with your details or registered for a promotion and, in 
+               each case, you have opted in for receiving that marketing.
+         <h4><u>COOKIES:</u></h4>
+         <p> <m>You</m> can set your browser to refuse all or some browser cookies, or to alert you 
+                when websites set or access cookies. If you disable or refuse cookies, please 
+                note that some parts of this website may become inaccessible or not function 
+                properly.</p>
+         <h4>Refund or Settlement</h4>
+         <p><m>WHITE LOTUS</m> has not consented to refund or sattlement with any user for any 
+                reason. Thats way if any user want to refund then accroding to this law WHITE
+                LOTUS not give any money back to him/her.</p>
+        <h2 id="privacy-terms">Terms</h2>
+        <h6>Updated Browser:</h6>
+        <p><m>Use</m> updated or current version of following browsers for use our all features and data 
+            privacy policy. If you dont follow this point then we are not responsible for any type
+            of data leakage.
+            <ul style="background-color: #f6f6f6; width: 90%;margin: 2px 5%;padding: 4px 8px;border-radius: 10px;border-left: 1px solid #00ff09;">
+            <li><b>Chrome</b>: Version 110.0.5481.154 or more then this version</li>
+            <li><b>Microsoft Edge</b>: Version 110.0.1587.54 or more then this version</li>
+            <li><b>Firefox</b>: Version 109.2.0 or more then this version</li>
+            <li><b>Opera Mini</b>: Version 67.1.2254.64861 or more then this version</li>
+            <li><b>Puffin Incognito</b>: Version 9.9.0 or more then this version</li>
+            <li><b>Vivaldi</b>: Version 5.7.2932.34 or more then this version</li>
+            <li>etc..</li></ul>
+        </p>
+        <h6>Fastest Internet Speed:</h6>
+        <p><m>Use</m> fastest internet in your device, use at least 50kbps to 200kbs or more then it.
+            Donot use our website when you offline or use less then 50kbps internet speed.
+        </p>
+        <h6>Formal Device:</h6>
+        <p><m>Use</m> Computer, Laptop or Smartphone to open this website , Donot open it in your 
+             smartphone's desktop side or use any type of tab phone to open this web. Always update your
+             Operating system.</p>
+             <ul style="background-color: #f6f6f6; width: 90%;margin: 2px 5%;padding: 4px 8px;border-radius: 10px;border-left: 1px solid #00ff09;">
+                  <li>In <b>Computer or Laptop</b> use Windows 11 or higer versions, Linux, etc.</li>
+                  <li>In <b>Smartphone</b> use Android version 12 or more then it, iOS version 16.3.1 or more then it, etc.</li>
+             </ul><br>
+        <h2>Conditions</h2>
+        <h6>Current Browser:</h6>
+        <p><m>You</m> use the following browser, now cross check the browser terms to
+              understand that you maintain or not the required condition. If it is yes then congratulations but 
+              if it is not then try to recover it now.
+        </p>
+        <ul style="background-color: #f6f6f6; width: 90%;margin: 2px 5%;padding: 4px 8px;border-radius: 10px;border-left: 1px solid #00ff09;"id="mybrowsername">
+        </ul><br>
+        <h6>Browser Agent:</h6>
+        <p><m>Your</m> browser agent data is following
+        </p>
+        <ul style="background-color: #f6f6f6; width: 90%;margin: 2px 5%;padding: 4px 8px;border-radius: 10px;border-left: 1px solid #00ff09;"id="mybrowserdata">
+        </ul><br>
+        <h6>Your Internet Speed:</h6>
+        <p><m>Your</m> avarage internet speed is following, now cross check the internet terms to
+              understand that you maintain or not the required condition. If it is yes then congratulations but 
+              if it is not then try to recover it now.
+        </p>
+        <ul style="background-color: #f6f6f6; width: 90%;margin: 2px 5%;padding: 4px 8px;border-radius: 10px;border-left: 1px solid #00ff09;"id="myinternetdata">
+        </ul><br>
+        <h6>Your Device:</h6>
+        <p><m>Your</m> Device type(Mobile or Computer) is following
+        </p>
+        <ul style="background-color: #f6f6f6; width: 90%;margin: 2px 5%;padding: 4px 8px;border-radius: 10px;border-left: 1px solid #00ff09;"id="mydevicedata">
+        </ul><br>
+    </section>
+    <section class="quizdoc">
+        <span id="quizdocapi"></span>
+    </section>
+<!--1)INSAT-3DR
+SATCAT no.	41752
+Reference system	Geocentric
+Regime	Geostationary
+Longitude	74° E
+https://en.wikipedia.org/wiki/File:INSAT_3DR_Deployed_View.jpg
+2)GSAT-6
+Reference system	Geocentric
+Regime	Geostationary
+Slot	83°E (Planned)
+https://en.wikipedia.org/wiki/File:GSAT-6A_Undergoing_Acoustic_Test.jpg
+3)NOAA-M
+https://en.wikipedia.org/wiki/File:NOAA-M.jpg
+
+1) Current Weather
+Here we provide our followers with all the useful information about today's weather absolutely free. In particular, the important points of the day such as temperature, wind speed, amount of rain, sunsets time etc. are arranged at that particular section. From where we all can know about the state of our nature and take proper action when needed.
+2) Global Map
+3) Weekly forecast
+Basically we provide our audience with the information about the upcoming 6 days weather of given location, where a beautiful line-graph is given of the average temperature of those 6 days. Since the weather changes at any time, it is not always possible to provide accurate information for all places, so the average temperature information is given based on long-term research.
+4) Ozone forecast
+5) Quize
+6) Video
+Leaving everything behind, people are fleeing conflict in Ukraine. They need shelter, food, and water. When you subscribe to our service, you can join us to help with donation of just of £20.
+Openweather will add £40 to each donation and send it to Disastrous Emergency Committee’s (DEC) Ukrainian Humanitarian Appeal.
+-->
+    <div class="scrolltop float-right">
+	    <i class="fa fa-arrow-up" onclick="topFunction();" id="topBtna"></i>
+    </div>
+    <footer id="footer-page">
+        <div class="content">
+          <div class="top">
+            <div class="logo-details">
+                <img src="./fav-icon/logo.png"alt="Error dp not loaded">
+              <span class="logo_name">WHITE LOTUS</span>
+            </div>
+            <div class="media-icons">
+              <a href="#"onclick="notvalid();"><i class="fa fa-facebook-f"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-twitter"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-instagram"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-linkedin"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="link-boxes">
+            <ul class="box">
+              <li class="link_name">Company</li>
+              <li><a href="#"onclick="mainpage();">Main</a></li>
+              <li><a href="#"onclick="contactpage();">Contact us</a></li>
+              <li><a href="#"onclick="aboutpage();">About us</a></li>
+              <li><a href="#"onclick="myquiz();">Quiz</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Services</li>
+              <li><a href="#add"onclick="mainpage();">Current Weather</a></li>
+              <li><a href="#myChart"onclick="mainpage();">6 day forecast</a></li>
+              <li><a href="#home_images"onclick="mainpage();">Ozone forecast</a></li>
+              <li><a href="#"onclick="myquiz();">Enviorment Quiz</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Account</li>
+              <li><a href="#"onclick="notvalid();">Profile</a></li>
+              <li><a href="#"onclick="notvalid();">My account</a></li>
+              <li><a href="#"onclick="notvalid();">Prefrences</a></li>
+              <li><a href="#"onclick="notvalid();">Purchase</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Offers</li>
+              <li><a href="#"onclick="notvalid();">Donation</a></li>
+              <li><a href="#"onclick="notvalid();">Advertisement</a></li>
+              <li><a href="#"onclick="notvalid();">Coupons/Tickets</a></li>
+              <li><a href="#"onclick="notvalid();">Subscription</a></li>
+            </ul>
+            <ul class="box input-box">
+              <li class="link_name">About White Lotus</li>
+              <li>First of all, it is better to say that our WHITE LOTUS was established in 14 February 2023. So it didn't take us 
+                long for this team to come into existence. <span onclick="aboutpage();"style="cursor: pointer;">See more..</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-details">
+          <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2023 to 2030 <a href="#">WHITE LOTUS.</a>All rights reserved</span>
+            <span class="policy_terms">
+              <a href="#"onclick="showprivacy();">Privacy policy</a>
+              <a href="#privacy-terms"onclick="showprivacy();">Terms & condition</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+</body>
+<script>
+var inputval = document.querySelector('#cityinput')
+var btn = document.querySelector('#add');
+var city = document.querySelector('#cityoutput')
+var descrip = document.querySelector('#description')
+var temp = document.querySelector('#temp')
+var wind = document.querySelector('#wind')
+var hum = document.querySelector('#humi');
+var press = document.querySelector("#pressure");
+var feelslike = document.querySelector("#feelslike");
+const date = new Date();
+let x = date.getDate();
+let y = date.getMonth();
+let z = date.getYear();
+let chrono = `${x}/${y+1}/${z-100}`;
+apik = "3045dd712ffe6e702e3245525ac7fa38"
+function convertion(val){
+    return (val - 273).toFixed(2)
+}
+btn.addEventListener('click', function(){
+  fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputval.value+'&appid='+apik)
+  .then(res => res.json())
+  .then(data => 
+  {
+    var nameval = data['name']
+    var descrip = data['weather']['0']['description']
+    var tempature = data['main']['temp']
+    var wndspd = data['wind']['speed']
+    var humidity = data['main']['humidity']
+    var pressure = data['main']['pressure']
+    var feels = data['main']['feels_like']
+    city.innerHTML=`<i class='fa fa-map-marker'id='minicon'></i>${nameval}, (${chrono})`
+    temp.innerHTML = `<span>${convertion(tempature)} °C</span>`
+    description.innerHTML = `Sky Conditions: ${descrip}`
+    wind.innerHTML = `<i class='fa fa-leaf'></i>Wind Speed: <span>${wndspd} km/h</span>`
+    hum.innerHTML = `<i class='fa fa-tint'></i>Humidity: <span>${humidity} %</span>`
+    press.innerHTML = `<i class='fa fa-globe'></i>Pressure: <span>${pressure} mb</span>`
+    feelslike.innerHTML = `<i class="fa fa-thermometer"></i>Feels temp: <span>${convertion(feels)}°C</span>`
+    var iconcode = data['weather'][0]['icon'];
+    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    document.querySelector("#icon").innerHTML = `<img id='wicon' src='${iconurl}' alt='icon'>`;
+    let tempa = convertion(tempature);
+    graphic(tempa);
+    tabledata(data,chrono);
+    globeMap('temp_new');
+  })
+  .catch(err => alert('You entered Wrong city name'))
+})
+</script>
+<script>
+var v = 1;
+let quip = 0;
+let boxa = document.getElementById("navelement");
+function statup(){
+    let slider = document.getElementById("ststimg");
+    setTimeout(function of(){
+        slider.innerHTML = "<img src='./fav-icon/effect002.jpg'class='abja'>";
+    },10000);
+    setTimeout(function of(){
+        slider.innerHTML = "<img src='./fav-icon/effect0025.jpg'class='abja'>";
+    },30000);
+    setTimeout(function of(){
+        slider.innerHTML = "<img src='./fav-icon/effect0035.jpg'class='abja'>";
+    },50000);
+    setTimeout(function of(){
+        slider.innerHTML = "<img src='./fav-icon/effect003.jpg'class='abja'>";
+    },80000);
+    setTimeout(function of(){
+        slider.innerHTML = "<img src='./fav-icon/effect001.jpg'class='abja'>";
+    },120000);
+    firstSearch();
+    generateCaptcha();
+    document.getElementById("mylocation").innerHTML = window.location;
+}
+function firstSearch(){
+	fetch('https://api.openweathermap.org/data/2.5/weather?q=Kolkata&appid=3045dd712ffe6e702e3245525ac7fa38')
+  .then(res => res.json())
+  .then(data => 
+  {
+    var nameval = data['name']
+    var descrip = data['weather']['0']['description']
+    var tempature = data['main']['temp']
+    var wndspd = data['wind']['speed']
+    var humidity = data['main']['humidity']
+    var pressure = data['main']['pressure']
+    var feels = data['main']['feels_like']
+    city.innerHTML=`<i class='fa fa-map-marker'id='minicon'></i>${nameval}, (${chrono})`
+    temp.innerHTML = `<span>${convertion(tempature)} °C</span>`
+    description.innerHTML = `Sky Conditions: ${descrip}`
+    wind.innerHTML = `<i class='fa fa-leaf'></i>Wind Speed: <span>${wndspd} km/h</span>`
+    hum.innerHTML = `<i class='fa fa-tint'></i>Humidity: <span>${humidity} %</span>`
+    press.innerHTML = `<i class='fa fa-globe'></i>Pressure: <span>${pressure} mb</span>`
+    feelslike.innerHTML = `<i class="fa fa-thermometer"></i>Feels temp: <span>${convertion(feels)}°C</span>`
+    var iconcode = data['weather'][0]['icon'];
+    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    document.querySelector("#icon").innerHTML = `<img id='wicon' src='${iconurl}' alt='icon'>`;
+    let tempa = convertion(tempature);
+    graphic(tempa);
+    tabledata(data,chrono);
+    globeMap('temp_new');
+  })
+  .catch(err => alert('You entered Wrong city name'))
+}
+function naveffect(){
+    if(v == 1){
+        boxa.style.opacity = "1";
+        boxa.style.zIndex = "99";
+        v = 0;
+    }else{
+        boxa.style.opacity = "-2";
+        boxa.style.zIndex = "-5";
+        v = 1;
+    }
+}
+function tabledata(data,chrono){
+	document.getElementById("m1").innerHTML =`${convertion(data['main']['temp'])}°C`;
+	document.getElementById("m2").innerHTML =`${data['weather']['0']['description']}`;
+	document.getElementById("m3").innerHTML =`${data['name']}`;
+	document.getElementById("m4").innerHTML =`${chrono}`;
+	document.getElementById("m5").innerHTML =`${data['main']['pressure']}mb`;
+	document.getElementById("m6").innerHTML =`${data['wind']['speed']}km/h`;
+	document.getElementById("m7").innerHTML =`${data['wind']['deg']}°`;
+	document.getElementById("m8").innerHTML =`${data['main']['humidity']}%`;
+	document.getElementById("m9").innerHTML =`${convertion(data['main']['feels_like'])}°C`;
+	document.getElementById("m10").innerHTML =`${convertion(data['main']['temp_min'])}°C`;
+	document.getElementById("m11").innerHTML =`${convertion(data['main']['temp_max'])}°C`;
+	document.getElementById("m12").innerHTML =`${data['main']['sea_level']}m`;
+	document.getElementById("m13").innerHTML =`${data['main']['grnd_level']}m`;
+	document.getElementById("m14").innerHTML =`${data['coord']['lon']}°`;
+	document.getElementById("m15").innerHTML =`${data['coord']['lat']}°`;
+	document.getElementById("m16").innerHTML = unixConverter(data['sys']['sunrise']);
+	document.getElementById("m17").innerHTML = unixConverter(data['sys']['sunset']);
+	document.getElementById("m18").innerHTML = `${data['sys']['country']}`;
+	document.getElementById("m19").innerHTML = `${data['timezone']} UTC(s)`;
+	document.getElementById("m20").innerHTML = unixConverter(data['dt']);
+	document.getElementById("m21").innerHTML = `${data['clouds']['all']}%`;
+	//console.log(data);
+}
+function unixConverter(time){
+	const unixTimestamp = time;
+    const date = new Date(unixTimestamp * 1000);
+    const enUS = date.toLocaleTimeString('en-US', {
+         hour: '2-digit',
+         minute: '2-digit',
+         second: '2-digit',
+     });
+    return enUS;
+}
+function globeMap(type){
+    let list = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],r=0;
+    list[0] = 'https://tile.openweathermap.org/map/'+type+'/2/0/0.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[1] = 'https://tile.openweathermap.org/map/'+type+'/2/1/0.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[2] = 'https://tile.openweathermap.org/map/'+type+'/2/2/0.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[3] = 'https://tile.openweathermap.org/map/'+type+'/2/3/0.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[4] = 'https://tile.openweathermap.org/map/'+type+'/2/0/1.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[5] = 'https://tile.openweathermap.org/map/'+type+'/2/1/1.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[6] = 'https://tile.openweathermap.org/map/'+type+'/2/2/1.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[7] = 'https://tile.openweathermap.org/map/'+type+'/2/3/1.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[8] = 'https://tile.openweathermap.org/map/'+type+'/2/0/2.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[9] = 'https://tile.openweathermap.org/map/'+type+'/2/1/2.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[10] = 'https://tile.openweathermap.org/map/'+type+'/2/2/2.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[11] = 'https://tile.openweathermap.org/map/'+type+'/2/3/2.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[12] = 'https://tile.openweathermap.org/map/'+type+'/2/0/3.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[13] = 'https://tile.openweathermap.org/map/'+type+'/2/1/3.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[14] = 'https://tile.openweathermap.org/map/'+type+'/2/2/3.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    list[15] = 'https://tile.openweathermap.org/map/'+type+'/2/3/3.png?appid=3045dd712ffe6e702e3245525ac7fa38';
+    document.getElementById("mtb1").innerHTML = `<img src='${list[0]}'>`;
+    document.getElementById("mtb2").innerHTML = `<img src='${list[1]}'>`;
+    document.getElementById("mtb3").innerHTML = `<img src='${list[2]}'>`;
+    document.getElementById("mtb4").innerHTML = `<img src='${list[3]}'>`;
+    document.getElementById("mtb5").innerHTML = `<img src='${list[4]}'>`;
+    document.getElementById("mtb6").innerHTML = `<img src='${list[5]}'>`;
+    document.getElementById("mtb7").innerHTML = `<img src='${list[6]}'>`;
+    document.getElementById("mtb8").innerHTML = `<img src='${list[7]}'>`;
+    document.getElementById("mtb9").innerHTML = `<img src='${list[8]}'>`;
+    document.getElementById("mtb10").innerHTML = `<img src='${list[9]}'>`;
+    document.getElementById("mtb11").innerHTML = `<img src='${list[10]}'>`;
+    document.getElementById("mtb12").innerHTML = `<img src='${list[11]}'>`;
+    document.getElementById("mtb13").innerHTML = `<img src='${list[12]}'>`;
+    document.getElementById("mtb14").innerHTML = `<img src='${list[13]}'>`;
+    document.getElementById("mtb15").innerHTML = `<img src='${list[14]}'>`;
+    document.getElementById("mtb16").innerHTML = `<img src='${list[15]}'>`;
+    if(type == 'temp_new'){
+        r = 'Temparature Map';
+    }else if(type == 'wind_new'){
+        r = 'Wind Map';
+    }else if(type == 'clouds_new'){
+        r = 'Clouds Map';
+    }else if(type == 'pressure_new'){
+        r = 'Pressure Map';
+    }else{
+        r = 'Precipition Map';
+    }
+    document.getElementById("m22").innerHTML = `${r}`;
+}
+mybutton = document.getElementById("topBtna");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction(){
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+    	mybutton.style.display = "block";
+    }else{
+        mybutton.style.display = "none";
+    }
+}
+function topFunction(){
+   	document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+let p1 = document.querySelector(".weather-report");
+let p2 = document.querySelector(".about-us");
+let p3 = document.querySelector(".contact-us");
+let p4 = document.querySelector(".quizdoc");
+let p5 = document.querySelector(".privacy-report");
+let f1 = document.querySelector("#footer-page");
+function mainpage(){
+    p1.style.display = "block";
+    p2.style.display = "none";
+    p3.style.display = "none";
+    p4.style.display = "none";
+    p5.style.display = "none";
+    f1.style.display = "block";
+    document.querySelector("#home").style.color = "#fff";
+    document.querySelector("#about").style.color = "#0c8ff0";
+    document.querySelector("#cont").style.color = "#0c8ff0";
+    document.querySelector("#quizapi").style.color = "#0c8ff0";
+    offnavO();
+}
+function aboutpage(){
+    p1.style.display = "none";
+    p2.style.display = "block";
+    p3.style.display = "none";
+    p4.style.display = "none";
+    p5.style.display = "none";
+    f1.style.display = "block";
+    document.querySelector("#home").style.color = "#0c8ff0";
+    document.querySelector("#about").style.color = "#fff";
+    document.querySelector("#cont").style.color = "#0c8ff0";
+    document.querySelector("#quizapi").style.color = "#0c8ff0";
+    offnavO();
+}
+function contactpage(){
+    p1.style.display = "none";
+    p2.style.display = "none";
+    p3.style.display = "block";
+    p4.style.display = "none";
+    p5.style.display = "none";
+    f1.style.display = "block";
+    document.querySelector("#home").style.color = "#0c8ff0";
+    document.querySelector("#about").style.color = "#0c8ff0";
+    document.querySelector("#cont").style.color = "#fff";
+    document.querySelector("#quizapi").style.color = "#0c8ff0";
+    offnavO();
+}
+function myquiz(){
+    p1.style.display = "none";
+    p2.style.display = "none";
+    p3.style.display = "none";
+    p4.style.display = "block";
+    p5.style.display = "none";
+    f1.style.display = "none";
+    document.querySelector("#home").style.color = "#0c8ff0";
+    document.querySelector("#about").style.color = "#0c8ff0";
+    document.querySelector("#cont").style.color = "#0c8ff0";
+    document.querySelector("#quizapi").style.color = "#fff";
+    offnavO();
+    if(quip == 0){
+        alert("You have maximum 30min to solve all question");
+        quip++;
+    }else if(quip == 4){
+        alert("5 times your call quiz area, be carefull this type of work not sounds good!");
+        quip++;
+    }else{quip++;}
+	space = document.getElementById("quizdocapi");
+	space.innerHTML = "<div class='graph'><div class='grid'><div id='quiz'><h1 onclick='showScores();'> WHITE LOTUS Quiz<br>(Sub- Green Enviorment) </h1><hr style='margin-bottom: 20px;'><p id='question'> </p><div class='button'><button id='bt0'> <span id='choice0'> </span> </button><button id='bt1'> <span id='choice1'> </span> </button><button id='bt2'> <span id='choice2'> </span> </button><button id='bt3'> <span id='choice3'> </span> </button></div><hr style='margin-top: 50px;'><footer><p id='progress'> Question 0 of 00</p></footer></div></div></div>";
+	populate();
+}
+function showprivacy(){
+    p1.style.display = "none";
+    p2.style.display = "none";
+    p3.style.display = "none";
+    p4.style.display = "none";
+    p5.style.display = "block";
+    offnavO();
+    var objappVersion = navigator.appVersion; 
+    var browserAgent = navigator.userAgent; 
+    var browserName = navigator.appName; 
+    var browserVersion = '' + parseFloat(navigator.appVersion); 
+    var browserMajorVersion = parseInt(navigator.appVersion, 10); 
+    var Offset, OffsetVersion, ix; 
+    if ((OffsetVersion = browserAgent.indexOf("Chrome")) != -1) { 
+        browserName = "Chrome"; 
+        browserVersion = browserAgent.substring(OffsetVersion + 7);
+    }else if ((OffsetVersion = browserAgent.indexOf("MSIE")) != -1) { 
+        browserName = "Microsoft Internet Explorer"; 
+        browserVersion = browserAgent.substring(OffsetVersion + 5); 
+    }else if ((OffsetVersion = browserAgent.indexOf("Firefox")) != -1) { 
+        browserName = "Firefox"; 
+    }else if ((OffsetVersion = browserAgent.indexOf("Safari")) != -1) { 
+        browserName = "Safari"; 
+        browserVersion = browserAgent.substring(OffsetVersion + 7); 
+        if ((OffsetVersion = browserAgent.indexOf("Version")) != -1) 
+            browserVersion = browserAgent.substring(OffsetVersion + 8); 
+    }else if ((Offset = browserAgent.lastIndexOf(' ') + 1) < 
+        (OffsetVersion = browserAgent.lastIndexOf('/'))) { 
+        browserName = browserAgent.substring(Offset, OffsetVersion); 
+        browserVersion = browserAgent.substring(OffsetVersion + 1); 
+        if (browserName.toLowerCase() == browserName.toUpperCase()) { 
+            browserName = navigator.appName; 
+        } 
+    } 
+    if ((ix = browserVersion.indexOf(";")) != -1) 
+        browserVersion = browserVersion.substring(0, ix); 
+    if ((ix = browserVersion.indexOf(" ")) != -1) 
+        browserVersion = browserVersion.substring(0, ix); 
+    browserMajorVersion = parseInt('' + browserVersion, 10); 
+    if (isNaN(browserMajorVersion)) { 
+        browserVersion = '' + parseFloat(navigator.appVersion); 
+        browserMajorVersion = parseInt(navigator.appVersion, 10); 
+    } 
+    document.getElementById("mybrowsername").innerHTML = `<li>Name of Browser = <b>${browserName}</b></li><li>Your version = <b>${browserVersion}</b></li>`;
+    document.getElementById("mybrowserdata").innerHTML = `<li>App Name = <b>${navigator.appName}</b></li><li>User Agent = <b>${navigator.userAgent}</b></li>`;
+    var userImageLink = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200714180638/CIP_Launch-banner.png"; 
+            var time_start, end_time; 
+            var downloadSize = 5616998; 
+            var downloadImgSrc = new Image(); 
+            downloadImgSrc.onload = function () { 
+                end_time = new Date().getTime(); 
+                displaySpeed(time_start,end_time,downloadSize); 
+            }; 
+            time_start = new Date().getTime(); 
+            downloadImgSrc.src = userImageLink; 
+            deviceCheck(navigator.userAgent);
+}
+function displaySpeed(time_start,end_time,downloadSize){ 
+                var timeDuration = (end_time - time_start) / 1000; 
+                var loadedBits = downloadSize * 8; 
+                var bps = (loadedBits / timeDuration).toFixed(2); 
+                var speedInKbps = (bps / 1024).toFixed(2); 
+                var speedInMbps = (speedInKbps / 1024).toFixed(2); 
+                document.getElementById("myinternetdata").innerHTML = `<li>Your avg internet connection speed is:</li><li>${bps}bps</li><li>${speedInKbps}kbps</li><li>${speedInMbps}Mbps</li>`;
+}
+function deviceCheck(details){
+	let regexp = /android|iphone|kindle|ipad/i;
+	let isMobileDevice = regexp.test(details);
+	if (isMobileDevice) { 
+          document.getElementById("mydevicedata").innerHTML = `<li>You are using a <b>Mobile</b> Device</li>`; 
+     } else { 
+          document.getElementById("mydevicedata").innerHTML = `<li>You are using <b>Desktop</b></li>`; 
+     }
+}
+function notvalid(){
+    alert("This feature is not avalible now!");
+}
+function offnavO(){
+    document.getElementById("navelement").style.opacity = "-2";
+    document.getElementById("navelement").style.zIndex = "-5";
+    v = 1;
+}
+function generateCaptcha(){
+	var cap = new Array
+	('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','/','@','&','!','#','*','?','%','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9');
+    var i;
+    for(i=0;i<6;i++){
+    	var a = cap[Math.floor(Math.random()*cap.length)];
+        var b = cap[Math.floor(Math.random()*cap.length)];
+        var c = cap[Math.floor(Math.random()*cap.length)];
+        var d = cap[Math.floor(Math.random()*cap.length)];
+        var e = cap[Math.floor(Math.random()*cap.length)];
+        var f = cap[Math.floor(Math.random()*cap.length)];
+    }
+    var code = a+b+c+d+e+f;
+    document.getElementById("mainCaptcha").value = code;
+    document.getElementById('error').innerHTML = null;
+    document.getElementById('success').innerHTML = null;
+}
+function CheckValidCaptcha(){
+    var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
+    var string2 = removeSpaces(document.getElementById('txtinput').value);
+    if(string1 == string2){
+        document.getElementById('success').innerHTML = "Captcha enter Successfully";
+        alert("Are you sure to send this message? Press Ok for confirmation..");
+        return true;
+    }else{
+        let errcodes = "Please Enter a Valid Captcha Mr./Ms. "+document.getElementById('name').value+" ";
+        document.getElementById('error').innerHTML = "Please Enter a Valid Captcha Mr./Ms. "+document.getElementById('name').value+" ";
+        alert(errcodes);
+        return false;
+    }
+}
+function removeSpaces(string){
+    return string.split(' ').join('');
+}
+const btns = document.querySelector(".rate");
+const post = document.querySelector(".post");
+const widget = document.querySelector(".star-widget");
+const editBtn = document.querySelector(".edit");
+btns.onclick = ()=>{
+    widget.style.display = "none";
+    post.style.display = "block";
+    alert("Star Rate sending fail,This device not able to load hex.vul.js file");
+    editBtn.onclick = ()=>{
+        widget.style.display = "block";
+        post.style.display = "none";
+    }
+    return false;
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script>
+function graphic(temp){
+const date = new Date();
+let x = date.getDate();
+var xValues = [x,x+1,x+2,x+3,x+4,x+5];
+temp=Math.floor(temp);
+let v = Math.floor((Math.random()*(3-(-1))+(-1)));
+let v1 = (Math.round(temp+v))-1;
+let v2 = (Math.round(v1-(2*v)))+1;
+let v3 = Math.floor((temp+v2)-v1);
+let v4 = ((((v+temp)-v3)*v1)/v2)+v1;
+var yValues = [temp,temp+2,v1,v2,v3,v4];
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "#0C8FF0",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{ticks: {min: -30, max:50}}],
+    }
+  }
+});
+}
+</script>
+<script>
+let modequestion = 0;
+function Question(text, choices, answer){
+    this.text = text;
+    this.choices = choices;
+    this.answer = answer;
+}
+Question.prototype.isCorrectAnswer = function(choice){
+    return this.answer === choice;
+}
+function Quiz(questions) {
+    this.score = 0;
+    this.questions = questions;
+    this.questionIndex = 0;
+}
+Quiz.prototype.getQuestionIndex = function(){
+    return this.questions[this.questionIndex];
+}
+Quiz.prototype.guess = function(answer) {
+    if(this.getQuestionIndex().isCorrectAnswer(answer)) {
+        this.score++;
+    }
+
+    this.questionIndex++;
+}
+Quiz.prototype.isEnded = function() {
+    return this.questionIndex === this.questions.length;
+}
+function populate(){
+    if(quiz.isEnded()){
+        showScores();
+    }else{
+        var element = document.getElementById("question");
+        element.innerHTML = quiz.getQuestionIndex().text;
+
+        var choices = quiz.getQuestionIndex().choices;
+        for(var i = 0; i < choices.length; i++) {
+            var element = document.getElementById("choice" + i);
+            element.innerHTML = choices[i];
+            guess("bt" + i, choices[i]);
+        }
+
+        showProgress();
+    }
+};
+function guess(id, guess) {
+    var button = document.getElementById(id);
+    button.onclick = function() {
+        quiz.guess(guess);
+        populate();
+    }
+};
+function showProgress() {
+    var currentQuestionNumber = quiz.questionIndex + 1;
+    var element = document.getElementById("progress");
+    element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
+};
+function showScores() {
+    var gameOverHTML = "<h1 onclick='anssheet();'>Result</h1>";
+    gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2> <br><h4 id='puma'>Totale question: " + quiz.questions.length + "<br>Right answer: " + quiz.score + "<br>Your parsentage: " + quiz.score/quiz.questions.length*100 + "%</h4><br><p id='parform'>If your scores > 75% <br>then you are able,<br> If your scores < 75%<br> then you are not able<br>but <b><i>Never Giveup</i></b></p><br><button id='refresh'value='restart'onclick='restart();'>Restart</button>";
+    var element = document.getElementById("quiz");
+    element.innerHTML = gameOverHTML;
+    alert("Congratulation we calculate your scores..");
+};
+var questions1 = [
+    new Question("What is the name of our home planet?", ["Mars", "Earth", "USA", "Moon"], "Earth"), 
+    new Question("What is the name of our galaxy?", ["Andromeda", "Samsung", "Milkyway", "Solar-system"], "Milkyway"),
+    new Question("How many constellation are founded before 2020?", ["81", "85", "89", "908"], "89"),
+    new Question("What is the probability that you will get full marks in this test?", ["0%", "25%", "50%", "100%"], "50%"),
+];
+var questions2 = [ 
+    new Question("WHAT IS HUMIDITY ?", ["AMOUNT OF STEAM", "AMOUNT OF AIR IN WATER", "AMOUNT OF MOISTURE IN AIR", "ALL OF THESE"], "AMOUNT OF MOISTURE IN AIR"),
+    new Question("RAINFALL IS USUALY MEASURED IN?", ["mm", "cm", "litre/mm3", "ml/cm3"], "mm"),
+    new Question("IN WHICH HEAT ZONE “4 O' CLOCK RAIN“ OCCURS?", ["TROPICAL ZONE", "NORTH TEMPERATE ZONE", "SOUTH TEMPERATE ZONE", "NORTH ARTIC ZONE"], "TROPICAL ZONE"),
+    new Question("THE AVERAGE CLIMATIC CONDITION OF THE WORLD IS___________", ["GETTING COLD", "GETTING WARM", "IS STABLE", "ALL OF ABOVE"], "GETTING WARM"),
+    new Question("Which one of the following cause global warming?", ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"], "Carbon dioxide"),
+    new Question("How many percent of carbon dioxide increased in the atmosphere since pre-industrial times?", ["About 10%", "About 20%", "About 30%", "About 40%"], "About 30%"),
+    new Question("What is the full form of UNFCC with respect to global warming convention?", ["United Nations Framework Convention on Climate Change", "United Nations Federation Convention on Climate Change", "United Nations Framework Center on Climate Change", "United Nations Federation Center on Climate Change"], "United Nations Framework Convention on Climate Change"),
+    new Question("Who measures the global warming rate?", ["Astrologers", "Physicist", "Philosopher", "Climatologist"], "Climatologist"),
+    new Question("Which one of the following result takes place due to global warming?", ["Maintaining steady temperature", "Changes in the rainfall", "Pleasant environment", "Causing less pollution"], "Changes in the rainfall"),
+    new Question("Which one of the following cause global warming?", ["Radiative forcing", "Oxygen", "Earth gravitation force", "Centripetal force"], "Radiative forcing"),
+    new Question("How human activity has influenced global warming?", ["By planting more trees", "By causing changing in gravitational force", "By changing the radiative balance governing the Earth", "By protecting environment"], "By changing the radiative balance governing the Earth"),
+    new Question("Which one of the following is the anthropogenic radiative forcing of climate?", ["Aerosols", "Cement", "Paper", "Glass"], "Aerosols"),
+    new Question("Which one of the following land use causes global warming?", ["Increase in the fertility of soil", "Surface reflectance", "Forestation", "Adopting organic farming"], "Surface reflectance"),
+    new Question("Soot only warm Earth's climate system", ["True", "False", "All of these", "None of These"], "False"),
+    new Question("What is the probability that you will get full marks in this test?", ["0%", "25%", "50%", "100%"], "50%"),
+];
+var questions3 = [ 
+    new Question("What is the formula of Carbon dioxide?", ["CO", "CO3", "CO2", "2COCH3"], "CO2"),
+    new Question("What is the first step in waste management?", ["Waste disposal", "Waste separation", "Waste collection", "All of these"], "Waste separation"),
+    new Question("____________ is the first 'R' in the Three R's", ["Reduce", "Reuse", "Recycle", "Refuse"], "Reduce"),
+    new Question("World Environment day in", ["10 August", "5 June", "7 December", "21 September"], "5 June"),
+    new Question("Which is an example for non-biodegradable waste?", ["Paper cup", "Plastic plate", "Coconut shell", "Biology book"], "Plastic plate"),
+    new Question("What is hibernation?", ["midday sleep", "Winter sleep", "Summer sleep", "Some thing related to nation"], "Winter sleep"),
+    new Question("The highest nonzero dose at which no toxic effect is observed in a study on animals is called", ["LD50", "NOAEL", "LOAEL", "NOEFF"], "NOAEL"),
+    new Question("Project Tiger was started in:", ["1973", "1975", "1976", "1977"], "1973"),
+    new Question("What is water vapor?", ["It is the gaseous phase of water", "It is a rain droplet", "Water vapor is the cloud droplet", "All of these"], "It is the gaseous phase of water"),
+    new Question("Which of the country has the maximum numbers of the tube wells in the world?", ["China", "America", "Japan", "India"], "India"),
+    new Question("How human activity has influenced global warming?", ["By planting more trees", "By causing changing in gravitational force", "By changing the radiative balance governing the Earth", "By protecting environment"], "By changing the radiative balance governing the Earth"),
+    new Question("When is world wildlife week observed?", ["First week of September", "Last week of September", "Last week of October", "First week of October"], "First week of October"),
+    new Question("Which of the following has a maximum speed?", ["Air", "Sound", "Light", "Salary"], "Light"),
+    new Question("The salinaization can be defind as-", ["Accumulation of salts in the body", "Accumulation of salts in water", "Accumulation of salts in animals", "Accumulation of salts in soil"], "Accumulation of salts in soil"),
+    new Question("'Care and share' policy of the forest applies to", ["Tribal people", "Villagers", "JFMCs", "Forest communities"], "JFMCs"),
+    new Question("Which of the following is the cause of soil pollution?", ["Ozone", "Aerosol", "Acid rain", "None of these"], "Acid rain"),
+    new Question("Which of the following sequence represent a correct order of soil particles arrenged in terms of particle size form smaller to largest?", ["Clay,Silt,Sand,Graval", "Silt,Clay,Graval,Sand", "Graval,Sand,Silt,Clay", "Graval,Silt,Clay,Sand"], "Clay,Silt,Sand,Graval"),
+    new Question("Which one of the following cause global warming?", ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"], "Carbon dioxide"),
+    new Question("At what time of the day relative humidity in the enviorment is at minimum?", ["When the air temperature is lowest", "Before sunrise", "When we sleep", "When the air temperature is higher"], "When the air temperature is higher"),
+    new Question("Which of the following is a renewable source of energy?", ["Coal", "Uranium", "Wind", "Video game"], "Wind"),
+    new Question("Paper is made up of-", ["Polythene and cotton", "Starch and cellulose", "Grass and Bamboo", "None of the above"], "Grass and Bamboo"),
+    new Question("Who measures the global warming rate?", ["Astrologers", "Physicist", "Philosopher", "Climatologist"], "Climatologist"),
+    new Question("Sugar is form of____________", ["Carbohydrate", "Fat", "Protein", "Water"], "Carbohydrate"),
+    new Question("Soot only warm Earth's climate system", ["True", "False", "All of these", "None of These"], "False"),
+    new Question("Ozone layer present in-", ["Mesosphere", "Thermosphere", "Stratosphere", "Kidney"], "Stratosphere"),
+    new Question("Which of the following gas destroys the chlorophyll present in the plant leaves", ["SO3", "H2S", "SO2", "CO2"], "SO2"),
+    new Question("Which of the following is non-luminous?", ["Sun", "Star", "Moon", "Girls"], "Moon"),
+    new Question("In which heat zone “4 O' clock rain“ occure", ["TROPICAL ZONE", "NORTH TEMPERATE ZONE", "SOUTH TEMPERATE ZONE", "NORTH ARTIC ZONE"], "ROPICAL ZONE"),
+    new Question("Which one of the following land use causes global warming?", ["Increase in the fertility of soil", "Surface reflectance", "Forestation", "Adopting organic farming"], "Surface reflectance"),
+    new Question("Which one of the following an important heat trapping gas?", ["Nitrogen", "Carbon monoxide", "Carbon dioxide", "Hydrogen"], "Carbon dioxide"),
+    new Question("How many cubic kilometers of land ice decrease in antartica since 2002?", ["100", "4000", "500", "1000"], "100"),
+    new Question("What is the probability that you will get full marks in this test?", ["0%", "25%", "50%", "100%"], "50%"),
+];
+let k = Math.floor((Math.random()*(4-(1))+(1)));
+if(k == 1){
+    var quiz = new Quiz(questions3);
+    modequestion = 1;
+}else if(k == 2){
+    var quiz = new Quiz(questions2);
+    modequestion = 2;
+}else{
+    var quiz = new Quiz(questions3);
+    modequestion = 3;
+}
+populate();
+function anssheet(){
+	quizbox = document.getElementById("quiz");
+    if(modequestion == 1){
+	    quizbox.innerHTML = "<h1 onclick='showScores();'> WHITE LOTUS Quiz<br>Answer Sheet</h1><br><p class='anssheet'>1)b, 2)c, 3)b, 4)a, 5)c, 6)a, 7)c, 8)b, 9)a, 10)b, 11)d, 12)a, 13)b, 14)c, 15)c, 16)b, 17)b, 18)b, 19)b, 20)c, 21)b, 22)d, 23)b, 24)c, 25)c, 26)a, 27)a, 28)c, 29)a, 30)c, 31)d, 32)c, 33)c, 34)b, 35)a, 36)b, 37)c, 38)b, 39)c, 40)c, 41)b, 42)a, 43)c, 44)d, 45)a, 46)a, 47)d, 48)c, 49)b, 50)c</p>";
+    }else if(modequestion == 2){
+	    quizbox.innerHTML = "<h1 onclick='showScores();'> WHITE LOTUS Quiz<br>Answer Sheet</h1><br><p class='anssheet'>1)b, 2)c, 3)b, 4)a, 5)c, 6)a, 7)c, 8)b, 9)a, 10)b, 11)d, 12)a, 13)b, 14)c, 15)c, 16)b, 17)b, 18)b, 19)b, 20)c, 21)b, 22)d, 23)b, 24)c, 25)c, 26)a, 27)a, 28)c, 29)a, 30)c, 31)d, 32)c, 33)c, 34)b, 35)a, 36)b, 37)c, 38)b, 39)c, 40)c, 41)b, 42)a, 43)c, 44)d, 45)a, 46)a, 47)d, 48)c, 49)b, 50)c</p>";
+    }else{
+        quizbox.innerHTML = "<h1 onclick='showScores();'> WHITE LOTUS Quiz<br>Answer Sheet</h1><br><p class='anssheet'>1)b, 2)c, 3)b, 4)a, 5)c, 6)a, 7)c, 8)b, 9)a, 10)b, 11)d, 12)a, 13)b, 14)c, 15)c, 16)b, 17)b, 18)b, 19)b, 20)c, 21)b, 22)d, 23)b, 24)c, 25)c, 26)a, 27)a, 28)c, 29)a, 30)c, 31)d, 32)c, 33)c, 34)b, 35)a, 36)b, 37)c, 38)b, 39)c, 40)c, 41)b, 42)a, 43)c, 44)d, 45)a, 46)a, 47)d, 48)c, 49)b, 50)c</p>";
+    }
+}
+function restart(){
+	quizbox = document.getElementById("quiz");
+	quizbox.innerHTML = "<h1 onclick='anssheet();'> WHITE LOTUS Quiz<br>(Sub- Green Enviorment) </h1><hr style='margin-bottom: 20px'><p id='question'><span class='aler'>System fail, please start manually!</span><br>This device not able to load quiz.vul.js file</p><div class='button'><button id='bt0'> <span id='choice0'> </span> </button><button id='bt1'> <span id='choice1'> </span> </button><button id='bt2'> <span id='choice2'> </span> </button><button id='bt3'> <span id='choice3'> </span> </button></div><hr style='margin-top: 50px'><footer><p id='progress'> Question 0 of 00</p></footer>";
+	requestion();
+}
+function requestion(){
+	var element = document.getElementById("question");
+    element.innerHTML = quiz.getQuestionIndex().text;
+    var choices = quiz.getQuestionIndex().choices;
+    for(var i = 0; i < choices.length; i++){
+        document.getElementById("choice" + i).innerHTML = choices[i];
+        guess("bt" + i, choices[i]);
+    }
+    showProgress();
+}
+</script>
+<script>
+    const reviews = [
+      {
+        id: 1,
+        name: "Kousick Biswas",
+        job: "Student",
+        rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star"></i>`,
+        img:
+          "./img/user(kousick).png",
+        text:
+          "I like this website because here i check my city's daliy weathers and ozone history not only that but also i play here a quiz game related to nature. free free (•_•)"
+      },
+      {
+        id: 2,
+        name: "KING GAMER",
+        job: "Gamer",
+        rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i>`,
+        img:
+          "./img/user(king).jpg",
+        text:
+          "Hello, I am a Youtuber. I think you all know me yes I am King Gamer and I love White Lotus..."
+      },
+      {
+        id: 3,
+        name: "Dr. Anile Lama",
+        job: "Weather Scientists",
+        rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i>`,
+        img:
+          "./img/user(anil).png",
+        text:
+          "I voluntarily helped WHITE LOTUS with some weather report to build this website, so they always remembers me. Basically i am a weather scientists in Nepal and i am report this team at the first and they pulish it free of cost which i feel more attractive to them. This website look like very simple but it's not like that it is very informative and accurate, Thank you read this."
+      },
+      {
+        id: 4,
+        name: "Manish Rajput",
+        job: "Tourist Guid",
+        rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i><i class="fa fa-star"></i>`,
+        img:
+          "./img/user(manish).jpg",
+        text:
+          "I am a tour guide in rajasthan, rajasthan always a high tempareture state so hot that many people die anytime so we always have to check the weather forecast. And from there I know about this site, using it helps me a lot."
+      },
+      {
+        id: 5,
+        name: "Debosmita Mitra",
+        job: "Nurse",
+        rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i>`,
+        img:
+          "./img/user(debosmita).jpg",
+        text:
+          "Hello everyone, my self debosmita. I didn't come here mainly to see the weather forecast or I came here to play the quiz, but then when did i like it so much that i didn't know. After that i occasionally come back to it and play quizzes, look at temperature records. Finally, its design is very good and without ads and cookies so much faster then the other app I have use."
+      },
+      {
+        id: 6,
+        name: "Happy038870",
+        job: "Driver",
+        rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i>`,
+        img:
+          "https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png",
+        text:
+          ""
+      },
+      {
+        id: 7,
+        name: "David Hamsworth",
+        job: "Writer",
+        rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i>`,
+        img:
+          "./img/user(david).jpg",
+        text:
+          "Simply the best weather app l have used which is devoid of ads.lts shows weather of my city so much faster than any other apps. Great for weather ,the zoom in detailed map works exactly  for me."
+      }
+    ];
+    const img = document.getElementById("person-img");
+    const author = document.getElementById("author");
+    const job = document.getElementById("job");
+    const info = document.getElementById("info");
+    const rateinfo = document.getElementById("starclient");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+    let currentItem = 0;
+    window.addEventListener("DOMContentLoaded", () => {
+      const item = reviews[currentItem];
+      img.src = item.img;
+      author.textContent = item.name;
+      job.textContent = item.job;
+      rateinfo.innerHTML = item.rateinfo;
+      info.textContent = item.text;
+    });
+    function showPerson(person) {
+      const item = reviews[person];
+      img.src = item.img;
+      author.textContent = item.name;
+      job.textContent = item.job;
+      rateinfo.innerHTML = item.rateinfo;
+      info.textContent = item.text;
+    }
+    nextBtn.addEventListener("click", () => {
+      currentItem++;
+      if (currentItem > reviews.length - 1) {
+        currentItem = 0;
+      }
+      showPerson(currentItem);
+    });
+    prevBtn.addEventListener("click", () => {
+      currentItem--;
+      if (currentItem < 0) {
+        currentItem = reviews.length - 1;
+      }
+      showPerson(currentItem);
+    });
+    
+    
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&amp;subagency=GSFC" id="_fed_an_ua_tag"></script>
+</html>
