@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Latest status of weather" lang="en-us" name="description">
     <meta content="current weather, ozone hole, ozone, quiz, green environment quiz, white lotus, kidKrishkode" lang="en-us" name="keywords">
-    <title version="1.0">Weather by WhiteLotus</title>
-    <link rel="icon" href="./fav-icon/logo.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
+    <title version="1.1">Weather by WhiteLotus</title>
+    <link rel="icon" href="./fav-icon/roundlogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./origin.css">
@@ -98,6 +98,7 @@ a{
     text-shadow: 0px 0px 3px #000;
     position: absolute;
     top: 10%;
+    height: 30px;
 }
 .weathercontain p{
     color: #00ff09;
@@ -115,7 +116,7 @@ a{
 .searcharea{
     background-color: #0c8ff0;
     width: 100%;
-    height: 15%;
+    height: 100px;
 }
 .inputs{
     width: 50%;
@@ -249,6 +250,7 @@ a{
 }
 .wetmain h5{
 	color: blueviolet;
+	margin-bottom: 10px;
 }
 .wetextra{
     display: flex;
@@ -641,7 +643,7 @@ zita{
         font-size: 25px;
     }.weathercontain p{
         font-size: 16px;
-        top: 15%;
+        top: 18%;
     }.inputs{
         width: 100%;
         margin-left: 0%;
@@ -915,12 +917,24 @@ ul{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-left: 20px;
 }
+#about3 h4{
+	margin: 5px 10px;
+	color: #00ff09;
+}
 #about3 p{
     padding: 5px 5%;
     font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
 }
 #about3 p m{
     margin-left: 30px;
+}
+#about3 .fly img{
+    width: 25%;
+    height: 150px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    over-flow: hidden;
 }
 .devlopersarea{
     width: 100%;
@@ -1093,7 +1107,7 @@ hr{
         width: 92px;
     }
     .profile_card{
-        margin-left: 30px;
+        margin-left: calc((100% - 310px)/2);
     }
     #about1 img,#about2 img{
     	display: none;
@@ -1101,6 +1115,19 @@ hr{
     #about1,#about2{
         height: 250px;
         margin-bottom: 10px;
+    }
+    #about3 .fly{
+    	flex-direction: column;
+    }#about3 .fly img{
+    	width: 80%;
+        height: 200px;
+        margin: 10px 10%;
+        border-radius: 10px;
+        border: 2px solid #0c8ff0;
+        background-size: cover;
+    }
+    #about3 .fly p{
+        overflow-x: scroll;
     }
 }
 </style>
@@ -1393,8 +1420,8 @@ input:checked ~ form{
         margin-bottom: 10px;
     }
     .ratingbox{
-        width: 80%;
-        margin: 20px 10%;
+        width: 315px;
+        margin: 20px calc((100% - 315px)/2);
         padding: 10px 0px;
     }
     .star-widget form .textarea textarea,.ratingbox .star-widget div input{
@@ -1569,6 +1596,20 @@ img{
 .privacy-report h4{
 	color: #00ff09;
 }
+#spinload{
+	background: rgba(0,0,0,0.9);
+	color: #0c8ff0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	text-align: center;
+}
+#spinload I{
+	margin-top: 20%;
+}
 </style>
 <style>
 footer{
@@ -1738,6 +1779,11 @@ footer .bottom-details .bottom_text{
   footer .content .link-boxes .input-box{
     width: 40%;
     margin-top: 10px;
+  }footer .bottom-details .bottom_text{
+     padding: 20px 20px;
+  }
+  #spinload I{
+	  margin-top: 60%;
   }
 }
 @media (max-width: 700px){
@@ -1826,48 +1872,48 @@ footer .bottom-details .bottom_text{
                 <div class="wetheading"><h2>Weather Report</h2></div>
                 <div class="wetmain">
                    <div id="icon"><i class="fa fa-cloud"></i></div><br>
-                    <span id="temp">25C</span>
+                    <span id="temp">25°C</span>
                     <p id="description">hezy</p>
                     <h5 id="cityoutput">Kolkata</h5>
                 </div>
                 <div class="wetextra">
                     <div class="fly">
-                        <div class="flybox"><p id="wind">120</p></div>
-                        <div class="flybox"><p id="humi">80</p></div>
+                        <div class="flybox"><p id="wind">loading</p></div>
+                        <div class="flybox"><p id="humi">loading</p></div>
                     </div>
                     <div class="fly">
-                        <div class="flybox"><p id="pressure">1050</p></div>
-                        <div class="flybox"><p id="feelslike"><i class="fa fa-thermometer"></i>Fell temp: Nan</p></div>
+                        <div class="flybox"><p id="pressure">loading</p></div>
+                        <div class="flybox"><p id="feelslike">loading</p></div>
                     </div>
                 </div>
             </section>
             <section class="map">
                 <div class="submap">
-                    <span class="smallmap"id="mtb1">0,0</span>
-                    <span class="smallmap"id="mtb2">0,1</span>
-                    <span class="smallmap"id="mtb3">0,2</span>
-                    <span class="smallmap"id="mtb4">0,3</span>
+                    <span class="smallmap"id="mtb1">0,0<br><br>Y</span>
+                    <span class="smallmap"id="mtb2">0,1<br><br>O</span>
+                    <span class="smallmap"id="mtb3">0,2<br><br>U</span>
+                    <span class="smallmap"id="mtb4">0,3<br><br>R</span>
                     <div class="mapbtn"onclick="globeMap('temp_new');"title="Temparature Map"><i class="fa fa-thermometer"></i>Temp</div>
                 </div>
                 <div class="submap">
-                    <span class="smallmap"id="mtb5">1,0</span>
-                    <span class="smallmap"id="mtb6">1,1</span>
-                    <span class="smallmap"id="mtb7">1,2</span>
+                    <span class="smallmap"id="mtb5">1,0<br><br>N</span>
+                    <span class="smallmap"id="mtb6">1,1<br><br>E</span>
+                    <span class="smallmap"id="mtb7">1,2<br><br>T</span>
                     <span class="smallmap"id="mtb8">1,3</span>
                     <div class="mapbtn"onclick="globeMap('wind_new');"title="Wind Map"><i class="fa fa-leaf"></i>Wind</div>
                 </div> 
                 <div class="submap">
-                    <span class="smallmap"id="mtb9">2,0</span>
-                    <span class="smallmap"id="mtb10">2,1</span>
+                    <span class="smallmap"id="mtb9">2,0<br><br>I</span>
+                    <span class="smallmap"id="mtb10">2,1<br><br>S</span>
                     <span class="smallmap"id="mtb11">2,2</span>
                     <span class="smallmap"id="mtb12">2,3</span>
                     <div class="mapbtn"onclick="globeMap('clouds_new');"title="Clouds Map"><i class="fa fa-cloud"></i>Cloud</div>
                 </div>
                 <div class="submap">
-                    <span class="smallmap"id="mtb13">3,0</span>
-                    <span class="smallmap"id="mtb14">3,1</span>
-                    <span class="smallmap"id="mtb15">3,2</span>
-                    <span class="smallmap"id="mtb16">3,3</span>
+                    <span class="smallmap"id="mtb13">3,0<br><br>S</span>
+                    <span class="smallmap"id="mtb14">3,1<br><br>L</span>
+                    <span class="smallmap"id="mtb15">3,2<br><br>O</span>
+                    <span class="smallmap"id="mtb16">3,3<br><br>W</span>
                     <div class="mapbtn"onclick="globeMap('pressure_new');"title="Air Pressure Map"><i class="fa fa-globe"></i>Press</div>
                 </div>
             </section>
@@ -1886,8 +1932,8 @@ footer .bottom-details .bottom_text{
         </div>
         <div class="weathertable"id="datatable">
          	<span class="tablerow"><span class="tablehead">Terms</span><span class="tablehead"id>Value</span></span>
-         	<span class="tablerow"><span class="tableele">Temparature</span><span class="tableele m"id="m1">25</span></span>
-            <span class="tablerow"><span class="tableele">Sky Conditions</span><span class="tableele m"id="m2">clear</span></span>
+         	<span class="tablerow"><span class="tableele">Temparature</span><span class="tableele m"id="m1"></span></span>
+            <span class="tablerow"><span class="tableele">Sky Conditions</span><span class="tableele m"id="m2"></span></span>
             <span class="tablerow"><span class="tableele">Location</span><span class="tableele m"id="m3"></span></span>
             <span class="tablerow"><span class="tableele">Date</span><span class="tableele m"id="m4"></span></span>
             <span class="tablerow"><span class="tableele">Air Pressure</span><span class="tableele m"id="m5"></span></span>
@@ -1928,11 +1974,11 @@ footer .bottom-details .bottom_text{
                 <zita><m>Primary Weather data</m><m style="text-align: right;">Card</m></zita>
                 <zita><m>Location</m><m style="text-align: right;">Google Map</m></zita>
                 <zita><m>6 Days Forecast</m><m style="text-align: right;">Graph</m></zita>
-                <zita><m>Secondary Weather data</m><m style="text-align: right;">Data Table</m></zita>
+                <zita><m style="overflow-y: hidden;">Secondary Weather data</m><m style="text-align: right;">Data Table</m></zita>
                 <zita><m>Ozone data</m><m style="text-align: right;">Historical Events</m></zita>
             </div>
             <div class="api-img">
-                <img src="./fav-icon/img001.png">
+                <img src="./fav-icon/img001.png"alt="loading..">
             </div>
         </div>
         <section class="serviceoffers" id="servicediv">
@@ -2014,7 +2060,7 @@ footer .bottom-details .bottom_text{
                             </div>
                             <div class="col-lg-11 col-10">
                               <h2>Current Weather</h2>
-                              <p>Here we provide our followers with all the 
+                              <p style="text-align: justify;">Here we provide our followers with all the 
                                 useful information about today's weather 
                                 absolutely free. In particular, the important 
                                 points of the day such as temperature, wind 
@@ -2031,13 +2077,13 @@ footer .bottom-details .bottom_text{
                             </div>
                             <div class="col-lg-11 col-10">
                               <h2>Global Location</h2>
-                              <p>When we see something at eye level we understand 
-                                    it better, so with that in mind here is the world map.
-                                    Temperature, wind current, cloud position etc. are all 
-                                    understood by this map. And there is also a map of a 
-                                    particular place but it is available only if you subscribe 
-                                    to us. Also, the map used by the public provides weather 
-                                    forecasts for the entire world.
+                              <p style="text-align: justify;">When we see something at eye level we understand 
+                                it better, so with that in mind here is the world map.
+                                Temperature, wind current, cloud position etc. are all 
+                                understood by this map. And there is also a map of a 
+                                particular place but it is available only if you subscribe 
+                                to us. Also, the map used by the public provides weather 
+                                forecasts for the entire world.
                                 </p>
                             </div>
                         </div>
@@ -2047,7 +2093,7 @@ footer .bottom-details .bottom_text{
                             </div>
                             <div class="col-lg-11 col-10">
                               <h2>Weekly Forecast</h2>
-                              <p>Basically we provide our audience with the information 
+                              <p style="text-align: justify;">Basically we provide our audience with the information 
                                 about the upcoming 6 days weather of given location, where
                                 a beautiful line-graph is given of the average temperature 
                                 of those 6 days. Since the weather changes at any time, it 
@@ -2067,13 +2113,13 @@ footer .bottom-details .bottom_text{
                                 </div>
                                 <div class="col-lg-11 col-10">
                                   <h2>Ozone Forecast</h2>
-                                  <p>We all know the importance of ozone gases in our 
-                                        earth's atmosphere. So we need to know the changes 
-                                        in ozone gas level due to constant pollution so that 
-                                        we can be aware. So this ozone gas data is interpreted 
-                                        with historical events and some data of the previous month.
-                                        So this whole thing is shown here with some pictures and 
-                                        illustrations which will change from time to time.</p>
+                                  <p style="text-align: justify;">We all know the importance of ozone gases in our 
+                                    earth's atmosphere. So we need to know the changes 
+                                    in ozone gas level due to constant pollution so that 
+                                    we can be aware. So this ozone gas data is interpreted 
+                                    with historical events and some data of the previous month.
+                                    So this whole thing is shown here with some pictures and 
+                                    illustrations which will change from time to time.</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -2082,7 +2128,7 @@ footer .bottom-details .bottom_text{
                                 </div>
                                 <div class="col-lg-11 col-10">
                                   <h2>Environment Quiz</h2>
-                                  <p>
+                                  <p style="text-align: justify;">
                                     Here is a very nice and informative quiz present. The 
                                     main reason for its existence is to increase public
                                     awareness towards the environment So that everyone 
@@ -2099,14 +2145,14 @@ footer .bottom-details .bottom_text{
                                 </div>
                                 <div class="col-lg-11 col-10">
                                   <h2>Videoes</h2>
-                                  <p>There are very nice videos on weather or how to use 
-                                         this web etc on our youtube channel also some videos 
-                                         can be seen here. Through these videos you can gain a 
-                                         vast knowledge on our content. Not only this, this information 
-                                         can also play a very important role in your daily life. Our own 
-                                         developers have made these videos for us or you so that you can 
-                                         get a better understanding of this web. And if you like these 
-                                         videos, they will make more videos like this in future.</p>
+                                  <p style="text-align: justify;">There are very nice videos on weather or how to use 
+                                    this web etc on our youtube channel also some videos 
+                                    can be seen here. Through these videos you can gain a 
+                                    vast knowledge on our content. Not only this, this information 
+                                    can also play a very important role in your daily life. Our own 
+                                    developers have made these videos for us or you so that you can 
+                                    get a better understanding of this web. And if you like these 
+                                    videos, they will make more videos like this in future.</p>
                                 </div>
                             </div>
                         </div>
@@ -2119,7 +2165,7 @@ footer .bottom-details .bottom_text{
             <div class="sideheadtext">
               <div class="center-div">
                  <h2>WHITE LOTUS</h2>
-                  <p><m>“</m> Space is the study of everything in the<br> universe that's beyond our own mind <m>”</m></p><br>
+                  <p><m>“</m> Nature is the study of everything in the<br> universe that's beyond our own mind <m>”</m></p><br>
                   <div class="sideheadbtn">
                    <a href="#"onclick="aboutpage();">ABOUT US</a>
                    <a href="#"onclick="contactpage();">JOIN US</a>
@@ -2181,7 +2227,7 @@ footer .bottom-details .bottom_text{
                   Near the Earth's surface, those reactions cause rubber to crack, hurt plant life, and damage people's lung tissues. 
                   But ozone also absorbs harmful components of sunlight, known as “ultraviolet B”, or “UV-B”. High above the surface, 
                   above even the weather systems, a tenuous layer of ozone gas absorbs UV-B, protecting living things below.</p>
-              <img src="./fav-icon/ozone_diagrame.png">
+              <img src="./fav-icon/ozone_diagrame.png"alt="loading">
              </div>
              <div class="litrature"><h3>Roll of Ozone:</h3>
             <p><m>The </m>Earth's atmosphere is composed of several layers. Most atmospheric ozone is concentrated in a 
@@ -2208,7 +2254,7 @@ footer .bottom-details .bottom_text{
                     Ozone depletion consists of two related events observed since the late 1970s: a steady lowering of about four percent in 
                      the total amount of ozone in Earth's atmosphere, and a much larger springtime decrease in stratospheric ozone around 
                      Earth's polar regions. The latter phenomenon is referred to as the ozone hole.<br>
-                     <img src="./fav-icon/ozone_depletion.png"><br>
+                     <img src="./fav-icon/ozone_depletion.png"alt="loading"><br>
                      The main causes of ozone depletion and the ozone hole are manufactured chemicals, especially manufactured 
                      halocarbon refrigerants, solvents, propellants, and foam-blowing agents (chlorofluorocarbons (CFCs), HCFCs, halons), 
                      referred to as ozone-depleting substances (ODS).<br>
@@ -2216,7 +2262,7 @@ footer .bottom-details .bottom_text{
                      use HCFCs or CFCs as propellants. Conduct regular inspection and maintenance of air-conditioning and refrigeration 
                      appliances to prevent and minimize refrigerant leakage.</p>
               </div>
-              <img src="./fav-icon/ozone_history19to20.jpg"id="ozone_history19to20">
+              <img src="./fav-icon/ozone_history19to20.jpg"id="ozone_history19to20"alt="loading">
         </div>
         <div style="color: #fff;text-align: center;font-size: medium;background-color: #0c8ff0;width: 100%;height: auto;padding: 5px 10px;margin:20px 0px;">
             <p style="margin-bottom: 2px;">If you want to advertise your company in this website, you can contact us, we do it at very low cost.
@@ -2296,7 +2342,7 @@ footer .bottom-details .bottom_text{
             <div class="headertext">
               <div class="center-div">
                  <h2>WHITE LOTUS</h2>
-                  <p><m>“</m> Space is the study of everything in the<br> universe that's beyond our own mind <m>”</m></p><br>
+                  <p><m>“</m> Nature is the study of everything in the<br> universe that's beyond our own mind <m>”</m></p><br>
                   <div class="headerbtn">
                    <a href="#ratedareas"onclick="contactpage();">RATE</a>
                    <a href="#"onclick="myquiz();">QUIZ</a>
@@ -2359,13 +2405,37 @@ footer .bottom-details .bottom_text{
                 green event(like: blood donation, tree planting, etc) our listeners. So we are making this website for many needs 
                 and requests of our audience so that they can keep an eye on all our knowledge from one place. The next reason is 
                 that, we have the greentech fest in our collage and our topic is made website where we show the current weather 
-                and green related quiz.</p>
+                and green related quiz.</p><br>
+                <h4>Data Support:</h4>
+                <div class="fly"><p><b>1) INSAT-3DR</b><br>
+                          <m>SATCAT no:  41752</m><br>
+                          <m>Reference system:  Geocentric</m><br>
+                          <m>Regime:  Geostationary</m><br>
+                          <m>Access key:  698d36hi1&d7nJhs_yihd42!um8525bo6Fdg********hu76n9a$re0t3</m><br>
+                          <m><a href="https://en.m.wikipedia.org/wiki/File:Future_ozone_layer_concentrations.gif">More..</a></m>
+                          </p>
+                          <img src="./fav-icon/insat.jpg"alt="loading.."width="25%">
+                </div>
+                <div class="fly"><p><b>2) GSAT-6</b><br>
+                	<m>Reference system:  Geocentric</m><br>
+                    <m>Slot:  83°E </m><br>
+                    <m>Access key:  ik85b********y6Dwtj26p0hbri8</m><br>
+                    <m><a href="https://en.m.wikipedia.org/wiki/File:Future_ozone_layer_concentrations.gif">More..</a></m>
+                    </p>
+                    <img src="./fav-icon/insat.jpg"alt="loading.."width="25%">
+                </div>
+                <div class="fly"><p><b>3) NOAA-M</b><br>
+                    <m>Access key:  09ufot4a$eu9@ppg_di9********7el9a1gb5</m><br>
+                    <m><a href="https://en.m.wikipedia.org/wiki/File:Future_ozone_layer_concentrations.gif">More..</a></m>
+                    </p>
+                	<img src="./fav-icon/insat.jpg"alt="loading.."width="25%">
+                </div><br>
         </div>
         <div class="halfheader">
             <div class="headertext">
               <div class="center-div">
                  <h2>WHITE LOTUS</h2>
-                  <p><m>“</m> Space is the study of everything in the<br> universe that's beyond our own mind <m>”</m></p><br>
+                  <p><m>“</m> Nature is the study of everything in the<br> universe that's beyond our own mind <m>”</m></p><br>
                   <div class="headerbtn">
                    <a href="#ratedareas"onclick="contactpage();">RATE</a>
                    <a href="#"onclick="myquiz();">QUIZ</a>
@@ -2447,7 +2517,7 @@ footer .bottom-details .bottom_text{
                         <textarea readonly>Hi, My self Hritick Modak and I am a frontend web developer, I do very professionaly my jobs.</textarea>
                         <m><ul><li>HTML-CSS-JS</li><li>C and C++</li><li>Pythone</li><li>R</li></ul>
                         <ul><li>Java</li></ul></m>
-                        <zita><a href="#"onclick="notvalid();">Hire Me</a><a href="mailto:modakhritick@gmail.com?&Subject=User inquary from Weather by WHITE LOTUS.&body=My Name is*:          ,My phone number is:        ,My comment is*:     .">Contact Me</a></zita>
+                        <zita><a href="#"onclick="notvalid();">Hire Me</a><a href="mailto:modakhritick@gmail.com?&Subject=User inquary from Weather by WHITE LOTUS.&body=My Name is*:          ,My phone number is:        ,My comment is*:     ."target="_blank">Contact Me</a></zita>
                     </div>
                     <hr>
                     <ul class="social-media-icons"style="margin-bottom:2px;">
@@ -2465,7 +2535,7 @@ footer .bottom-details .bottom_text{
                         </li>
                     </ul>
                 </div>
-                <div class="profile_card">
+                <div class="profile_card"id="krish">
                     <div class="user_img">
                         <img src="./fav-icon/Krishdp.jpg" height="100" width="100" alt="profile">
                     </div>
@@ -2476,7 +2546,7 @@ footer .bottom-details .bottom_text{
                         <textarea readonly>Ahoy hoy everyone, my self Krishnendu Mitra, and I'm a freelance web Developer with extensive experience for over 5 years. My expertise is to create and website design, thumbnails design, poster making and many more. In past I am work with world's famous companies like Alphabet and Edequ. I do my job very professionaly and smartways...</textarea>
                         <m><ul><li>HTML-CSS-JS</li><li>Node js</li><li>React app</li><li>PHP</li></ul>
                         <ul><li>PyScript</li><li>C and C++</li><li>Json</li></ul></m>
-                        <zita><a href="#"onclick="notvalid();">Hire Me</a><a href="mailto:krishnendumitra24@gmail.com?&Subject=User inquary from Weather by WHITE LOTUS.&body=My Name is*:          ,My phone number is:        ,My comment is*:     .">Contact Me</a></zita>
+                        <zita><a href="#"onclick="notvalid();">Hire Me</a><a href="mailto:krishnendumitra24@gmail.com?&Subject=User inquary from Weather by WHITE LOTUS.&body=My Name is*:          ,My phone number is:        ,My comment is*:     ."target="_blank">Contact Me</a></zita>
                     </div>
                     <hr>
                     <ul class="social-media-icons"style="margin-bottom:2px;">
@@ -2508,7 +2578,7 @@ footer .bottom-details .bottom_text{
                 <div class="condetail">
                     <h6>Contact Details</h6>
                     <hr>
-                    <p><b>Email id:</b> krishnendumitra24@gmail.com</p>
+                    <p><b>Email id:</b> info.WhiteLotus24@gmail.com</p>
                     <p><b>Address:</b> Camellia Institute of Technology, Digberia, Badu Road, Near NSG Hub, Madhyamgram, 
                         Kolkata,West Bengal 700129</p>
                     <p><b>Other Address:</b> Mitra Bishram</p>
@@ -2518,7 +2588,7 @@ footer .bottom-details .bottom_text{
             </div>
             <div class="rt">
                 <div id="formbox">
-                    <form class="form-horizontal" method="post" action="contact.php">
+                    <form class="form-horizontal"method="POST" action="mailto:info.WhiteLotus24@gmail.com?Subject=inquary purpose"enctype="multipart/form-data">
                         <div class="form-group">
                             <p>Your Name:</p>
                           <div class="col-sm-12">
@@ -2592,7 +2662,7 @@ footer .bottom-details .bottom_text{
                personal data. This privacy notice will inform you as to how we look after your 
                personal data when you visit our website (regardless of where you visit it from) 
                and tell you about your privacy rights and how the law protects you, only and
-               only when you maintain the given <I><a href="#terms">Terms</a></I> points 
+               only when you maintain the given <I><a href="#privacy-terms">Terms</a></I> points 
                in that condition.</p>
          <h4><u>THIRD-PARTY LINKS:</u></h4>
          <p><m>This</m> website may include links to third-party websites, plug-ins and applications. 
@@ -2613,7 +2683,7 @@ footer .bottom-details .bottom_text{
                 when websites set or access cookies. If you disable or refuse cookies, please 
                 note that some parts of this website may become inaccessible or not function 
                 properly.</p>
-         <h4>Refund or Settlement</h4>
+         <h4><u>Refund or Settlement:</u></h4>
          <p><m>WHITE LOTUS</m> has not consented to refund or sattlement with any user for any 
                 reason. Thats way if any user want to refund then accroding to this law WHITE
                 LOTUS not give any money back to him/her.</p>
@@ -2672,33 +2742,15 @@ footer .bottom-details .bottom_text{
     <section class="quizdoc">
         <span id="quizdocapi"></span>
     </section>
-<!--1)INSAT-3DR
-SATCAT no.	41752
-Reference system	Geocentric
-Regime	Geostationary
-Longitude	74° E
-https://en.wikipedia.org/wiki/File:INSAT_3DR_Deployed_View.jpg
-2)GSAT-6
-Reference system	Geocentric
-Regime	Geostationary
-Slot	83°E (Planned)
-https://en.wikipedia.org/wiki/File:GSAT-6A_Undergoing_Acoustic_Test.jpg
-3)NOAA-M
-https://en.wikipedia.org/wiki/File:NOAA-M.jpg
-
-1) Current Weather
-Here we provide our followers with all the useful information about today's weather absolutely free. In particular, the important points of the day such as temperature, wind speed, amount of rain, sunsets time etc. are arranged at that particular section. From where we all can know about the state of our nature and take proper action when needed.
-2) Global Map
-3) Weekly forecast
-Basically we provide our audience with the information about the upcoming 6 days weather of given location, where a beautiful line-graph is given of the average temperature of those 6 days. Since the weather changes at any time, it is not always possible to provide accurate information for all places, so the average temperature information is given based on long-term research.
-4) Ozone forecast
-5) Quize
-6) Video
-Leaving everything behind, people are fleeing conflict in Ukraine. They need shelter, food, and water. When you subscribe to our service, you can join us to help with donation of just of £20.
-Openweather will add £40 to each donation and send it to Disastrous Emergency Committee’s (DEC) Ukrainian Humanitarian Appeal.
+ <!--
+sections ending for football.
 -->
     <div class="scrolltop float-right">
 	    <i class="fa fa-arrow-up" onclick="topFunction();" id="topBtna"></i>
+    </div>
+    <div id="spinload">
+    	<I class="fa-5x fa fa-spinner fa-spin"style="color:#fff;"></I><br>
+    	<p id="spinnertext">loading...</p>
     </div>
     <footer id="footer-page">
         <div class="content">
@@ -2734,7 +2786,7 @@ Openweather will add £40 to each donation and send it to Disastrous Emergency C
               <li class="link_name">Account</li>
               <li><a href="#"onclick="notvalid();">Profile</a></li>
               <li><a href="#"onclick="notvalid();">My account</a></li>
-              <li><a href="#"onclick="notvalid();">Prefrences</a></li>
+              <li><a href="./PStorebyWhiteLotus.html"title="prefrences inventory, products">Product/Prefrences</a></li>
               <li><a href="#"onclick="notvalid();">Purchase</a></li>
             </ul>
             <ul class="box">
@@ -2747,7 +2799,7 @@ Openweather will add £40 to each donation and send it to Disastrous Emergency C
             <ul class="box input-box">
               <li class="link_name">About White Lotus</li>
               <li>First of all, it is better to say that our WHITE LOTUS was established in 14 February 2023. So it didn't take us 
-                long for this team to come into existence. <span onclick="aboutpage();"style="cursor: pointer;">See more..</span></li>
+                long for this team to come into existence. <a href="#about3" onclick="aboutpage();"style="cursor: pointer;">See more..</a></li>
             </ul>
           </div>
         </div>
@@ -2782,6 +2834,10 @@ function convertion(val){
     return (val - 273).toFixed(2)
 }
 btn.addEventListener('click', function(){
+    if(inputval.value == ''){
+        alert("Please search a city name, searchbox is empty..");
+        return;
+    }
   fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputval.value+'&appid='+apik)
   .then(res => res.json())
   .then(data => 
@@ -2816,10 +2872,16 @@ var v = 1;
 let quip = 0;
 let boxa = document.getElementById("navelement");
 function statup(){
-    firstSearch();
+	firstSearch();
+	if(document.getElementById("cityoutput").innerHTML != 'kolkata'){
+		document.getElementById("spinload").style.display = 'none';
+	}else{
+		document.getElementById("spinload").style.display = 'block';
+	}
     let slider = document.getElementById("ststimg");
     setTimeout(function of(){
         slider.innerHTML = "<img src='./fav-icon/effect002.jpg'class='abja'>";
+        document.getElementById("spinnertext").innerHTML = `Wait your internet is too much slow, we are loading our data..`;
     },10000);
     setTimeout(function of(){
         slider.innerHTML = "<img src='./fav-icon/effect0025.jpg'class='abja'>";
@@ -2831,10 +2893,17 @@ function statup(){
         slider.innerHTML = "<img src='./fav-icon/effect003.jpg'class='abja'>";
     },80000);
     setTimeout(function of(){
-        slider.innerHTML = "<img src='./fav-icon/effect001.jpg'class='abja'>";
+        slider.innerHTML = "<img src='./fav-icon/effect005.jpg'class='abja'>";
     },120000);
+    setTimeout(function of(){
+        slider.innerHTML = "<img src='./fav-icon/effect001.jpg'class='abja'>";
+    },160000);
+    setTimeout(function of(){
+        slider.innerHTML = "<img src='./fav-icon/effect004.jpg'class='abja'>";
+    },200000);
     generateCaptcha();
     document.getElementById("mylocation").innerHTML = window.location;
+    linkchecker();
 }
 function firstSearch(){
 	fetch('https://api.openweathermap.org/data/2.5/weather?q=Kolkata&appid=3045dd712ffe6e702e3245525ac7fa38')
@@ -3112,6 +3181,45 @@ function deviceCheck(details){
           document.getElementById("mydevicedata").innerHTML = `<li>You are using <b>Desktop</b></li>`; 
      }
 }
+function linkchecker(){
+    var currentLink = window.location;
+    var currentPath = currentLink['href'];
+    let j = currentLink['pathname'];
+    if(currentPath == j){
+        return;
+    }else{
+        if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#about3`){
+            aboutpage();
+            href = '#about3';
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#privacy-terms`){
+            showprivacy();
+            href='#privacy-terms';
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#about-us`){
+            aboutpage();
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#contact-us`){
+            contactpage();
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#myquiz`){
+            myquiz();
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#add`){
+            mainpage();
+            href = '#add';
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#myChart`){
+            mainpage();
+            href = '#myChart';
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#home_images`){
+            mainpage();
+            href = '#home_images';
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#product`){
+            window.location = "./PStorebyWhiteLotus.html";
+        }else{
+            console.log("Link not protected!");
+        }
+    }
+    /*
+    currentPath = https://.../#about3;
+    j = https://.../;
+    */
+}
 function notvalid(){
     alert("This feature is not avalible now!");
 }
@@ -3143,6 +3251,7 @@ function CheckValidCaptcha(){
     if(string1 == string2){
         document.getElementById('success').innerHTML = "Captcha enter Successfully";
         alert("Are you sure to send this message? Press Ok for confirmation..");
+        sendEmail();
         return true;
     }else{
         let errcodes = "Please Enter a Valid Captcha Mr./Ms. "+document.getElementById('name').value+" ";
@@ -3428,11 +3537,21 @@ function requestion(){
         id: 7,
         name: "David Hamsworth",
         job: "Writer",
-        rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i>`,
+        rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i>`,
         img:
           "./img/user(david).jpg",
         text:
           "Simply the best weather app l have used which is devoid of ads.lts shows weather of my city so much faster than any other apps. Great for weather ,the zoom in detailed map works exactly  for me."
+      },
+      {
+        id: 8,
+        name: "Biswajit Dutta",
+        job: "Self Employe",
+        rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>`,
+        img:
+          "./img/user(unknown).png",
+        text:
+          "I am not like this type of presention.. I think the graph and map is made better for show us. If you read it then go and made it better i am not understand it."
       }
     ];
     const img = document.getElementById("person-img");
@@ -3473,8 +3592,6 @@ function requestion(){
       }
       showPerson(currentItem);
     });
-    
-    
 </script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&amp;subagency=GSFC" id="_fed_an_ua_tag"></script>
 </html>
