@@ -103,24 +103,28 @@ Our Developers:
 ------------------------------------------------------------------------------
 
 (1)Sovik Kar(FRONTEND WEB DEVELOPER)
+
 Design Websites and Web Templates.
 Hi, my name is Souvik Kar, and I am a frontend web 
 developer.
 =>HTML-CSS-JS,C and C++,Python,Java,Logo,Photoshope
 
 (2)Rajanya Chakraborty(WEB CONTENT WRITER)
+
 Narrate the web Paragraphs and design artistic framwork
 Hello everyone, I am Rajanya Chakraborty, and I am work
 here as a Website Content Writer.
 =>C and C++,Python,Canva,Photoshope,Litrature,Music
 
 (3)Hritick Modak(FRONTEND WEB DEVELOPER)
+
 Design Websites and Web Templates, Thumbnails.
 Hi, My self Hritick Modak and I am a frontend web developer, 
 I do very professionaly my jobs.
 =>HTML-CSS-JS,C and C++,Pythone,R,Java
 
 (4)Krishnendu Mitra(FULLSTACK WEB DEVELOPER)
+
 Develop's Dynamic Websites and Design Web Templates, Thumbnails.
 Ahoy hoy everyone, my self Krishnendu Mitra, and I'm a freelance 
 web Developer with extensive experience for over 5 years. My 
@@ -184,7 +188,7 @@ WEBSITE.
 
 ------------------------------------------------------------------------------
 
-                            PRIVACY POLICY
+PRIVACY POLICY
 ------------------------------------------------------------------------------
 
 INTRODUCTION:
@@ -230,7 +234,7 @@ LOTUS not give any money back to him/her.
 
 ------------------------------------------------------------------------------
 
-                                TERMS
+TERMS
 ------------------------------------------------------------------------------
 
 Updated Browser:
@@ -262,4 +266,4 @@ then it, etc.
 
 ------------------------------------------------------------------------------
 
-                            Thank you
+Thank you
