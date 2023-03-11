@@ -6,7 +6,7 @@ quiz in a fast and elegant way.
 -----------------------------------------------------------------------------
 
 
-                    WHAT TO DO WE OFFER
+                            WHAT TO DO WE OFFER
 ------------------------------------------------------------------------------
 Here is a brief outline of what we want to serve to our audience
 ------------------------------------------------------------------------------
@@ -50,6 +50,7 @@ environment So that everyone can think about the good and bad of
 the environment to make our world more beautiful. Sometimes special 
 quizzes are organized where certificates are given to those who win 
 that quiz.
+
 ------------------------------------------------------------------------------
 
 About WHITE LOTUS:
@@ -89,6 +90,7 @@ loading..
 loading..
 (3) NOAA-M
     Access key: 09ufot4a$eu9@ppg_di9********7el9a1gb5
+
 ------------------------------------------------------------------------------
 
 Our Developers:
@@ -120,6 +122,7 @@ Our Developers:
     companies like Alphabet and Edequ. I do my job very professionaly 
     and smartways...
     =>HTML-CSS-JS,Node js,React app,PHP,PyScript,C and C++,Json
+
 ------------------------------------------------------------------------------
 
 Contact us:
@@ -130,10 +133,12 @@ Near NSG Hub, Madhyamgram, Kolkata,West Bengal 700129
 Other Address: Mitra Bishram
 Time: 9:00am to 6:00pm
 Website: https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/
+
 ------------------------------------------------------------------------------
 
 Technology use:
     HTML + CSS + JAVASCRIPT + RAPIDAPI + BOOTSTRAP + PHP etc..
+
 ------------------------------------------------------------------------------
 
 License:
@@ -158,6 +163,7 @@ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
 OUT OF OR IN CONNECTION WITH THE WEBSITE OR THE USE OR OTHER DEALINGS IN THE 
 WEBSITE.
+
 ------------------------------------------------------------------------------
 
                             PRIVACY POLICY
@@ -198,6 +204,7 @@ Refund or Settlement:
     WHITE LOTUS has not consented to refund or sattlement with any user for any 
 reason. Thats way if any user want to refund then accroding to this law WHITE 
 LOTUS not give any money back to him/her.
+
 ------------------------------------------------------------------------------
 
                                 TERMS
@@ -228,6 +235,7 @@ update your Operating system.
 In Computer or Laptop use Windows 11 or higer versions, Linux, etc.
 In Smartphone use Android version 12 or more then it, iOS version 16.3.1 or more 
 then it, etc.
+
 ------------------------------------------------------------------------------
 
 
