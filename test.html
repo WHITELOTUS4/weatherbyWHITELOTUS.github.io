@@ -1,1982 +1,555 @@
-<html lang="en-us"><head>
-  <title>
-    NASA Ozone Watch: Latest status of ozone
-  </title>
-  
-  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
-  
-  <meta content="Latest status of ozone" lang="en-us" name="description">
-  
-  <meta content="ozone hole, ozone watch, ozone, goddard, gsfc, nasa" lang="en-us" name="keywords">
-
-  <link href="/Styles/o3watch.css" rel="stylesheet" type="text/css">
-
-  <link href="/Styles/maps.css" rel="stylesheet" type="text/css">
-
-  <link href="/Styles/home.css" rel="stylesheet" type="text/css">
-
-  <script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&amp;subagency=GSFC" id="_fed_an_ua_tag"></script>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Latest status of weather" lang="en-us" name="description">
+    <meta content="weather, WhiteLotus products, Amazing products, question papers, ozone, quiz, programs, white lotus, kidKrishkode" lang="en-us" name="keywords">
+    <title version="1.0">Try</title>
+    <link rel="icon" href="./fav-icon/roundlogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./origin.css">
 </head>
 <style>
-/*
-  Cascading Style Sheet for the Ozone Watch web site:
-    http://ozonewatch.gsfc.nasa.gov/
-
-  Written by:
-    Eric Nash
-      
-  Original development by:
-    Robert Simmon
-    Leslie Lait
-
-   Revision history:
-      $Log: o3watch.css,v $
-*/
-
-/*********** Home Page Specific ************/
-
-/*
-  This holds the intro text, the news items, the animation links, the
-  data source links, and the ozone facts. We float it all the way to the
-  right. The rest of the page is floated left with a fixed size. We let
-  this expand to the size of the window
-*/
-#home_text
-{
-  float : right;
-  top : 0;
-  width : 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-/*
-  This is the intro section. We set it to start past the left column.
-*/
-#home_intro
-{
-  margin : 0 0 0 488px;
+body{
+    background: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
-
-/*
-  This is the news section. It follows the intro section. We space it a
-  bit downward and set it to start past the left column.
-*/
-#home_news
-{
-  margin : 2em 0 0 488px;
+a{
+	text-decoration: none;
 }
-
-/*
-  This is the animation links section. It follows the news section. We
-  space it a bit downward and set it to start past the left column.
-*/
-#home_animation
-{
-  margin : 2em 0 0 488px;
+.navber{
+    display: none;
 }
-
-/*
-  This is the data source links section. It follows the animation
-  section. We space it a bit downward and set it to start past the left
-  column.
-*/
-#home_sources
-{
-  margin : 2em 0 0 488px;
+#navelement{
+    width: 30%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    color: #0c8ff0;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px 5px;
+    position: absolute;
+    top: 6%;
+    right: 0%;
+    z-index: -5;
+    opacity: -2;
 }
-
-/*
-  Put a bit of vertical space between the outer link items.
-*/
-#home_sources>ul>li
-{
-  margin : 0.5em 0 0 0;
+.element{
+    margin: 8px 2px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    cursor: pointer;
 }
-
-/*
-  No extra vertical space before the inner link items.
-*/
-#home_sources>ul>li ul
-{
-  margin : 0 0 0 0;
+.flp{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #0c8ff0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #212121;
+    padding: 5px 8px;
 }
-
-/*
-  Put a bit of horizontal space before the inner link items.
-*/
-#home_sources>ul>li li
-{
-  margin : 0 0 0 1em;
+.flp span img{
+    width: 35px;
+    height: 35px;
+    margin-right: 3px;
+    cursor: progress;
+    border-radius: 50%;
 }
-
-/*
-  This is the ozone facts section. It follows the data source section.
-  We space it a bit downward, put space below it, and set it to start
-  past the left column.
-*/
-#home_facts
-{
-  margin : 2em 0 1em 488px;
+.iconholder{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-
-/*
-  This holds the main image along with the year-to-date and annual
-  records sparkline plots. We place this to the left by doing a trick to
-  float these to right with a fixed size and set the left margin to the
-  fixed size, since we know the width of the images. Image backgrounds
-  are white, so we leave this background white, also. 
-*/
-#home_images
-{
-  float : right;
-  left : 0;
-  margin : 0 -348px 0 0;
-  top : 0;
-  width : 348px;
+.rtp{
+    margin-top: 6px;
+    cursor: pointer;
 }
-
-#home_intro_first
-{
-  display : inline-block;
-  font-size : 3em;
+#topBtna{
+	display: none;
+	width: 30px;
+	position: fixed;
+	bottom: 20px;
+	right: 40px;
+	z-index: 99;
+	border: none;
+	color: #fff;
+	background: #0c8ff0;
+	padding: 10px 8px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px #999;
 }
-
-/*
-  This holds the sparkline plots and it follows the main image caption.
-*/
-#home_met
-{
-  left : 0;
+#topBtna:hover{
+	color: #0c8ff0;
+	background: #fff;
 }
-
-/*
-  This holds the text and plot image for the daily time history for this
-  season, year-to-date.
-*/
-#home_ytd
-{
-  float : left;
-  margin : 2em 0 0 0;
+@media only screen and (max-width: 900px){
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden!important;
+    }.rtp, .iconholder{
+        display: none;
+    }.flp span img{
+    	width: 45px;
+         height: 45px;
+    }.navber{
+        display: block;
+        width: 10%;
+        border: 1px solid #fff;
+    }.ber{
+        background-color: #fff;
+        width: 80%;
+        height: 5px;
+        margin: 20% 10%; 
+    }
 }
-
-/*
-  This holds the text and plot image for the annual statistics. We need
-  to clear to the left to guarantee that it falls below the year-to-date
-  block. 
-*/
-#home_annual
-{
-  float : left;
-  margin : 0 0 0 0;
+#spinload{
+	background: rgba(0,0,0,0.7);
+	color: #0c8ff0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	text-align: center;
 }
-
-/*
-  This holds the previous week's images. We use another trick to place
-  this in between the two columns. We  float these to right with a fixed
-  size and set the left margin to the fixed size for this column + the
-  left column, since we know the width of the images. Image backgrounds
-  are white, so we leave this background white, also. 
-*/
-#last_week
-{
-  background : #FFFFFF;
-  float : right;
-  left : 0;
-  margin : 0 -478px 0 0;
-  padding : 0 0 0 0;
-  top : 0;
-  width : 120px;
+#spinload I{
+	margin-top: 20%;
 }
-
-/*
-  Special code to handle  
-*/
-* html #last_week
-{
-	left : 348px;
+footer{
+  position: relative;
+  background: #212121;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
-
-#last_week ul
-{
-  display : inline;
+footer::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 1px;
+  width: 100%;
+  background: #AFAFB6;
 }
-
-#last_week ul li
-{
-  margin : 0 5px 0 0;
-  text-align : right;
+footer .content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
 }
-
-#last_week ul li.last_week_date
-{
-  margin : -0.5em 0 0 0.5em;
-  text-align : left;
+footer .content .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
-
-/*
-  Don't print animation links.
-*/
-@media print
-{
-  #home_animation
-  {
-    display : none;
+.content .top .logo-details{
+  color: #fff;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.content .top .logo-details img{
+    width: 35px;
+    height: 35px;
+    margin-right: 3px;
+    cursor: progress;
+    border-radius: 50%;
+}
+.content .top .media-icons{
+  display: flex;
+}
+.content .top .media-icons a{
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 8px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.top .media-icons a:nth-child(1){
+  background: #4267B2;
+}
+.top .media-icons a:nth-child(1):hover{
+  color: #4267B2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(2){
+  background: #1DA1F2;
+}
+.top .media-icons a:nth-child(2):hover{
+  color: #1DA1F2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(3){
+  background: #E1306C;
+}
+.top .media-icons a:nth-child(3):hover{
+  color: #E1306C;
+  background: #fff;
+}
+.top .media-icons a:nth-child(4){
+  background: #0077B5;
+}
+.top .media-icons a:nth-child(4):hover{
+  color: #0077B5;
+  background: #fff;
+}
+.top .media-icons a:nth-child(5){
+  background: #FF0000;
+}
+.top .media-icons a:nth-child(5):hover{
+  color: #FF0000;
+  background: #fff;
+}
+footer .content .link-boxes{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .link-boxes .box{
+  width: calc(100% / 5 - 10px);
+}
+.content .link-boxes .box .link_name{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
+}
+.link-boxes .box .link_name::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: #fff;
+}
+.content .link-boxes .box li{
+  margin: 6px 0;
+  list-style: none;
+}
+.content .link-boxes .box li a{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease
+}
+.content .link-boxes .box li a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.content .link-boxes .input-box{
+  margin-right: 55px;
+  color: #AFAFB6;
+}
+footer .bottom-details{
+  width: 100%;
+  background: #212121;
+}
+footer .bottom-details .bottom_text{
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a{
+  margin-right: 10px;
+}
+@media (max-width: 900px) {
+  footer .content .link-boxes{
+    flex-wrap: wrap;
+  }
+  footer .content .link-boxes .input-box{
+    width: 40%;
+    margin-top: 10px;
+  }footer .bottom-details .bottom_text{
+     padding: 20px 20px;
+  }
+  #spinload I{
+	  margin-top: 60%;
   }
 }
-/*
-
-   Cascading Style Sheet for the Ozone Watch web site
-      http://ozonewatch.gsfc.nasa.gov/
-
-   Written by:
-      Eric R. Nash
-
-  Original development by:
-    Robert Simmon
-    Leslie Lait
-
-   Revision history:
-      $Log: o3watch.css,v $
-*/
-
-/*********** Map Pages (Home and Monthly) ************/
-
-/*
-  Container for the main image on the home and map pages. It is floated left,
-  given a specific width.
-*/
-#main_image
-{
-  float : left;
-  margin : 0 0 10px 0;
-  width : 348px;
-}
-
-/*
-  The palette for the main image on the home and map pages. It is placed in 
-  the center of the image.
-*/
-#main_image_palette
-{
-  clear : left;
-  float : left;
-  margin : 0 0 10px 71px;
-  width : 275px;
-}
-
-/*
-  The caption for the main image on the home and map pages. It is floated left 
-  and given a specific width.
-*/
-#main_image_caption
-{
-  clear : left;
-  float : left;
-  left : 0;
-  margin : 0 0 -1em 0;
-  width : 100%;
-}
-
-/*
-  Contains a link that jumps back a year.
-*/
-#map_back_jump
-{
-  clear : left;
-  float : left;
-  font-size : 0.9em;
-  margin : 0 0 1em 0;
-  width : 28%;
-}
-
-/*
-  Contains a link that steps back a month or year.
-*/
-#map_back_step
-{
-  float : left;
-  font-size : 0.9em;
-  margin : 0 0 1em 0;
-  width : 22%;
-}
-
-/*
-  Contains a link that steps forward a month or year.
-*/
-#map_next_step
-{
-  float : left;
-  font-size : 0.9em;
-  margin : 0 0 1em 0;
-  text-align : right;
-  width : 22%;
-}
-
-/*
-  Contains a link that jumps forward a year.
-*/
-#map_next_jump
-{
-  float : right;
-  font-size : 0.9em;
-  margin : 0 0 1em 0;
-  text-align : right;
-  width : 28%;
-}
-
-/*
-  Table for animations.
-*/
-#anim
-{
-  margin : 0 0 1em 0;
-}
-
-/*
-  Animation table headers. Align text left and add a bit for padding the widths.
-*/
-#anim th
-{
-  padding : 0 0.5em 0 0.5em;
-  text-align : left;
-}
-
-/*
-  Animation table left headers. Add padding at the top (for spacing between 
-  groups), and pad to the right.
-*/
-#anim th.anim_left
-{
-  padding : 0.5em 1em 0 0;
-}
-
-/*
-  Animation table cells. Align text centered, add a bit for padding the widths, 
-  and push the text to the bottom.
-*/
-#anim td
-{
-  height : 1em;
-  padding : 0 0.5em 0 0.5em;  
-  text-align : center;
-  vertical-align : bottom;
-}
-/*
-  Cascading Style Sheet for the Ozone Watch web site:
-    http://ozonewatch.gsfc.nasa.gov/
-
-  Written by:
-    Eric Nash
-      
-  Original development by:
-    Robert Simmon
-    Leslie Lait
-*/
-
-/*
-  Global settings for default features on all web pages. No borders,
-  normal font, no list style, no margins or padding, static position,
-  left-aligned text, and no text decorations.
-*/
-*
-{
-  border : 0;
-  font-size : 1em;
-  font-style : normal;
-  font-weight : normal;
-  list-style : none;
-  margin : 0 0 0 0;
-  padding : 0 0 0 0;
-  position : static;
-  text-align : left;
-  text-decoration : none;
-}
-
-/*
-  All links appear blue-green normally, and red when hovering.
-*/
-a
-{
-  color : #006699;
-}
-
-a:hover
-{
-  color : #FF0000;
-}
-
-/*
-  Put a little space below each paragraph.
-*/
-p
-{
-  margin : 0 0 1em 0;
-}
-
-/*
-  H1 header is 40% larger than normal and bold, with extra space on
-  bottom.
-*/
-h1
-{
-  font-size : 1.4em;
-  font-weight : bold;
-  margin : 0 0 .5em 0;
-}
-
-/*
-  H2 header is 20% larger than normal and bold, with extra space on
-  bottom.
-*/
-h2
-{
-  font-size : 1.2em;
-  font-weight : bold;
-  margin : 0 0 .5em 0;
-}
-
-/*
-  H3 header is normal size and bold, with extra space on top.
-*/
-h3
-{
-  font-weight : bold;
-  margin : 0.5em 0 0 0;
-}
-
-/*
-  H4 header is normal size and weight, with extra space on top.
-*/
-h4
-{
-  margin : 0.5em 0 0 0;
-}
-
-/*
-  Definition lists. The items have a little extra space on top. The
-  definition term is bold.
-*/
-dl
-{
-  margin : 0.5em 0 0 0;
-}
-dt
-{
-  font-weight : bold;
-  margin : 0.5em 0 0 0;
-}
-dd
-{
-}
-
-/*
-  Unordered list has extra space on top between list elements and for
-  the list as a whole.
-*/
-ul
-{
-  margin : 0.5em 0 0 0;
-}
-
-/*
-  List element: indent from left slightly
-*/
-li
-{
-  margin : 0.5em 0 0 0;
-}
-
-/*
-  Superscript, subscript elements.
-*/
-sub, sup
-{
-  font-size : 0.8em;
-  line-height : 0.1em;
-}
-
-/*
-  Use to clear left, right, or both sides.
-*/
-.clear_both
-{
-  clear : both;
-}
-.clear_left
-
-{
-  clear : left;
-}
-
-.clear_right
-{
-  clear : right;
-}
-
-.page_bg
-{
-  background-color : #2C5134;
-}
-
-
-/*
-  Provides a light gray background.
-*/
-.section_title
-{
-  background : #DDDDDD;
-  margin : 0 0 0.5em 0;
-}
-
-/*
-  Provides a bottom border line.
-*/
-.subsection_title
-{
-  border-bottom : thin solid #000000;
-  margin : 0 0 0.5em 0;
-}
-
-/*
-  Provides a bold type.
-*/
-.boldtype
-{
-  font-weight : bold;
-}
-/* =================== Specific Components =================== */
-
-/*
-  Set the entire page to the user's default font-size and give a little
-  extra space for line spacing.
-*/
-html
-{
-  font-size : 100%;
-  line-height : 130%;
-}
-
-/*
-  Don't display any of the head information.
-*/
-head
-{
-  display : none;
-}
-
-/*
-  The body is one large green area for a background. For webkit
-    browsers, use the gradient function. Define the font family and
-    provide a small margin around the entire page.
-*/
-body
-{
-  font-family : Helvetica, Arial, sans-serif;
-  margin : 8px 9px 8px 9px;
-}
-
-/*
-  Within the green body background is a "body" that contains all the
-  page's content. This contianer is scaled to the page wisth, and has a
-  minimal width value.
-*/
-#body
-{
-  background-color : #FFFFFF;
-  border-bottom : 10px solid #2C5134;
-  min-width : 75em;
-}
-
-/*
-  This provides a bypass around the navigation links.
-*/
-#nav_bypass
-{
-  display : none;
-}
-
-/*
-  The body container is divided into five section: the standard NASA
-  header, the site header, the site navigation, the page-unique content,
-  and the standard NASA footer, Each has a container associated with it. 
-*/
-
-/*********** The Standard NASA Header ************/
-
-/*
-  The container for the NASA header. The header extends the full
-  width of the body container. The background is gray, and the
-  default text color is white. 
-
-  The header banner has three parts:
-    the NASA meatball logo
-    the NASA and GSFC links
-    links to Code 400 and 600
-*/
-
-#nasa_header
-{
-  background-color : #2E2E2E;
-  border-bottom : 1px solid #000000;
-  color : #FFFFFF;
-  height : 7.0em;
-  min-width : 75em;
-  position : relative;
-  width : 100%;
-}
-
-#nasa_header a
-{
-  color : #FFFFFF;
-}
-
-#nasa_header a:hover
-{
-  color : #AAAAAA;
-}
-
-/*
-  The NASA logo goes to the left side on the banner and footer.
-*/
-.nasa_logo
-{
-  float : left;
-  height : 6em;
-  left : 0.5em;
-  position : relative;
-  top : 0.5em;
-  width : 8em;
-}
-
-.nasa_logo img
-{
-  height : 100%;
-  left : 0;
-  position : relative;
-  top : 0;
-}
-
-
-/*
-  The site title has two lines: the title itself, and a subtitle. We
-  put these into two containers which go into this container. 
-*/
-
-#nasa_name_block
-{
-  float : left;
-  height : 100%;
-  left : 0;
-  position : relative;
-  top : 1em;
-  width : 45em;
-}
-
-/*
-  Here is the title.
-*/
-#nasa_name
-{
-  color : #FFFFFF;
-  float : left;
-  font-size : 1.75em;
-  left : 0.5em;
-  position : relative;
-  top : 0.5em;
-  width : 100%;
-}
-
-/*
-  Here is the subtitle.
-*/
-#gsfc_name
-{
-  font-size : 1.25em;
-  left : 0.5em;
-  position : relative;
-  top : 1.2em;
-  width : 100%;
-}
-
-/*
-  The NASA GSFC organizational links are right aligned and float with the
-  edge of the page. 
-*/
-#gsfc_org_links
-{
-  float : right;
-  left : 0;
-  padding-right : 1em;
-  position : relative;
-  right : 1em;
-  text-align : right;
-  top : 5.0em;
-  width : 20em;
-}
-
-
-/*********** The Site Title ************/
-
-/*
-  The title extends the full width of the body container. The background
-  is a green to indicate an Earth Science page (although we leave off the
-  stupid stars image, since this ain't astronomy). The text color is white. 
-
-  The site title has two parts:
-    the title (which contains a link to the home page)
-    a short description of the page
-*/
-
-#o3watch_header
-{
-  background-color : transparent;
-  height : 3.5em;
-  left : 0;
-  min-width : 75em;
-  position : relative;
-  top : 0;
-  width : 100%;
-}
-
-/*
-  A container for the title and description.
-*/
-#o3watch_title_block
-{
-  color : #FFFFFF;
-  float : left;
-  left : 0;
-  position : relative;
-  top : 1em;
-  width : 99%;
-}
-
-#o3watch_title_block a
-{
-  color : #FFFFFF;
-}
-
-#o3watch_title_block a:hover
-{
-  color : #AAAAAA;
-}
-
-/*
-  The actual title is a link which leads back to the site home page.
-*/
-#o3watch_title
-{
-  float : left;
-  font-size : 2em;
-  left : 0;
-  padding-left : 0.33em;
-  position : relative;
-  top : 0;
-  width : 10em;
-}
-
-/*
-  The subtitle.
-*/
-#o3watch_subtitle
-{
-  float : left;
-  font-size : 1.25em;
-  font-style : italic;
-  left : 1.5em;
-  position : relative;
-  top : 0.1em;
-  width : 28em;
-}
-
-/*********** The Site Navigation ************/
-
-/*
-  Just below the site title, there is a navigation menu. This is a
-  series of gray boxes,outlined in a brighter green than the background,
-  with white text. Each box contains a link to some part of the site. If
-  the current page is in the section that the link would point to,  the
-  background turns the same as the page background. Any link background
-  brightens when hovered over.
-*/
-
-/*
-  This is the container for the nav banner. It extends the full width of
-  the body container, and it is fairly narrow in height. It contains
-    tabs with links to each part of the website
-    a link to the home page of the other hemisphere (not functioning yet)
-*/
-#site_navigation
-{
-  background-color : #2C5134;
-  color : #FFFFFF;
-  height : 2.5em;
-  position : relative;
-  width : 100%;
-}
-
-/*
-  There are two classes of links within the nav header. The first,
-  "elsewhere" has links that lead to other sections of the site.  This
-  has a gray background.
-*/
-.nav_elsewhere
-{
-  background-color : #2E2E2E;
-}
-
-.nav_elsewhere:hover
-{
-  background-color : #5D5D5D;
-}
-
-/*
-  The other class of link in the nav header is "here", which points to
-  the current section. This has a green backgrond.
-*/
-.nav_here
-{
-  background-color : #2C5134;
-  border-top : 1px solid #2E2E2E;
-}
-
-.nav_here:hover
-{
-  background-color : #4B6751;
-}
-
-/*
-  In addition to the two classes of links, each link in the nav header
-  has one of the following five IDs. Each has its own starting location
-  They are placed absolutely.
-*/
-#nav_historical,#nav_meteorology,#nav_facts,#nav_multimedia,#nav_education,#nav_vortex
-{
-  border-left : 2px solid #448462;
-  border-right : 2px solid #448462;
-  border-top : 2px solid #448462;
-  bottom : 0;
-  color : #FFFFFF;
-  font-size : 1.2em;
-  font-weight : bold;
-  padding-top : 0.4em;
-  position : absolute;
-  text-align : center;
-  top : 0;
-  width : 8em;
-}
-
-#nav_historical {
-  left : 0.5em;
-}
-#nav_meteorology {
-  left : 9.5em;
-}
-#nav_facts {
-  left : 18.5em;
-}
-#nav_multimedia {
-  left : 27.5em;
-}
-#nav_education {
-  left : 36.5em;
-}
-#nav_vortex {
-  left : 27.5em;
-}
-
-/*
-  A link to the home page of the other hemisphere. This aligns to the right
-  side of the page and moves with the page.
-*/
-#o3watch_hemisphere
-{
-  background-color : #2E2E2E;
-  border-left : 2px solid #448462;
-  border-right : 2px solid #448462;
-  border-top : 2px solid #448462;
-  bottom : 0;
-  color : #FFFFFF;
-  font-size : 1.2em;
-  font-weight : bold;
-  padding-top : 0.4em;
-  position : absolute;
-  right : 0;
-  text-align : center;
-  top : 0;
-  width : 12em;
-}
-
-#o3watch_hemisphere a
-{
-  color : #FFFFFF;
-}
-
-#o3watch_hemisphere a:hover
-{
-  color : #FFFFFF;
-}
-
-#o3watch_hemisphere:hover
-{
-  color : #FFFFFF;
-  background-color : #5D5D5D;
-}
-
-/*********** The Content Container ************/
-/*
-  This container hold the page's actual content, aside from headers and
-  footers. We put a little padding all around, so the content
-  does not press against the sides. 
-*/
-#content:after
-{
-  clear: both; 
-  content: 'False text to clear the visual page for footer info.'; 
-  display: block; 
-  height: 0; 
-  visibility: hidden;
-}
-
-#content
-{
-  display: inline-block;
-  left : 0;
-  margin : 1em 10px 1em 10px;
-  position : relative;
-  top : 0;
-}
-
-/*\*/
-* html #content
-{
-  height: 1%;
-}
-
-#content
-{
-  display: block;
-}
-/* */
-
-/*
-  Table for animations.
-*/
-table.anim
-{
-  margin : 0 0 1em 0;
-  text-align : center;
-}
-
-/*
-  Animation table headers. Align text left and add a bit for padding the widths.
-*/
-table.anim th
-{
-  padding : 0 0 0 0;
-  text-align : center;
-}
-
-/*
-  Animation table left headers. Add padding at the top (for spacing between 
-  groups), and pad to the right.
-*/
-table.anim th.anim_left
-{
-  padding : 0 0 0 0;
-  text-align : left;
-}
-
-table.anim th.anim_decade
-{
-  padding : 1em 1em 0 0;
-  text-align : left;
-}
-
-/*
-  Animation table cells. Align text centered, add a bit for padding the widths, 
-  and push the text to the bottom.
-*/
-table.anim td
-{
-/*  height : 1em; */
-  padding : 0 0.5em 0 0.5em;  
-  text-align : center;
-  vertical-align : bottom;
-}
-
-
-/*********** The Standard NASA Footer ************/
-
-/*
-  Everything is inside this container. The footer extends the full
-  width of the body container. The background is light gray, and the
-  default text color is white. 
-
-  The footer banner has two parts:
-    the NASA footer
-    the footer information
-*/
-#footer
-{
-  background-color : #2E2E2E;
-  border-top : 1px solid #000000;
-  color : #FFFFFF;
-  height : 7.0em;
-  min-width : 75em;
-  position : relative;
-  width : 100%;
-}
-
-#footer a
-{
-  color : #FFFFFF;
-}
-
-#footer a:hover
-{
-  color : #AAAAAA;
-}
-
-/*
-  The NASA footer contains the NASA meatball logo and the Goddard signature.
-*/
-
-#nasa_footer
-{
-  float : left;
-  height : 100%;
-  margin : 0 0 0 0;
-  padding : 0 0 0 0;
-  position : relative;
-  width : 26em;
-}
-
-#nasa_sig
-{
-  float : left;
-  left : 3em;
-  position : relative;
-  top : 0.5em;
-  width : 15em;
-}
-
-#nasa_sig img
-{
-  height : 6em;
-  left : 0;
-  position : relative;
-  top : 0;
-}
-
-/*
-  The footer info contains the the NASA official, the curator, the
-  update date, the credit notice, the privacy link, and the disclaimer link.
-*/
-
-#footer_info
-{
-  color : #FFFFFF;
-  float : right;
-  height : 100%;
-  line-height : 100%;
-  position : relative;
-  right : 1em;
-  width : 44em;
-}
-
-#footer_info_text
-{
-  color : #FFFFFF;
-  float : left;
-  height : 80%;
-  left : 0;
-  position : relative;
-  top : 0;
-  width : 100%;
-}
-
-#footer_text
-{
-  color : #FFFFFF;
-  float : left;
-  height : 100%;
-  left : 0;
-  line-height : 100%;
-  position : relative;
-  width : 20em;
-}
-
-/*
-  Links to the NASA privacy page and our disclaimer page.
-*/
-#footer_links
-{
-  color : #FFFFFF;
-  float : right;
-  height : 100%;
-  line-height : 100%;
-  margin : 0 0 0 0;
-  padding : 0 0 0 0;
-  position : relative;
-  right : 0;
-  width : 17em;
-}
-
-/*
-  Give extra space to the credit text.
-*/
-#nasa_credit
-{
-  float : left;
-  height : 20%;
-  left : 4em;
-  position : relative;
-  top : 0;
-  width : 38em;
-}
-
-
-/*
-****************  For Print Media  ****************
-*/
-
-@media print
-{
-  *
-  {
-    background-color : #FFFFFF;
-    color : #000000;
+@media (max-width: 700px){
+  footer{
+    position: relative;
   }
-
-  a
-  {
-    color : #000000;
+  .content .top .logo-details{
+    font-size: 26px;
   }
-
-  .page_bg
-  {
-    background-color : #FFFFFF;
-    background-image : none;
-    background-position : top center;
-    background-repeat : no-repeat;
+  .content .top .media-icons a{
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    padding-top: 10px;
+    line-height: 35px;
   }
-
-  html
-  {
-    line-height : 100%;
+  footer .content .link-boxes .box{
+    width: calc(100% / 3 - 10px);
   }
-
-  body
-  {
-    font-family : Helvetica, Arial, sans-serif;
-    margin : 0 0 0 0;
+  footer .content .link-boxes .input-box{
+    width: 60%;
   }
-
-  #body
-  {
-    min-width : 0;
-    border-bottom : 0 solid #FFFFFF;
-  }
-
-  #nasa_header
-  {
-    background-color : #FFFFFF;
-    border-bottom : 1px solid #000000;
-    color : #000000;
-    height : 4em;
-    position : relative;
-    width : 100%;
-  }
-
-  .nasa_logo
-  {
-    display : none;
-  }
-
-  #nasa_name_block
-  {
-    color : #000000;
-  }
-
-  #nasa_name_block a
-  {
-    color : #000000;
-  }
-
-  #nasa_name
-  {
-    color : #000000;
-    margin : 0 0 0 0;
-  }
-
-  #gsfc_name
-  {
-    color : #000000;
-    top : 1.5em;
-  }
-
-  #gsfc_org_links
-  {
-    color : #000000;
-    top : 2.2em;
-  }
-
-  #gsfc_org_links a
-  {
-    color : #000000;
-  }
-
-  #o3watch_header
-  {
-    background-color : #FFFFFF;
-    border-bottom : 1px solid #000000;
-    position : relative;
-    top : 0;
-    width : 100%;
-  }
-
-  #o3watch_title_block
-  {
-    color : #000000;
-  }
-
-  #o3watch_title_block a
-  {
-    color : #000000;
-  }
-
-  #o3watch_subtitle
-  {
-    color : #000000;
-  }
-
-  #site_navigation
-  {
-    display : none;
-  }
-
-  #footer
-  {
-    margin : 0 0 0 0;
-    color : #000000;
-  }
-
-  #nasa_footer
-  {
-    display : none;
-  }
-
-  #footer_info
-  {
-    float : left;
-    height : 100%;
-    left : 0;
-    right : 0;
-    width : 100%;
-  }
-
-  #footer_links
-  {
-    display : none;
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 12px;
   }
 }
-
-@media aural
-{
-  #nasa_bypass
-  {
-    display : block;
+@media (max-width: 520px){
+  footer::before{
+    top: 145px;
   }
-
-  abbr.spell
-  {
-    speak : spell-out;
+  footer .content .top{
+    flex-direction: column;
   }
-
+  .content .top .media-icons{
+    margin-top: 16px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 2 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 100%;
+  }
 }
-
-@media braille
-{
-  #nasa_bypass
-  {
-    display : block;
-  }
+#errorpage{
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+	margin: 10% 0px;
+	margin-bottom: 0px;
+	display: none;
+}
+#errorpage h2{
+	color: #0c8ff0;
+  font-family: 'impact',Arial, sans-serif;
+}
+#errorpage ul{
+	background: #f6f6f6;
+	border-radius: 10px;
+	padding: 10px 15px;
+	color: #000;
+	text-align: left;
+	margin: 5px 10%;
+	width: 80%;
+	list-style-type: none;
+  line-height: 36px;
 }
 </style>
-<body class="page_bg">
-
-  <span id="nav_bypass">
-    <a href="#content">
-      Bypass Navigation?
-    </a>
-  </span> <!-- nav_bypass -->
-  
-  <div id="nasa_header">
-
-    <div class="nasa_logo">
-      <a href="https://www.nasa.gov">
-        <img alt="NASA Logo, National Aeronautics and Space Administration" src="/images/NASA_logo_200.png">
-      </a>
-    </div> <!-- nasa_logo -->
-    
-    <div id="nasa_name_block">
-
-      <div id="nasa_name">
-        <a href="https://www.nasa.gov">
-          National Aeronautics and Space Administration
-        </a>
-      </div> <!-- nasa_name -->
-      
-      <div id="gsfc_name">
-        <a href="https://www.nasa.gov/goddard">
-          Goddard Space Flight Center
-        </a>
-      </div> <!-- gsfc_name -->
-    
-    </div> <!-- nasa_name_block -->
-  
-  </div> <!-- nasa_header -->
-  
-  <div id="o3watch_header">
-
-    <div id="o3watch_title_block">
-
-      <div id="o3watch_title">
-        <a href="/SH.html">
-          NASA Ozone Watch
-        </a>
-      </div> <!-- o3watch_title -->
-      
-      <div id="o3watch_subtitle">
-        Images, data, and information for atmospheric ozone
-      </div> <!-- o3watch_subtitle -->
-    
-    </div> <!-- o3watch_title_block -->
-  
-  </div> <!-- o3watch_header -->
-  
-  <div id="body">
-
-    <div id="site_navigation">
-      <a id="nav_historical" href="/monthly/SH.html" class="nav_elsewhere">
-        Ozone Maps
-      </a>
-      <a id="nav_meteorology" href="/meteorology/SH.html" class="nav_elsewhere">
-        Meteorology
-      </a>
-      <a id="nav_facts" href="/facts/SH.html" class="nav_elsewhere">
-        Ozone Facts
-      </a>
-      <a id="nav_multimedia" href="/multimedia/index.html" class="nav_elsewhere">
-        Multimedia
-      </a>
-      <a id="nav_education" href="/education/index.html" class="nav_elsewhere">
-        Education
-      </a>
-      <div id="o3watch_hemisphere">
-        <a href="/NH.html">
-          Northern Hemisphere
-        </a>
-      </div> <!-- o3watch_hemisphere -->
-    </div> <!-- site_navigation -->
-    
-    <div id="content">
-
-      <div id="home_text">
-
-        <div id="home_intro">
-          <p>
-            View the latest status of the ozone layer over the Antarctic,
-            with a focus on the ozone hole. Satellite instruments monitor
-            the ozone layer, and we use their data to create the images
-            that depict the amount of ozone. 
-          </p>
-
-          <p>
-            Click any map image to bring up a new page with a
-            high-resolution image.
-          </p>
-                      
-        </div> <!-- home_intro -->
-        
-        <div id="home_animation">
-
-          <h2 class="h2_no_print section_title">
-            Ozone Movies
-          </h2>
-          
-          <p>
-            Watch a movie of the daily progression through a season or 
-            the annual progression of the means for a month. A table
-            of all ozone movies are available in our 
-            <a href="multimedia/index.html">
-              multimedia
-            </a>
-            section.
-          </p>
-
-          <table id="anim">
-
-            <thead>
-              <tr>
-                <th>
-                </th>
-                <td colspan="2">
-                  360x240
-                </td>
-                <td colspan="2">
-                  720x486
-                </td>
-                <td>
-                  1280x720
-                </td>
-                <td>
-                  1920x1080
-                </td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th class="anim_left">
-                  2022
-                </th>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D2022-07-01%25P1D_G%5e360X240.IOMPS_PNPP_V21_MMERRA2_LSH.mp4">
-                    mp4
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D2022-07-01%25P1D_G%5e360X240.IOMPS_PNPP_V21_MMERRA2_LSH.mpg">
-                    mpg
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D2022-07-01%25P1D_G%5e720X486.IOMPS_PNPP_V21_MMERRA2_LSH.mp4">
-                    mp4
-                  </a>
-                </td>
-                <td>
-                  <a href="/ozone_maps/movies/OZONE_D2022-07-01%25P1D_G%5e720X486.IOMPS_PNPP_V21_MMERRA2_LSH.mpg">
-                    mpg
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D2022-07-01%25P1D_G%5e1280X720.IOMPS_PNPP_V21_MMERRA2_LSH.mp4">
-                    mp4
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D2022-07-01%25P1D_G%5e1920X1080.IOMPS_PNPP_V21_MMERRA2_LSH.mp4">
-                    mp4
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <th class="anim_left">
-                  2021
-                </th>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D2021-07-01%25P1D_G%5e360X240.IOMPS_PNPP_V21_MMERRA2_LSH.mp4">
-                    mp4
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D2021-07-01%25P1D_G%5e360X240.IOMPS_PNPP_V21_MMERRA2_LSH.mpg">
-                    mpg
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D2021-07-01%25P1D_G%5e720X486.IOMPS_PNPP_V21_MMERRA2_LSH.mp4">
-                    mp4
-                  </a>
-                </td>
-                <td>
-                  <a href="/ozone_maps/movies/OZONE_D2021-07-01%25P1D_G%5e720X486.IOMPS_PNPP_V21_MMERRA2_LSH.mpg">
-                    mpg
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D2021-07-01%25P1D_G%5e1280X720.IOMPS_PNPP_V21_MMERRA2_LSH.mp4">
-                    mp4
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D2021-07-01%25P1D_G%5e1920X1080.IOMPS_PNPP_V21_MMERRA2_LSH.mp4">
-                    mp4
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <th class="anim_left">
-                  February
-                </th>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D1979-02%25P1Y_G%5e360X240.IOMPS_PNPP_V21_MMERRA2_LSH.mp4">
-                    mp4
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D1979-02%25P1Y_G%5e360X240.IOMPS_PNPP_V21_MMERRA2_LSH.mpg">
-                    mpg
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D1979-02%25P1Y_G%5e720X486.IOMPS_PNPP_V21_MMERRA2_LSH.mp4">
-                    mp4
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D1979-02%25P1Y_G%5E720X486.IOMPS_PNPP_V21_MMERRA2_LSH.mpg">
-                    mpg
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D1979-02%25P1Y_G%5e1280X720.IOMPS_PNPP_V21_MMERRA2_LSH.mp4">
-                    mp4
-                  </a>
-                </td>
-                <td>                
-                  <a href="/ozone_maps/movies/OZONE_D1979-02%25P1Y_G%5e1920X1080.IOMPS_PNPP_V21_MMERRA2_LSH.mp4">
-                    mp4
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div> <!-- home_animation -->
-        
-        <div id="home_sources">
-          <h2 class="section_title">
-            Data sources
-          </h2>
-          
-          <ul>
-            <li>
-              NASA TOMS
-              <ul>
-                <li>
-                  <a href="data/nimbus7/">NASA/NOAA Nimbus-7</a>
-                </li>
-                <li>
-                  <a href="data/meteor3/">NASA METEOR-3</a>
-                </li>
-                <li>
-                  <a href="data/eptoms/">NASA Earth Probe TOMS</a>
-                </li>
-              </ul>
-            </li>
-            
-            <li>
-              Aura OMI 
-              (<a href="https://www.knmi.nl/omi/research/">KNMI</a>
-              |
-              <a href="https://aura.gsfc.nasa.gov/omi.html">NASA</a>)
-              <a href="data/omi">
-                OMTO3d (Global Ozone Data)
-              </a>
-            </li>
-            
-            <li>
-              Suomi NPP OMPS 
-              <a href="data/omps/">
-                NMTO3-L3-DAILY
-              </a>
-            </li>
-            
-            <li>
-              NASA 
-              <a href="https://gmao.gsfc.nasa.gov/">
-                GMAO
-              </a> 
-              <ul>
-                <li>
-                  <a href="https://gmao.gsfc.nasa.gov/reanalysis/">
-                    MERRA
-                  </a>
-                </li>
-                <li>
-                  <a href="https://gmao.gsfc.nasa.gov/reanalysis/">
-                    MERRA-2
-                  </a>
-                </li>
-                <li>
-                  <a href="https://gmao.gsfc.nasa.gov/weather_prediction/">
-                    GEOS FP
-                  </a>
-                </li>
-              </ul>
-            </li>
-            
-            <li>
-              ESA <a href="https://earth.esa.int/web/guest/missions/esa-operational-eo-missions/ers/instruments/gome">
-                GOME
-              </a>
-            </li>
-            
-            <li>
-              <a href="https://www.cpc.ncep.noaa.gov/products/stratosphere/sbuv2to/index.shtml">
-                SBUV/2
-              </a>
-              <ul>
-                <li>
-                  NASA Nimbus-4, Nimbus-7
-                </li>
-                <li>
-                  NOAA-9, NOAA-11, NOAA-14, NOAA-16
-                </li>
-              </ul>
-            </li>
-            
-            <li>
-              NASA JPL
-              <a href="https://mls.jpl.nasa.gov/">
-                MLS
-              </a>
-              <ul>
-                <li>
-                  <a href="https://mls.jpl.nasa.gov/uars/">
-                    UARS
-                  </a>
-                </li>
-                <li>
-                  <a href="https://mls.jpl.nasa.gov/index-eos-mls.php">
-                    Aura
-                  </a>
-                </li>
-              </ul>
-            </li>
-            
-            <li>
-              NOAA South Pole 
-              <a href="https://www.esrl.noaa.gov/gmd/dv/spo_oz">
-                Balloon Sondes
-              </a>
-            </li>
-          </ul>
-        </div> <!-- home_sources -->
-        
-        <div id="home_facts">
-          <h2 class="section_title">
-            Ozone facts
-          </h2>
-          
-          <h3 class="subsection_title">
-            <a href="/facts/ozone_SH.html">
-              What is ozone?
-            </a>
-          </h3>
-          
-          <p>
-            Ozone is a colorless gas. Chemically, ozone is very active;
-            it reacts readily with a great many other substances. Near
-            the Earth’s surface, those reactions cause rubber to crack,
-            hurt plant life, and damage people’s lung tissues. But
-            ozone also absorbs harmful components of sunlight, known as
-            “ultraviolet B”, or “UV-B”. High
-            above the surface, above even the weather systems, a tenuous
-            layer of ozone gas absorbs UV-B, protecting living things
-            below.
-          </p>
-          
-          <h3 class="subsection_title">
-            <a href="/facts/dobson_SH.html">
-              What is a Dobson Unit?
-            </a>
-          </h3>
-          
-          <p>
-            The Dobson Unit (DU) is the unit of measure for total ozone.
-            If you were to take all the ozone in a column of air
-            stretching from the surface of the earth to space, and bring
-            all that ozone to standard temperature (0 °Celsius) and
-            pressure (1013.25 millibars, or one atmosphere, or
-            “atm”), the column would be about 0.3
-            centimeters thick. Thus, the total ozone would be 0.3
-            atm-cm. To make the units easier to work with, the
-            “Dobson Unit” is defined to be 0.001 atm-cm. Our
-            0.3 atm-cm would be 300 DU.
-          </p>
-          
-          <h3 class="subsection_title">
-            <a href="/facts/hole_SH.html">
-              What is the ozone hole?
-            </a>
-          </h3>
-          
-          <p>
-            Each year for the past few decades during the Southern
-            Hemisphere spring, chemical reactions involving chlorine
-            and bromine cause ozone in the southern polar region to be
-            destroyed rapidly and severely. This depleted region is
-            known as the “ozone hole”. The area of the
-            ozone hole is determined from a map of total column ozone.
-            It is calculated from the area on the Earth that is
-            enclosed by a line with a constant value of 220 Dobson
-            Units. The value of 220 Dobson Units is chosen since total
-            ozone values of less than 220 Dobson Units were not found
-            in the historic observations over Antarctica prior to
-            1979. Also, from direct measurements over Antarctica, a
-            column ozone level of less than 220 Dobson Units is a
-            result of the ozone loss from chlorine and bromine
-            compounds.
-          </p>
-          
-        </div> <!-- home_facts -->
-      
-      </div> <!-- home_text -->
-      
-      <div id="home_images">
-
-        <h1>
-          23 February 2023
-        </h1>
-        
-        <div id="main_image">
-          <a href="/Scripts/big_image.php?date=2023-02-23&amp;hem=S&amp;section=HOME">
-            <img alt="Antarctic ozone map for 2023-02-23" width="348" src="https://ozonewatch.gsfc.nasa.gov/ozone_maps/images/Y2023/M02/OZONE_D2023-02-23_G%5E348X348.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG">
-          </a>
-        </div> <!--main_image-->
-        
-        <div id="main_image_palette">
-          <img alt="Palette relating map colors to ozone values" width="215" src="/images/ozone_legend_full.png">
-        </div> <!-- main_image_palette -->
-        
-        <div id="main_image_caption">
-          The latest false-color view of total ozone over the
-          Antarctic pole. The purple and blue colors are where there
-          is the least ozone, and the yellows and reds are where
-          there is more ozone.
-        </div> <!-- main_image_caption -->
-        
-        <div id="home_met" class="clear_left">
-          <div id="home_ytd">
-
-            <h2 class="section_title">
-              2022 Season
-            </h2>
-            
-            <img alt="Ozone hole area, minimum ozone, and minimum temperature compared to climatology" src="/statistics/meteorology_ytd_sh.png" width="348">
-
-            <p>
-              The graphs above show the progress of the ozone hole for
-              2022. The gray shading indicates the highest and
-              lowest values measured since 1979. The red numbers are
-              the maximum or minimum values. The stratospheric 
-              temperature and the amount of sunlight reaching the
-              south polar region control the depth and size of the
-              Antarctic ozone hole. The dashed line in the minimum
-              temperature plot indicates the temperature below which 
-              <a href="facts/hole_SH.html">Type I (NAT) PSCs</a> can 
-              form.
-            </p>
-            <p>
-              The data for the 
-              <a href="/meteorology/figures/ozone/to3areas_2022_toms+omi+omps.txt">
-                ozone hole area</a>, the 
-              <a href="/meteorology/figures/ozone/to3mins_2022_toms+omi+omps.txt">
-                minimum ozone</a>, and the 
-              <a href="/meteorology/figures/merra2/temperature/tmins_50_2022_merra2.txt">
-                minimum stratospheric temperature</a>
-              are available. Also available is a 
-              <a href="/statistics/annual_data.html">
-                table
-              </a>
-              of values showing the maximum ozone hole area and the minimum 
-              ozone values for each year.
-            </p>
-          </div> <!-- home_ytd -->
-          
-          <div id="home_annual">
-
-            <h2 class="section_title">
-              Annual records
-            </h2>
-            
-            <a href="/statistics/annual_data.html">
-              <img alt="Average ozone hole area and minimum ozone for years 1979 to present" src="/statistics/meteorology_annual.png" width="348">
-            </a>
-            <p>
-              Click on the image to get a 
-              <a href="/statistics/annual_data.html">
-                table
-              </a>
-              of values.
-            </p>
-            <p>
-              The graphs above show the variations of ozone from year
-              to year. The red bars indicate the largest area and the
-              lowest minimum value. The year-to-year fluctuations are
-              superimposed on a trend extending over the last three
-              decades. 
-            </p>
-          </div> <!-- home_annual -->
-        
-        </div> <!-- home_met -->
-      
-      </div> <!-- home_images -->
-      
-      <div id="last_week">
+<body id="body" onload="statup()">
+    <div class="flp">
+        <span style="display: flex;flex-direction: row;width: 20%;">
+            <img src="./fav-icon/logo.png"alt="Error dp not loaded"><span class="rtp"style="color: white;">WHITE LOTUS</span>
+        </span>
+        <div class="iconholder">
+        	<span class="rtp" id="home" onclick="mainpage();">Main</span>
+            <span class="rtp" id="about" onclick="aboutpage();">About</span>
+            <span class="rtp" id="cont" onclick="contactpage();">Contact</span>
+            <span class="rtp" id="quizapi" onclick="myquiz();">Quiz</span>
+        </div>
+        <div class="navber"onclick="naveffect();">
+            <div class="ber"></div>
+            <div class="ber"></div>
+            <div class="ber"></div>
+        </div>
+    </div>
+    <div id="navelement">
+    	<span class="element"onclick="mainpage();">Main</span>
+        <span class="element"onclick="aboutpage();">About</span>
+        <span class="element"onclick="contactpage();">Contact</span>
+        <span class="element"onclick="myquiz();">Quiz</span>
+    </div>
+    <div id="errorpage">
+    	<h2>404 error!</h2>
+        <h4>There isn't a WHITE LOTUS Pages site here</h4>
         <ul>
-          <li>
-            <ul>
-              <li>
-                <a href="/Scripts/big_image.php?date=2023-02-22&amp;hem=S">
-                  <img alt="Antarctic ozone map for 2023-02-22" src="/ozone_maps/images/Y2023/M02/OZONE_D2023-02-22_G^92X92.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG">
-                </a>
-              </li>
-              <li class="last_week_date">
-                <a href="/Scripts/big_image.php?date=2023-02-22&amp;hem=S">
-                  22 Feb.
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li>
-                <a href="/Scripts/big_image.php?date=2023-02-21&amp;hem=S">
-                  <img alt="Antarctic ozone map for 2023-02-21" src="/ozone_maps/images/Y2023/M02/OZONE_D2023-02-21_G^92X92.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG">
-                </a>
-              </li>
-              <li class="last_week_date">
-                <a href="/Scripts/big_image.php?date=2023-02-21&amp;hem=S">
-                  21 Feb.
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li>
-                <a href="/Scripts/big_image.php?date=2023-02-20&amp;hem=S">
-                  <img alt="Antarctic ozone map for 2023-02-20" src="/ozone_maps/images/Y2023/M02/OZONE_D2023-02-20_G^92X92.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG">
-                </a>
-              </li>
-              <li class="last_week_date">
-                <a href="/Scripts/big_image.php?date=2023-02-20&amp;hem=S">
-                  20 Feb.
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li>
-                <a href="/Scripts/big_image.php?date=2023-02-19&amp;hem=S">
-                  <img alt="Antarctic ozone map for 2023-02-19" src="/ozone_maps/images/Y2023/M02/OZONE_D2023-02-19_G^92X92.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG">
-                </a>
-              </li>
-              <li class="last_week_date">
-                <a href="/Scripts/big_image.php?date=2023-02-19&amp;hem=S">
-                  19 Feb.
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li>
-                <a href="/Scripts/big_image.php?date=2023-02-18&amp;hem=S">
-                  <img alt="Antarctic ozone map for 2023-02-18" src="/ozone_maps/images/Y2023/M02/OZONE_D2023-02-18_G^92X92.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG">
-                </a>
-              </li>
-              <li class="last_week_date">
-                <a href="/Scripts/big_image.php?date=2023-02-18&amp;hem=S">
-                  18 Feb.
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li>
-                <a href="/Scripts/big_image.php?date=2023-02-17&amp;hem=S">
-                  <img alt="Antarctic ozone map for 2023-02-17" src="/ozone_maps/images/Y2023/M02/OZONE_D2023-02-17_G^92X92.IOMPS_PNPP_V21_MGEOS5FP_LSH.JPG">
-                </a>
-              </li>
-              <li class="last_week_date">
-                <a href="/Scripts/big_image.php?date=2023-02-17&amp;hem=S">
-                  17 Feb.
-                </a>
-              </li>
-            </ul>
-          </li>
+        	<h6>All possible reasons are following</h6>
+            <hr></hr>
+        	<li>&#x26D4; File not exist or removed</li>
+            <li>&#x26D4; Internet slow</li>
+            <li>&#x26D4; Device OS not updated</li>
+            <li>&#x26D4; Browser backdated</li>
+            <li>&#x26D4; System block this IP</li>
+            <li>&#x26D4; @media quary not work</li>
+            <li>&#x26D4; Under development</li>
         </ul>
-      </div> <!--last_week-->
-    
-    </div> <!-- content -->
-  </div> <!-- body -->
-  
-  <div id="footer">
-
-    <div id="nasa_footer">
-
-      <div class="nasa_logo">
-        <a href="https://www.nasa.gov">
-          <img alt="NASA Logo, National Aeronautics and Space Administration" src="/images/NASA_logo_200.png">
-        </a>
-      </div> <!-- nasa_logo -->
-      
-      <div id="nasa_sig">
-        <a href="https://www.nasa.gov/goddard/">
-          <img alt="NASA Goddard Signature, National Aeronautics and Space Administration" src="/images/goddard_sig.png">
-        </a>
-      </div> <!-- nasa_sig -->
-    
-    </div> <!-- nasa_footer -->
-    
-    <div id="footer_info">
-
-      <div id="footer_info_text">
-
-        <div id="footer_text">
-          <ul>
-            <li>
-              NASA Official:
-              <a href="/contacts.html">
-                Paul A. Newman
-              </a>
-            </li>
-            <li>
-              Curator: 
-              <a href="/contacts.html">
-                Leslie R. Lait (SSAI)
-              </a>
-            </li>
-            <li>
-              Page Last Updated: 2023-02-26 18:43:11Z
-            </li>
-          </ul>
-        </div> <!-- footer_text -->
-        
-        <div id="footer_links">
-          <ul>
-            <li>
-              <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">
-                Privacy Policy &amp; Important Notices
-              </a>
-            </li>
-            <li>
-              <a href="/disclaimers.html">
-                Disclaimers
-              </a>
-            </li>
-          </ul>
-        </div> <!-- footer_links -->
-      
-      </div> <!-- footer_info_text -->
-      
-      <div id="nasa_credit">
-        Please credit all material to “NASA Ozone Watch”
-        unless otherwise noted.
-      </div> <!-- nasa_credit -->
-    
-    </div> <!-- footer_info -->
-  
-  </div> <!-- footer -->
-
-
-
-
-</body></html>
+    </div>
+ <!--
+sections ending for football.
+-->
+    <div class="scrolltop float-right">
+	    <i class="fa fa-arrow-up" onclick="topFunction();" id="topBtna"></i>
+    </div>
+    <div id="spinload">
+    	<I class="fa-5x fa fa-spinner fa-spin"style="color:#fff;"></I><br>
+    	<p id="spinnertext">loading...</p>
+    </div>
+    <footer id="footer-page">
+        <div class="content">
+          <div class="top">
+            <div class="logo-details">
+                <img src="./fav-icon/logo.png"alt="Error dp not loaded">
+              <span class="logo_name">WHITE LOTUS</span>
+            </div>
+            <div class="media-icons">
+              <a href="#"onclick="notvalid();"><i class="fa fa-facebook-f"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-twitter"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-instagram"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-linkedin"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="link-boxes">
+            <ul class="box">
+              <li class="link_name">Company</li>
+              <li><a href="#"onclick="mainpage();">Main</a></li>
+              <li><a href="#"onclick="contactpage();">Contact us</a></li>
+              <li><a href="#"onclick="aboutpage();">About us</a></li>
+              <li><a href="#"onclick="myquiz();">Quiz</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Services</li>
+              <li><a href="#add"onclick="feture('currentWeather');">Current Weather</a></li>
+              <li><a href="#myChart"onclick="feture('weekWeather');">6 day forecast</a></li>
+              <li><a href="#home_images"onclick="feture('ozoneForecust');">Ozone forecast</a></li>
+              <li><a href="#"onclick="myquiz();">Enviorment Quiz</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Account</li>
+              <li><a href="#"onclick="notvalid();">Profile</a></li>
+              <li><a href="#"onclick="notvalid();">My account</a></li>
+              <li><a href="./PStorebyWhiteLotus.html"title="prefrences inventory, products">Product/Prefrences</a></li>
+              <li><a href="#"onclick="notvalid();">Purchase</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Offers</li>
+              <li><a href="#"onclick="notvalid();">Donation</a></li>
+              <li><a href="#"onclick="notvalid();">Advertisement</a></li>
+              <li><a href="#"onclick="notvalid();">Coupons/Tickets</a></li>
+              <li><a href="#"onclick="notvalid();">Subscription</a></li>
+            </ul>
+            <ul class="box input-box">
+              <li class="link_name">About White Lotus</li>
+              <li>First of all, it is better to say that our WHITE LOTUS was established in 14 February 2023. So it didn't take us 
+                long for this team to come into existence. <a href="./index.html#about3" onclick="future('#about3');"style="cursor: pointer;">See more..</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-details">
+          <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2023 to 2030 <a href="#">WHITE LOTUS.</a>All rights reserved</span>
+            <span class="policy_terms">
+              <a href="#"onclick="showprivacy();">Privacy policy</a>
+              <a href="#privacy-terms"onclick="showprivacy();">Terms & condition</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+</body>
+<script>
+var v = 1;
+let quip = 0;
+let boxa = document.getElementById("navelement");
+function statup(){
+	errorloder(`404 error!`,`There isn't a WHITE LOTUS Pages site here`);
+}
+function errorloder(headerr,prr){
+	document.getElementById("body").style.background = '#212121';
+	setTimeout(function of(){
+        document.getElementById("spinload").style.display = 'none';
+        document.getElementById("errorpage").style.display = 'block';
+        document.getElementById("errorpage").style.height = '70%';
+        document.getElementById("body").style.background = '#fff';
+    },3000);
+}
+function naveffect(){
+    if(v == 1){
+        boxa.style.opacity = "1";
+        boxa.style.zIndex = "99";
+        v = 0;
+    }else{
+        boxa.style.opacity = "-2";
+        boxa.style.zIndex = "-5";
+        v = 1;
+    }
+}
+mybutton = document.getElementById("topBtna");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction(){
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+    	mybutton.style.display = "block";
+    }else{
+        mybutton.style.display = "none";
+    }
+}
+function topFunction(){
+   	document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+function notvalid(){
+    alert("This feature is not avalible now!");
+}
+function mainpage(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/';
+}
+function aboutpage(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about-us';
+}
+function contactpage(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#contact-us';
+}
+function myquiz(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myquiz';
+}
+function showprivacy(){
+  window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#privacy-terms';
+}
+function future(a){
+  if(a == 'currentWeather'){
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#add';
+  }else if(a == 'weekWeather'){
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myChart';
+  }else if(a == 'ozoneForecust'){
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#home_images';
+  }else if(a == '#about3'){
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about3';
+  }else{
+    console.log("Link underflow!");
+  }
+}
+</script>
+</html>
