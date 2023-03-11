@@ -54,6 +54,8 @@ that quiz.
 ------------------------------------------------------------------------------
 
 About WHITE LOTUS:
+------------------------------------------------------------------------------
+
     First of all, it is better to say that our WHITE LOTUS was 
 established in 14 February 2023. So it didn't take us long for 
 this team to come into existence. There were many reasons behind 
@@ -75,25 +77,25 @@ have the greentech fest in our collage and our topic is made website
 where we show the current weather and green related quiz.
 
 Data Support:
+
 (1) INSAT-3DR
     SATCAT no: 41752
     Reference system: Geocentric
     Regime: Geostationary
     Access key: 698d36hi1&d7nJhs_yihd42!um8525bo6Fdg********hu76n9a$re0t3
 
-loading..
 (2) GSAT-6
     Reference system: Geocentric
     Slot: 83°E
     Access key: ik85b********y6Dwtj26p0hbri8
 
-loading..
 (3) NOAA-M
     Access key: 09ufot4a$eu9@ppg_di9********7el9a1gb5
 
 ------------------------------------------------------------------------------
 
 Our Developers:
+------------------------------------------------------------------------------
 
 (1)Sovik Kar(FRONTEND WEB DEVELOPER)
     Design Websites and Web Templates.
@@ -126,6 +128,7 @@ Our Developers:
 ------------------------------------------------------------------------------
 
 Contact us:
+------------------------------------------------------------------------------
 
 Email id: info.WhiteLotus24@gmail.com
 Address: Camellia Institute of Technology, Digberia, Badu Road, 
@@ -137,11 +140,14 @@ Website: https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/
 ------------------------------------------------------------------------------
 
 Technology use:
+------------------------------------------------------------------------------
+
     HTML + CSS + JAVASCRIPT + RAPIDAPI + BOOTSTRAP + PHP etc..
 
 ------------------------------------------------------------------------------
 
 License:
+------------------------------------------------------------------------------
 
 MIT License
 Copyright © 2023 WHITE LOTUS
@@ -237,6 +243,5 @@ In Smartphone use Android version 12 or more then it, iOS version 16.3.1 or more
 then it, etc.
 
 ------------------------------------------------------------------------------
-
 
                             Thank you
