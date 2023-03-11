@@ -13,7 +13,7 @@ Here is a brief outline of what we want to serve to our audience
 
 Current Weather:
 
-    Here we provide our followers with all the useful information 
+Here we provide our followers with all the useful information 
 about today's weather absolutely free. In particular, the 
 important points of the day such as temperature, wind speed, 
 amount of rain, sunsets time etc. are arranged at that particular 
@@ -22,7 +22,7 @@ and take proper action when needed.
 
 Global Location:
 
-    When we see something at eye level we understand it better, so 
+When we see something at eye level we understand it better, so 
 with that in mind here is the world map. Temperature, wind 
 current, cloud position etc. are all understood by this map. 
 And there is also a map of a particular place but it is available 
@@ -31,7 +31,7 @@ provides weather forecasts for the entire world.
 
 Weekly Forecast:
 
-    Basically we provide our audience with the information about the 
+Basically we provide our audience with the information about the 
 upcoming 6 days weather of given location, where a beautiful 
 line-graph is given of the average temperature of those 6 days. 
 Since the weather changes at any time, it is not always possible 
@@ -40,7 +40,7 @@ temperature information is given based on long-term research.
 
 Ozone Forecast:
 
-    We all know the importance of ozone gases in our earth's 
+We all know the importance of ozone gases in our earth's 
 atmosphere. So we need to know the changes in ozone gas level 
 due to constant pollution so that we can be aware. So this ozone 
 gas data is interpreted with historical events and some data of 
@@ -49,7 +49,7 @@ pictures and illustrations which will change from time to time.
 
 Environment Quiz:
 
-    Here is a very nice and informative quiz present. The main reason 
+Here is a very nice and informative quiz present. The main reason 
 for its existence is to increase public awareness towards the 
 environment So that everyone can think about the good and bad of 
 the environment to make our world more beautiful. Sometimes special 
@@ -103,52 +103,32 @@ Our Developers:
 ------------------------------------------------------------------------------
 
 (1)Sovik Kar(FRONTEND WEB DEVELOPER)
-
-    Design Websites and Web Templates.
-
-    Hi, my name is Souvik Kar, and I am a frontend web 
-
-    developer.
-
-    =>HTML-CSS-JS,C and C++,Python,Java,Logo,Photoshope
+Design Websites and Web Templates.
+Hi, my name is Souvik Kar, and I am a frontend web 
+developer.
+=>HTML-CSS-JS,C and C++,Python,Java,Logo,Photoshope
 
 (2)Rajanya Chakraborty(WEB CONTENT WRITER)
-
-    Narrate the web Paragraphs and design artistic framwork
-
-    Hello everyone, I am Rajanya Chakraborty, and I am work 
-
-    here as a Website Content Writer.
-
-    =>C and C++,Python,Canva,Photoshope,Litrature,Music
+Narrate the web Paragraphs and design artistic framwork
+Hello everyone, I am Rajanya Chakraborty, and I am work
+here as a Website Content Writer.
+=>C and C++,Python,Canva,Photoshope,Litrature,Music
 
 (3)Hritick Modak(FRONTEND WEB DEVELOPER)
-
-    Design Websites and Web Templates, Thumbnails.
-
-    Hi, My self Hritick Modak and I am a frontend web developer, 
-
-    I do very professionaly my jobs.
-
-    =>HTML-CSS-JS,C and C++,Pythone,R,Java
+Design Websites and Web Templates, Thumbnails.
+Hi, My self Hritick Modak and I am a frontend web developer, 
+I do very professionaly my jobs.
+=>HTML-CSS-JS,C and C++,Pythone,R,Java
 
 (4)Krishnendu Mitra(FULLSTACK WEB DEVELOPER)
-
-    Develop's Dynamic Websites and Design Web Templates, Thumbnails.
-
-    Ahoy hoy everyone, my self Krishnendu Mitra, and I'm a freelance 
-
-    web Developer with extensive experience for over 5 years. My 
-
-    expertise is to create and website design, thumbnails design, 
-
-    poster making and many more. In past I am work with world's famous 
-
-    companies like Alphabet and Edequ. I do my job very professionaly 
-
-    and smartways...
-
-    =>HTML-CSS-JS,Node js,React app,PHP,PyScript,C and C++,Json
+Develop's Dynamic Websites and Design Web Templates, Thumbnails.
+Ahoy hoy everyone, my self Krishnendu Mitra, and I'm a freelance 
+web Developer with extensive experience for over 5 years. My 
+expertise is to create and website design, thumbnails design, 
+poster making and many more. In past I am work with world's famous 
+companies like Alphabet and Edequ. I do my job very professionaly 
+and smartways...
+=>HTML-CSS-JS,Node js,React app,PHP,PyScript,C and C++,Json
 
 ------------------------------------------------------------------------------
 
@@ -183,7 +163,7 @@ MIT License
 
 Copyright © 2023 WHITE LOTUS
 
-    Permission is hereby granted, free of charge, to any person 
+Permission is hereby granted, free of charge, to any person 
 obtaining a copy of this website and associated documentation files 
 (the "website"), to deal in the website without restriction, including 
 without limitation the rights to use, copy, modify, merge, publish, 
@@ -209,7 +189,7 @@ WEBSITE.
 
 INTRODUCTION:
 
-    WHITE LOTUS respects your privacy and is committed to protecting your 
+WHITE LOTUS respects your privacy and is committed to protecting your 
 personal data. This privacy notice will inform you as to how we look after 
 your personal data when you visit our website (regardless of where you 
 visit it from) and tell you about your privacy rights and how the law protects 
@@ -217,7 +197,7 @@ you, only and only when you maintain the given Terms points in that condition.
 
 THIRD-PARTY LINKS:
 
-    This website may include links to third-party websites, plug-ins and 
+This website may include links to third-party websites, plug-ins and 
 applications. Clicking on those links or enabling those connections may allow 
 third parties to collect or share data about you. We do not control these 
 third-party websites and are not responsible for their privacy statements. 
@@ -226,7 +206,7 @@ every website you visit.
 
 ADVERTISING:
 
-    We may use your Search, Contact, Technical, Usage and Profile Data to 
+We may use your Search, Contact, Technical, Usage and Profile Data to 
 form a view on what we think you may want or need, or what may be of 
 interest to you. This is how we decide which products, advertisement and 
 offers may be relevant for you (we call this marketing).
@@ -237,14 +217,14 @@ opted in for receiving that marketing.
 
 COOKIES:
 
-    You can set your browser to refuse all or some browser cookies, or to 
+You can set your browser to refuse all or some browser cookies, or to 
 alert you when websites set or access cookies. If you disable or refuse 
 cookies, please note that some parts of this website may become inaccessible 
 or not function properly.
 
 Refund or Settlement:
 
-    WHITE LOTUS has not consented to refund or sattlement with any user for any 
+WHITE LOTUS has not consented to refund or sattlement with any user for any 
 reason. Thats way if any user want to refund then accroding to this law WHITE 
 LOTUS not give any money back to him/her.
 
@@ -268,11 +248,11 @@ Vivaldi: Version 5.7.2932.34 or more then this version
 etc..
 
 Fastest Internet Speed:
-    Use fastest internet in your device, use at least 50kbps to 200kbs or more then 
+Use fastest internet in your device, use at least 50kbps to 200kbs or more then 
 it. Donot use our website when you offline or use less then 50kbps internet speed.
 
 Formal Device:
-    Use Computer, Laptop or Smartphone to open this website , Donot open it in your 
+Use Computer, Laptop or Smartphone to open this website , Donot open it in your 
 smartphone's desktop side or use any type of tab phone to open this web. Always 
 update your Operating system.
 
