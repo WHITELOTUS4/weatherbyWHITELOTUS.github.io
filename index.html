@@ -3,8 +3,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Latest status of weather" lang="en-us" name="description">
+    <meta content="Current status of weather with Ozone history and green enviorment quiz all in one web, WHITE LOTUS" lang="en-us" name="description">
     <meta content="current weather, ozone hole, ozone, quiz, green environment quiz, white lotus, kidKrishkode" lang="en-us" name="keywords">
+    <meta name="author" content="WHITE LOTUS">
     <title version="1.1">Weather by WhiteLotus</title>
     <link rel="icon" href="./fav-icon/roundlogo.png">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
@@ -396,6 +397,7 @@ zita{
 	background: #e2e0e0;
 	padding: 0px 0;
 	margin: 50px 0px;
+    overflow-x: hidden;
 }
 .bluewell h1{
 	font-size: 1.4rem;
@@ -934,7 +936,11 @@ ul{
     height: 150px;
     margin: 20px 0px;
     border-radius: 10px;
-    over-flow: hidden;
+    overflow: hidden;
+    opacity: 0.7;
+}
+#about3 .fly p{
+    width: 50%;
 }
 .devlopersarea{
     width: 100%;
@@ -1128,6 +1134,9 @@ hr{
     }
     #about3 .fly p{
         overflow-x: scroll;
+    }
+    #about3 .fly p{
+        width: 100%;
     }
 }
 </style>
@@ -1573,6 +1582,13 @@ img{
     color:#000;
     text-align: center;
 }
+#SupportingVideo iframe{
+    width: 80%;
+    height: 250px;
+    border: 1px solid #0c8ff0;
+    max-height: 310px;
+    max-width: 85%;
+}
 @media only screen and (max-width: 900px){
     .containers{
         width: 90%;
@@ -1585,6 +1601,11 @@ img{
     .title h2{
         font-size: 34px;
         text-transform: capitalize;
+    }
+    #SupportingVideo iframe{
+        width: 520px;
+        height: 180px;
+        border: 1px solid #0c8ff0;
     }
 }
 </style>
@@ -1609,6 +1630,11 @@ img{
 }
 #spinload I{
 	margin-top: 20%;
+}
+@media only screen and (max-width: 900px){
+    .privacy-report p{
+        text-align: justify;
+    }
 }
 </style>
 <style>
@@ -2382,6 +2408,13 @@ footer .bottom-details .bottom_text{
                 </button>
               </div>
             </article>
+          </section><br>
+          <section class="containers" id="SupportingVideo">
+            <div class="title">
+                <h2>Supporting Videos</h2>
+                <div class="underline"></div>
+              </div>
+              <iframe src="https://www.youtube.com/embed/M63IdwIymiY?controls=0"alt="loading..."></iframe>
           </section>
     </section>
     <section class="about-us">
@@ -2414,7 +2447,7 @@ footer .bottom-details .bottom_text{
                           <m>Access key:  698d36hi1&d7nJhs_yihd42!um8525bo6Fdg********hu76n9a$re0t3</m><br>
                           <m><a href="https://en.m.wikipedia.org/wiki/File:Future_ozone_layer_concentrations.gif">More..</a></m>
                           </p>
-                          <img src="./fav-icon/insat.jpg"alt="loading.."width="25%">
+                          <img src="./img/sat1.jpg"alt="loading.."width="25%">
                 </div>
                 <div class="fly"><p><b>2) GSAT-6</b><br>
                 	<m>Reference system:  Geocentric</m><br>
@@ -2422,13 +2455,13 @@ footer .bottom-details .bottom_text{
                     <m>Access key:  ik85b********y6Dwtj26p0hbri8</m><br>
                     <m><a href="https://en.m.wikipedia.org/wiki/File:Future_ozone_layer_concentrations.gif">More..</a></m>
                     </p>
-                    <img src="./fav-icon/insat.jpg"alt="loading.."width="25%">
+                    <img src="./img/sat2.jpg"alt="loading.."width="25%">
                 </div>
                 <div class="fly"><p><b>3) NOAA-M</b><br>
                     <m>Access key:  09ufot4a$eu9@ppg_di9********7el9a1gb5</m><br>
                     <m><a href="https://en.m.wikipedia.org/wiki/File:Future_ozone_layer_concentrations.gif">More..</a></m>
                     </p>
-                	<img src="./fav-icon/insat.jpg"alt="loading.."width="25%">
+                	<img src="./img/sat3.jpg"alt="loading.."width="25%">
                 </div><br>
         </div>
         <div class="halfheader">
@@ -2738,6 +2771,29 @@ footer .bottom-details .bottom_text{
         </p>
         <ul style="background-color: #f6f6f6; width: 90%;margin: 2px 5%;padding: 4px 8px;border-radius: 10px;border-left: 1px solid #00ff09;"id="mydevicedata">
         </ul><br>
+        <h2>License</h2>
+        <p id="licenses">MIT License<br>
+            Copyright © 2023 WHITE LOTUS<br>
+            <m>Permission</m> is hereby granted, free of charge, to any person obtaining a copy
+            of this website and associated documentation files (the "website"), to deal
+            in the website without restriction, including without limitation the rights
+            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the website, and to permit persons to whom the website is
+            furnished to do so, subject to the following conditions:<br>
+            <br>
+            The above copyright notice and this permission notice shall be included in all
+            copies or substantial portions of the website.<br>
+            <br>
+            THE WEBSITE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+            OUT OF OR IN CONNECTION WITH THE WEBSITE OR THE USE OR OTHER DEALINGS IN THE
+            WEBSITE.<br>
+            <a href="./LICENSE.txt" download="true">Click here</a> to download license file.
+        </p><br>
+        <p><m>Point</m> to be noted that the above license is may be temporary..</p>
     </section>
     <section class="quizdoc">
         <span id="quizdocapi"></span>
@@ -3188,28 +3244,28 @@ function linkchecker(){
     if(currentPath == j){
         return;
     }else{
-        if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#about3`){
+        if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about3`){
             aboutpage();
             href = '#about3';
-        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#privacy-terms`){
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#privacy-terms`){
             showprivacy();
             href='#privacy-terms';
-        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#about-us`){
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about-us`){
             aboutpage();
-        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#contact-us`){
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#contact-us`){
             contactpage();
-        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#myquiz`){
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myquiz`){
             myquiz();
-        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#add`){
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#add`||currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#weather`){
             mainpage();
             href = '#add';
-        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#myChart`){
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myChart`||currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#graph`){
             mainpage();
             href = '#myChart';
-        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#home_images`){
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#home_images`||currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#ozone`){
             mainpage();
             href = '#home_images';
-        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#product`){
+        }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#product`){
             window.location = "./PStorebyWhiteLotus.html";
         }else{
             console.log("Link not protected!");
