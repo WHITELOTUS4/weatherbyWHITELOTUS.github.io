@@ -1,0 +1,1352 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image"content="./fav-icon/roundlogo.png">
+    <meta content="Creative Products in free of cost mean ultimate knowledge, like Ebook, Report, Biography/Autography, Notes, Presentation  ppt, Book pdf, Research paper, Question papers, etc.." lang="en-us" name="description">
+    <meta content="weather, WhiteLotus products, Amazing products, question papers, ozone, quiz, programs, white lotus, kidKrishkode" lang="en-us" name="keywords">
+    <title version="1.0">Product store by WhiteLotus</title>
+    <link rel="icon" href="./fav-icon/roundlogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./origin.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+a{
+	text-decoration: none;
+}
+.navber{
+    display: none;
+}
+#navelement{
+    width: 30%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    color: #0c8ff0;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px 5px;
+    position: absolute;
+    top: 6%;
+    right: 0%;
+    z-index: -5;
+    opacity: -2;
+}
+.element{
+    margin: 8px 2px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.flp{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #0c8ff0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #212121;
+    padding: 5px 8px;
+}
+.flp span img{
+    width: 35px;
+    height: 35px;
+    margin-right: 3px;
+    cursor: progress;
+    border-radius: 50%;
+}
+.iconholder{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.rtp{
+    margin-top: 6px;
+    cursor: pointer;
+}
+#topBtna{
+	display: none;
+	width: 30px;
+	position: fixed;
+	bottom: 20px;
+	right: 40px;
+	z-index: 99;
+	border: none;
+	color: #fff;
+	background: #0c8ff0;
+	padding: 10px 8px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px #999;
+}
+#topBtna:hover{
+	color: #0c8ff0;
+	background: #fff;
+}
+@media only screen and (max-width: 900px){
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden!important;
+    }.rtp, .iconholder{
+        display: none;
+    }.flp span img{
+    	width: 45px;
+         height: 45px;
+    }.navber{
+        display: block;
+        width: 10%;
+        border: 1px solid #fff;
+    }.ber{
+        background-color: #fff;
+        width: 80%;
+        height: 5px;
+        margin: 20% 10%; 
+    }
+}
+#spinload{
+	background: rgba(0,0,0,0.7);
+	color: #0c8ff0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	text-align: center;
+}
+#spinload I{
+	margin-top: 20%;
+}
+footer{
+  position: relative;
+  background: #212121;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+footer::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 1px;
+  width: 100%;
+  background: #AFAFB6;
+}
+footer .content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+footer .content .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.content .top .logo-details{
+  color: #fff;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.content .top .logo-details img{
+    width: 35px;
+    height: 35px;
+    margin-right: 3px;
+    cursor: progress;
+    border-radius: 50%;
+}
+.content .top .media-icons{
+  display: flex;
+}
+.content .top .media-icons a{
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 8px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.top .media-icons a:nth-child(1){
+  background: #4267B2;
+}
+.top .media-icons a:nth-child(1):hover{
+  color: #4267B2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(2){
+  background: #1DA1F2;
+}
+.top .media-icons a:nth-child(2):hover{
+  color: #1DA1F2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(3){
+  background: #E1306C;
+}
+.top .media-icons a:nth-child(3):hover{
+  color: #E1306C;
+  background: #fff;
+}
+.top .media-icons a:nth-child(4){
+  background: #0077B5;
+}
+.top .media-icons a:nth-child(4):hover{
+  color: #0077B5;
+  background: #fff;
+}
+.top .media-icons a:nth-child(5){
+  background: #FF0000;
+}
+.top .media-icons a:nth-child(5):hover{
+  color: #FF0000;
+  background: #fff;
+}
+footer .content .link-boxes{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .link-boxes .box{
+  width: calc(100% / 5 - 10px);
+}
+.content .link-boxes .box .link_name{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
+}
+.link-boxes .box .link_name::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: #fff;
+}
+.content .link-boxes .box li{
+  margin: 6px 0;
+  list-style: none;
+}
+.content .link-boxes .box li a{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease
+}
+.content .link-boxes .box li a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.content .link-boxes .input-box{
+  margin-right: 55px;
+  color: #AFAFB6;
+}
+footer .bottom-details{
+  width: 100%;
+  background: #212121;
+}
+footer .bottom-details .bottom_text{
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a{
+  margin-right: 10px;
+}
+@media (max-width: 900px) {
+  footer .content .link-boxes{
+    flex-wrap: wrap;
+  }
+  footer .content .link-boxes .input-box{
+    width: 40%;
+    margin-top: 10px;
+  }footer .bottom-details .bottom_text{
+     padding: 20px 20px;
+  }
+  #spinload I{
+	  margin-top: 60%;
+  }
+}
+@media (max-width: 700px){
+  footer{
+    position: relative;
+  }
+  .content .top .logo-details{
+    font-size: 26px;
+  }
+  .content .top .media-icons a{
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    padding-top: 10px;
+    line-height: 35px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 3 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 60%;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 12px;
+  }
+}
+@media (max-width: 520px){
+  footer::before{
+    top: 145px;
+  }
+  footer .content .top{
+    flex-direction: column;
+  }
+  .content .top .media-icons{
+    margin-top: 16px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 2 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 100%;
+  }
+}
+#errorpage{
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+	margin: 10% 0px;
+	margin-bottom: 0px;
+	display: none;
+}
+#errorpage h2{
+	color: #0c8ff0;
+  font-family: 'impact',Arial, sans-serif;
+}
+#errorpage ul{
+	background: #f6f6f6;
+	border-radius: 10px;
+	padding: 10px 15px;
+	color: #000;
+	text-align: left;
+	margin: 5px 10%;
+	width: 80%;
+	list-style-type: none;
+  line-height: 36px;
+}
+.urlpath{
+  background-color: #f6f6f6;
+  margin-bottom: 20px;
+  padding: 3px 4px;
+}.urlpath h4{
+  color: #0c8ff0;
+  font-weight: bolder;
+  margin-bottom: 0px;
+}
+.urlpath span{
+  color: #3B1540!important;
+  margin-left: 30px;
+}
+.urlpath span a{
+  color: #3B1540;
+}
+</style>
+<style>
+.top-controler{
+  width: 100%;
+  padding: 2px 10%;
+  color: #0c8ff0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cbtn{
+  cursor: pointer;
+  font-weight: bold;
+}
+.containers{
+  width: 95%;
+  margin: 2px 2.5%;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0;
+  background: inherit;
+  backdrop-filter: blur(5px);
+  padding: 5px 2px;
+}
+#prohead{
+	font-weight: bold;
+}
+.img-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.img-container div{
+  width: 50%;
+  padding: 50px 4px;
+  background-color: transparent;
+}
+.img-container img{
+  width: 50%;
+  padding: 2px 5px;
+}
+#person-img{
+  width: 375px;
+  height: 210px;
+  border-radius: 10px;
+}
+.secondline{
+  display: none;
+}
+article .subheading{
+  margin-top: 30px;
+  margin-left: 10px;
+  color: #00ff09;
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#info,.aboutdata{
+	padding: 0px 5%;
+	text-align: justify;
+}
+.downarea{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  margin: 5px 2.5%;
+  padding: 5px 20px;
+  background-color: #f6f6f6;
+}
+.downarea h6{
+  padding-top: 8px;
+}
+.flw{
+  display: flex;
+  flex-direction: row;
+}
+#type{
+  margin-left: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.flw h6{
+  font-weight: bold;
+}
+.prating{
+  width: 30%;
+  padding: 4px 5%;
+  margin: 5px 35%;
+  text-align: center;
+}
+.prating .fa{
+  font-size: 25px;
+}
+.checked{
+  color: orange;
+}
+.null{
+  color: gray;
+}
+#starclient{
+  width: 100%;
+  justify-content: space-around;
+}
+.flo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.weathertable{
+	width: 45%;
+	height: auto;
+	margin: 20px 0%;
+}.tablerow{
+	display: flex;
+	flex-direction: row;
+}.tableele{
+	width: 50%;
+	height: auto;
+  background-color: #f6f6f6;
+	border: 1px solid #c8c8c8;
+	color: #16a864;
+	padding-left: 2px;
+}.m{
+	color: blueviolet;
+	text-align: center;
+}
+.tablehead{
+	width: 50%;
+	height: auto;
+	border: 1px solid #c8c8c8;
+	background: #0c8ff0;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+#ytvideo{
+    width: 45%;
+    height: 250px;
+    border: 1px solid #0c8ff0;
+    max-height: 310px;
+    max-width: 85%;
+}
+#backup{
+  display: none;
+}
+.morepro{
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  margin: 2px 5%;
+  width: 90%;
+  height: auto;
+  padding: 10px 5px;
+}
+.morepro .flo{
+  justify-content: space-between;
+}
+.leftpro{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 50%;
+}
+.leftpro img{
+  width: 30%;
+  height: 80px;
+  border-radius: 5px;
+}
+.leftpro h6{
+  margin-top: 5%;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 4px;
+}
+.morepro .flo a{
+  margin-top: 2%;
+  margin-right: 5%;
+}
+.morepro hr{
+  width: 95%;
+  margin: 2px 2.5%;
+  margin-bottom: 10px;
+  background-color: #0c8ff0;
+}
+.writterarea{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 5px 10%;
+  background-color: transparent;
+}
+.writer-img{
+  width: 12%;
+  height: 130px;
+  background-color: #f6f6f6;
+  padding: 4px 4px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.writer-img img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.writer-about{
+  width: 50%;
+  background-color: #f6f6f6;
+  padding: 5px 5%;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-left: 5px;
+}
+.writer-about h4{
+  color: #0c8ff0;
+  margin-bottom: 3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.writer-about p{
+  color: #3B1540;
+  font-family: cursive;
+  height: 38px;
+  overflow-y: scroll;
+}
+.writer-about ul{
+  width: 60%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2px 5px;
+  color: #0c8ff0;
+  font-size: 20px;
+}
+.writer-about ul li{
+  cursor: pointer;
+}
+.supheading h5{
+	margin: 5px 10px;
+	font-weight: bold;
+	font-family: poppins;
+	color: #3B1540;
+}
+@media(max-width: 900px){
+  .img-container div p{
+    display: none;
+  }
+  #person-img{
+    width: 195px;
+  }
+  .secondline{
+    display: block;
+    line-height: 16px;
+    margin: 5px 0px;
+    padding: 2px 3px;
+  }
+  article .subheading{
+    margin-top: 2px;
+  }
+  .prating{
+    width: 60%;
+    padding: 4px 5%;
+    margin: 5px 20%;
+  }
+  .flo{
+    flex-direction: column;
+  }
+  .weathertable{
+    width: 100%;
+    margin: 0px 0%;
+  }
+  .tableele{
+    overflow-y: scroll;
+  }
+  #ytvideo{
+    width: 100%;
+    height: 185px;
+    max-width: 100%;
+    border: 1px solid #0c8ff0;
+    margin-bottom: 20px;
+  }
+  .leftpro{
+    width: 90%;
+  }
+  .leftpro img{
+    width: 50%;
+  }
+  .leftpro h6{
+    margin-top: 8%;
+  }
+  .writterarea{
+    padding: 5px 2%;
+  }
+.writer-img{
+  width: 30%;
+  height: 100px;
+}
+.writer-about{
+  width: 60%;
+  padding: 5px 2%;
+  margin-left: 5px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.writer-about h4{
+  font-size: 18px;
+}
+.writer-about p{
+  font-size: 12px;
+  height: 40px;
+  overflow-y: scroll;
+  margin-bottom: 2px;
+}
+.writer-about ul{
+  width: 80%;
+  margin: 2px 2px;
+  font-size: 14px;
+}
+}
+</style>
+<style>
+.mySlides{
+  display: none;
+}.mySlides img{
+  width: 375px;
+  height: 210px;
+}
+.slideshow-container img{
+  vertical-align: middle;
+}
+.slideshow-container{
+  width: 375px;
+  margin: 20px 10%;
+  position: relative;
+  margin: auto;
+}
+.prev,.next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,.next:hover{
+  background-color: rgba(0,0,0,0.8);
+}
+.text{
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+  background-color: #717171;
+}
+.fade{
+  animation: fade 1s linear infinite;
+}
+@keyframes fade{
+  from{opacity: 1;} 
+  to{opacity: 1;}
+}
+@media only screen and(max-width: 300px){
+  .prev,.next,.text{font-size: 11px}
+}
+@media(max-width: 900px){
+  .slideshow-container{
+    width: 90%;
+    margin: 5px 5%;
+  }
+}
+</style>
+<body onload="statup()">
+    <div class="flp">
+        <span style="display: flex;flex-direction: row;width: 20%;">
+            <img src="./fav-icon/logo.png"alt="Error dp not loaded"><span class="rtp"style="color: white;">WHITE LOTUS</span>
+        </span>
+        <div class="iconholder">
+        	<span class="rtp" id="home" onclick="mainpage();">Main</span>
+            <span class="rtp" id="about" onclick="aboutpage();">About</span>
+            <span class="rtp" id="cont" onclick="contactpage();">Contact</span>
+            <span class="rtp" id="quizapi" onclick="myquiz();">Quiz</span>
+        </div>
+        <div class="navber"onclick="naveffect();">
+            <div class="ber"></div>
+            <div class="ber"></div>
+            <div class="ber"></div>
+        </div>
+    </div>
+    <div id="navelement">
+    	<span class="element"onclick="mainpage();">Main</span>
+        <span class="element"onclick="aboutpage();">About</span>
+        <span class="element"onclick="contactpage();">Contact</span>
+        <span class="element"onclick="myquiz();">Quiz</span>
+    </div>
+    <div id="errorpage">
+    	<h2>404 error!</h2>
+        <h4>There isn't a WHITE LOTUS Pages site here</h4>
+        <ul>
+        	<h6>All possible reasons are following</h6>
+            <hr></hr>
+        	  <li>&#x26D4; File not exist or removed</li>
+            <li>&#x26D4; Internet slow</li>
+            <li>&#x26D4; Device OS not updated</li>
+            <li>&#x26D4; Browser backdated</li>
+            <li>&#x26D4; System block this IP</li>
+            <li>&#x26D4; @media quary not work</li>
+            <li>&#x26D4; Under development</li>
+        </ul>
+    </div>
+    <section class="urlpath">
+      <h4>Path: </h4>
+      <span id="mypath"><a href="./index.html">Main</a>/<a href="./PStorebyWhiteLotus.html">PStorebyWhiteLotus</a>/</span>
+    </section>
+    <div><h4 style="color: #0c8ff0; margin: 2px 5px; text-align: center; font-weight: 800;">Products</h4>
+      <div style="width:200px;height:4px;border-radius:10px;background-color:#3B1540;margin-bottom:10px;margin-left:calc((100% - 200px)/2);"></div>
+    </div>
+    <div class="top-controler">
+      <span class="cbtn" onclick="prevpro();"><i class="fa fa-chevron-left"></i>Prev</span>
+      <span class="cbtn" onclick="nextpro();">Next<i class="fa fa-chevron-right"></i></span>
+    </div>
+    <section class="containers">
+        <article class="review">
+          <div class="img-container">
+            <img src="./img/product(empty).png" alt="" id="person-img"/>
+            <div>
+              <h4 id="prohead">Product Heading</h4>
+              <p id="firstTwolines">Loading...</p>
+            </div>
+          </div>
+          <div class="secondline"><p id="secondTwolines">Loading..</p></div>
+          <div class="subheading">Preview of product</div>
+          <div class="slideshow-container">
+            <div class="mySlides fade"style="display: block;">
+              <div class="numbertext">1 / 3</div>
+              <img src="./img/product(empty).png" style="width:100%" id="img1"/>
+              <div class="text">WHITE LOTUS</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="./img/product(empty).png" style="width:100%" id="img2"/>
+              <div class="text">WHITE LOTUS</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="./img/product(empty).png" style="width:100%" id="img3"/>
+              <div class="text">WHITE LOTUS</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+            <br>
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            <div class="subheading"style="margin-bottom: 2px;">Description</div>
+            <p id="info">
+            Loading...
+            </p>
+            <div class="downarea">
+            	<h6>Download link is here: </h6>
+                <a href="https://google.com/"id="dlink"download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a>
+            </div>
+            <div class="subheading"style="margin-bottom: 2px;">About Product</div>
+            <div class="aboutdata">
+            	<span class="flw"><h6>Type of product: </h6><span id="type">loading..</span></span>
+              <span class="flw"><h6>Publish Store: </h6><span id="type">PSWL0</span></span>
+              <span class="flw"><h6>Rating of this Product: </h6></span>
+              <div class="prating">
+                <span style="display: flex;flex-direction: row;"id="starclient">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </span><br>
+                <h6 id="avgrate">0 average based on 0 reviews</h6>
+              </div>
+              <span class="flw"><h6>More Information: </h6></span>
+              <div class="flo">
+                <div class="weathertable">
+                  <span class="tablerow"><span class="tableele">Name of product</span><span class="tableele m"id="m1">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Provided formate</span><span class="tableele m"id="m2">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Page no/Slide no</span><span class="tableele m"id="m3">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Size of product</span><span class="tableele m"id="m4">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Type of reader</span><span class="tableele m"id="m5">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Contant language</span><span class="tableele m"id="m6">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Type of product</span><span class="tableele m"id="m10">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Another part</span><span class="tableele m"id="m11">loading..</span></span>
+                </div>
+                <div class="weathertable">
+                  <span class="tablerow"><span class="tableele">Cost of Product</span><span class="tableele m"id="m7">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Publisher</span><span class="tableele m">WHITE LOTUS</span></span>
+                  <span class="tablerow"><span class="tableele">Available in other store</span><span class="tableele m"id="m8">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Author contact in product</span><span class="tableele m"id="m9">loading..</span></span>
+                </div>
+              </div>
+              <span class="flw"><h6>Supporting Video: </h6></span>
+              <iframe src="https://www.youtube.com/embed/M63IdwIymiY?controls=0"alt="loading..."id="ytvideo"></iframe>
+              <p id="backup1"class="null">Supporting video is not available for this product, Try another one..</p>
+            </div>
+            <div class="subheading"style="margin-bottom: 2px;">Another Part of this Product</div>
+            <div class="morepro"id="proloader">
+              <div class="flo">
+                <div class="leftpro">
+                  <img src="./img/product(empty).png"alt="loading...">
+                  <h6>Product 2</h6>
+                </div>
+                <a href="https://google.com/"download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a>
+              </div><hr>
+            </div><br>
+            <div class="subheading"style="margin-bottom: 2px;">Author</div>
+          <div class="writterarea">
+            <div class="writer-img">
+              <img src="./fav-icon/Krishdp.jpg"id="authorimg">
+            </div>
+            <div class="writer-about">
+              <h4 id="author">Krishnendu Mitra</h4>
+              <p id="wabout">loading...</p>
+              <ul>
+                <li><a href="#"id="s1"><i class="fa fa-envelope"></i></a></li>
+                <li><a href="#"id="s2"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"id="s3"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"id="s4"><i class="fa fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!--div class="button-container">
+            <button class="prev-btn btn">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+            <button class="next-btn btn">
+              <i class="fa fa-chevron-right"></i>
+            </button>
+          </div-->
+        </article>
+    </section><br>
+    <div class="top-controler">
+      <span class="cbtn" onclick="prevpro();"><i class="fa fa-chevron-left"></i>Prev</span>
+      <span class="cbtn" onclick="nextpro();">Next<i class="fa fa-chevron-right"></i></span>
+    </div><br>
+ <!--
+sections ending for football.
+-->
+    <div class="scrolltop float-right">
+	    <i class="fa fa-arrow-up" onclick="topFunction();" id="topBtna"></i>
+    </div>
+    <div id="spinload">
+    	<I class="fa-5x fa fa-spinner fa-spin"style="color:#fff;"></I><br>
+    	<p id="spinnertext">loading...</p>
+    </div>
+    <footer id="footer-page">
+        <div class="content">
+          <div class="top">
+            <div class="logo-details">
+                <img src="./fav-icon/logo.png"alt="Error dp not loaded">
+              <span class="logo_name">WHITE LOTUS</span>
+            </div>
+            <div class="media-icons">
+              <a href="#"onclick="notvalid();"><i class="fa fa-facebook-f"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-twitter"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-instagram"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-linkedin"></i></a>
+              <a href="https://youtu.be/M63IdwIymiY"><i class="fa fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="link-boxes">
+            <ul class="box">
+              <li class="link_name">Company</li>
+              <li><a href="#"onclick="mainpage();">Main</a></li>
+              <li><a href="#"onclick="contactpage();">Contact us</a></li>
+              <li><a href="#"onclick="aboutpage();">About us</a></li>
+              <li><a href="#"onclick="myquiz();">Quiz</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Services</li>
+              <li><a href="#add"onclick="feture('currentWeather');">Current Weather</a></li>
+              <li><a href="#myChart"onclick="feture('weekWeather');">6 day forecast</a></li>
+              <li><a href="#home_images"onclick="feture('ozoneForecust');">Ozone forecast</a></li>
+              <li><a href="#"onclick="myquiz();">Enviorment Quiz</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Account</li>
+              <li><a href="#"onclick="notvalid();">Profile</a></li>
+              <li><a href="#"onclick="notvalid();">My account</a></li>
+              <li><a href="./PStorebyWhiteLotus.html"title="prefrences inventory, products">Product/Prefrences</a></li>
+              <li><a href="#"onclick="notvalid();">Purchase</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Offers</li>
+              <li><a href="#"onclick="notvalid();">Donation</a></li>
+              <li><a href="#"onclick="notvalid();">Advertisement</a></li>
+              <li><a href="#"onclick="notvalid();">Coupons/Tickets</a></li>
+              <li><a href="#"onclick="notvalid();">Subscription</a></li>
+            </ul>
+            <ul class="box input-box">
+              <li class="link_name">About White Lotus</li>
+              <li>First of all, it is better to say that our WHITE LOTUS was established in 14 February 2023. So it didn't take us 
+                long for this team to come into existence. <a href="./index.html#about3" onclick="future('#about3');"style="cursor: pointer;">See more..</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-details">
+          <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2023 to 2030 <a href="#">WHITE LOTUS.</a>All rights reserved</span>
+            <span class="policy_terms">
+              <a href="#"onclick="showprivacy();">Privacy policy</a>
+              <a href="#privacy-terms"onclick="showprivacy();">Terms & condition</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+</body>
+<script>
+var v = 1;
+let quip = 0;
+let boxa = document.getElementById("navelement");
+function statup(){
+	errorloder(`404 error!`,`There isn't a WHITE LOTUS Pages site here`);
+}
+function errorloder(headerr,prr){
+	setTimeout(function of(){
+        document.getElementById("spinload").style.display = 'none';
+        //document.getElementById("errorpage").style.display = 'block';
+        document.getElementById("errorpage").style.height = '70%';
+    },2000);
+}
+function naveffect(){
+    if(v == 1){
+        boxa.style.opacity = "1";
+        boxa.style.zIndex = "99";
+        v = 0;
+    }else{
+        boxa.style.opacity = "-2";
+        boxa.style.zIndex = "-5";
+        v = 1;
+    }
+}
+mybutton = document.getElementById("topBtna");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction(){
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+    	mybutton.style.display = "block";
+    }else{
+        mybutton.style.display = "none";
+    }
+}
+function topFunction(){
+   	document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+function notvalid(){
+    alert("This feature is not avalible now!");
+}
+function mainpage(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/';
+}
+function aboutpage(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about-us';
+}
+function contactpage(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#contact-us';
+}
+function myquiz(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myquiz';
+}
+function showprivacy(){
+  window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#privacy-terms';
+}
+function future(a){
+  if(a == 'currentWeather'){
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#add';
+  }else if(a == 'weekWeather'){
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myChart';
+  }else if(a == 'ozoneForecust'){
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#home_images';
+  }else if(a == '#about3'){
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about3';
+  }else{
+    console.log("Link underflow!");
+  }
+}
+let answers = document.querySelectorAll(".accordion"); 
+answers.forEach((event) => { 
+  event.addEventListener("click", () => { 
+    if (event.classList.contains("active")) { 
+      event.classList.remove("active"); 
+    } else { 
+      event.classList.add("active"); 
+    } 
+  }); 
+});
+</script>
+<script>
+  const reviews = [
+    {
+      id: 1,
+      head: "Mathematics CA3 paper(2023)",
+      dp: "./pic/math.png",
+      twoline: "CA3 Question answer paper for 2023 cit's students , question with solution in a image. Crack your exam in snap..",
+      img1: "./pic/math.jpg",
+      img2: "./pic/bio.jpg",
+      img3: "./pic/auto.jpg",
+      link: "https://drive.google.com/uc?export=download&id=1FNuwhuG9PwpfQbcvmLKyhWAseVqjwdlP",
+      type: "Question Paper",
+      avglist: [4.3,2],
+      aboutlist: ["img",1,"5kb","All type","English",0,"No","No","Yes"],
+      ytlink: "https://www.youtube.com/embed/?controls=0",
+      morepro: [["./pic/bio.png","Biology CA3(2023)","https://drive.google.com/uc?export=download&id=1FFktDCMTM1Tf16kDQ90pyOILagTqmpFw"],["./pic/architecture.png","Architecture CA3(2023)","https://drive.google.com/uc?export=download&id=#"],["./pic/env.png","Environment CA3(2023)","https://drive.google.com/uc?export=download&id=#"],["./pic/auto.png","Automata CA3(2023)","https://drive.google.com/uc?export=download&id=1FS1irRp4uNrYBa_8Y5Sso37MDisa0_gS"]],
+      wdp: "./pic/cit.jpg",
+      name: "CIT helpdesk",
+      wabout: `“ Without Math you are single , with Math you are married, so choice is your.”`,
+      social: [["demo@gmail.com"],["https://www.facebook.com/example?mibextid=ZbWKwL"],["https://www.linkedin.com/in/someone"],["https://youtube.com/"]],
+      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i><i class="fa fa-star"></i>`,
+      text:
+        "CA3 Question answer paper for 2023 cit's students , question with solution in a image. Crack your exam in snap. Not only mathematics but also Architecture, DAA, Automata, Environment, Biology etc question paper with solution is available so, download them and write only the given question's answer in your exam day , for special help you can call me any time but this side link or any words about this side I am not effort so do not say it to anyone except your friends. Thank you so much to co-operate."
+    }
+  ];
+  const dp = document.getElementById("person-img");
+  const head = document.getElementById("prohead");
+  const ftline = document.getElementById("firstTwolines");
+  const stline = document.getElementById("secondTwolines");
+  const img1 = document.getElementById("img1");
+  const img2 = document.getElementById("img2");
+  const img3 = document.getElementById("img3");
+  const link = document.getElementById("dlink");
+  const type = document.getElementById("type");
+  const avgrate = document.getElementById("avgrate");
+  const ytlink = document.getElementById("ytvideo");
+  const wimg = document.getElementById("authorimg");
+  const author = document.getElementById("author");
+  const wabout = document.getElementById("wabout");
+  const info = document.getElementById("info");
+  const rateinfo = document.getElementById("starclient");
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+//about list
+  const m1 = document.getElementById("m1");
+  const m2 = document.getElementById("m2");
+  const m3 = document.getElementById("m3");
+  const m4 = document.getElementById("m4");
+  const m5 = document.getElementById("m5");
+  const m6 = document.getElementById("m6");
+  const m7 = document.getElementById("m7");
+  const m8 = document.getElementById("m8");
+  const m9 = document.getElementById("m9");
+  const m10 = document.getElementById("m10");
+  const m11 = document.getElementById("m11");
+  const proloader = document.getElementById("proloader");
+  const s1 = document.getElementById("s1");
+  const s2 = document.getElementById("s2");
+  const s3 = document.getElementById("s3");
+  const s4 = document.getElementById("s4");
+  let currentItem = 0;
+  window.addEventListener("DOMContentLoaded", () => {
+    const item = reviews[currentItem];
+    head.textContent = item.head;
+    dp.src = item.dp;
+    ftline.textContent = item.twoline;
+    stline.textContent = item.twoline;
+    img1.src = item.img1;
+    img2.src = item.img2;
+    img3.src = item.img3;
+    link.href = item.link;
+    type.textContent = item.type;
+    m1.textContent = item.head;
+    m2.textContent = item.aboutlist[0];
+    m3.textContent = item.aboutlist[1];
+    m4.textContent = item.aboutlist[2];
+    m5.textContent = item.aboutlist[3];
+    m6.textContent = item.aboutlist[4];
+    m7.textContent = item.aboutlist[5];
+    m8.textContent = item.aboutlist[6];
+    m9.textContent = item.aboutlist[7];
+    m10.textContent = item.type;
+    m11.textContent = item.aboutlist[8];
+    ytlink.src = item.ytlink;
+    wimg.src = item.wdp;
+    author.textContent = item.name;
+    wabout.textContent = item.wabout;
+    rateinfo.innerHTML = item.rateinfo;
+    info.textContent = item.text;
+    s1.href = item.social[0];
+    s2.href = item.social[1];
+    s3.href = item.social[2];
+    s4.href = item.social[3];
+    if(item.aboutlist[5] != 0){
+      item.avglist[0] = 0;
+    }else{
+      m7.textContent = "Free of cost";
+    }
+    if(item.avglist[0] == 0 && item.avglist[1] == 0){
+      avgrate.innerHTML = 'Star rating is not available in this product, for more details see FAQ section.';
+      rateinfo.innerHTML = `<i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i>`;
+    }else{
+      avgrate.innerHTML = `${item.avglist[0]} average based on ${item.avglist[1]} reviews`;
+    }
+    if(item.ytlink == 'https://www.youtube.com/embed/?controls=0'){
+      ytlink.style.display = "none";
+      document.getElementById("backup1").style.display = "block";
+    }else{
+      ytlink.style.display = "block";
+      document.getElementById("backup1").style.display = "none";
+    }
+    if(item.aboutlist[8] == "Yes"){
+      proloader.innerHTML = " ";
+      proloader.style.display = "block";
+      for(let i=0; i<item.morepro.length; i++){
+        proloader.innerHTML += `<div class="flo"><div class="leftpro"><img src='${item.morepro[i][0]}'alt="loading..."><h6>${item.morepro[i][1]}</h6></div><a href='${item.morepro[i][2]}'download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a></div><hr>`;
+      }
+    }else{
+      proloader.style.display = "none";
+    }
+  });
+  function showPerson(person) {
+    const item = reviews[person];
+    head.textContent = item.head;
+    dp.src = item.dp;
+    ftline.textContent = item.twoline;
+    stline.textContent = item.twoline;
+    img1.src = item.img1;
+    img2.src = item.img2;
+    img3.src = item.img3;
+    link.href = item.link;
+    type.textContent = item.type;
+    m1.textContent = item.head;
+    m2.textContent = item.aboutlist[0];
+    m3.textContent = item.aboutlist[1];
+    m4.textContent = item.aboutlist[2];
+    m5.textContent = item.aboutlist[3];
+    m6.textContent = item.aboutlist[4];
+    m7.textContent = item.aboutlist[5];
+    m8.textContent = item.aboutlist[6];
+    m9.textContent = item.aboutlist[7];
+    m10.textContent = item.type;
+    m11.textContent = item.aboutlist[8];
+    ytlink.src = item.ytlink;
+    wimg.src = item.wdp;
+    author.textContent = item.name;
+    wabout.textContent = item.wabout;
+    rateinfo.innerHTML = item.rateinfo;
+    info.textContent = item.text;
+    s1.href = item.social[0];
+    s2.href = item.social[1];
+    s3.href = item.social[2];
+    s4.href = item.social[3];
+    if(item.aboutlist[5] != 0){
+      item.avglist[0] = 0;
+    }else{
+      m7.textContent = "Free of cost";
+    }
+    if(item.avglist[0] == 0 && item.avglist[1] == 0){
+      avgrate.innerHTML = 'Star rating is not available in this product, for more details see FAQ section.';
+      rateinfo.innerHTML = `<i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i>`;
+    }else{
+      avgrate.innerHTML = `${item.avglist[0]} average based on ${item.avglist[1]} reviews`;
+    }
+    if(item.ytlink == 'https://www.youtube.com/embed/?controls=0'){
+      ytlink.style.display = "none";
+      document.getElementById("backup1").style.display = "block";
+    }else{
+      ytlink.style.display = "block";
+      document.getElementById("backup1").style.display = "none";
+    }
+    if(item.aboutlist[8] == "Yes"){
+      proloader.innerHTML = " ";
+      proloader.style.display = "block";
+      for(let i=0; i<item.morepro.length; i++){
+        proloader.innerHTML += `<div class="flo"><div class="leftpro"><img src='${item.morepro[i][0]}'alt="loading..."><h6>${item.morepro[i][1]}</h6></div><a href='${item.morepro[i][2]}'download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a></div><hr>`;
+      }
+    }else{
+      proloader.style.display = "none";
+    }
+  }
+  nextBtn.addEventListener("click", () => {
+    currentItem++;
+    if (currentItem > reviews.length - 1) {
+      currentItem = 0;
+    }
+    showPerson(currentItem);
+  });
+  prevBtn.addEventListener("click", () => {
+    currentItem--;
+    if (currentItem < 0) {
+      currentItem = reviews.length - 1;
+    }
+    showPerson(currentItem);
+  });
+function nextpro(){
+  currentItem++;
+  if(currentItem > reviews.length - 1){
+    currentItem = 0;
+  }
+  showPerson(currentItem);
+}
+function prevpro(){
+  currentItem--;
+  if(currentItem < 0){
+    currentItem = reviews.length - 1;
+  }
+  showPerson(currentItem);
+}
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&amp;subagency=GSFC" id="_fed_an_ua_tag"></script>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n){
+  showSlides(slideIndex += n);
+}
+function currentSlide(n){
+  showSlides(slideIndex = n);
+}
+function showSlides(n){
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if(n > slides.length){slideIndex = 1}    
+  if(n < 1){slideIndex = slides.length}
+  for(i = 0; i < slides.length; i++){
+    slides[i].style.display = "none";  
+  }
+  for(i = 0; i < dots.length; i++){
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</html>
