@@ -6,7 +6,7 @@
     <meta content="Current status of weather with Ozone history and green enviorment quiz all in one web, WHITE LOTUS" lang="en-us" name="description">
     <meta content="current weather, ozone hole, ozone, quiz, green environment quiz, white lotus, kidKrishkode" lang="en-us" name="keywords">
     <meta name="author" content="WHITE LOTUS">
-    <title version="1.4">Weather by WhiteLotus</title>
+    <title version="1.4.1">Weather by WhiteLotus</title>
     <link rel="icon" href="./fav-icon/roundlogo.png">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,14 +15,14 @@
 </head>
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body{
-    background: #fff;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+  background: #fff;
+  /*overflow-x: hidden;*/
+  scroll-behavior: smooth;
 }
 a{
 	text-decoration: none;
@@ -393,11 +393,209 @@ zita{
 	color: #0c8ff0;
 	background: #fff;
 }
+#roboCancel{
+	display: block;
+	font-size: 20px;
+  font-weight: bold;
+	position: fixed;
+	bottom: 215px;
+	right: 8px;
+	z-index: 99;
+  color: grey;
+  cursor: pointer;
+}
+#robo-message{
+  display: none;
+	position: fixed;
+	bottom: 165px;
+	right: 100px;
+	z-index: 99;
+  color: #00ff09;
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #fff;
+  box-shadow: 0px 0px 2px 1px #999;
+  border-radius: 10px;
+  padding: 2px 3px;
+}
+#roboBtna{
+	display: none;
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	bottom: 140px;
+	right: 10px;
+	z-index: 99;
+	border: 2px solid #000;
+	background: #c8ffce9e;
+	border-radius: 50%;
+	box-shadow: 0px 2px 2px #999;
+}
+​.robobox{
+  background: #FFDF37;
+  position: relative;
+  height: 80%;
+  width: 80%;
+}
+.robot-ears{
+  background: #D7ECF7;
+  border: 3px solid #000;
+  border-radius: 44px;
+  box-sizing: border-box;
+  height: 30%;
+  position: relative;
+  left: 1px; 
+  top: -18px;
+  width: 75px;
+}
+.robot-head{
+  background: #fff;
+  border-radius: 30px;
+  border: 3px solid #000;
+  box-sizing: border-box;
+  position: absolute;
+  top: -6%;
+  left: 11%;
+  width: 80%;
+  height: 58%;
+}
+.pulse{
+  background: red;
+  border-radius: 500px;
+  height: 10px;
+  width: 10px;
+  position: relative;
+  top: -18px; 
+  left: 23px;
+  animation: pulse 1s infinite ease-in-out;
+}
+@keyframes pulse{
+  from{
+    background: #663399;
+    transform: scale(1);
+    opacity: 1;
+  }
+  to{
+    background: #fff;
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+.robot-antenna{
+  background: #000;
+  height: 9px;
+  width: 3px;
+  position: relative;
+  top: -20px; 
+  left: 48%;
+}
+.robot-antenna:before{
+  background: #B88EF4;
+  border: 2px solid #000;
+  border-radius: 100px;
+  box-sizing: border-box;
+  content: '';
+  display: block;
+  position: relative;
+  top: -7px; 
+  left: -80%;
+  width: 8px;
+  height: 8px;
+}
+.robot-face{
+  box-sizing: border-box;
+  background: #94D3F7;
+  border-radius: 60px;
+  border: 3px solid #000;
+  position: relative;
+  left: 5%;
+  top: -40%;
+  width: 90%;
+  height: 85%;
+}
+.robot-face span{
+	display: flex;
+	flex-direction:row;
+	justify-content:space-around;
+	width: 100%;
+	background: transparent;
+	position: relative;
+    top: 7px;
+}
+.robot-eye-left,
+.robot-eye-right{
+  background: #000;
+  border-radius: 100px;
+  width: 5px;
+  animation: blink 4s infinite ease-in-out;
+}
+.robot-eye-left{
+  left: 28px;
+}
+.robot-eye-right{
+  right: -8px;
+}
+@keyframes blink{
+  0%, 12%, 100%{
+    height: 6px;
+    top: 7px;
+  }
+ 5%, 7%{
+    height: 3px;
+    top: 10px;
+  }
+}
+.robot-mouth{
+  width: 40px;
+  position: relative;
+  left: 3px; 
+  top: 10px;
+}
+.robo-body{
+	width: 65%;
+	height: 40%;
+	margin-top: -6%;
+	margin-left: 19%;
+	background:#fff;
+	border: 3px solid #000;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 60%;
+	border-bottom-right-radius: 60%;
+}
+.robo-pocket{
+	width: 60%;
+	height: 65%;
+	margin-top: 10%;
+	margin-left: 20%;
+	background:#D7ECF7;
+	border: 2px solid #000;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 60%;
+	border-bottom-right-radius: 60%;
+}
+@keyframes aiblank{
+  from{
+    width: 80px;
+	  height: 80px;
+	  border-radius: 50%;
+  }to{
+    position: absolute;
+	  bottom: 0px;
+	  right: 0px;
+    background: #fff;
+    width: 100vw;
+	  height: 100vh;
+	  border-radius: 0%;
+	  border: 0px solid #fff;
+  }
+}
 .serviceoffers{
 	background: #e2e0e0;
 	padding: 0px 0;
 	margin: 50px 0px;
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 .bluewell h1{
 	font-size: 1.4rem;
@@ -717,6 +915,9 @@ zita{
     }
     .serviceoffers{
         display: none;
+    }
+    .litrature p{
+    	text-align: justify;
     }
     .litrature img{
         width: 100%;
@@ -2801,6 +3002,30 @@ footer .bottom-details .bottom_text{
  <!--
 sections ending for football.
 -->
+  <section id="roboBtna"onclick="aiCall();"title="EnvBot, user's help buddy and enviorment AI..">
+​    <div class="robobox">
+      <div class="robot-ears">
+        <div class="robot-ear-left"></div>
+        <div class="robot-ear-right"></div>
+      </div>
+        <div class="robot-head">
+          <div class="pulse"></div>
+          <div class="robot-antenna"></div>
+          <div class="robot-face"><span>
+            <div class="robot-eye-left"></div>
+            <div class="robot-eye-right"></div></span>
+            <svg class="robot-mouth" width="30%" height="30%" viewBox="0 0 170 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"><path d="M10,10c11.985,25.848 41.76,42.886 74.947,42.886c33.188,0 62.962,-17.038 74.947,-42.886c-11.985,25.848 -41.759,42.886 -74.947,42.886c-33.187,0 -62.962,-17.038 -74.947,-42.886Z" style="stroke:#000;stroke-width:10px;"/></svg>
+          </div>
+      </div>
+    </div>
+      <div class="robo-body">
+        <div class="robo-pocket">
+        </div>
+      </div>
+  </section>
+    <div id="robo-message">May i help you dear user!</div>
+    <audio src="./devtools/img/notification-music.mp3" id="noti" autoplay="autoplay"></audio>
+    <div id="roboCancel"onclick="roboBy('roboCancel');">X</div>
     <div class="scrolltop float-right">
 	    <i class="fa fa-arrow-up" onclick="topFunction();" id="topBtna"></i>
     </div>
@@ -2848,7 +3073,7 @@ sections ending for football.
             <ul class="box">
               <li class="link_name">Offers</li>
               <li><a href="#"onclick="notvalid();">Donation</a></li>
-              <li><a href="./devtools/envbot.html"onclick="notvalid();">Advertisement</a></li>
+              <li><a href="#"onclick="notvalid();">Advertisement</a></li>
               <li><a href="#"onclick="notvalid();">Coupons/Tickets</a></li>
               <li><a href="#"onclick="notvalid();">Subscription</a></li>
             </ul>
@@ -2934,28 +3159,34 @@ function statup(){
 	}else{
 		document.getElementById("spinload").style.display = 'block';
 	}
+	setTimeout(function onn(){
+      document.getElementById("roboBtna").style.display="block";
+    },3000);
     let slider = document.getElementById("ststimg");
     setTimeout(function of(){
-        slider.innerHTML = "<img src='./fav-icon/effect002.jpg'class='abja'>";
-        document.getElementById("spinnertext").innerHTML = `Wait your internet is too much slow, we are loading our data..`;
+      slider.innerHTML = "<img src='./fav-icon/effect002.jpg'class='abja'>";
+      document.getElementById("spinnertext").innerHTML = `Wait your internet is too much slow, we are loading our data..`;
+      document.getElementById("robo-message").style.display="block";
+      document.getElementById("noti").play();
     },10000);
     setTimeout(function of(){
-        slider.innerHTML = "<img src='./fav-icon/effect0025.jpg'class='abja'>";
+      slider.innerHTML = "<img src='./fav-icon/effect0025.jpg'class='abja'>";
     },30000);
     setTimeout(function of(){
-        slider.innerHTML = "<img src='./fav-icon/effect0035.jpg'class='abja'>";
+      slider.innerHTML = "<img src='./fav-icon/effect0035.jpg'class='abja'>";
+      document.getElementById("robo-message").style.display="none";
     },50000);
     setTimeout(function of(){
-        slider.innerHTML = "<img src='./fav-icon/effect003.jpg'class='abja'>";
+      slider.innerHTML = "<img src='./fav-icon/effect003.jpg'class='abja'>";
     },80000);
     setTimeout(function of(){
-        slider.innerHTML = "<img src='./fav-icon/effect005.jpg'class='abja'>";
+      slider.innerHTML = "<img src='./fav-icon/effect005.jpg'class='abja'>";
     },120000);
     setTimeout(function of(){
-        slider.innerHTML = "<img src='./fav-icon/effect001.jpg'class='abja'>";
+      slider.innerHTML = "<img src='./fav-icon/effect001.jpg'class='abja'>";
     },160000);
     setTimeout(function of(){
-        slider.innerHTML = "<img src='./fav-icon/effect004.jpg'class='abja'>";
+      slider.innerHTML = "<img src='./fav-icon/effect004.jpg'class='abja'>";
     },200000);
     generateCaptcha();
     document.getElementById("mylocation").innerHTML = window.location;
@@ -3366,6 +3597,39 @@ new Chart("myChart", {
     }
   }
 });
+}
+function aiCall(){
+	document.getElementById("roboBtna").style.animation="aiblank 2s 1 ease-in-out";
+	document.getElementById("roboBtna").innerHTML="";
+	document.getElementById("robo-message").style.display="none";
+    document.getElementById("roboCancel").style.display="none";
+  setTimeout(function onn(){
+    document.getElementById("roboBtna").style.width="100vw";
+    document.getElementById("roboBtna").style.height="100vh";
+    document.getElementById("roboBtna").style.background="#fff";
+    document.getElementById("roboBtna").style.border="0px solid #fff";
+    document.getElementById("roboBtna").style.borderRadius="0%";
+    document.getElementById("roboBtna").style.position="absolute";
+    document.getElementById("roboBtna").style.bottom="0px";
+    document.getElementById("roboBtna").style.right="0px";
+  },1900);
+	setTimeout(function ai(){
+		window.location="./devtools/envbot.html";
+	},2000);
+}
+let robo=0;
+function roboBy(pra){
+  //if(robo==0){
+    document.getElementById(`${pra}`).style.display="none";
+    //document.getElementById(`${pra}`).innerHTML=`<i class="fa fa-gear"></i>`;
+    document.getElementById("roboBtna").style.display="none";
+    document.getElementById("robo-message").style.display="none";
+    robo=1;
+  // }else{
+  //   document.getElementById(`${pra}`).innerHTML="X";
+  //   document.getElementById("roboBtna").style.display="block";
+  //   robo=0;
+  // }
 }
 </script>
 <script>
