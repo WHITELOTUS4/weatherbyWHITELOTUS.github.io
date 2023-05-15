@@ -7,6 +7,7 @@ let list={main:'4'};
 function send(){
     let s = 1;
     var user = document.getElementById("command").value;
+    user=replaceStr(user);
     if((user==null)||(user=='')){
         alert("Write somthing...");
     }else if(set[0]==0){
@@ -48,6 +49,7 @@ var database1={
     "Hi":"Hello",
     "Hello":"Hlw",
     "Hlw":"Hi",
+    "Nice to meet you":"That's my pleasure bro.",
     "What is your name":"Hello , My name is Envbot, I am a environment chatbot by white lotus",
     "Who are you":"I am Envbot",
     "What is white lotus":"White lotus is name of a group , where 4 memebers are present, fire, water, earth and air...",
@@ -75,6 +77,14 @@ var database1={
     "How to hack makaut":"Haa Haa Haa , nice joke bro..",
     "Write a c program to implement prime's algorithm":"<img src='/storage/emulated/0/Pictures/Screenshots/Screenshot_2023_0502_152830.png'alt='loading'class='poster'><br>For prime's algorithm check out the following link<br><a class='aurl' href='https://github.com/Krishnendu-Mitra/C-codes.git'>https://github.com/Krishn<br>endu-Mitra/C-codes.git</a> ",
     "Slap you":"Thanks bro..",
+    "How to make a AI like you":"Search it in google , 'how to hack google', your answer is very clear",
+    "I want to marry you":"I am a robot not any leaving body",
+    "l like you":"l subscribe you",
+    "I love you":"I love you 3000 bro..",
+    "I hate you":"That's your pleasure bro",
+    "Write a sort note":"Really bro..",
+    "Yes":"Argument is not applicable in your last commite",
+    "No":"Argument is not applicable in last message",
     "Thanks":"Try to say 'Thank you' not thanks, it a bad manners bro..",
     "Thank you":"Welcome bro",
     "Bye":"Be with you every time bro..",
@@ -185,8 +195,14 @@ function fillup(data,line){
 		selftalk(1,`<img class='wicon' src='${iconurl}' alt='icon'><br><te> ${convertion(data['main']['temp'])} °C </te>`);*/
 		selftalk(1,`<center><te><r><i class='fa fa-thermometer-half'></i></r> ${convertion(data['main']['temp'])} °C </te></center>`);
 	}else if(line=='pressure'){
-		selftalk(1,`<center><te><r><i class='fa fa-leaf'></i></r> ${pressure} mb</te></center>`);
+		selftalk(1,`<center><te><r><i class='fa fa-leaf'></i></r> ${data['main']['pressure']} mb</te></center>`);
     }else{
 		selftalk(1,`Which data you want bro, give clearly..`);
 	}
+}
+function replaceStr(user){
+	user=user.replace('?','');
+	user=user.replace('.','');
+	user=user.replace(',','');
+	return user;
 }
