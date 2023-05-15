@@ -21,7 +21,7 @@
 }
 body{
   background: #fff;
-  /*overflow-x: hidden;*/
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 a{
@@ -3339,6 +3339,7 @@ function mainpage(){
     p4.style.display = "none";
     p5.style.display = "none";
     f1.style.display = "block";
+    aiVisible(1);
     document.querySelector("#home").style.color = "#fff";
     document.querySelector("#about").style.color = "#0c8ff0";
     document.querySelector("#cont").style.color = "#0c8ff0";
@@ -3352,6 +3353,7 @@ function aboutpage(){
     p4.style.display = "none";
     p5.style.display = "none";
     f1.style.display = "block";
+    aiVisible(1);
     document.querySelector("#home").style.color = "#0c8ff0";
     document.querySelector("#about").style.color = "#fff";
     document.querySelector("#cont").style.color = "#0c8ff0";
@@ -3365,6 +3367,7 @@ function contactpage(){
     p4.style.display = "none";
     p5.style.display = "none";
     f1.style.display = "block";
+    aiVisible(1);
     document.querySelector("#home").style.color = "#0c8ff0";
     document.querySelector("#about").style.color = "#0c8ff0";
     document.querySelector("#cont").style.color = "#fff";
@@ -3378,6 +3381,7 @@ function myquiz(){
     p4.style.display = "block";
     p5.style.display = "none";
     f1.style.display = "none";
+    aiVisible(0);
     document.querySelector("#home").style.color = "#0c8ff0";
     document.querySelector("#about").style.color = "#0c8ff0";
     document.querySelector("#cont").style.color = "#0c8ff0";
@@ -3609,13 +3613,23 @@ function aiCall(){
     document.getElementById("roboBtna").style.background="#fff";
     document.getElementById("roboBtna").style.border="0px solid #fff";
     document.getElementById("roboBtna").style.borderRadius="0%";
-    document.getElementById("roboBtna").style.position="absolute";
+    document.getElementById("roboBtna").style.position="fixed";
     document.getElementById("roboBtna").style.bottom="0px";
     document.getElementById("roboBtna").style.right="0px";
   },1900);
 	setTimeout(function ai(){
 		window.location="./devtools/envbot.html";
 	},2000);
+}
+function aiVisible(pra){
+	if(pra==0){
+		document.getElementById("roboBtna").style.display="none";
+	    document.getElementById("robo-message").style.display="none";
+        document.getElementById("roboCancel").style.display="none";
+	}else{
+		document.getElementById("roboBtna").style.display="block";
+        document.getElementById("roboCancel").style.display="block";
+	}
 }
 let robo=0;
 function roboBy(pra){

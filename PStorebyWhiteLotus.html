@@ -3,7 +3,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Latest status of weather" lang="en-us" name="description">
+    <meta property="og:image"content="./fav-icon/roundlogo.png">
+    <meta content="Creative Products in free of cost mean ultimate knowledge, like Ebook, Report, Biography/Autography, Notes, Presentation  ppt, Book pdf, Research paper, Question papers, etc.." lang="en-us" name="description">
     <meta content="weather, WhiteLotus products, Amazing products, question papers, ozone, quiz, programs, white lotus, kidKrishkode" lang="en-us" name="keywords">
     <title version="1.0">Product store by WhiteLotus</title>
     <link rel="icon" href="./fav-icon/roundlogo.png">
@@ -369,8 +370,553 @@ footer .bottom-details .bottom_text{
 	list-style-type: none;
   line-height: 36px;
 }
+.urlpath{
+  background-color: #f6f6f6;
+  margin-bottom: 20px;
+  padding: 3px 4px;
+}.urlpath h4{
+  color: #0c8ff0;
+  font-weight: bolder;
+  margin-bottom: 0px;
+}
+.urlpath span{
+  color: #3B1540!important;
+  margin-left: 30px;
+}
+.urlpath span a{
+  color: #3B1540;
+}
 </style>
-<body id="body" onload="statup()">
+<style>
+.top-controler{
+  width: 100%;
+  padding: 2px 10%;
+  color: #0c8ff0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cbtn{
+  cursor: pointer;
+  font-weight: bold;
+}
+.containers{
+  width: 95%;
+  margin: 2px 2.5%;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0;
+  background: transparent;/* background: inherit; */
+  backdrop-filter: blur(5px);
+  padding: 5px 2px;
+}
+#prohead{
+	font-weight: bold;
+}
+.img-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.img-container div{
+  width: 50%;
+  padding: 50px 4px;
+  background-color: transparent;
+}
+.img-container img{
+  width: 50%;
+  padding: 2px 5px;
+}
+#person-img{
+  width: 375px;
+  height: 210px;
+  border-radius: 10px;
+}
+.secondline{
+  display: none;
+}
+article .subheading{
+  margin-top: 30px;
+  margin-left: 10px;
+  color: #00ff09;
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#info,.aboutdata{
+	padding: 0px 5%;
+	text-align: justify;
+}
+.downarea{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  margin: 5px 2.5%;
+  padding: 5px 20px;
+  background-color: #f6f6f6;
+}
+.downarea h6{
+  padding-top: 8px;
+}
+.flw{
+  display: flex;
+  flex-direction: row;
+}
+#type{
+  margin-left: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.flw h6{
+  font-weight: bold;
+}
+.prating{
+  width: 30%;
+  padding: 4px 5%;
+  margin: 5px 35%;
+  text-align: center;
+}
+.prating .fa{
+  font-size: 25px;
+}
+.checked{
+  color: orange;
+}
+.null{
+  color: gray;
+}
+#starclient{
+  width: 100%;
+  justify-content: space-around;
+}
+.flo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.weathertable{
+	width: 45%;
+	height: auto;
+	margin: 20px 0%;
+}.tablerow{
+	display: flex;
+	flex-direction: row;
+}.tableele{
+	width: 50%;
+	height: auto;
+  background-color: #f6f6f6;
+	border: 1px solid #c8c8c8;
+	color: #16a864;
+	padding-left: 2px;
+}.m{
+	color: blueviolet;
+	text-align: center;
+}
+.tablehead{
+	width: 50%;
+	height: auto;
+	border: 1px solid #c8c8c8;
+	background: #0c8ff0;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+#ytvideo{
+    width: 45%;
+    height: 250px;
+    border: 1px solid #0c8ff0;
+    max-height: 310px;
+    max-width: 85%;
+}
+#backup{
+  display: none;
+}
+.morepro{
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  margin: 2px 5%;
+  width: 90%;
+  height: auto;
+  padding: 10px 5px;
+}
+.morepro .flo{
+  justify-content: space-between;
+}
+.leftpro{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 50%;
+}
+.leftpro img{
+  width: 30%;
+  height: 80px;
+  border-radius: 5px;
+}
+.leftpro h6{
+  margin-top: 5%;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 4px;
+}
+.morepro .flo a{
+  margin-top: 2%;
+  margin-right: 5%;
+}
+.morepro hr{
+  width: 95%;
+  margin: 2px 2.5%;
+  margin-bottom: 10px;
+  background-color: #0c8ff0;
+}
+.writterarea{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 5px 10%;
+  background-color: transparent;
+}
+.writer-img{
+  width: 12%;
+  height: 130px;
+  background-color: #f6f6f6;
+  padding: 4px 4px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.writer-img img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.writer-about{
+  width: 50%;
+  background-color: #f6f6f6;
+  padding: 5px 5%;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-left: 5px;
+}
+.writer-about h4{
+  color: #0c8ff0;
+  margin-bottom: 3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.writer-about p{
+  color: #3B1540;
+  font-family: cursive;
+  height: 38px;
+  overflow-y: scroll;
+}
+.writer-about ul{
+  width: 60%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2px 5px;
+  color: #0c8ff0;
+  font-size: 20px;
+}
+.writer-about ul li{
+  cursor: pointer;
+}
+.supheading h5{
+	margin: 5px 10px;
+	font-weight: bold;
+	font-family: poppins;
+	color: #3B1540;
+}
+@media(max-width: 900px){
+  .img-container div p{
+    display: none;
+  }
+  .secondline{
+    display: block;
+    line-height: 16px;
+    margin: 5px 0px;
+    padding: 2px 3px;
+  }
+  article .subheading{
+    margin-top: 2px;
+  }
+  .prating{
+    width: 60%;
+    padding: 4px 5%;
+    margin: 5px 20%;
+  }
+  .flo{
+    flex-direction: column;
+  }
+  .weathertable{
+    width: 100%;
+    margin: 0px 0%;
+  }
+  .tableele{
+    overflow-y: scroll;
+  }
+  #ytvideo{
+    width: 100%;
+    height: 185px;
+    max-width: 100%;
+    border: 1px solid #0c8ff0;
+    margin-bottom: 20px;
+  }
+  .leftpro{
+    width: 90%;
+  }
+  .leftpro img{
+    width: 50%;
+  }
+  .leftpro h6{
+    margin-top: 8%;
+  }
+  .writterarea{
+    padding: 5px 2%;
+  }
+.writer-img{
+  width: 30%;
+  height: 100px;
+}
+.writer-about{
+  width: 60%;
+  padding: 5px 2%;
+  margin-left: 5px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.writer-about h4{
+  font-size: 18px;
+}
+.writer-about p{
+  font-size: 12px;
+  height: 40px;
+  overflow-y: scroll;
+  margin-bottom: 2px;
+}
+.writer-about ul{
+  width: 80%;
+  margin: 2px 2px;
+  font-size: 14px;
+}
+}
+</style>
+<style>
+.mySlides{
+  display: none;
+}.mySlides img{
+  width: 375px;
+  height: 210px;
+}
+.slideshow-container img{
+  vertical-align: middle;
+}
+.slideshow-container{
+  width: 375px;
+  margin: 20px 10%;
+  position: relative;
+  margin: auto;
+}
+.prev,.next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,.next:hover{
+  background-color: rgba(0,0,0,0.8);
+}
+.text{
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+  background-color: #717171;
+}
+.fade{
+  animation: fade 1s linear infinite;
+}
+@keyframes fade{
+  from{opacity: 1;} 
+  to{opacity: 1;}
+}
+@media only screen and(max-width: 300px){
+  .prev,.next,.text{font-size: 11px}
+}
+@media(max-width: 900px){
+  .slideshow-container{
+    width: 90%;
+    margin: 5px 5%;
+  }
+}
+</style>
+<style>
+.layout { 
+  width: 100%; 
+  margin-top: 10px; 
+} 
+.accordion { 
+  padding: 10px; 
+  background: #f6f6f6; 
+  border-top: 1px solid gray;
+} 
+.accordion__question p { 
+  margin: 5px; 
+  padding: 0; 
+  font-family: Verdana; 
+  font-size: 16px; 
+  color: #3B1540;
+  font-weight: bold;
+} 
+.accordion__answer p,.accordion__answer ol{ 
+  margin: 5px; 
+  padding: 10px; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  color: grey; 
+  background: #fff; 
+  border-radius: 10px; 
+  text-align: justify;
+} 
+.accordion:hover { 
+  cursor: pointer; 
+} 
+.accordion__answer { 
+  display: none; 
+} 
+.accordion.active .accordion__answer { 
+  display: block; 
+}
+.accordion__answer ol{
+  margin: 10px 5px;
+  padding: 10px 30px;
+}
+</style>
+<style>
+.linku{
+  position: absolute;
+  right: 5%;
+  color: #00ff09;
+  margin-top: 5px;
+  font-size: 25px;
+  cursor: pointer;
+}
+#SupportingVideo iframe{
+  width: 80%;
+  height: 250px;
+  border: 1px solid #0c8ff0;
+  max-height: 310px;
+  max-width: 85%;
+}
+.containerss{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px calc(100% - 1000px);
+}
+.title{
+  margin: 10px 0px;
+}
+.title h2{
+  font-size: 40px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  color: #3B1540;
+}
+.title .underline{
+  width: 250px;
+  height: 4px;
+  background-color: #00ff09;
+  margin: 0 auto;
+}
+.circle{
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #0c8ff0;
+  opacity: 0.2;
+  z-index: -10;
+  box-shadow: 0 0 10px 7px #0c8ff0;
+  position: fixed;
+}
+#leftcir{
+  position: fixed;
+  top: 25%;
+  left: -4%;
+}
+#rightcir{
+  position: fixed;
+  top: 75%;
+  right: 1%;
+}
+@media only screen and (max-width: 900px){
+  .linku{
+    color: #00FF09;
+    font-size: 20px;
+  }
+  #SupportingVideo iframe{
+    width: 520px;
+    height: 180px;
+    border: 1px solid #0c8ff0;
+  }
+  .containerss{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 5%;
+  }
+  .title h2{
+    font-size: 32px;
+    text-transform: capitalize;
+  }
+  .circle{
+    width: 100px;
+    height: 100px;
+  }
+}
+</style>
+<body onload="statup()">
     <div class="flp">
         <span style="display: flex;flex-direction: row;width: 20%;">
             <img src="./fav-icon/logo.png"alt="Error dp not loaded"><span class="rtp"style="color: white;">WHITE LOTUS</span>
@@ -399,7 +945,7 @@ footer .bottom-details .bottom_text{
         <ul>
         	<h6>All possible reasons are following</h6>
             <hr></hr>
-        	<li>&#x26D4; File not exist or removed</li>
+        	  <li>&#x26D4; File not exist or removed</li>
             <li>&#x26D4; Internet slow</li>
             <li>&#x26D4; Device OS not updated</li>
             <li>&#x26D4; Browser backdated</li>
@@ -407,6 +953,250 @@ footer .bottom-details .bottom_text{
             <li>&#x26D4; @media quary not work</li>
             <li>&#x26D4; Under development</li>
         </ul>
+    </div>
+    <section class="urlpath">
+      <h4>Path: </h4>
+      <span id="mypath"><a href="./index.html">Main</a>/<a href="./PStorebyWhiteLotus.html">PStorebyWhiteLotus</a>/<l id="pppath"></l></span>
+    </section>
+    <div id="pro"><h4 style="color: #0c8ff0; margin: 2px 5px; text-align: center; font-weight: 800;">Products</h4>
+      <div style="width:200px;height:4px;border-radius:10px;background-color:#3B1540;margin-bottom:10px;margin-left:calc((100% - 200px)/2);"></div>
+    </div>
+    <div class="top-controler">
+      <span class="cbtn" onclick="prevpro();"><i class="fa fa-chevron-left"></i>Prev</span>
+      <span class="cbtn" onclick="nextpro();">Next<i class="fa fa-chevron-right"></i></span>
+    </div>
+    <section class="containers">
+        <article class="review">
+          <i class="fa fa-link linku"title="Copy the current product link"onclick="cplc();"></i>
+          <div class="img-container">
+            <img src="./img/product(empty).png" alt="" id="person-img"/>
+            <div>
+              <h4 id="prohead">Product Heading</h4>
+              <p id="firstTwolines">Loading...</p>
+            </div>
+          </div>
+          <div class="secondline"><p id="secondTwolines">Loading..</p></div>
+          <div class="subheading">Preview of product</div>
+          <div class="slideshow-container">
+            <div class="mySlides fade"style="display: block;">
+              <div class="numbertext">1 / 3</div>
+              <img src="./img/product(empty).png" style="width:100%" id="img1"/>
+              <div class="text">WHITE LOTUS</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="./img/product(empty).png" style="width:100%" id="img2"/>
+              <div class="text">WHITE LOTUS</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="./img/product(empty).png" style="width:100%" id="img3"/>
+              <div class="text">WHITE LOTUS</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+            <br>
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            <div class="subheading"style="margin-bottom: 2px;">Description</div>
+            <p id="info">
+            Loading...
+            </p>
+            <div class="downarea">
+            	<h6>Download link is here: </h6>
+                <a href="https://google.com/"id="dlink"download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a>
+            </div>
+            <div class="subheading"style="margin-bottom: 2px;">About Product</div>
+            <div class="aboutdata">
+            	<span class="flw"><h6>Type of product: </h6><span id="type">loading..</span></span>
+              <span class="flw"><h6>Publish Store: </h6><span id="type">PSWL1</span></span>
+              <span class="flw"><h6>Rating of this Product: </h6></span>
+              <div class="prating">
+                <span style="display: flex;flex-direction: row;"id="starclient">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </span><br>
+                <h6 id="avgrate">0 average based on 0 reviews</h6>
+              </div>
+              <span class="flw"><h6>More Information: </h6></span>
+              <div class="flo">
+                <div class="weathertable">
+                  <span class="tablerow"><span class="tableele">Name of product</span><span class="tableele m"id="m1">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Provided formate</span><span class="tableele m"id="m2">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Page no/Slide no</span><span class="tableele m"id="m3">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Size of product</span><span class="tableele m"id="m4">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Type of reader</span><span class="tableele m"id="m5">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Contant language</span><span class="tableele m"id="m6">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Type of product</span><span class="tableele m"id="m10">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Another part</span><span class="tableele m"id="m11">loading..</span></span>
+                </div>
+                <div class="weathertable">
+                  <span class="tablerow"><span class="tableele">Cost of Product</span><span class="tableele m"id="m7">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Publisher</span><span class="tableele m">WHITE LOTUS</span></span>
+                  <span class="tablerow"><span class="tableele">Available in other store</span><span class="tableele m"id="m8">loading..</span></span>
+                  <span class="tablerow"><span class="tableele">Author contact in product</span><span class="tableele m"id="m9">loading..</span></span>
+                </div>
+              </div>
+              <span class="flw"><h6>Supporting Video: </h6></span>
+              <iframe src="https://www.youtube.com/embed/M63IdwIymiY?controls=0"alt="loading..."id="ytvideo"></iframe>
+              <p id="backup1"class="null">Supporting video is not available for this product, Try another one..</p>
+            </div>
+            <div class="subheading"style="margin-bottom: 2px;">Another Part of this Product</div>
+            <p id="backup2"class="null"style="padding:2px 5%;">Another part is not available for this product, Try another one..</p>
+            <div class="morepro"id="proloader">
+              <div class="flo">
+                <div class="leftpro">
+                  <img src="./img/product(empty).png"alt="loading...">
+                  <h6>Product 2</h6>
+                </div>
+                <a href="https://google.com/"download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a>
+              </div><hr>
+            </div><br>
+            <div class="subheading"style="margin-bottom: 2px;">Author</div>
+          <div class="writterarea">
+            <div class="writer-img">
+              <img src="./fav-icon/Krishdp.jpg"id="authorimg">
+            </div>
+            <div class="writer-about">
+              <h4 id="author">Krishnendu Mitra</h4>
+              <p id="wabout">loading...</p>
+              <ul>
+                <li><a href="#"id="s1"><i class="fa fa-envelope"></i></a></li>
+                <li><a href="#"id="s2"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"id="s3"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"id="s4"><i class="fa fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!--div class="button-container">
+            <button class="prev-btn btn">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+            <button class="next-btn btn">
+              <i class="fa fa-chevron-right"></i>
+            </button>
+          </div-->
+        </article>
+    </section>
+    <div class="top-controler"id="top-controler">
+      <span class="cbtn" onclick="prevpro();"><i class="fa fa-chevron-left"></i>Prev</span>
+      <span class="cbtn" onclick="nextpro();">Next<i class="fa fa-chevron-right"></i></span>
+    </div><br><br>
+    <div style="color: #fff;text-align: center;font-size: medium;background-color: #0c8ff0;width: 100%;height: auto;padding: 5px 10px;margin:20px 0px;">
+      <p style="margin-bottom: 2px;">If you want to advertise your company in this website, you can contact us, we do it at very low cost.
+         We have a lot of online traffic coming here every day, they can come and see your ads very easily. Contact us immediately for more details.
+        <I><a href="#" onclick="contactpage();"style="color:#fff;"> Click here</a></I>.</p>
+  </div>
+    <section class="containerss" id="SupportingVideo">
+      <div class="title">
+        <h2>Supporting Videos</h2>
+        <div class="underline"></div>
+      </div>
+      <iframe src="https://www.youtube.com/embed/M63IdwIymiY?controls=0"alt="loading..."></iframe>
+    </section><br>
+    <div class="circle" id="leftcir"></div>
+    <div class="circle" id="rightcir"></div>
+    <div class="supheading">
+    	<h5>FAQ:</h5>
+      <div class="layout"> 
+        <div class="accordion"> 
+          <div class="accordion__question"> 
+            <p>How to I post my product here?</p> 
+          </div> 
+          <div class="accordion__answer"> 
+            <p>If you want to publish your product in WHITE LOTUS , then we say that you
+            choose correct option. First of all, you can send your product to us very easily,
+            For this you need to fill a form which will help you to register with us. Register 
+            your product with this link:<br>
+            <a href="https://forms.gle/cKwdEskWRbk8CPHV6">https://forms.gle/
+            cKwdEskWRbk8CPHV6</a><br>
+            But before you fill this form, it's good to know some important points.<br>
+            Your product must be completely free and non-copyrightable. And make sure other
+            required point is maintain in your product.
+            </p> 
+          </div> 
+        </div> 
+        <div class="accordion"> 
+          <div class="accordion__question"> 
+            <p>What is the caitaria of any product to publish here?</p> 
+          </div>
+          <div class="accordion__answer"> 
+            <p> 
+              If you publish your product in WHITE LOTUS, then make sure your product 
+              must complete the points of requireness. The main details provide in <a href="#"onclick="showprivacy();">
+              here</a>, But a quick review is following..<br>
+            </p>
+            <ol>
+              <li>Free of cost</li>
+              <li>Non-copyright</li>
+              <li>No harmful content</li>
+              <li>Product have a DP and 3 sliding images</li>
+              <ul>
+                <li>DP size ratio is 16:9 or 1:1</li>
+                <li>Sliding image or Preview image size ratio is 16:9 or 3:2</li>
+                <li>Image extansion maybe .png or .jpg or .jpeg</li>
+              </ul>
+              <li>Author names and contact is given in product</li>
+              <ul>
+                <li>Author's real name is not required</li>
+                <li>Real email id is required</li>
+              </ul>
+              <li>A sort description is included</li>
+              <li>Supporting videos</li>
+              <li>Google drive link</li>
+              <li>etc..</li>
+            </ol>
+            <p>
+              Above points is important to publishing but for more clear instruction
+              visit the given link and after send your product details in our database,
+              your product is display at max to max after 6 days if it not have any error.
+            </p>
+          </div> 
+        </div>
+        <div class="accordion"> 
+          <div class="accordion__question"> 
+            <p>Why my product don't have any star rating?</p> 
+          </div> 
+          <div class="accordion__answer"> 
+            <p>Basically star rating is not provide when your product don't have any rate Preview(0 rating) 
+              or another reason is your product details have any error mean you are not carefully filed
+              the product sending form. Check your given email messages, if any error email is not 
+              provide by WHITE LOTUS then write mail to us and mention your name, product name and 
+              problems. Go to our contact page <a href="#"onclick="contactpage();">Click here</a>.
+            </p> 
+          </div> 
+        </div>
+        <div class="accordion"> 
+          <div class="accordion__question"> 
+            <p>How to delete my product?</p> 
+          </div> 
+          <div class="accordion__answer"> 
+            <p>Deleting your any product process is very easy, Go to our contact page <a href="#"onclick="contactpage();">Click here</a>
+              and write a mail to WHITE LOTUS. Mention your name, product name, deleting reasons. After few time lates you got a confirmation
+              reply, when you send the confirmation back to WHITE LOTUS then your product is delete automatically in 3 days.
+            </p> 
+          </div> 
+        </div>
+        <div class="accordion"> 
+          <div class="accordion__question"> 
+            <p>How to get the link of my product?</p> 
+          </div> 
+          <div class="accordion__answer"> 
+            <p>If your product is published in WHITE LOTUS then you have the link in you given email's message. But if you quick share it
+              then go to your product and check a green chain icon in your product head, the click it and now your link copy in your clipboard.
+              If you don't find your product then conform that your product is present in WHITE LOTUS. Or contact us to our email with your
+              name and product name and your problems <a href="#"onclick="contactpage();">Click here</a>.
+            </p> 
+          </div> 
+        </div>
+      </div> 
     </div>
  <!--
 sections ending for football.
@@ -430,7 +1220,7 @@ sections ending for football.
               <a href="#"onclick="notvalid();"><i class="fa fa-twitter"></i></a>
               <a href="#"onclick="notvalid();"><i class="fa fa-instagram"></i></a>
               <a href="#"onclick="notvalid();"><i class="fa fa-linkedin"></i></a>
-              <a href="#"onclick="notvalid();"><i class="fa fa-youtube"></i></a>
+              <a href="https://youtu.be/M63IdwIymiY"><i class="fa fa-youtube"></i></a>
             </div>
           </div>
           <div class="link-boxes">
@@ -484,17 +1274,18 @@ sections ending for football.
 var v = 1;
 let quip = 0;
 let boxa = document.getElementById("navelement");
+let errorpage = document.getElementById("errorpage");
 function statup(){
+  errorpage.style.display = 'none';
 	errorloder(`404 error!`,`There isn't a WHITE LOTUS Pages site here`);
+  linkchecker(0);
 }
 function errorloder(headerr,prr){
-	document.getElementById("body").style.background = '#212121';
 	setTimeout(function of(){
         document.getElementById("spinload").style.display = 'none';
-        document.getElementById("errorpage").style.display = 'block';
+        //document.getElementById("errorpage").style.display = 'block';
         document.getElementById("errorpage").style.height = '70%';
-        document.getElementById("body").style.background = '#fff';
-    },3000);
+    },2000);
 }
 function naveffect(){
     if(v == 1){
@@ -527,29 +1318,498 @@ function mainpage(){
 	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/';
 }
 function aboutpage(){
-	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#about-us';
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about-us';
 }
 function contactpage(){
-	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#contact-us';//check this link
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#contact-us';
 }
 function myquiz(){
-	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#myquiz';
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myquiz';
 }
 function showprivacy(){
-  window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#privacy-terms';
+  window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#privacy-terms';
 }
 function future(a){
   if(a == 'currentWeather'){
-    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#add';
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#add';
   }else if(a == 'weekWeather'){
-    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#myChart';
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myChart';
   }else if(a == 'ozoneForecust'){
-    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#home_images';
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#home_images';
   }else if(a == '#about3'){
-    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io#about3';
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about3';
   }else{
     console.log("Link underflow!");
   }
+}
+let answers = document.querySelectorAll(".accordion"); 
+answers.forEach((event) => { 
+  event.addEventListener("click", () => { 
+    if (event.classList.contains("active")) { 
+      event.classList.remove("active"); 
+    } else { 
+      event.classList.add("active"); 
+    } 
+  }); 
+});
+</script>
+<script>
+  const reviews = [
+    {
+      id: 1,
+      head: "Gods Particle",
+      dp: "./fav-icon/img001.png",
+      twoline: "In this report we are know about god particle and it's true power in simple way",
+      img1: "./fav-icon/effect001.jpg",
+      img2: "./fav-icon/effect002.jpg",
+      img3: "./fav-icon/effect004.jpg",
+      link: "https://google.com/",
+      type: "Research Paper",
+      avglist: [4.4,28],
+      aboutlist: ["pdf",10,"20kb","All type","English",0,"Yes","Yes","Yes"],
+      ytlink: "https://www.youtube.com/embed/M63IdwIymiY?controls=0",
+      morepro: [["./fav-icon/effect001.jpg","Gods Particle part 2","https://drive.google.com/uc?export=download&id=1Csh6Gcqd-e4LTxR7U18vv9n7mG3HkTu_"],["./fav-icon/effect002.jpg","Gods Particle part 3","https://drive.google.com/uc?export=download&id=1jyBoxo0bWzmdgK-r0PJVRdF3iq35bxt7"]],
+      wdp: "./fav-icon/Krishdp.jpg",
+      name: "Krishnendu Mitra",
+      wabout: `“ Space is the study of everything in the universe that's beyond our own mind ”`,
+      social: [["krishnendumitra24@gmail.com"],["https://www.facebook.com/dibyendu.mitra.52090?mibextid=ZbWKwL"],["https://www.linkedin.com/in/krishnendu-mitra-b94004261"],["https://youtube.com/@whitelotus4"]],
+      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i><i class="fa fa-star"></i>`,
+      text:
+        "I like this website because here i check my city's daliy weathers and ozone history not only that but also i play here a quiz game related to nature. free free (•_•)"
+    },
+    {
+      id: 2,
+      head: "Astronomy for India",
+      dp: "./img/user(king).jpg",
+      twoline: "Astronomy is a easy subject but not in india",
+      img1: "./fav-icon/effect0025.jpg",
+      img2: "./fav-icon/effect0035.jpg",
+      img3: "./fav-icon/effect002.jpg",
+      link: "https://youtube.com/",
+      type: "PPT",
+      avglist: [3.8,53],
+      aboutlist: ["ppt",18,"50kb","Students","English",0,"No","Yes","Yes"],
+      ytlink: "https://www.youtube.com/embed/?controls=0",
+      morepro: [["./img/product(empty).png","Astronomy part 2","https://drive.google.com/uc?export=download&id=1CY0OftPkAy95pimj_qiwoD_e0FiBJgjd"]],
+      wdp: "./img/user(unknown).png",
+      name: "KING GAMER",
+      wabout: `Gamer`,
+      social: [["demo@gmail.com"],["#"],["#"],["#"]],
+      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>`,
+      text:
+        "Hello, I am a Youtuber. I think you all know me yes I am King Gamer and I love White Lotus..."
+    },
+    {
+      id: 3,
+      head: "Product Heading",
+      dp: "./img/user(anil).png",
+      twoline: "Two lines about your product is writen here..",
+      img1: "./fav-icon/effect005.jpg",
+      img2: "./fav-icon/effect001.jpg",
+      img3: "./fav-icon/effect0025.jpg",
+      link: "https://facebook.com/",
+      type: "EBook",
+      avglist: [3,3],
+      aboutlist: ["pdf",1,"20kb","All type","English",0,"No","Yes","No"],
+      ytlink: "https://www.youtube.com/embed/?controls=0",
+      morepro: [],
+      wdp: "./img/user(unknown).png",
+      name: "Dr. Anile Lama",
+      wabout: `Weather Scientists`,
+      social: [["#"],["#"],["#"],["#"]],
+      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i>`,
+      text:
+        "I voluntarily helped WHITE LOTUS with some weather report to build this website, so they always remembers me. Basically i am a weather scientists in Nepal and i am report this team at the first and they pulish it free of cost which i feel more attractive to them. This website look like very simple but it's not like that it is very informative and accurate, Thank you read this."
+    },
+    {
+      id: 4,
+      head: "Product Heading",
+      dp: "./img/user(manish).jpg",
+      twoline: "Two lines about your product is writen here..",
+      img1: "./img/product(empty).png",
+      img2: "./img/product(empty).png",
+      img3: "./img/product(empty).png",
+      link: "https://github.com/",
+      type: "loading...",
+      avglist: [0,0],
+      aboutlist: ["pdf",1,"20kb","All type","English",1,"No","Yes","No"],
+      ytlink: "https://www.youtube.com/embed/?controls=0",
+      morepro: [],
+      wdp: "./img/user(unknown).png",
+      name: "Manish Rajput",
+      wabout: `Tourist Guid`,
+      social: [["#"],["#"],["#"],["#"]],
+      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i><i class="fa fa-star"></i>`,
+      text:
+        "I am a tour guide in rajasthan, rajasthan always a high tempareture state so hot that many people die anytime so we always have to check the weather forecast. And from there I know about this site, using it helps me a lot."
+    },
+    {
+      id: 5,
+      head: "Product Heading",
+      dp: "./img/user(debosmita).jpg",
+      twoline: "Two lines about your product is writen here..",
+      img1: "./img/product(empty).png",
+      img2: "./img/product(empty).png",
+      img3: "./img/product(empty).png",
+      link: "https://google.com/",
+      type: "loading...",
+      avglist: [0,0],
+      aboutlist: ["loading..","loading..","loading..","loading..","loading..","loading..","loading..","loading.."],
+      ytlink: "https://www.youtube.com/embed/?controls=0",
+      morepro: [],
+      wdp: "./img/user(unknown).png",
+      name: "Debosmita Mitra",
+      wabout: `Nurse`,
+      social: [["#"],["#"],["#"],["#"]],
+      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i>`,
+      text:
+        "Hello everyone, my self debosmita. I didn't come here mainly to see the weather forecast or I came here to play the quiz, but then when did i like it so much that i didn't know. After that i occasionally come back to it and play quizzes, look at temperature records. Finally, its design is very good and without ads and cookies so much faster then the other app I have use."
+    },
+    {
+      id: 6,
+      head: "Product Heading",
+      dp: "https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png",
+      twoline: "Two lines about your product is writen here..",
+      img1: "./img/product(empty).png",
+      img2: "./img/product(empty).png",
+      img3: "./img/product(empty).png",
+      link: "https://google.com/",
+      type: "loading...",
+      avglist: [0,0],
+      aboutlist: ["loading..","loading..","loading..","loading..","loading..","loading..","loading..","loading.."],
+      ytlink: "https://www.youtube.com/embed/?controls=0",
+      morepro: [],
+      wdp: "./img/user(unknown).png",
+      name: "Happy038870",
+      wabout: `Driver`,
+      social: [["#"],["#"],["#"],["#"]],
+      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i>`,
+      text:
+        ""
+    },
+    {
+      id: 7,
+      head: "Product Heading",
+      dp: "./img/user(david).jpg",
+      twoline: "Two lines about your product is writen here..",
+      img1: "./img/product(empty).png",
+      img2: "./img/product(empty).png",
+      img3: "./img/product(empty).png",
+      link: "https://google.com/",
+      type: "loading...",
+      avglist: [0,0],
+      aboutlist: ["loading..","loading..","loading..","loading..","loading..","loading..","loading..","loading.."],
+      ytlink: "https://www.youtube.com/embed/?controls=0",
+      morepro: [],
+      wdp: "./img/user(unknown).png",
+      name: "David Hamsworth",
+      wabout: `Writer`,
+      social: [["#"],["#"],["#"],["#"]],
+      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i>`,
+      text:
+        "Simply the best weather app l have used which is devoid of ads.lts shows weather of my city so much faster than any other apps. Great for weather ,the zoom in detailed map works exactly  for me."
+    },
+    {
+      id: 8,
+      head: "Product",
+      dp: "./img/user(unknown).png",
+      twoline: "Two lines about your product is writen here..",
+      img1: "./img/product(empty).png",
+      img2: "./img/product(empty).png",
+      img3: "./img/product(empty).png",
+      link: "https://google.com/",
+      type: "loading...",
+      avglist: [0,0],
+      aboutlist: ["loading..","loading..","loading..","loading..","loading..","loading..","loading..","loading.."],
+      ytlink: "https://www.youtube.com/embed/?controls=0",
+      morepro: [],
+      wdp: "./img/user(unknown).png",
+      name: "Biswajit Dutta",
+      wabout: `Self Employe`,
+      social: [["#"],["#"],["#"],["#"]],
+      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>`,
+      text:
+        "I am not like this type of presention.. I think the graph and map is made better for show us. If you read it then go and made it better i am not understand it."
+    }
+  ];
+  const dp = document.getElementById("person-img");
+  const head = document.getElementById("prohead");
+  const ftline = document.getElementById("firstTwolines");
+  const stline = document.getElementById("secondTwolines");
+  const img1 = document.getElementById("img1");
+  const img2 = document.getElementById("img2");
+  const img3 = document.getElementById("img3");
+  const link = document.getElementById("dlink");
+  const type = document.getElementById("type");
+  const avgrate = document.getElementById("avgrate");
+  const ytlink = document.getElementById("ytvideo");
+  const wimg = document.getElementById("authorimg");
+  const author = document.getElementById("author");
+  const wabout = document.getElementById("wabout");
+  const info = document.getElementById("info");
+  const rateinfo = document.getElementById("starclient");
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+//about list
+  const m1 = document.getElementById("m1");
+  const m2 = document.getElementById("m2");
+  const m3 = document.getElementById("m3");
+  const m4 = document.getElementById("m4");
+  const m5 = document.getElementById("m5");
+  const m6 = document.getElementById("m6");
+  const m7 = document.getElementById("m7");
+  const m8 = document.getElementById("m8");
+  const m9 = document.getElementById("m9");
+  const m10 = document.getElementById("m10");
+  const m11 = document.getElementById("m11");
+  const proloader = document.getElementById("proloader");
+  const s1 = document.getElementById("s1");
+  const s2 = document.getElementById("s2");
+  const s3 = document.getElementById("s3");
+  const s4 = document.getElementById("s4");
+  const pppath = document.getElementById("pppath");
+  let currentItem = 0;
+  window.addEventListener("DOMContentLoaded", () => {
+    const item = reviews[currentItem];
+    head.textContent = item.head;
+    dp.src = item.dp;
+    ftline.textContent = item.twoline;
+    stline.textContent = item.twoline;
+    img1.src = item.img1;
+    img2.src = item.img2;
+    img3.src = item.img3;
+    link.href = item.link;
+    type.textContent = item.type;
+    m1.textContent = item.head;
+    m2.textContent = item.aboutlist[0];
+    m3.textContent = item.aboutlist[1];
+    m4.textContent = item.aboutlist[2];
+    m5.textContent = item.aboutlist[3];
+    m6.textContent = item.aboutlist[4];
+    m7.textContent = item.aboutlist[5];
+    m8.textContent = item.aboutlist[6];
+    m9.textContent = item.aboutlist[7];
+    m10.textContent = item.type;
+    m11.textContent = item.aboutlist[8];
+    ytlink.src = item.ytlink;
+    wimg.src = item.wdp;
+    author.textContent = item.name;
+    wabout.textContent = item.wabout;
+    rateinfo.innerHTML = item.rateinfo;
+    info.textContent = item.text;
+    s1.href = item.social[0];
+    s2.href = item.social[1];
+    s3.href = item.social[2];
+    s4.href = item.social[3];
+    if(item.aboutlist[5] != 0){
+      item.avglist[0] = 0;
+    }else{
+      m7.textContent = "Free of cost";
+    }
+    if(item.avglist[0] == 0 && item.avglist[1] == 0){
+      avgrate.innerHTML = 'Star rating is not available in this product, for more details see FAQ section.';
+      rateinfo.innerHTML = `<i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i>`;
+    }else{
+      avgrate.innerHTML = `${item.avglist[0]} average based on ${item.avglist[1]} reviews`;
+    }
+    if(item.ytlink == 'https://www.youtube.com/embed/?controls=0'){
+      ytlink.style.display = "none";
+      document.getElementById("backup1").style.display = "block";
+    }else{
+      ytlink.style.display = "block";
+      document.getElementById("backup1").style.display = "none";
+    }
+    if(item.aboutlist[8] == "Yes"){
+      proloader.innerHTML = " ";
+      document.getElementById("backup2").style.display = "none";
+      proloader.style.display = "block";
+      for(let i=0; i<item.morepro.length; i++){
+        proloader.innerHTML += `<div class="flo"><div class="leftpro"><img src='${item.morepro[i][0]}'alt="loading..."><h6>${item.morepro[i][1]}</h6></div><a href='${item.morepro[i][2]}'download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a></div><hr>`;
+      }
+    }else{
+      document.getElementById("backup2").style.display = "block";
+      proloader.style.display = "none";
+    }
+  });
+function showPerson(person){
+    const item = reviews[person];
+    head.textContent = item.head;
+    dp.src = item.dp;
+    ftline.textContent = item.twoline;
+    stline.textContent = item.twoline;
+    img1.src = item.img1;
+    img2.src = item.img2;
+    img3.src = item.img3;
+    link.href = item.link;
+    type.textContent = item.type;
+    m1.textContent = item.head;
+    m2.textContent = item.aboutlist[0];
+    m3.textContent = item.aboutlist[1];
+    m4.textContent = item.aboutlist[2];
+    m5.textContent = item.aboutlist[3];
+    m6.textContent = item.aboutlist[4];
+    m7.textContent = item.aboutlist[5];
+    m8.textContent = item.aboutlist[6];
+    m9.textContent = item.aboutlist[7];
+    m10.textContent = item.type;
+    m11.textContent = item.aboutlist[8];
+    ytlink.src = item.ytlink;
+    wimg.src = item.wdp;
+    author.textContent = item.name;
+    wabout.textContent = item.wabout;
+    rateinfo.innerHTML = item.rateinfo;
+    info.textContent = item.text;
+    s1.href = item.social[0];
+    s2.href = item.social[1];
+    s3.href = item.social[2];
+    s4.href = item.social[3];
+    if(item.aboutlist[5] != 0){
+      item.avglist[0] = 0;
+    }else{
+      m7.textContent = "Free of cost";
+    }
+    if(item.avglist[0] == 0 && item.avglist[1] == 0){
+      avgrate.innerHTML = 'Star rating is not available in this product, for more details see FAQ section.';
+      rateinfo.innerHTML = `<i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i>`;
+    }else{
+      avgrate.innerHTML = `${item.avglist[0]} average based on ${item.avglist[1]} reviews`;
+    }
+    if(item.ytlink == 'https://www.youtube.com/embed/?controls=0'){
+      ytlink.style.display = "none";
+      document.getElementById("backup1").style.display = "block";
+    }else{
+      ytlink.style.display = "block";
+      document.getElementById("backup1").style.display = "none";
+    }
+    if(item.aboutlist[8] == "Yes"){
+      proloader.innerHTML = " ";
+      document.getElementById("backup2").style.display = "none";
+      proloader.style.display = "block";
+      for(let i=0; i<item.morepro.length; i++){
+        proloader.innerHTML += `<div class="flo"><div class="leftpro"><img src='${item.morepro[i][0]}'alt="loading..."><h6>${item.morepro[i][1]}</h6></div><a href='${item.morepro[i][2]}'download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a></div><hr>`;
+      }
+    }else{
+      document.getElementById("backup2").style.display = "block";
+      proloader.style.display = "none";
+    }
+    pppath.textContent = item.head;
+}
+  nextBtn.addEventListener("click", () => {
+    currentItem++;
+    if (currentItem > reviews.length - 1) {
+      currentItem = 0;
+    }
+    showPerson(currentItem);
+  });
+  prevBtn.addEventListener("click", () => {
+    currentItem--;
+    if (currentItem < 0) {
+      currentItem = reviews.length - 1;
+    }
+    showPerson(currentItem);
+  });
+function nextpro(){
+  currentItem++;
+  if(currentItem > reviews.length - 1){
+    currentItem = 0;
+  }
+  showPerson(currentItem);
+}
+function prevpro(){
+  currentItem--;
+  if(currentItem < 0){
+    currentItem = reviews.length - 1;
+  }
+  showPerson(currentItem);
+}
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&amp;subagency=GSFC" id="_fed_an_ua_tag"></script>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n){
+  showSlides(slideIndex += n);
+}
+function currentSlide(n){
+  showSlides(slideIndex = n);
+}
+function showSlides(n){
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if(n > slides.length){slideIndex = 1}    
+  if(n < 1){slideIndex = slides.length}
+  for(i = 0; i < slides.length; i++){
+    slides[i].style.display = "none";  
+  }
+  for(i = 0; i < dots.length; i++){
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+function linkchecker(m){
+  var currentLink = window.location;
+  var currentPath = currentLink['href'];
+  let j = currentLink['pathname'];
+  if(currentPath==j){
+    return;
+  }else{
+    let err=1,s=0,loc=-1;
+    let newpath = currentPath.replace(j,'');
+    newpath = newpath.replace(`#PSWL1?details=`,'');
+    newpath = newpath.replace('file://','');
+    for(let i=0; i<reviews.length-1; i++){
+      let s = reviews[i].head;
+      s=s.replaceAll(" ","%20");
+      s=s+'.kid';
+      if(s==newpath){
+        err=0;
+        loc=i;
+        i=reviews.length+2;
+      }
+    }
+    if((currentPath=='https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html') ||
+    (currentPath=='file:///D:/.vscode/Vs%20programmes/Weather/PStorebyWhiteLotus.html') ||
+    (currentPath=='http://localhost:2435/storage/emulated/0/My+html/Weather/PStorebyWhiteLotus.html')){
+      alert("Welcome");
+    }else if((err!=0) && (currentPath!=j)){
+      errorpage.style.display = "block";
+      document.querySelector(".urlpath").style.display="none";
+      document.querySelector(".containers").style.display="none";
+      document.querySelector(".top-controler").style.display="none";
+      document.querySelector("#top-controler").style.display="none";
+      document.querySelector("#pro").style.display="none";
+      document.querySelector(".supheading").style.display="none";
+      setTimeout(function off(){
+        alert("Product not found!, link is not real..");
+      },500);
+    }else{
+      for(let i=0; i<loc; i++){
+        nextpro();
+      }
+    }
+  }
+    /*
+    currentPath = https://.../#about3;
+    j = https://.../;
+    https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhite
+    Lotus.html#PSWL1?details=God%20Particle%20the%20uncompleted%20paper.kid
+
+    D:/.vscode/Vs%20programmes/Weather/PStorebyWhiteLotus.html#PSWL1?details=Astronomy%20for%20India.kid
+    file://#PSWL1?details=id2.kid
+    http://localhost:2435/storage/emulated/0/My+html/Weather/PStorebyWhiteLotus.html#PSWL1?details=Astronomy%20for%20India.kid
+    */
+}
+function cplc(){
+  var currentLink = window.location;
+  let j = currentLink['pathname'];
+  let s = reviews[currentItem].head;
+  s = s.replaceAll(" ","%20");
+  s = j+`#PSWL1?details=`+s+`.kid`;
+  s = s.replace('/','');
+  navigator.clipboard.writeText(s);
+  alert("Copied the link: " + s);
 }
 </script>
 </html>
