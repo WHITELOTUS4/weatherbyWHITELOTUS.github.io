@@ -357,7 +357,7 @@ footer .bottom-details .bottom_text{
 }
 #errorpage h2{
 	color: #0c8ff0;
-  font-family: 'impact',Arial, sans-serif;
+  font-family: 'impact'/*,Arial, sans-serif; */
 }
 #errorpage ul{
 	background: #f6f6f6;
@@ -956,7 +956,7 @@ article .subheading{
     </div>
     <section class="urlpath">
       <h4>Path: </h4>
-      <span id="mypath"><a href="./index.html">Main</a>/<a href="./PStorebyWhiteLotus.html">PStorebyWhiteLotus</a>/<l id="pppath"></l></span>
+      <span id="mypath"><a href="./index.html">Main</a>/<a href="./PStorebyWhiteLotus.html">PStorebyWhiteLotus</a>/<a href="#" id="pppath"></a></span>
     </section>
     <div id="pro"><h4 style="color: #0c8ff0; margin: 2px 5px; text-align: center; font-weight: 800;">Products</h4>
       <div style="width:200px;height:4px;border-radius:10px;background-color:#3B1540;margin-bottom:10px;margin-left:calc((100% - 200px)/2);"></div>
@@ -1089,7 +1089,7 @@ article .subheading{
       <span class="cbtn" onclick="prevpro();"><i class="fa fa-chevron-left"></i>Prev</span>
       <span class="cbtn" onclick="nextpro();">Next<i class="fa fa-chevron-right"></i></span>
     </div><br><br>
-    <div style="color: #fff;text-align: center;font-size: medium;background-color: #0c8ff0;width: 100%;height: auto;padding: 5px 10px;margin:20px 0px;">
+    <div id="ads"style="color: #fff;text-align: center;font-size: medium;background-color: #0c8ff0;width: 100%;height: auto;padding: 5px 10px;margin:20px 0px;">
       <p style="margin-bottom: 2px;">If you want to advertise your company in this website, you can contact us, we do it at very low cost.
          We have a lot of online traffic coming here every day, they can come and see your ads very easily. Contact us immediately for more details.
         <I><a href="#" onclick="contactpage();"style="color:#fff;"> Click here</a></I>.</p>
@@ -1125,7 +1125,7 @@ article .subheading{
         </div> 
         <div class="accordion"> 
           <div class="accordion__question"> 
-            <p>What is the caitaria of any product to publish here?</p> 
+            <p>What is the criteria of any product to publish here?</p> 
           </div>
           <div class="accordion__answer"> 
             <p> 
@@ -1693,6 +1693,12 @@ function showPerson(person){
       proloader.style.display = "none";
     }
     pppath.textContent = item.head;
+    var currentLink = window.location;
+    let j = currentLink['pathname'];
+    let s = reviews[currentItem].head;
+    s = s.replaceAll(" ","%20");
+    s = `https://whitelotus4.github.io/`+j+`#PSWL1?details=`+s+`.kid`;
+    pppath.href = s;
 }
   nextBtn.addEventListener("click", () => {
     currentItem++;
@@ -1752,6 +1758,14 @@ function linkchecker(m){
   var currentLink = window.location;
   var currentPath = currentLink['href'];
   let j = currentLink['pathname'];
+  alert(currentPath,' and ',j);
+  // if(`http://` in currentPath){
+  //   m=1;
+  // }else{
+  //   currentPath=`https://whitelotus4.github.io/`+currentPath;
+  //   m=0;
+  // }
+  // alert(m);
   if(currentPath==j){
     return;
   }else{
@@ -1781,6 +1795,8 @@ function linkchecker(m){
       document.querySelector("#top-controler").style.display="none";
       document.querySelector("#pro").style.display="none";
       document.querySelector(".supheading").style.display="none";
+      document.querySelector("#ads").style.display="none";
+      document.querySelector(".containerss").style.display="none";
       setTimeout(function off(){
         alert("Product not found!, link is not real..");
       },500);
@@ -1799,6 +1815,7 @@ function linkchecker(m){
     D:/.vscode/Vs%20programmes/Weather/PStorebyWhiteLotus.html#PSWL1?details=Astronomy%20for%20India.kid
     file://#PSWL1?details=id2.kid
     http://localhost:2435/storage/emulated/0/My+html/Weather/PStorebyWhiteLotus.html#PSWL1?details=Astronomy%20for%20India.kid
+    weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Astronomy%20for%20India.kid
     */
 }
 function cplc(){
@@ -1806,10 +1823,17 @@ function cplc(){
   let j = currentLink['pathname'];
   let s = reviews[currentItem].head;
   s = s.replaceAll(" ","%20");
-  s = j+`#PSWL1?details=`+s+`.kid`;
-  s = s.replace('/','');
+  // if(`http://` in j){
+  //   s = j+`#PSWL1?details=`+s+`.kid`;
+  //   s = s.replace('/','');
+  // }else{
+    s = `https://whitelotus4.github.io/`+j+`#PSWL1?details=`+s+`.kid`;
+  //}
+  // s.select();
+  // s.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(s);
   alert("Copied the link: " + s);
+  pppath.href = s;
 }
 </script>
 </html>
