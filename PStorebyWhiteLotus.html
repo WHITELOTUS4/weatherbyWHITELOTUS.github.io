@@ -1758,8 +1758,9 @@ function linkchecker(m){
   var currentLink = window.location;
   var currentPath = currentLink['href'];
   let j = currentLink['pathname'];
+  currentPath=currentPath.replace(`//weatherbyWHITELOTUS.github.io`,`/weatherbyWHITELOTUS.github.io`);
   alert('currentpath: '+currentPath);
-  alert('j',j);
+  alert('j: '+j);
    j=`https://whitelotus4.github.io`+j;
   if(currentPath==j){
     return;
