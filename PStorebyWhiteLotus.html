@@ -117,7 +117,7 @@ a{
         margin: 20% 10%; 
     }
 }
-#spinload{
+#spinload,.linkload{
 	background: rgba(0,0,0,0.7);
 	color: #0c8ff0;
 	width: 100%;
@@ -888,6 +888,87 @@ article .subheading{
   top: 75%;
   right: 1%;
 }
+.linkload section{
+  width: 60%;
+  height: auto;
+  margin: 10% 20%;
+  background-color: #fff;
+  border: 2px solid #AFAFB6;
+  border-radius: 10px;
+  color: #3B1540;
+  padding: 4px 5px;
+}
+.linkload section h3{
+  text-align: left;
+  padding-left: 12px;
+  font-family: Impact;
+}
+.linkload section .flw{
+  justify-content: space-between;
+  padding: 3px 4px;
+}
+.linkload section .flw span{
+  display: flex;
+  flex-direction: row;
+}
+.linkload section .flw i{
+  margin-top: 5px;
+  margin-right: 4px;
+}
+.linkload section .flo{
+  justify-content: start;
+  padding: 3px 4px;
+  margin-bottom: 10px;
+}
+.linkload section .flo span{
+  margin: 0px 35px 2px 2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.linkload section button{
+  margin: 2px 2px;
+}
+.linkload section p{
+  text-align: left;
+  margin: 0px 3px;
+}
+.code-wraper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  height: auto;
+  background-color: #f6f6f6;
+  margin: 5px 5% 15px 5%;
+  border-radius: 10px;
+  border: 2px solid gray;
+}
+.code-wraper span{
+  padding: 2px 4px;
+  overflow: auto;
+  color: #000;
+}
+.code-wraper i{
+  width: 10%;
+  height: auto;
+  text-align: center;
+  background-color: #dcd9d9;
+  border-left: 2px solid gray;
+  padding: 8px 4px;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.parma-box,.linkload{
+  display: none;
+}
+.underline div{
+  background:transparent;
+  width:60px;
+  height: 3px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
 @media only screen and (max-width: 900px){
   .linku{
     color: #00FF09;
@@ -913,6 +994,21 @@ article .subheading{
   .circle{
     width: 100px;
     height: 100px;
+  }
+  .linkload section{
+    width: 90%;
+    height: auto;
+    margin: 40% 5%;
+  }
+  .linkload section h3{
+    font-size: 25px;
+  }
+  .linkload section .flo{
+    display: flex;
+    flex-direction: row;
+  }
+  .linkload section p{
+    font-size: 12px;
   }
 }
 </style>
@@ -967,7 +1063,7 @@ article .subheading{
     </div>
     <section class="containers">
         <article class="review">
-          <i class="fa fa-link linku"title="Copy the current product link"onclick="cplc();"></i>
+          <i class="fa fa-link linku"title="Copy the current product link"onclick="parmalink();"></i>
           <div class="img-container">
             <img src="./img/product(empty).png" alt="" id="person-img"/>
             <div>
@@ -1089,6 +1185,31 @@ article .subheading{
       <span class="cbtn" onclick="prevpro();"><i class="fa fa-chevron-left"></i>Prev</span>
       <span class="cbtn" onclick="nextpro();">Next<i class="fa fa-chevron-right"></i></span>
     </div><br><br>
+    <div class="linkload">
+      <section>
+        <head>
+          <h3>WHITE LOTUS</h3>
+        </head>
+        <hr></hr>
+        <div class="flw"><span><i class="fa fa-bookmark-o"></i><h5 id="perma-name">Clone</h5></span><i class="fa fa-question-circle-o null"></i></div>
+        <div class="flo"><span onclick="path_act();">PATH</span><span onclick="parma_act();">PARMA</span><span onclick="ifram_act();">IFrame</span></div>
+        <div class="flo underline"><div id="parma_head2"></div><div id="parma_head1"></div><div id="parma_head3" style="margin-left: 12px;"></div></div>
+        <div class="parma-box"id="parmalink">
+          <div class="code-wraper"><span id="parma">https://google.com/#youtub</span><i class="fa fa-copy" onclick="cplc(0);"></i></div>
+          <p class="null">Use and Share in social media or checkout this document using this web URL.</p>
+        </div>
+        <div class="parma-box"id="pathlink">
+          <div class="code-wraper"><span id="path">https://google.com/</span><i class="fa fa-copy" onclick="cplc(1);"></i></div>
+          <p class="null">Use and Share in social media or checkout our store using this web URL.</p>
+        </div>
+        <div class="parma-box"id="iframlink">
+          <div class="code-wraper"><span id="iframe"></span><i class="fa fa-copy" onclick="cplc(2);"></i></div>
+          <p class="null">Use and Share in social media or add this page in your website using this web URL.</p>
+        </div>
+        <hr></hr>
+        <div class="flw"><span style="font-weight:bold;"><i class="fa fa-money"></i>Download FREE</span><button class="btn btn-primary"onclick="parma_close();">Close</button></div>
+      </section>
+    </div>
     <div id="ads"style="color: #fff;text-align: center;font-size: medium;background-color: #0c8ff0;width: 100%;height: auto;padding: 5px 10px;margin:20px 0px;">
       <p style="margin-bottom: 2px;">If you want to advertise your company in this website, you can contact us, we do it at very low cost.
          We have a lot of online traffic coming here every day, they can come and see your ads very easily. Contact us immediately for more details.
@@ -1814,7 +1935,7 @@ function linkchecker(m){
     weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Astronomy%20for%20India.kid
     */
 }
-function cplc(){
+function cplc(k){
   var currentLink = window.location;
   let j = currentLink['pathname'];
   let s = reviews[currentItem].head;
@@ -1822,9 +1943,62 @@ function cplc(){
   s = `https://whitelotus4.github.io`+j+`#PSWL1?details=`+s+`.kid`;
   //s.select();
   //s.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(s);
-  alert("Copied the link: " + s);
-  pppath.href = s;
+  if(k==0){
+    navigator.clipboard.writeText(s);
+    pppath.href = s;
+  }else if(k==1){
+    s=`https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html`;
+    navigator.clipboard.writeText(s);
+  }else{
+    s=`<iframe src="${s}"alt="loading..."id="WhiteLotus_Page"title="Visite WHITE LOTUS website"></iframe>`;
+    navigator.clipboard.writeText(s);
+  }
+  alert("Copied link: "+s);
+}
+function parmalink(){
+  document.querySelector(".linkload").style.display="block";
+  document.querySelector("#perma-name").textContent=reviews[currentItem].head;
+  path_act();
+}
+function parma_act(){
+  document.querySelector("#parmalink").style.display="block";
+  var currentLink = window.location;
+  let j = currentLink['pathname'];
+  let s = reviews[currentItem].head;
+  s = s.replaceAll(" ","%20");
+  s = `https://whitelotus4.github.io`+j+`#PSWL1?details=`+s+`.kid`;
+  document.querySelector("#parma").textContent=s;
+  document.querySelector("#pathlink").style.display="none";
+  document.querySelector("#iframlink").style.display="none";
+  document.querySelector("#parma_head1").style.background="#0c8ff0";
+  document.querySelector("#parma_head2").style.background="transparent";
+  document.querySelector("#parma_head3").style.background="transparent";
+}
+function path_act(){
+  document.querySelector("#parmalink").style.display="none";
+  document.querySelector("#pathlink").style.display="block";
+  document.querySelector("#iframlink").style.display="none";
+  document.querySelector("#parma_head1").style.background="transparent";
+  document.querySelector("#parma_head2").style.background="#0c8ff0";
+  document.querySelector("#parma_head3").style.background="transparent";
+  document.querySelector("#path").textContent=`https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html`;
+}
+function ifram_act(){
+  var currentLink = window.location;
+  let j = currentLink['pathname'];
+  let s = reviews[currentItem].head;
+  s = s.replaceAll(" ","%20");
+  s = `https://whitelotus4.github.io`+j+`#PSWL1?details=`+s+`.kid`;
+  document.querySelector("#parmalink").style.display="none";
+  document.querySelector("#pathlink").style.display="none";
+  document.querySelector("#iframlink").style.display="block";
+  document.querySelector("#parma_head1").style.background="transparent";
+  document.querySelector("#parma_head2").style.background="transparent";
+  document.querySelector("#parma_head3").style.background="#0c8ff0";
+  document.querySelector("#iframe").textContent=`<iframe src="${s}"alt="loading..."id="WhiteLotus_Page"title="Visite WHITE LOTUS website"></iframe>`;
+}
+function parma_close(){
+  document.querySelector(".linkload").style.display="none";
 }
 </script>
 </html>
