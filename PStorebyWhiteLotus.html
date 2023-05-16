@@ -1759,8 +1759,8 @@ function linkchecker(m){
   var currentPath = currentLink['href'];
   let j = currentLink['pathname'];
   currentPath=currentPath.replace(`//weatherbyWHITELOTUS.github.io`,`/weatherbyWHITELOTUS.github.io`);
-  alert('currentpath: '+currentPath);
-  alert('j: '+j);
+  //alert('currentpath: '+currentPath);
+  //alert('j: '+j);
    j=`https://whitelotus4.github.io`+j;
   if(currentPath==j){
     return;
@@ -1820,8 +1820,8 @@ function cplc(){
   let s = reviews[currentItem].head;
   s = s.replaceAll(" ","%20");
   s = `https://whitelotus4.github.io`+j+`#PSWL1?details=`+s+`.kid`;
-  s.select();
-  s.setSelectionRange(0, 99999);
+  //s.select();
+  //s.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(s);
   alert("Copied the link: " + s);
   pppath.href = s;
