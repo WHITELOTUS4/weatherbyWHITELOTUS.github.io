@@ -1758,11 +1758,12 @@ function linkchecker(m){
   var currentLink = window.location;
   var currentPath = currentLink['href'];
   let j = currentLink['pathname'];
-  alert(currentPath,' and ',j);
+  alert(currentPath);
+  alert(j);
   // if(`http://` in currentPath){
   //   m=1;
   // }else{
-  //   currentPath=`https://whitelotus4.github.io/`+currentPath;
+   j=`https://whitelotus4.github.io`+j;
   //   m=0;
   // }
   // alert(m);
@@ -1827,7 +1828,7 @@ function cplc(){
   //   s = j+`#PSWL1?details=`+s+`.kid`;
   //   s = s.replace('/','');
   // }else{
-    s = `https://whitelotus4.github.io/`+j+`#PSWL1?details=`+s+`.kid`;
+    s = `https://whitelotus4.github.io`+j+`#PSWL1?details=`+s+`.kid`;
   //}
   // s.select();
   // s.setSelectionRange(0, 99999);
