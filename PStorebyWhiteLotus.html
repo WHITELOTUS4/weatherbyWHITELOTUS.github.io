@@ -1758,15 +1758,9 @@ function linkchecker(m){
   var currentLink = window.location;
   var currentPath = currentLink['href'];
   let j = currentLink['pathname'];
-  alert(currentPath);
-  alert(j);
-  // if(`http://` in currentPath){
-  //   m=1;
-  // }else{
+  alert('currentpath: '+currentPath);
+  alert('j',j);
    j=`https://whitelotus4.github.io`+j;
-  //   m=0;
-  // }
-  // alert(m);
   if(currentPath==j){
     return;
   }else{
@@ -1824,14 +1818,9 @@ function cplc(){
   let j = currentLink['pathname'];
   let s = reviews[currentItem].head;
   s = s.replaceAll(" ","%20");
-  // if(`http://` in j){
-  //   s = j+`#PSWL1?details=`+s+`.kid`;
-  //   s = s.replace('/','');
-  // }else{
-    s = `https://whitelotus4.github.io`+j+`#PSWL1?details=`+s+`.kid`;
-  //}
-  // s.select();
-  // s.setSelectionRange(0, 99999);
+  s = `https://whitelotus4.github.io`+j+`#PSWL1?details=`+s+`.kid`;
+  s.select();
+  s.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(s);
   alert("Copied the link: " + s);
   pppath.href = s;
