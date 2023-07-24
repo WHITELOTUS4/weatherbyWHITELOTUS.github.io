@@ -1,0 +1,1369 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image"content="./fav-icon/roundlogo.png" name="og:image">
+    <meta content="Login page for user and admins, contact the world with white lotus." lang="en-us" name="description">
+    <meta content="weather, WhiteLotus products, Amazing products, question papers, ozone, quiz, programs, white lotus, kidKrishkode" lang="en-us" name="keywords">
+    <title version="1.0">User page</title>
+    <link rel="icon" href="../fav-icon/roundlogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../origin.css">
+    <link rel="stylesheet" href="./user.css"/>
+</head>
+<style id="jsStyle"></style>
+<body id="fabrick" onload="statup()">
+  <section id="user_page">
+    <section id="sidebar">
+      <div class="sidebar-brand">
+        <img src="../fav-icon/roundlogo.png"/>
+        <h2>WHITE LOTUS</h2>
+      </div><br>
+      <div class="sidebar-menu">
+        <ul><li onclick="desktop();"><i class="fa fa-desktop"></i><span>Desktop</span></li>
+        <li onclick="alluser();"><i class="fa fa-users"></i><span>Users</span></li>
+        <li onclick="profile();"><i class="fa fa-user-circle-o"></i><span>Profile</span></li>
+        <li onclick="content();"><i class="fa fa-file-pdf-o"></i><span>Content</span></li>
+        <li onclick="income();"><i class="fa fa-money"></i><span>Income</span></li>
+        <li onclick="lock();"><i class="fa fa-sign-out"></i><span>Logout</span></li>
+        </ul>
+      </div>
+    </section>
+    <div class="roundclose"onclick="nav();">❮ =</div>
+    <section id="main-contant">
+      <header class="main-header">
+        <div class="haderdiv-left left">
+          <h1><i class="fa fa-bars"onclick="nav();"></i>Dashboard</h1>
+        </div>
+        <div class="haderdiv-right left"onclick="myProfile();">
+          <h3 style="font-weight: bold"id="U1">
+            <i class="fa fa-user"></i>loading..<br><span class="coad">loading..</span>
+          </h3>
+        </div>
+        <div class="clear"></div>
+      </header>
+      <div class="clear"></div>
+      <div class="main-contant-info container"id='desktop-contant-info'>
+        <div class="card-body">
+          <h2 class="cus-num cus-h" style="font-family: 'Special Elite', sans-serif;" id="value1">00</h2>
+          <p>Users</p>
+        </div>
+        <div class="card-body">
+          <h2 class="cus-num cus-tec" style="font-family: 'Special Elite', sans-serif;" id="value2">00</h2>
+          <p>Product store</p>
+        </div>
+        <div class="card-body defer">
+          <h2 class="cus-num cus-adm" style="font-family: 'Special Elite' , sans-serif;" id="value3">00</h2>
+          <p>Admines</p>
+        </div>
+        <div class="card-body defer">
+          <h2 class="cus-num cus-cla" style="font-family: 'Special Elite', sans-serif;" id="value4">00</h2>
+          <p>Pages</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="content-pro-par container" style="margin-top: 50px; margin-bottom: 15px;"id='content-pro-par'>
+        <div class="pro-table">
+          <div class="recent-table" style="margin-bottom: 20px;">
+            <div class="rec-h">
+              <h3>Your All Products</h3>
+            </div>
+            <div class="rec-btn">
+              <button class="reset" onclick="reseta();" title="Hard refrash">Reset</button>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="product-data">
+          	
+          </div>
+        </div>
+        <div class="cus-table">
+          <div class="recent-table" style="margin-bottom: 20px;">
+            <div class="rec-h">
+              <h3>All Admines</h3>
+            </div>
+            <div class="rec-btn">
+              <button class="reset"><a href="mailto:example123@gmail.com,krishnendumitra24@gmail.com?&Subject=Inquary from WHITE LOTUS account holder.&body=My User id*:          ,My comment is*:     ."target="_blank">Mail all</a></button>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="admin-data">
+            
+          </div>
+        </div>
+        <div class="cus-table" style="margin-top: 25px;">
+          <div class="recent-table" style="margin-bottom: 20px;">
+            <div class="rec-h">
+              <h3>Your Product Ratio</h3>
+            </div>
+            <div class="rec-btn">
+              <button class="reset"onclick="pieRefresh();"title="Refrash the data">Refrash</button>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class='piechart'>Pie</div>
+          <ul class="pie-ul"></ul>
+        </div>
+          <div class="clear"></div>
+        </div><br>
+        <div class="content-pro-par container" id="content-pro-par-max" style="margin-top: 0px; margin-bottom: 15px;">
+          <div class="anti-cus-table">
+            <div class="recent-table" style="margin-bottom: 20px;">
+              <div class="rec-h">
+                <h3>Your Success Sign</h3>
+              </div>
+              <div class="rec-btn">
+                <button class="reset"onclick="succRefresh();"title="Refrash the data">Refrash</button>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="success-data">
+              
+            </div>
+          </div>
+          <div class="anti-pro-table">
+            <div class="recent-table" style="margin-bottom: 20px;">
+              <div class="rec-h">
+                <h3>Best 5 Users</h3>
+              </div>
+              <div class="rec-btn">
+                <button class="reset"title="Refrash the data"onclick="bestFiveCom();">Refrash</button>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="comparision-box">
+              <div class="comparision-box-component upper">
+                <div class="comparision-box-component-componet left">Y</div>
+                <div class="comparision-box-component-componet mid"></div>
+                <div class="comparision-box-component-componet right"></div>
+              </div>
+              <div class="comparision-box-component middle">
+                <div class="comparision-box-component-componet left"id="comparision-range"></div>
+                <div class="comparision-box-component-componet mid"id="comparision-barholder"></div>
+                <div class="comparision-box-component-componet right">X</div>
+              </div>
+              <div class="comparision-box-component lower">
+                <div class="comparision-box-component-componet left">0</div>
+                <div class="comparision-box-component-componet mid"><span>User1</span><span>User2</span><span>User3</span><span>User4</span><span>User5</span></div>
+                <div class="comparision-box-component-componet right"></div>
+              </div>
+            </div>
+            <ul class="comparision-data"></ul>
+          </div>
+            <div class="clear"></div>
+        </div>
+          <!--product search-->
+          <div class="main-contant-info container"id='content-contant-info'>
+            <div class="searchBox">
+              <div class="searchBar">
+                <div class="searchSelect">
+                  <select id="searchSelectList"onchange="searchbySelect('searchSelectList','searchData','drop');">
+                    <option>All</option>
+                    <option>etc</option>
+                  </select>
+                </div>
+                <div class="searchText">
+                  <input type="text" placeholder="Search White Lotus" id="searchData" onkeyup="search_product('searchData','drop',0);"/>
+                </div>
+                <div class="searchIcon">
+                  <i class="fa fa-search"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-pro-par container" style="margin-top: 50px; margin-bottom: 15px;"id="search-contant-pro">
+            <div class="pro-table">
+              <div class="recent-table" style="margin-bottom: 20px;">
+                <div class="rec-h">
+                  <h3>Search Result(s)</h3>
+                </div>
+                <div class="rec-btn">
+                  <button class="reset" onclick="resetb();" title="Hard refrash">Reset</button>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <ol class="search-product-data">
+                
+              </ol>
+            </div>
+            <div class="cus-table search-status">
+              <div class="recent-table" style="margin-bottom: 20px;">
+                <div class="rec-h">
+                  <h3>Search Status</h3>
+                </div>
+                <div class="rec-btn">
+                  <button class="reset" title="Click not required, Automatically data updated">Auto</button>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="search-status-data">
+                
+              </div>
+              Y
+              <div class="search-pie-box">
+                <div class="search-pie-data">
+                  <div class="search-pie">
+                    <div class="search-pie-bar"id='search-bar1'>0%</div>
+                    <div class="search-pie-bar"id='search-bar2'>0%</div>
+                  </div>
+                  <div class="search-axis">X</div>
+                </div>
+                <div class="search-axis-value"></div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div><br>
+          <!--Users search-->
+          <div class="main-contant-info container"id='user-contant-info'>
+            <div class="searchBox">
+              <div class="searchBar">
+                <div class="searchSelect">
+                  <select id="userSearchSelectList"onchange="searchbySelect('userSearchSelectList','userSearchData','drops');">
+                    <option>All</option>
+                    <option>Admin Account</option>
+                    <option>User Account</option>
+                    <option>Non-verified</option>
+                  </select>
+                </div>
+                <div class="searchText">
+                  <input type="text" placeholder="Search White Lotus" id="userSearchData" onkeyup="search_product('userSearchData','drops',1);"/>
+                </div>
+                <div class="searchIcon">
+                  <i class="fa fa-search"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-pro-par container" style="margin-top: 50px; margin-bottom: 15px;"id="search-contant-pro-per">
+            <div class="pro-table">
+              <div class="recent-table" style="margin-bottom: 20px;">
+                <div class="rec-h">
+                  <h3>Search Result(s)</h3>
+                </div>
+                <div class="rec-btn">
+                  <button class="reset" onclick="resetc();" title="Hard refrash">Reset</button>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <ol class="search-user-data">
+                
+              </ol>
+            </div>
+            <div class="cus-table search-status">
+              <div class="recent-table" style="margin-bottom: 20px;">
+                <div class="rec-h">
+                  <h3>Search Status</h3>
+                </div>
+                <div class="rec-btn">
+                  <button class="reset" title="Click not required, Automatically data updated">Auto</button>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="user-search-status-data">
+                
+              </div>
+              Y
+              <div class="search-pie-box">
+                <div class="search-pie-data">
+                  <div class="search-pie">
+                    <div class="search-pie-bar"id='search-bar3'>0%</div>
+                    <div class="search-pie-bar"id='search-bar4'>0%</div>
+                  </div>
+                  <div class="search-axis">X</div>
+                </div>
+                <div class="user-search-axis-value"></div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div><br>
+          <div class="unAdmin-error container" style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+            <i class="fa fa-times-circle-o"></i>
+            <h4>Error: Permission denied(userkey)</h4>
+            <h3>This page belongs by only Adminstrators</h3>
+            <p>Your request has been failed because you don’t have any admin account here or any money transaction history with White Lotus<br>
+              If you do any money transaction with White Lotus in past then contact them immediately</p>
+          </div>
+          <div class="income-content container" style="margin-top: 80px; margin-bottom: 15px;">
+          	<div class="pro-table">
+              <div class="recent-table" style="margin-bottom: 20px;">
+                <div class="rec-h">
+                  <h3>Transaction History</h3>
+                </div>
+                <div class="rec-btn">
+                  <button class="reset" onclick="resetd();" title="Hard refrash">Reset</button>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <table class="income-table">
+                
+              </table>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="profile-content container"style="margin-top: 80px; margin-bottom: 30px;">
+            <div class="pro-table">
+              <div class="recent-table" style="margin-bottom: 20px;">
+                <div class="rec-h">
+                  <h3>Public Profile</h3>
+                </div>
+                <div class="rec-btn">
+                  <button class="reset" onclick="editProfile();" title="edit profile information">Update</button>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <form class="profile-form">
+                <div class="left">
+                  <img src="../img/user(unknown).png"alt="loading.."id="profile-img"aria-describedby="profileHelp"/>
+                  <label for="profile-img">Profile Picture</label>
+                  <small id="profileHelp"class="form-text text-muted">Your Dp may appear around WhiteLotus where you contributed</small>
+                </div>
+                <div class="right">
+                  <div class="form-group">
+                    <lable for="profile-name">Name</lable>
+                    <input type="name"class="form-control"id="profile-name"value="loading"aria-describedby="nameHelp"readonly/>
+                    <small id="nameHelp"class="form-text text-muted">Your name may appear around WhiteLotus where you contributed or are mentioned</small>
+                  </div><br>
+                  <div class="form-group">
+                    <lable for="profile-email">Public email</lable>
+                    <input type="email"class="form-control"id="profile-email"value="loading"aria-describedby="emailHelp"readonly/>
+                    <small id="emailHelp"class="form-text text-muted">This email may appear with you profile and help viewers to conect with you</small>
+                  </div><br>
+                  <div class="form-group">
+                    <lable for="profile-bio">Bio</lable>
+                    <textarea class="form-control"id="profile-bio"row="8"aria-describedby="bioHelp"readonly>loading</textarea>
+                    <small id="bioHelp"class="form-text text-muted">You can @mention other users in your bio</small>
+                  </div><br>
+                  <div class="form-group">
+                    <lable for="profile-quote">Quote</lable>
+                    <textarea class="form-control"id="profile-quote"row="5"aria-describedby="quoteHelp"readonly>loading</textarea>
+                    <small id="quoteHelp"class="form-text text-muted">Your quote appear as your status around WhiteLotus</small>
+                  </div><br>
+                  <div class="form-group">
+                    <lable for="profile-prononus">Prononus</lable>
+                    <input type="text"class="form-control"id="profile-prononus"value="loading"readonly/>
+                  </div><br>
+                  <div class="form-group">
+                    <lable for="profile-url">URL</lable>
+                    <input type="text"class="form-control"id="profile-url"value="loading"readonly/>
+                  </div><br>
+                  <div class="form-group">
+                    <lable for="profile-social-acc">Social accounts</lable>
+                    <input type="text"class="form-control"id="profile-social-acc1"value="loading"readonly/><br>
+                    <input type="text"class="form-control"id="profile-social-acc2"value="loading"readonly/><br>
+                    <input type="text"class="form-control"id="profile-social-acc3"value="loading"readonly/><br>
+                  </div><br>
+                  <label>Contribution & Activity</label>
+                  <div class="form-check">
+                    <input type="checkbox"class="form-check-input"id="flexCheckCheckedDisabled"aria-describedby="contributeHelp1"value=""checked disabled>
+                    <lable for="flexCheckCheckedDisabled"class="from-check-label">Include products on my profile</lable>
+                    <small id="contributeHelp1"class="form-text text-muted">Your all products and Contribution overview will show in your profile</small><br>
+                    <input type="checkbox"class="form-check-input"id="flexCheckCheckedDisabled1"aria-describedby="contributeHelp2"value=""checked disabled>
+                    <lable for="flexCheckCheckedDisabled1"class="from-check-label">Others mention me</lable>
+                    <small id="contributeHelp2"class="form-text text-muted">Any one on White Lotus can @mention your profile</small>
+                  </div><br>
+                  <label>Profile settings</label>
+                  <div class="form-check">
+                    <input type="checkbox"class="form-check-input"id="flexCheckCheckedDisabled2"aria-describedby="profilePublickHelp1"value=""checked disabled>
+                    <lable for="flexCheckCheckedDisabled2"class="from-check-label">Make my profile publick</lable>
+                    <small id="profilePublickHelp1"class="form-text text-muted">Disabling this will hide your profile arround WhiteLotus and where you mentioned in White Lotus</small><br>
+                    <input type="checkbox"class="form-check-input"id="flexCheckCheckedDisabled3"aria-describedby="profilePublickHelp2"value=""checked disabled>
+                    <lable for="flexCheckCheckedDisabled3"class="from-check-label">Show joining time</lable>
+                    <small id="profilePublickHelp2"class="form-text text-muted">Your joining time appear as IST format in your profile</small><br>
+                    <input type="checkbox"class="form-check-input"id="flexCheckCheckedDisabled4"aria-describedby="profilePublickHelp3"value=""checked disabled>
+                    <lable for="flexCheckCheckedDisabled4"class="from-check-label">Include account type</lable>
+                    <small id="profilePublickHelp3"class="form-text text-muted">Your account type mentioned in your profile</small>
+                  </div><br>
+                  <label>Danger settings</label>
+                  <div class="form-check">
+                    <input type="checkbox"class="form-check-input"id="flexCheckCheckedDisabled5"aria-describedby="dangerHelp"value=""checked disabled>
+                    <lable for="flexCheckCheckedDisabled5"class="from-check-label">Don't show security key</lable>
+                    <small id="dangerHelp"class="form-text text-muted">Your userid, password, shirt size, alergy status will never show in your profile</small>
+                  </div><br>
+                  <div class="form-group">
+                    <lable for="profile-element">Team name</lable>
+                    <input type="text"class="form-control"id="profile-element"value="loading"aria-describedby="elementHelp"readonly/>
+                    <small id="elementHelp"class="form-text text-muted">Your joining team name appear in your profile only</small>
+                  </div><br>
+                  <div class="form-group">
+                    <lable for="profile-theme">Profile theme</lable>
+                    <input type="text"class="form-control"id="profile-theme"value="Default profile theme"aria-describedby="themeHelp"readonly/>
+                    <small id="themeHelp"class="form-text text-muted">Your profile appear with default White Lotus's profile theme</small>
+                  </div><br>
+                  <small class="form-text text-muted">All of the fields on this page are muted and importent but some of them can be updated at any time, and
+                    by filling them out, this all the information provided by you and directly manipulated your public profile. Please see our 
+                    <a href="#">Privacy statement</a> to learn more about how we use this information.
+                  </small>
+                  <button class="btn btn-success"title="Edit your publick profile"onclick="editProfile();"type="reset">Update profile</button>
+                </div>
+              </div>
+              </form>
+            </div>
+            <div class="clear"></div>
+          </div>
+    </section><br><br>
+  </section>
+    <section class="login_section">
+      <div class="flw"><img src="../fav-icon/roundlogo.png"alt="Error dp not loaded"><span>WHITE LOTUS</span></div>
+      <p>“ Nature is the study of everything in the universe that's beyond our own mind ”</p>
+      <div class="login-box">
+        <form>
+          <input type="text" id="emailnum" placeholder="User id or Email address" required/>
+          <input type="password" id="password" placeholder="Password" required/>
+          <div class="flp">
+            <input type="text"class="mainCaptcha"id="mainCaptcha"readonly="readonly"/>
+            <span id="caprefresh"onclick="generateCaptcha();"title="Get new captcha"><i class="fa fa-refresh"id="spinblob"></i></span>
+            <input type="text"placeholder="Captcha"id="txtinput"required autocomplete="off"/>
+          </div>
+          <div class="captcha_Error">
+            <span id="error"style="color:red"></span>
+            <span id="success"style="color:green"></span>
+          </div>
+          <div class="login" onclick="login();">Log In</div>
+          <u onclick="forpass();">Forgot Password ?</u>
+        </form>
+      </div>
+    </section>
+    <div class="linkload">
+      <section>
+        <head>
+          <h3>WHITE LOTUS</h3>
+        </head>
+        <hr></hr>
+        <div class="flw"><span><i class="fa fa-bookmark-o"></i><h5 id="perma-name">Clone</h5></span><i class="fa fa-question-circle-o null"title="This system is in-directly control your products. So, be careful to do any changes, it's take effects to your products. For more information contact tech-support."></i></div>
+        <div class="flo"><i class="fa fa-edit" onclick="editProduct();"title="edit"></i><i class="fa fa-trash-o" onclick="deleteProduct();"title="delete"></i><i class="fa fa-share" onclick="linkProduct();" title="link"></i>
+          <i class="fa fa-balance-scale" onclick="licenceProduct();" title="license"></i><i class="fa fa-sitemap" title="sitemap"></i></div>
+        <div class="flo underline"><div id="parma_head2"></div><div id="parma_head1"style="margin-left: 10px;"></div><div id="parma_head3" style="margin-left: 10px;"></div><div id="parma_head4" style="margin-left: 14px;">
+        </div><div id="parma_head5" style="margin-left: 10px;"></div></div>
+        <div class="parma-box"id="editLink">
+          <h4>Edit Section</h4>
+          <h6>Which data are you able to modify:</h6>
+          <ul>
+            <li>1. Product Name<i>(limited)</i></li>
+            <li>2. Product Description</li>
+            <li>3. Product type</li>
+            <li>4. Product Dp<i>(limited)</i></li>
+            <li>5. Slide imges<i>(limited)</i></li>
+            <li>6. Product size</li>
+            <li>7. Download link<i>(limited)</i></li>
+            <li>8. Type of reader</li>
+            <li>9. Contant language</li>
+            <li>10. Supporting Video</li>
+          </ul>
+          <h6>Modify cost:</h6>
+          <ul><li>Free</li></ul>
+          <p>Point to noted that if you change any data then revers it is not possible, or make a new change can do it.
+            Your change effect your those product link,<br> If you want to change any data which is mentioned the list then
+            fill given security fields and got our edit form, after fill this and edit form you resive a confirmation email.<br> 
+          </p>
+          <p class="null">Please fill out the given fields:</p><br>
+          <form>
+            User id: <input type="text" id="parma-user-id" placeholder="User id or Email address" required/><br>
+            Solve the puzzles:<br>
+            <input type="text" id="parma-puzzle" readonly/><i>(Sort it in assending way)</i><br>
+            <input type="text" id="parma-user-puzzle" placeholder="[6,5,4,3,2,1]" required/><br>
+            <span class="parma-error"style="color:red;">&#x26D4; Error! given data not satisfied us..,</span><br>
+            <span class="btn btn-primary"onclick="CheckValidPuzzle('parma-user-id','parma-puzzle','parma-user-puzzle',['parma-error','parma-success','edit-form'],0);">Verify Me</span><br>
+            <span class="parma-success">You are ready to edit your product click the the given button.<br>
+              <div style="display: flex;flex-direction: row;justify-content: space-between;"><span>-- ></span><a href='#'id="edit-form"><span class="btn btn-success">EDIT</span></a></div>
+            </span>
+          </form>
+        </div>
+        <div class="parma-box"id="deleteLink">
+          <h4>Delete Section</h4>
+          <h6>Which data are you able to delete:</h6>
+          <ul>
+            <li>1. Full Product</li>
+          </ul>
+          <h6>Deleting cost:</h6>
+          <ul><li>Free</li></ul>
+          <p>Point to noted that if you delete your any product then revers it not possible, or make a re-entry of
+            same product by you can do it. So be carefull to do any delete.</p>
+          <p class="null">Please fill out the given fields:</p><br>
+          <form>
+            User id: <input type="text" id="delete-user-id" placeholder="User id or Email address" required/><br>
+            Solve the puzzles:<br>
+            <input type="text" id="delete-puzzle" readonly/><i>(Sort it in assending way)</i><br>
+            <input type="text" id="delete-user-puzzle" placeholder="[6,5,4,3,2,1]" required/><br>
+            <span class="delete-error"style="color:red;">&#x26D4; Error! given data not satisfied us..,</span><br>
+            <span class="btn btn-primary"onclick="CheckValidPuzzle('delete-user-id','delete-puzzle','delete-user-puzzle',['delete-error','delete-success','delete-form'],1);">Verify Me</span><br>
+            <span class="delete-success">You are ready to delete your product click the the given button.<br>
+              <div style="display: flex;flex-direction: row;justify-content: space-between;"><span>-- ></span><a href='#'id="delete-form"><span class="btn btn-danger">Delete</span></a></div>
+            </span>
+          </form>
+        </div>
+        <div class="parma-box"id="shareLink">
+          <div class="code-wraper"><span id="iframe"></span><i class="fa fa-copy"onclick="#"></i></div>
+          <p class="null">Use and Share in social media or checkout your product using this web URL.</p>
+        </div>
+        <div class="parma-box"id="licenceLink">
+          <span id="licenceData"></span>
+        </div>
+        <hr></hr>
+        <div class="flw"><span style="color: transparent;">.</span><button class="btn btn-primary"onclick="parma_close();">Cancel</button></div>
+      </section>
+    </div>
+    <div class="forgotload">
+      <section>
+        <head>
+          <h3>WHITE LOTUS</h3>
+        </head>
+        <hr></hr>
+        <div class="parma-box">
+          <div class="flw"><span><i class="fa fa-key"></i><h5>Forgot Password</h5></span><i class="fa fa-question-circle-o null"title="If you forgot your password to login, then check your email once again and if you lost your password or it is publicly know more one then change it immediately"></i></div>
+          <h6>Verify your identity to unlock security:</h6>
+          <p>First of all check your email box where white lotus give you your userid & password, but if you not resive any email then contact us. But if you lose
+              your password then make sure you have your email id, userid and your pen name(given name), alergy status, and shirt size to verify your identity.
+              after this long process you get your old password to login.</p><br>
+          <p class="null">Please fill out the given fields:</p><br>
+          <form>
+            <h6><i>Step-1 (Identity)</i></h6>
+            User id: <br><input type="text" id="forgot-user-id" placeholder="User id" required/><br>
+            Email id: <br><input type="text" id="forgot-email-id" placeholder="Email address" required/><br>
+            Name: <br><input type="text" id="forgot-name" placeholder="Pen name" required/><br>
+            Alergy Status: <br><select id="forgot-alergy"><option>Fill out this filled</option><option>Yes</option><option>No</option></select><br>
+            Solve the puzzles:<br>
+            <input type="text" id="forgot-puzzle" readonly/><i>(Sort it in descending way)</i><br>
+            <input type="text" id="forgot-user-puzzle" placeholder="[1,2,3,4,5,6]" required/><br>
+            <span class="forgot-error"style="color:red;"></span><br>
+            <span class="btn btn-primary"onclick="forgotPuzzle1();">Verify Me</span><br>
+            <span class="forgot-success1"></span><br>
+          </form><br><br>
+          <form id="step2forgot">
+            <h6><i>Step-2 (Origin)</i></h6>
+            Email id: <br><input type="text" id="forgot-email" placeholder="Email address" required/><br>
+            T-shirt size: <br><select id="forgot-shirt-size"><option>Fill out this filled</option><option>XL</option><option>XXL</option><option>XXXL</option><option>L</option></select><br>
+            Food status: <br><select id="forgot-food"><option>Fill out this filled</option><option>Veg</option><option>Non-veg</option></select><br>
+            Console key: <br><input type="text" id="forgot-console" placeholder="Given console key" required/><br><br>
+            <span class="btn btn-primary"onclick="forgotPuzzle2();">Get Password</span><br>
+            <span class="forgot-success2"></span><br>
+          </form><br>
+        </div>
+        <hr></hr>
+        <div class="flw"><span style="color: transparent;">.</span><button class="btn btn-primary"onclick="forgot_close(); lock();">Cancel</button></div>
+      </section>
+    </div>
+    <div class="othersload">
+      <section>
+        <head>
+          <h3>WHITE LOTUS</h3>
+        </head>
+        <hr></hr>
+        <div class="parma-box">
+          <div class="flw"><span><i class="fa fa-bookmark-o"></i><h5 id="othersName">loading</h5></span><i class="fa fa-question-circle-o null"title="Copy this link and past in any browser"></i></div>
+          <h6>Parma link:</h6>
+          <div class="code-wraper"><span id="othersLink">loading</span><i class="fa fa-copy"onclick="#"></i></div>
+          <h6>Licence name:</h6>
+          <p id="othersLicence">loading</p>
+        </div>
+        <hr></hr>
+        <div class="flw"><span style="color: transparent;">.</span><button class="btn btn-primary"onclick="others_close();">Cancel</button></div>
+      </section>
+    </div>
+ <!--
+sections ending for football.
+-->
+    <div class="scrolltop float-right">
+	    <i class="fa fa-arrow-up" onclick="topFunction();" id="topBtna"></i>
+    </div>
+    <div id="spinload">
+    	<I class="fa-5x fa fa-spinner fa-spin"style="color:#fff;"></I><br>
+    	<p id="spinnertext">loading...</p>
+    </div>
+</body>
+<script src="./database.js"></script>
+<script>
+let client=[], currentClient=0;
+let set = [0,1,'link-parma','edit-parma','forgot-key','best5com'];
+function statup(){
+  setTimeout(function of(){
+    document.getElementById("spinload").style.display = 'none';
+    generateCaptcha();
+  },2000);
+}
+mybutton = document.getElementById("topBtna");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction(){
+  if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+    mybutton.style.display = "block";
+  }else{
+    mybutton.style.display = "none";
+  }
+}
+function topFunction(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+function notvalid(){
+  alert("This feature is not avalible now!");
+}
+function mainpage(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/';
+}
+function aboutpage(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about-us';
+}
+function contactpage(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#contact-us';
+}
+function myquiz(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myquiz';
+}
+function showprivacy(){
+  window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#privacy-terms';
+}
+function generateCaptcha(){
+  document.getElementById("spinblob").style.animation = "rotate 1s 1 ease-in-out";
+	setTimeout(function onn(){
+    var cap = new Array
+	  ('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','/','@','&','!','#','*','?','%','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9');
+    var i;
+    for(i=0;i<6;i++){
+      var a = cap[Math.floor(Math.random()*cap.length)];
+      var b = cap[Math.floor(Math.random()*cap.length)];
+      var c = cap[Math.floor(Math.random()*cap.length)];
+      var d = cap[Math.floor(Math.random()*cap.length)];
+      var e = cap[Math.floor(Math.random()*cap.length)];
+      var f = cap[Math.floor(Math.random()*cap.length)];
+    }
+    var code = a+b+c+d+e+f;
+    document.getElementById("mainCaptcha").value = code;
+    document.getElementById('error').innerHTML = null;
+    document.getElementById('success').innerHTML = null;
+    document.getElementById("txtinput").value='';
+  },1000);
+}
+function CheckValidCaptcha(){
+  var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
+  var string2 = removeSpaces(document.getElementById('txtinput').value);
+  if(string1 == string2){
+    document.getElementById('success').innerHTML = "&#x26C4; Captcha enter Successfully";
+    return true;
+  }else{
+    let errcodes = "&#x26D4; Please Enter a Valid Captcha!";
+    document.getElementById('error').innerHTML = `${errcodes}`;
+    return false;
+  }
+}
+function removeSpaces(string){
+  return string.split(' ').join('');
+}
+function login(){
+  document.getElementById('error').innerHTML = null;
+  document.getElementById('success').innerHTML = null;
+  if((CheckValidCaptcha() == true) && (CheckValidClient() == true)){
+    setTimeout(function onn(){
+      document.querySelector(".login_section").style.display="none";
+      document.querySelector(".flp").style.display="block";
+      document.getElementById("main-contant").style.display="block";
+      document.getElementById("user_page").style.display="block";
+      counting();
+      userSetUp();
+    },500);    
+  }else if((CheckValidCaptcha() == true) && (CheckValidClient() != true)){
+  	document.getElementById('error').innerHTML = `&#x26D5; User information not match, try again..`;
+  }else if((CheckValidCaptcha() != true) && (CheckValidClient() == true)){
+  }else{
+  	document.getElementById('error').innerHTML = `&#x26D6; Given information is not satisfied, check it..`;
+  }
+}
+function CheckValidClient(){
+	for(let j=0; j<kilometres; j++){
+	  client[j]=data[j];
+  }
+  let id = document.querySelector("#emailnum").value;
+  let password = document.querySelector("#password").value;
+  for(let j=0; j<kilometres; j++){
+	  if(((id==client[j].userid) || (id==client[j].social[0])) && (password==client[j].password)){
+		  currentClient = client[j];
+		  return true;
+	  }
+  }
+}
+function animateValue(obj,start,end,duration){
+  let startTime=null;
+  const step = (timestamp) => {
+    if(!startTime)startTime=timestamp;
+    const progress = Math.min((timestamp - startTime)/duration, 1);
+    if(end<10){
+      obj.innerHTML = '0'+Math.floor(progress * (end - start) + start); 
+    }else{
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+    }
+    if(progress < 1){
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+function counting(){
+  animateValue(document.getElementById("value1"),0,kilometres,4000);
+  animateValue(document.getElementById("value2"),0,(pages[0].store),3000);
+  animateValue(document.getElementById("value3"),0,4,3000);
+  animateValue(document.getElementById("value4"),0,(pages[0].hostated),3000);
+}
+function userSetUp(){
+	document.querySelector(".roundclose").style.display="block";
+	let x = window.matchMedia("(max-width: 900px)");
+  ratio(x);
+  x.addListener(ratio);
+	if((currentClient.type==0) && (currentClient.dp!='')){
+		document.getElementById("U1").innerHTML = `<img src="${currentClient.dp}"title="Profile of ${currentClient.name}"alt="loading..."/>User Account<br><span class="coad">WhiteLotus Private Dashboard</span>`;
+	}else if((currentClient.type==1) && (currentClient.dp!='')){
+		document.getElementById("U1").innerHTML = `<img src="${currentClient.dp}"title="Profile of ${currentClient.name}"alt="loading.."/>Admin Account<br><span class="coad">WhiteLotus Private Admin-bord</span>`;
+  }else{
+    document.getElementById("U1").innerHTML = `<i class="fa fa-user-o"title="Profile data not found!"></i>Demo Account<br><span class="coad">WhiteLotus Commone Dash-bord</span>`;
+  }
+  for(let j=0; j<kilometres; j++){
+    if(data[j].type==1){
+      document.querySelector(".admin-data").innerHTML += `<div class="admin-contant"><div class="admin-left"><div class="admin-top"><h3>${data[j].name}</h3></div>
+      <div class="admin-bottom"><ul><li><a href="mailto:${data[j].social[0]}"><i class="fa fa-envelope"></i></a></li><li><a href="${data[j].social[1]}"><i class="fa fa-facebook"></i></a></li><li><a href="${data[j].social[2]}">
+      <i class="fa fa-linkedin"></i></a></li><li><a href="${data[j].social[3]}"><i class="fa fa-youtube"></i></a></li></ul></div></div><div class="admin-right"><img src="${data[j].dp}"/></div></div>`;
+    }
+  }
+  if((currentClient != '') && (currentClient.product.length != 0)){
+    reseta();
+    pieData(currentClient);
+    succRefresh();
+    bestFiveCom();
+  }else{
+    document.querySelector(".product-data").innerHTML ="<img src='../img/product(blank).png'title='empty'alt='loading..'/><br>";
+    document.querySelector(".pie-ul").innerHTML = "<li>You don't have any product here!</li>";
+    succRefresh();
+  }
+}
+function ratio(x){
+  if(x.matches){
+    document.querySelector(".roundclose").style.display="none";
+    document.getElementById("sidebar").style.display="none";
+  }else{
+    document.querySelector(".roundclose").style.display="none";
+    document.getElementById("sidebar").style.display="block";
+  }
+}
+function nav(){
+  let x = window.matchMedia("(max-width: 900px)");
+  if(x.matches){
+    document.getElementById("main-contant").style.width = "100%";
+    if(set[1] == 0){
+		  document.getElementById("sidebar").style.display = "none";
+      document.querySelector(".roundclose").style.display="none";
+      document.getElementById("fabrick").style.overflowY="auto";
+		  set[1] = 1;
+	  }else{
+		  document.getElementById("sidebar").style.display = "block";
+      document.querySelector(".roundclose").style.display="block";
+      document.getElementById("fabrick").style.overflowY="hidden";
+		  set[1] = 0;
+	  }
+  }else{
+    if(set[0] == 0){
+		  document.getElementById("sidebar").style.display = "none";
+		  document.getElementById("main-contant").style.width = "100%";
+		  set[0] = 1;
+	  }else{
+		  document.getElementById("sidebar").style.display = "block";
+		  document.getElementById("main-contant").style.width = "80%";
+		  set[0] = 0;
+	  }
+  }
+}
+function pieData(currentClient){
+  var matrix = set1;
+  let ratio=[],x='';
+  let temp,name,loc,styling=".piechart{background-image: conic-gradient(",left=0,right;
+  for(let j=0; j<currentClient.product.length; j++){
+    temp=0;
+    for(let i=0; i<matrix.length; i++){
+      if(currentClient.product[j].productType == matrix[i]){
+        name=matrix[i];
+        loc=i;
+        for(let k=0; k<currentClient.product.length; k++){
+          if(currentClient.product[k].productType == name){
+            temp++;
+          }
+        }
+        ratio[i]=temp;
+      }
+    }
+    //append data in pie here
+    if(j<1){right = Math.round((((temp/currentClient.product.length)*100)/100)*360);}
+    else{right = left+Math.round((((temp/currentClient.product.length)*100)/100)*360);}
+    styling += `${col1[loc]} ${left}deg ${right}deg`;
+    if(j<currentClient.product.length-1){styling+=',';}
+    left = right;
+    if((matrix[loc] != 0 ) && ((left + right) != 0)){
+      document.querySelector(".pie-ul").innerHTML += `<li><div class="pie-box"style="background: ${col1[loc]}"></div>${name} [≈ ${Math.round((temp/currentClient.product.length)*100)}%]</li>`;
+    }
+    matrix[loc]=0;
+  }
+  styling += ");}";
+  document.getElementById("jsStyle").innerHTML+=styling;
+  for(let j=0; j<ratio.length-1; j++){
+  	if(ratio[j] != undefined){x+=`${ratio[j]} : `;}else{x+='0 : ';}
+  }
+  if(((left + right) != 0) && (currentClient.product.length!=0)){
+    document.querySelector(".pie-ul").innerHTML += `<br><li>Total ratio of products = ${x}${ratio[ratio.length-1]}</li>`;
+  }
+}
+function pieRefresh(){
+	pieData(currentClient);
+}
+function reseta(){
+	document.querySelector(".product-data").innerHTML ='';
+	for(let j=currentClient.product.length-1; j>=0; j--){
+    document.querySelector(".product-data").innerHTML += `<div class="product"><div class="left"><img src="${currentClient.product[j].productDp}"></div>
+    <div class="middile"><h2>${currentClient.product[j].productName}</h2><span class="flw"><i class="fa fa-globe"></i><p>Public</p></span><p>
+    ${currentClient.product[j].productType} • ${currentClient.product[j].productModify} IST</p></div><div class="right" onclick="productChoice('${currentClient.product[j].productName}'
+    );"><i class="fa fa-ellipsis-v" title="Click for Delete/Edit/Link etc."></i></div></div>`;
+  }
+  if((currentClient.product.length<3) && (currentClient.product.length!=0)){
+    document.querySelector(".product-data").innerHTML +=`<br><br><p>Mr./Ms. ${currentClient.name}, thanks to contribute with us<br>Try to increase 
+    your product numbers.</p><p>For any technical errors! contact our admin and any doubt or query , contact us with our email..</p>`;
+  }
+  if(currentClient.product.length==0){
+    document.querySelector(".product-data").innerHTML =`<img src='../img/product(blank).png'title='empty'alt='loading..'/><br>`;
+  }
+}
+function puzzleValue(){
+  document.querySelector('.parma-error').style.display='none';
+  document.querySelector('.parma-success').style.display='none';
+  var puzz = new Array([6,5,4,3,2,1],[4,3,2,1,6,5],[5,1,6,2,3,4],[3,5,2,6,1,4],[2,5,3,1,6,4],[4,2,6,1,5,3],[3,1,6,2,5,4],[1,2,3,4,5,6]);
+  var a = puzz[Math.floor(Math.random()*puzz.length)];
+  return a;
+}
+function productChoice(productName){
+  document.querySelector(".linkload").style.display="block";
+  document.querySelector("#perma-name").textContent=productName;
+  set[2]=productName;
+  for(let j=0; j<currentClient.product.length; j++){
+  	if(currentClient.product[j].productName==set[2]){
+  	  set[3] = j;
+      break;
+    }
+  }
+  editProduct();
+}
+function parma_close(){
+  document.querySelector(".linkload").style.display="none";
+}
+function deleteProduct(){
+  document.querySelector("#editLink").style.display="none";
+  document.querySelector("#deleteLink").style.display="block";
+  document.querySelector("#shareLink").style.display="none";
+  document.querySelector("#licenceLink").style.display="none";
+  document.querySelector("#parma_head1").style.background="#0c8ff0";
+  document.querySelector("#parma_head2").style.background="transparent";
+  document.querySelector("#parma_head3").style.background="transparent";
+  document.querySelector("#parma_head4").style.background="transparent";
+  var a = puzzleValue();
+  document.querySelector("#delete-puzzle").value=`[${a}]`;
+}
+function editProduct(){
+  document.querySelector("#editLink").style.display="block";
+  document.querySelector("#deleteLink").style.display="none";
+  document.querySelector("#shareLink").style.display="none";
+  document.querySelector("#licenceLink").style.display="none";
+  document.querySelector("#parma_head1").style.background="transparent";
+  document.querySelector("#parma_head2").style.background="#0c8ff0";
+  document.querySelector("#parma_head3").style.background="transparent";
+  document.querySelector("#parma_head4").style.background="transparent";
+  var a = puzzleValue();
+  document.querySelector("#parma-puzzle").value=`[${a}]`;
+}
+function linkProduct(){
+  document.querySelector("#editLink").style.display="none";
+  document.querySelector("#deleteLink").style.display="none";
+  document.querySelector("#shareLink").style.display="block";
+  document.querySelector("#licenceLink").style.display="none";
+  document.querySelector("#parma_head1").style.background="transparent";
+  document.querySelector("#parma_head2").style.background="transparent";
+  document.querySelector("#parma_head3").style.background="#0c8ff0";
+  document.querySelector("#parma_head4").style.background="transparent";
+  for(let j=0; j<currentClient.product.length; j++){
+  	if(currentClient.product[j].productName==set[2]){
+  	  document.querySelector("#iframe").textContent=`${currentClient.product[j].productLink}`;
+      break;
+    }
+  }
+  //document.querySelector("#iframe").textContent=`${set[2]}`;
+}
+function licenceProduct(){
+  document.querySelector("#editLink").style.display="none";
+  document.querySelector("#deleteLink").style.display="none";
+  document.querySelector("#shareLink").style.display="none";
+  document.querySelector("#licenceLink").style.display="block";
+  document.querySelector("#parma_head1").style.background="transparent";
+  document.querySelector("#parma_head2").style.background="transparent";
+  document.querySelector("#parma_head3").style.background="transparent";
+  document.querySelector("#parma_head4").style.background="#0c8ff0";
+  if(currentClient.product[set[3]].productLicence == 'Publick-lotus'){
+    document.querySelector('#licenceData').innerHTML = Licence[0].licenceBody;
+  }else{
+    document.querySelector('#licenceData').innerHTML = Licence[1].licenceBody;
+  }
+  document.querySelector("#licence-product").textContent=`${currentClient.product[set[3]].productName}`;
+  document.querySelector("#licence-author").textContent=`${currentClient.name}`;
+}
+function CheckValidPuzzle(got,given,get,change,choose){
+  let u = document.getElementById(got).value;
+  let a = document.getElementById(given).value;
+  let b = document.getElementById(get).value;
+  let c1 = document.querySelector(`.`+`${change[0]}`);
+  let c2 = document.querySelector(`.`+`${change[1]}`);
+  let c3 = document.querySelector(`#`+`${change[2]}`);
+  b = b.replaceAll(`[`,``);
+  b = b.replaceAll(`]`,``);
+  b = b.replaceAll(`,`,``);
+  b = b.replaceAll(` `,``);
+  if(((currentClient.userid == u) || (currentClient.social[0] == u)) && (b==123456)){
+    c2.style.display = 'block';
+    c1.style.display = 'none';
+    if(choose==0){
+      c3.href = googleForm[3].link;
+    }else{
+      c3.href = googleForm[4].link;
+    }
+  }else{
+    c2.style.display = 'none';
+    c1.style.display = 'block';
+  }
+}
+function succRefresh(){
+	document.querySelector(".success-data").innerHTML ='';
+	if(currentClient.product.length != 0){
+		let Today = [0,0,0,0];
+	  let First = dateCraser(currentClient.product[0].productModify);
+	  let Last = dateCraser(currentClient.product[currentClient.product.length-1].productModify);
+	    Today[0] = new Date;
+	    Today[1] = Today[0].getDate();
+	    Today[2] = Today[0].getMonth();
+	    Today[3] = Today[0].getFullYear();
+	  let v = dateCombineter(Today,First);
+		let A = (currentClient.product.length/v);
+		let t = dateCombineter(Today,Last);
+    let zodiac = zodiacDept(currentClient.time);
+	  document.querySelector(".success-data").innerHTML =`<ul><li>Avarage base: <span title="${A}"> ${dataArrow(A,0,1,0)}</span></li><li>Current base: <span title="${dateCombineter(Today,Last)}"> ${dataArrow(t,5,10,1)}</span></li>
+      <br><li><m>Joining date:</m> <span><m>${First[0]}</m></span></li><li><m>Last product entry date:</m> <span><m>${Last[0]}</m></span></li><li><m>Total products under calculation:</m> <span><m>${A*v}</m>
+      </span></li><li><m>Up time:</m> <span><m>${v}days ${Today[0].getHours()}:${Today[0].getMinutes()}:${Today[0].getSeconds()}</m></span></li><li><m>Position:</m> <span><m>${set[5]==0?'You are in best 5 user':'You are not in best 5'}</m></span></li>
+      <li><m>Total income:</m> <span><m>0.00/-</m></span></li><li><m>Viwer conectivity:</m> <span><m>${!currentClient.social[1].includes('#')?'Strong':'Wike'}</m></span></li><li><m>Post impresions:</m> <span><m>${A<0.1?'Low':'High'}</m></span></li>
+      <li><m>Joining team type:</m> <span><m>${zodiac}</m></span></li><br><li>Last update: <span>${Today[1]}/${1+Today[2]}/${Today[3]} ${Today[0].getHours()}:${Today[0].getMinutes()}:${Today[0].getSeconds()}</span></li></ul>`;
+	}else{
+    document.querySelector(".success-data").innerHTML = "You don't have any product here!<br><br>";
+    document.querySelector('.comparision-box').style.display = "none";
+    document.querySelector('.comparision-data').innerHTML = "Comparision not possible, You don't have any product here!";
+  }
+}
+function dateCraser(date){
+	let First = [0,0,0,0];
+	First[0] = date;
+	First[1] = First[0][0]+First[0][1];
+	First[2] = First[0][3]+First[0][4];
+	First[3] = First[0][6]+First[0][7]+First[0][8]+First[0][9];
+	return First;
+}
+function dateCombineter(Today,First){
+	let diffMonth=0,diffDate=0;
+	let diffYear = (Today[3] - First[3])*365;
+	if(diffYear > 0){
+		diffMonth = ((12-First[2])+Today[2])*30;
+	}else{
+		diffMonth = (Today[2]-First[2])*30;
+	}
+	diffDate = ((30-First[1])+Today[1])*1;
+	let v = (diffYear+diffMonth+diffDate);
+	return v;
+}
+function dataArrow(t,l,h,m){
+  var time;
+  if(m==1){
+    if(t<l){
+		  time =`Up <i class="fa fa-arrow-circle-o-up"></i>`;
+	  }else if(t>l && t<h){
+		  time ='Mid <i class="fa fa-arrows-v"></i>';
+	  }else{
+		  time = `Down <i class="fa fa-arrow-circle-o-down"></i>`;
+	  }
+  }else{
+    if(t<h){
+      time=`Down <i class="fa fa-arrow-circle-o-down"></i>`;
+    }else{
+      time=`Up <i class="fa fa-arrow-circle-o-up"></i>`;
+    }
+  }
+  return time;
+}
+function desktop(){
+  document.querySelector('#desktop-contant-info').style.display = 'block';
+  document.querySelector('#content-pro-par').style.display = 'block';
+  document.querySelector('#content-pro-par-max').style.display = 'block';
+  document.querySelector('#content-contant-info').style.display = 'none';
+  document.querySelector('#search-contant-pro').style.display = 'none';
+  document.querySelector('#user-contant-info').style.display = 'none';
+  document.querySelector('#search-contant-pro-per').style.display = 'none';
+  document.querySelector('.unAdmin-error').style.display = 'none';
+  document.querySelector('.income-content').style.display = 'none';
+  document.querySelector('.profile-content').style.display = 'none';
+}
+function alluser(){
+  document.querySelector('#desktop-contant-info').style.display = 'none';
+  document.querySelector('#content-pro-par').style.display = 'none';
+  document.querySelector('#content-pro-par-max').style.display = 'none';
+  document.querySelector('#content-contant-info').style.display = 'none';
+  document.querySelector('#search-contant-pro').style.display = 'none';
+  document.querySelector('#user-contant-info').style.display = 'block';
+  document.querySelector('#search-contant-pro-per').style.display = 'block';
+  document.querySelector('.unAdmin-error').style.display = 'none';
+  document.querySelector('.income-content').style.display = 'none';
+  document.querySelector('.profile-content').style.display = 'none';
+  resetc();
+}
+function profile(){
+  document.querySelector('#desktop-contant-info').style.display = 'none';
+  document.querySelector('#content-pro-par').style.display = 'none';
+  document.querySelector('#content-pro-par-max').style.display = 'none';
+  document.querySelector('#content-contant-info').style.display = 'none';
+  document.querySelector('#search-contant-pro').style.display = 'none';
+  document.querySelector('#user-contant-info').style.display = 'none';
+  document.querySelector('#search-contant-pro-per').style.display = 'none';
+  document.querySelector('.unAdmin-error').style.display = 'none';
+  document.querySelector('.income-content').style.display = 'none';
+  document.querySelector('.profile-content').style.display = 'block';
+  resete();
+}
+function content(){
+  document.querySelector('#desktop-contant-info').style.display = 'none';
+  document.querySelector('#content-pro-par').style.display = 'none';
+  document.querySelector('#content-pro-par-max').style.display = 'none';
+  document.querySelector('#content-contant-info').style.display = 'block';
+  document.querySelector('#search-contant-pro').style.display = 'block';
+  document.querySelector('#user-contant-info').style.display = 'none';
+  document.querySelector('#search-contant-pro-per').style.display = 'none';
+  document.querySelector('.unAdmin-error').style.display = 'none';
+  document.querySelector('.income-content').style.display = 'none';
+  document.querySelector('.profile-content').style.display = 'none';
+  document.querySelector('#searchSelectList').innerHTML = `<option>All</option>`;
+  for(let i=0; i<set2.length; i++){
+    document.querySelector('#searchSelectList').innerHTML += `<option>${set2[i]}</option>`;
+  }
+  resetb();
+}
+function income(){
+  document.querySelector('#desktop-contant-info').style.display = 'none';
+  document.querySelector('#content-pro-par').style.display = 'none';
+  document.querySelector('#content-pro-par-max').style.display = 'none';
+  document.querySelector('#content-contant-info').style.display = 'none';
+  document.querySelector('#search-contant-pro').style.display = 'none';
+  document.querySelector('#user-contant-info').style.display = 'none';
+  document.querySelector('#search-contant-pro-per').style.display = 'none';
+  document.querySelector('.unAdmin-error').style.display = 'none';
+  document.querySelector('.profile-content').style.display = 'none';
+  if(currentClient.type==0){
+    document.querySelector('.unAdmin-error').style.display = 'block';
+    document.querySelector('.income-content').style.display = 'none';
+  }else{
+    document.querySelector('.unAdmin-error').style.display = 'none';
+    document.querySelector('.income-content').style.display = 'block';
+    resetd();
+  }
+}
+function lock(){
+  window.location="./User_Login.html";
+}
+function resetb(){
+	document.querySelector(".search-product-data").innerHTML ='';
+  document.getElementById('searchData').value = '';
+  for(let i=data.length-1; i>=0; i--){
+    for(let j=data[i].product.length-1; j>=0; j--){
+      document.querySelector(".search-product-data").innerHTML += `<li class="drop"><div class="product"><div class="left"><img src="${data[i].product[j].productDp}"alt="loading"></div>
+      <div class="middile"><h2>${data[i].product[j].productName}</h2><span class="flw"><i class="fa fa-globe"></i><p>Public • ${data[i].name}</p></span><p>
+      ${data[i].product[j].productType} • ${data[i].product[j].productModify} IST</p></div><div class="right"><i class="fa fa-ellipsis-v" title="Click for get Link etc."onclick="others_open('${data[i].product[j].productName}');"></i></div></div></li>`;
+    }
+  }
+  searchStatus(0,0,0,'','search-axis-value',110,10,'search-status-data','search-bar1','search-bar2');
+}
+function search_product(data,list,count){
+  let find=0,miss=0;
+  let input = document.getElementById(`${data}`).value;
+  input=input.toLowerCase();
+  let x = document.getElementsByClassName(`${list}`);
+  for(i = 0; i <x.length; i++){ 
+    if(!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display="none";
+      miss++;
+    }else{
+      x[i].style.display="list-item";
+      find++;            
+    }
+  }
+  if(count==0){
+     searchStatus(x,find,miss,input,'search-axis-value',110,10,'search-status-data','search-bar1','search-bar2');
+  }else{
+  	searchStatus(x,find,miss,input,'user-search-axis-value',110,10,'user-search-status-data','search-bar3','search-bar4');
+  }
+}
+function searchStatus(x,find,miss,input,axisValue,v1,v2,statusData,barA,barB){
+  document.querySelector(`.${axisValue}`).innerHTML = '';
+	if(x.length==undefined){var y='No search found';}else{var y= x.length;}
+	if(find==1){var achieve='Yes';}else{var achieve='No'}
+	if((find+miss)==0){var ratio=-1;}else{var ratio=((find/(find+miss))*100);}
+	input = input.replaceAll("<","&lt;");
+	document.querySelector(`.${statusData}`).innerHTML ='';
+	document.querySelector(`.${statusData}`).innerHTML =`<ul><li>Search Items: <span title="Search element type">${statusData=='user-search-status-data'?'Accounts':'Products'}</span></li><li>Sort Bases: <span title="Search element sort">User joining time</span></li>
+	<li><m>Maximum Results: </m><span title="Total results"><m>${y}</m></span></li><li><m>Search Hit: </m><span title="Similar result found"><m>${find}</m></span></li><li><m>Search Miss: </m><span title="Unsimilar 
+  results which not approach"><m>${miss}</m></span></li><li><m>Successfully Achieve: </m><span title="Searching data found"><m>${achieve}</m></span></li><li><m>Probability of Achievement: </m><span title="Probability
+  to search successful"><m>${Math.floor(ratio.toFixed(2))}%</m></span></li><li><m>Searching Value: </m><span title="Searching data"><m>${input}</m></span></li><li><m>Time-Complexities: </m><span title="Searching time 
+  notation"><m>O(${find+miss})</m></span></li><li>Time Required Per Search: <span title="Searching Data Access Time Per Million Items">≈1.5 seconds</span></li>
+  </ul>`;
+  for(let i=0; i<v1; i+=v2){
+    document.querySelector(`.${axisValue}`).innerHTML += `<span>${i}</span>`;
+  }
+  if((find+miss)==0){
+    document.querySelector(`#${barA}`).style.width = '0%';
+    document.querySelector(`#${barA}`).innerHTML = '0%';
+    document.querySelector(`#${barB}`).style.width = '0%';
+    document.querySelector(`#${barB}`).innerHTML = '0%'; 
+  }else{
+    document.querySelector(`#${barA}`).style.width = ((find/(find+miss))*100)+'%';
+    document.querySelector(`#${barA}`).innerHTML = (((find/(find+miss))*100).toFixed(2))+'%';
+    document.querySelector(`#${barB}`).style.width = ((miss/(find+miss))*100)+'%';
+    document.querySelector(`#${barB}`).innerHTML = (((miss/(find+miss))*100).toFixed(2))+'%';
+  }
+}
+function searchbySelect(selectlist,data,type){
+  var selectBox = document.querySelector(`#${selectlist}`);
+  var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+  if(selectBox.options[selectBox.selectedIndex].value=='All'){
+    selectedValue='';
+  }
+  document.getElementById(`${selectlist}`).value = selectedValue;
+  search_product(`${selectlist}`,`${type}`,`${type=='drop'?0:1}`);
+  selectBox.innerHTML = `<option>--------Sort Base--------</option><option>All</option>`;
+  if(type=='drop'){
+    for(let i=0; i<set2.length; i++){
+      selectBox.innerHTML += `<option>${set2[i]}</option>`;
+    }
+  }else{
+    selectBox.innerHTML += `<option>Admin Account</option><option>User Account</option><option>Non-verified</option>`;
+  }
+}
+function resetc(){
+	document.querySelector(".search-user-data").innerHTML ='';
+  document.getElementById('userSearchData').value = '';
+  for(let i=data.length-1; i>=0; i--){
+    if(data[i].product.length<1){
+      var verification='Non-verified';
+    }else{
+      var verification="Verified <i class='fa fa-check-square-o'></i>";
+    }
+    if(data[i].type==1){
+      var acctype='Admin';
+    }else{
+      var acctype='User';
+    }
+    document.querySelector(".search-user-data").innerHTML += `<li class="drops"><div class="user-card"><div class="left"><img src="${data[i].dp}"alt="loading"><span>${acctype} Account</span></div>
+      <div class="right"><div class="top"><h2>${data[i].name}</h2><p>${data[i].text}</p><span><p>${verification}</p><p>${data[i].time} IST</p></span></div><div class="bottom"><ul class="social-media-icons">
+      <li><a href="mailto:${data[i].social[0]}?&Subject=Message form another White Lotus User.&body=Hi ${data[i].name},I am a another user in white lotus like you. My Message: "style="background: linear-gradient(45deg, #0c8ff0, aqua);">
+      <i class="fa fa-envelope"></i></a></li><li><a href="${data[i].social[1]}"style="background: linear-gradient(45deg, #2911c3, #46719c);"><i class="fa fa-facebook"></i></a></li><li><a href="${data[i].social[2]}" 
+      style="background: linear-gradient(45deg, #0c8ff0, #260067);"><i class="fa fa-linkedin"></i></a></li><li><a href="${data[i].social[3]}" style="background: linear-gradient(45deg, red, #960101);"><i class=
+      "fa fa-youtube"></i></a></li><li><a href="#" style="background: linear-gradient(45deg, #00ff09, #fff);"><i class="fa fa-user-circle-o"></i></a></li></ul></div></div></div></li>`;
+  }
+  searchStatus(0,0,0,'','user-search-axis-value',110,10,'user-search-status-data','search-bar3','search-bar4');
+}
+function resetd(){
+	document.querySelector(".income-table").innerHTML ='<tr><th>Date</th><th>Form</th><th>To</th><th>Cause</th><th>Amount(₹)</th><th>Method</th><th>Stack(₹)</th></tr>';
+  for(let i=blockChain.length-1; i>=0; i--){
+    document.querySelector(".income-table").innerHTML +=`<tr><td>${blockChain[i].Date}</td><td>${blockChain[i].Form}</td><td>${blockChain[i].To}</td><td>${blockChain[i].Cause}</td><td>${(blockChain[i].Amount).toFixed(2)}/-</td>
+    <td>${blockChain[i].Method}</td><td>${(blockChain[i].Stack).toFixed(2)}/-</td></tr>`;
+  }
+}
+function forpass(){
+  document.querySelector('.forgotload').style.display = 'block';
+  var a = puzzleValue();
+  document.querySelector("#forgot-puzzle").value=`[${a}]`;
+}
+function forgot_close(){
+  document.querySelector('.forgotload').style.display = 'none';
+}
+function forgotPuzzle1(){
+  let a = document.querySelector('#forgot-user-id').value;
+  let b = document.querySelector('#forgot-email-id').value;
+  let c = document.querySelector('#forgot-name').value;
+  let d = document.querySelector('#forgot-alergy').value;
+  let e = document.querySelector('#forgot-user-puzzle').value;
+  e = e.replaceAll(`[`,``);
+  e = e.replaceAll(`]`,``);
+  e = e.replaceAll(`,`,``);
+  e = e.replaceAll(` `,``);
+  let m=0;
+  for(let i=0; i<kilometres; i++){
+    if((data[i].userid == a) && (data[i].social[0] == b) && (data[i].name == c) && (e==654321)){
+      if(d=='Yes'){
+        d=1;
+      }else if(d=='No'){
+        d=0;
+      }else{
+        d=99999;
+      }
+      if(d==data[i].alergy){
+        currentClient=data[i];
+        m++;
+        break;
+      }
+    }
+  }
+  if(m!=0){
+    var conso = new Array('K4s@j','oY92/f','dM6e#','*f92ma{','6ps,4w',`${a}`,'H*w@l2','V7a1/','reR5!','5&wjA','Le21!');
+    var key = conso[Math.floor(Math.random()*conso.length)];
+    document.querySelector('.forgot-success1').innerHTML = `Mr/Ms. ${currentClient.name}, Your Identity is verified, now complete next step<br> Console key: ${key} (remember it for next step)`;
+    set[4]=key;
+    document.querySelector('#step2forgot').style.display = 'block';
+  }else{
+    document.querySelector('.forgot-success1').innerHTML = `&#x26D4; Mr/Ms. ${c}, Your account history not founded!, check your given details again..`;
+    document.querySelector('#step2forgot').style.display = 'none';
+  }
+}
+function forgotPuzzle2(){
+  let a = document.querySelector('#forgot-email').value;
+  let b = document.querySelector('#forgot-shirt-size').value;
+  let c = document.querySelector('#forgot-food').value;
+  let d = document.querySelector('#forgot-console').value;
+  if(c=='Veg'){
+    c=1;
+  }else if(c=='Non-veg'){
+    c=0;
+  }else{
+    c=999;
+  }
+  if((currentClient.social[0]==a) && (currentClient.shirt==b) && (set[4]==d) && (currentClient.veg==c)){
+    document.querySelector('.forgot-success2').innerHTML = `Mr/Ms. ${currentClient.name}, You are complete all securty terms now the ultimate result is below,<br>Your password is: ${currentClient.password} <br>Never loss it again.`;
+  }else{
+    document.querySelector('.forgot-success2').innerHTML = `&#x26D4; The given data is not correct!, try again`;
+    setTimeout(function load(){lock();},2000);
+  }
+}
+function bestFiveCom(){
+  let Size=[], Name=[], i, j, temp;
+  for(j=0; j<kilometres-1; j++){
+    Size[j]=data[j].product.length;
+    Name[j]=data[j].userid;
+  }
+  for(j=0; j<kilometres-1; j++){
+    for(i=0; i<kilometres-j-1; i++){
+      if(Size[i+1]>=Size[i]){
+        temp=Size[i+1];
+        Size[i+1]=Size[i];
+        Size[i]=temp;
+        temp=Name[i+1];
+        Name[i+1]=Name[i];
+        Name[i]=temp;
+      }
+    }
+  }
+  console.log(Size,Name);
+  let reminder = (maxRange(Size[0]*1)+Size[0]*1);
+  document.getElementById('comparision-range').innerHTML=`<span>${reminder}</span><span>${4*(reminder)/5}</span><span>${3*(reminder)/5}</span><span>${(2*reminder)/5}</span><span>${reminder/5}</span>`;
+  document.getElementById('comparision-barholder').innerHTML = '';
+  document.querySelector('.comparision-data').innerHTML = '';
+  for(i=0; i<Name.length; i++){
+    for(j=0; j<kilometres; j++){
+      if(Name[i]==data[j].userid){
+        Name[i]=data[j].name;
+        break;
+      }
+    }
+  }
+  for(i=0; i<5; i++){
+    let newsize = ((Size[i]/reminder) * 100);
+    Name[i]==undefined?newsize=0:newsize=newsize;
+    document.getElementById('comparision-barholder').innerHTML += `<span style="background: ${col1[i]}; height: ${newsize}%; top: ${100 - newsize}%">${Size[i]}</span>`;
+    document.querySelector('.comparision-data').innerHTML += `<li><div><span class="comparision-data-box"style="background: ${col1[i]}"></span>${Name[i]==undefined?'This port is busy now':Name[i]} (user${i+1})</div><div class="comparision-size">${Size[i]}</div></li>`;
+    if(Name[i]==currentClient.name){
+      set[5]=0;
+    }
+  }
+  succRefresh();
+}
+function maxRange(challenger){
+	let num=challenger, counter,newnum;
+  if(num % 10 != 0){
+    for(let j=1; j<10; j++){
+      newnum = num+j;
+      if(newnum % 10 == 0){
+        counter=j;
+        break;
+      }
+    }
+  }else{
+    counter=5;
+  }
+return counter;
+}
+function zodiacDept(t){
+  t = dateCraser(t);
+  if((((t[1]>=20) && (t[2]==1)) || ((t[1]<19) && (t[2]==2))) || (((t[1]>=20) && (t[2]==5)) || ((t[1]<20) && (t[2]==6))) || (((t[1]>=22) && (t[2]==9)) || ((t[1]<22) && (t[2]==10)))){
+    return `<i class="fa fa-leaf"title="Team leader Souvik Kar"></i>Air team`;
+  }else if((((t[1]>=19) && (t[2]==2)) || ((t[1]<20) && (t[2]==3))) || (((t[1]>=20) && (t[2]==6)) || ((t[1]<22) && (t[2]==7))) || (((t[1]>=22) && (t[2]==10)) || ((t[1]<21) && (t[2]==11)))){
+    return `<i class="fa fa-tint"title="Team leader Rajanya Chakraborty"></i>Water team`;
+  }else if((((t[1]>=19) && (t[2]==4)) || ((t[1]<20) && (t[2]==5))) || (((t[1]>=22) && (t[2]==8)) || ((t[1]<22) && (t[2]==9))) || (((t[1]>=21) && (t[2]==12)) || ((t[1]<19) && (t[2]==1)))){
+    return `<i class="fa fa-tree"title="Team leader Hritick Modak"></i>Earth team`;
+  }else if((((t[1]>=20) && (t[2]==3)) || ((t[1]<19) && (t[2]==4))) || (((t[1]>=22) && (t[2]==7)) || ((t[1]<22) && (t[2]==8))) || (((t[1]>=21) && (t[2]==11)) || ((t[1]<21) && (t[2]==12)))){
+    return `<i class="fa fa-fire"title="Team leader Krishnendu Mitra"></i>Fire team`;
+  }else{
+    return `<i class="fa fa-flash"title="Make your own team or join any one"></i>No team alloted`;
+  }
+}
+function resete(){
+  setTimeout(function edit(){
+    document.querySelector('#profile-img').src = currentClient.dp;
+    document.querySelector('#profile-name').value = currentClient.name;
+    document.querySelector('#profile-email').value = currentClient.social[0];
+    var temp = currentClient.text.replaceAll('<br>','');
+    document.querySelector('#profile-bio').value = `${temp}`;
+    document.querySelector('#profile-quote').value = currentClient.quote;
+    document.querySelector('#profile-prononus').value = currentClient.pronouns;
+    document.querySelector('#profile-social-acc1').value = `${currentClient.social[1]=='#'?'__blank':currentClient.social[1]}`;
+    document.querySelector('#profile-social-acc2').value = `${currentClient.social[2]=='#'?'__blank':currentClient.social[2]}`;
+    document.querySelector('#profile-social-acc3').value = `${currentClient.social[3]=='#'?'__blank':currentClient.social[3]}`;
+    temp =  zodiacDept(currentClient.time).replace(`'<i class="fa fa-flash"title="Make your own team or join any one"></i>`,'');
+    temp = temp.replace(`<i class="fa fa-leaf"title="Team leader Souvik Kar"></i>`,'');
+    temp = temp.replace(`<i class="fa fa-tint"title="Team leader Rajanya Chakraborty"></i>`,'');
+    temp = temp.replace(`<i class="fa fa-tree"title="Team leader Hritick Modak"></i>`,'');
+    temp = temp.replace(`<i class="fa fa-fire"title="Team leader Krishnendu Mitra"></i>`,'');
+    document.querySelector('#profile-element').value = temp;
+    document.querySelector('#profile-url').value = myprofileUrl(currentClient.name);
+  },1000); 
+}
+function myprofileUrl(name){
+  name = name.replaceAll(' ','%20');
+  let link = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/Profile.html#account?details='+name+'.kid';
+  return link;
+}
+function editProfile(){
+  let link = googleForm[5].link;
+  window.location = link;
+}
+function myProfile(){
+  let link = myprofileUrl(currentClient.name);
+  window.location = link;
+}
+function others_open(Pname){
+  document.querySelector('.othersload').style.display = 'block';
+  for(let j=0; j<kilometres; j++){
+    for(let i=0; i<data[j].product.length; i++){
+      if(Pname==data[j].product[i].productName){
+        document.querySelector('#othersName').textContent = data[j].product[i].productName;
+        document.querySelector('#othersLink').textContent = data[j].product[i].productLink;
+        document.querySelector('#othersLicence').textContent = data[j].product[i].productLicence;
+        break;
+      }
+    }
+  }
+}
+function others_close(){
+  document.querySelector('.othersload').style.display = 'none';
+}
+</script>
+</html>
