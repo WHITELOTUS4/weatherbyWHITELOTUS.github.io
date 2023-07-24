@@ -3,10 +3,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image"content="./fav-icon/roundlogo.png">
+    <meta property="og:image"content="./fav-icon/roundlogo.png"name="og:image">
     <meta content="Creative Products in free of cost mean ultimate knowledge, like Ebook, Report, Biography/Autography, Notes, Presentation  ppt, Book pdf, Research paper, Question papers, etc.." lang="en-us" name="description">
     <meta content="weather, WhiteLotus products, Amazing products, question papers, ozone, quiz, programs, white lotus, kidKrishkode" lang="en-us" name="keywords">
-    <title version="1.0">Product store by WhiteLotus</title>
+    <title version="1.2">Product store by WhiteLotus</title>
     <link rel="icon" href="./fav-icon/roundlogo.png">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,35 +15,35 @@
 </head>
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body{
-    background: #fff;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+  background: #fff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 a{
 	text-decoration: none;
 }
 .navber{
-    display: none;
+  display: none;
 }
 #navelement{
-    width: 30%;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    color: #0c8ff0;
-    font-weight: bold;
-    text-align: center;
-    padding: 2px 5px;
-    position: absolute;
-    top: 6%;
-    right: 0%;
-    z-index: -5;
-    opacity: -2;
+  width: 30%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  color: #0c8ff0;
+  font-weight: bold;
+  text-align: center;
+  padding: 2px 5px;
+  position: absolute;
+  top: 6%;
+  right: 0%;
+  z-index: -5;
+  opacity: -2;
 }
 .element{
     margin: 8px 2px;
@@ -401,8 +401,8 @@ footer .bottom-details .bottom_text{
   font-weight: bold;
 }
 .containers{
-  width: 95%;
-  margin: 2px 2.5%;
+  width: 85%;
+  margin: 2px calc((100% - 85%)/2);
   border-radius: 10px;
   box-shadow: 0 0 4px 0;
   background: transparent;/* background: inherit; */
@@ -422,6 +422,10 @@ footer .bottom-details .bottom_text{
   padding: 50px 4px;
   background-color: transparent;
 }
+.img-container div p{
+  max-height: 120px;
+  overflow: hidden;
+}
 .img-container img{
   width: 50%;
   padding: 2px 5px;
@@ -434,7 +438,7 @@ footer .bottom-details .bottom_text{
 .secondline{
   display: none;
 }
-article .subheading{
+article .subheading,.comments span .subheading{
   margin-top: 30px;
   margin-left: 10px;
   color: #00ff09;
@@ -445,6 +449,10 @@ article .subheading{
 #info,.aboutdata{
 	padding: 0px 5%;
 	text-align: justify;
+}
+#info{
+  max-height: 700px;
+  overflow: hidden;
 }
 .downarea{
   display: flex;
@@ -470,9 +478,9 @@ article .subheading{
   font-weight: bold;
 }
 .prating{
-  width: 30%;
+  width: 40%;
   padding: 4px 5%;
-  margin: 5px 35%;
+  margin: 5px 30%;
   text-align: center;
 }
 .prating .fa{
@@ -522,11 +530,11 @@ article .subheading{
 	text-align: center;
 }
 #ytvideo{
-    width: 45%;
-    height: 250px;
-    border: 1px solid #0c8ff0;
-    max-height: 310px;
-    max-width: 85%;
+  width: 45%;
+  height: 250px;
+  border: 1px solid #0c8ff0;
+  max-height: 310px;
+  max-width: 85%;
 }
 #backup{
   display: none;
@@ -549,19 +557,38 @@ article .subheading{
   width: 50%;
 }
 .leftpro img{
-  width: 30%;
+  width: 140px;
   height: 80px;
   border-radius: 5px;
 }
-.leftpro h6{
+.leftpro div{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+.leftpro div h6{
   margin-top: 5%;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 4px;
 }
-.morepro .flo a{
+.leftpro div span{
+  color: grey;
+  font-size: 14px;
+  font-weight: 600;
+}
+.leftpro div span i{
+  margin-right: 4px;
+}
+.morepro .flo .moredownBtn{
+  display: flex;
+  flex-direction: row;
   margin-top: 2%;
   margin-right: 5%;
+  justify-content: space-around;
+}
+.moredownBtn a{
+  margin-right: 4%;
 }
 .morepro hr{
   width: 95%;
@@ -579,7 +606,7 @@ article .subheading{
   background-color: transparent;
 }
 .writer-img{
-  width: 12%;
+  width: 14%;
   height: 130px;
   background-color: #f6f6f6;
   padding: 4px 4px;
@@ -631,22 +658,40 @@ article .subheading{
 	color: #3B1540;
 }
 @media(max-width: 900px){
+  .containers{
+    width: 95%;
+    margin: 2px calc((100% - 95%)/2);
+  }
   .img-container div p{
     display: none;
+  }
+  #person-img{
+    width: 50%;
+    height: 120px;
+    padding: 2px 5px;
+  }
+  #prohead {
+    max-height: 30px;
+    overflow: hidden;
   }
   .secondline{
     display: block;
     line-height: 16px;
     margin: 5px 0px;
     padding: 2px 3px;
+    max-height: 80px;
+    overflow: hidden;
   }
-  article .subheading{
+  article .subheading,.comments span .subheading{
     margin-top: 2px;
   }
+  .comments .top-controler{
+    padding: 2px 2%;
+  }
   .prating{
-    width: 60%;
+    width: 85%;
     padding: 4px 5%;
-    margin: 5px 20%;
+    margin: 5px 7.5%;
   }
   .flo{
     flex-direction: column;
@@ -669,18 +714,32 @@ article .subheading{
     width: 90%;
   }
   .leftpro img{
-    width: 50%;
+    width: 120px;
+    height: 75px;
   }
-  .leftpro h6{
+  .leftpro div h6{
     margin-top: 8%;
+    max-height: 20px;
+    max-width: 150px;
+    overflow: hidden;
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  .morepro .flo .moredownBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+  .leftpro div span{
+    font-size: 10px;
   }
   .writterarea{
     padding: 5px 2%;
   }
-.writer-img{
-  width: 30%;
-  height: 100px;
-}
+  .writer-img{
+    width: 30%;
+    height: 100px;
+  }
 .writer-about{
   width: 60%;
   padding: 5px 2%;
@@ -947,6 +1006,7 @@ article .subheading{
   padding: 2px 4px;
   overflow: auto;
   color: #000;
+  text-align: left;
 }
 .code-wraper i{
   width: 10%;
@@ -1009,6 +1069,66 @@ article .subheading{
   }
   .linkload section p{
     font-size: 12px;
+  }
+}
+</style>
+<style>
+#viewer-message{
+  height: 180px;
+  max-height: 180px;
+  min-height: 180px;
+}
+.form-control{
+  background: transparent!important;
+}
+.star-widget{
+  position: relative;
+  width: 30%;
+  height: 54px;
+}
+.star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 30px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  justify-content: left;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #ffdd44;
+}
+input:checked ~ label{
+  color: #ffdd44;
+}
+input#rate-5:checked ~ label{
+  color: yellow;
+  text-shadow: 0 0 4px orange;
+}
+#rate-1:checked ~ header:before{
+  content: "63f321gl@dQh1";
+}
+#rate-2:checked ~ header:before{
+  content: "m8#aiT1o4jr2";
+}
+#rate-3:checked ~ header:before{
+  content: "K3nw$Qlf8vb3";
+}
+#rate-4:checked ~ header:before{
+  content: "0d!fGke2si4";
+}
+#rate-5:checked ~ header:before{
+  content: "p2&fi4Le2dY5";
+}
+header{
+  display: none;
+}
+@media only screen and (max-width: 900px){
+  .star-widget{
+    width: 75%;
   }
 }
 </style>
@@ -1109,7 +1229,9 @@ article .subheading{
             <div class="subheading"style="margin-bottom: 2px;">About Product</div>
             <div class="aboutdata">
             	<span class="flw"><h6>Type of product: </h6><span id="type">loading..</span></span>
-              <span class="flw"><h6>Publish Store: </h6><span id="type">PSWL1</span></span>
+              <span class="flw"><h6>Publish Store: </h6><span style="margin-left: 5px;">PSWL1</span></span>
+              <span class="flw"><h6>Product licence: </h6><span style="margin-left: 5px;" id="licence">loading..</span></span>
+              <span class="flw"><h6>Publish date: </h6><span style="margin-left: 5px;" id="publishDate">loading..</span></span>
               <span class="flw"><h6>Rating of this Product: </h6></span>
               <div class="prating">
                 <span style="display: flex;flex-direction: row;"id="starclient">
@@ -1146,13 +1268,20 @@ article .subheading{
             </div>
             <div class="subheading"style="margin-bottom: 2px;">Another Part of this Product</div>
             <p id="backup2"class="null"style="padding:2px 5%;">Another part is not available for this product, Try another one..</p>
-            <div class="morepro"id="proloader">
+            <div class="morepro" id="proloader">
               <div class="flo">
                 <div class="leftpro">
-                  <img src="./img/product(empty).png"alt="loading...">
-                  <h6>Product 2</h6>
+                  <img src="./pic/daa.png"alt="loading...">
+                  <div>
+                    <h6>Product 2</h6>
+                    <span><i class="fa fa-globe"></i>Publick • 20kb • ppt</span>
+                    <span>Research Paper • 14/02/2023 IST</span>
+                  </div>
                 </div>
-                <a href="https://google.com/"download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a>
+                <span class="moredownBtn">
+                  <a href="https://google.com/"download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a>
+                  <a href="https://google.com/"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Link</button></a>
+                </span>
               </div><hr>
             </div><br>
             <div class="subheading"style="margin-bottom: 2px;">Author</div>
@@ -1185,6 +1314,41 @@ article .subheading{
       <span class="cbtn" onclick="prevpro();"><i class="fa fa-chevron-left"></i>Prev</span>
       <span class="cbtn" onclick="nextpro();">Next<i class="fa fa-chevron-right"></i></span>
     </div><br><br>
+    <div class="comments">
+      <span class="top-controler"><div class="subheading"style="margin-bottom: 2px;">Comments</div></span>
+      <div class="container col-lg-8">
+        <form>
+          <div class="form-group">
+            <label for="viewer-rate">Rate</label>
+            <div class="star-widget"id="viewer-rate">
+              <input type="radio" name="rate" id="rate-5" aria-describedby="rateHelp" onclick="starCount('p2*fi4Le2dY5');">
+              <label for="rate-5" class="fa fa-star"></label>
+              <input type="radio" name="rate" id="rate-4" aria-describedby="rateHelp" onclick="starCount('0d!fGke2si4');">
+              <label for="rate-4" class="fa fa-star"></label>
+              <input type="radio" name="rate" id="rate-3" aria-describedby="rateHelp" onclick="starCount('K3nw$Qlf8vb3');">
+              <label for="rate-3" class="fa fa-star"></label>
+              <input type="radio" name="rate" id="rate-2" aria-describedby="rateHelp" onclick="starCount('m8#aiT1o4jr2');">
+              <label for="rate-2" class="fa fa-star"></label>
+              <input type="radio" name="rate" id="rate-1" aria-describedby="rateHelp" onclick="starCount('63f321gl@dQh1');">
+              <label for="rate-1" class="fa fa-star"></label>
+              <header id="viewer-star"></header>
+            </div>
+            <small id="rateHelp"class="form-text text-muted">Star Rating is not compulsory with every comments</small>
+          </div>
+          <div class="form-group">
+            <lable for="viewer-email">Email</lable>
+            <input type="email"class="form-control"id="viewer-email"placeholder="Enter your email id"aria-describedby="emailHelp"/>
+            <small id="emailHelp"class="form-text text-muted">This email will not appear with your comment, It's use only send this message</small>
+          </div>
+          <div class="form-group">
+            <lable for="viewer-message">Message</lable>
+            <textarea class="form-control"id="viewer-message"row="8"aria-describedby="commentHelp"placeholder="Enter your message here"></textarea>
+            <small id="commentHelp"class="form-text text-muted">You can @mention other users in this message</small>
+          </div>
+        </form>
+        <button class="btn btn-primary"onclick="commentMe();"title="I agree all terms and conditions..">Message Send</button>
+      </div>
+    </div><br>
     <div class="linkload">
       <section>
         <head>
@@ -1233,9 +1397,11 @@ article .subheading{
           </div> 
           <div class="accordion__answer"> 
             <p>If you want to publish your product in WHITE LOTUS , then we say that you
-            choose correct option. First of all, you can send your product to us very easily,
-            For this you need to fill a form which will help you to register with us. Register 
-            your product with this link:<br>
+            choose correct option. First of all, register yourself with us and then you can 
+            send your product to us very easily, For this you need to fill a form which will 
+            help you to register with us. Register yourself with this link:<br>
+            <a href="#"><link>https://forms.gle/cKwdEskWRbk8CPHV6</link></a><br>
+            and register your products using this link:<br>
             <a href="https://forms.gle/cKwdEskWRbk8CPHV6">https://forms.gle/
             cKwdEskWRbk8CPHV6</a><br>
             But before you fill this form, it's good to know some important points.<br>
@@ -1276,7 +1442,7 @@ article .subheading{
             </ol>
             <p>
               Above points is important to publishing but for more clear instruction
-              visit the given link and after send your product details in our database,
+              visit the given link and after send your product to reviewing and publish,
               your product is display at max to max after 6 days if it not have any error.
             </p>
           </div> 
@@ -1302,6 +1468,16 @@ article .subheading{
             <p>Deleting your any product process is very easy, Go to our contact page <a href="#"onclick="contactpage();">Click here</a>
               and write a mail to WHITE LOTUS. Mention your name, product name, deleting reasons. After few time lates you got a confirmation
               reply, when you send the confirmation back to WHITE LOTUS then your product is delete automatically in 3 days.
+            </p> 
+          </div> 
+        </div>
+        <div class="accordion"> 
+          <div class="accordion__question"> 
+            <p>May I publish any type of document here?</p> 
+          </div> 
+          <div class="accordion__answer"> 
+            <p>No, the type product is pre define check our page to know how many kind of product
+             you publish here, defferent shop is able to display defferent type of product.
             </p> 
           </div> 
         </div>
@@ -1362,7 +1538,7 @@ sections ending for football.
             <ul class="box">
               <li class="link_name">Account</li>
               <li><a href="#"onclick="notvalid();">Profile</a></li>
-              <li><a href="#"onclick="notvalid();">My account</a></li>
+              <li><a href="./PStorebyWhiteLotus/User_Login.html">My account</a></li>
               <li><a href="./PStorebyWhiteLotus.html"title="prefrences inventory, products">Product/Prefrences</a></li>
               <li><a href="#"onclick="notvalid();">Purchase</a></li>
             </ul>
@@ -1474,185 +1650,19 @@ answers.forEach((event) => {
   }); 
 });
 </script>
+<script src="./PStorebyWhiteLotus/database.js"></script>
+<script src="./PStorebyWhiteLotus/productbase.js"></script>
 <script>
-  const reviews = [
-    {
-      id: 1,
-      head: "Gods Particle",
-      dp: "./fav-icon/img001.png",
-      twoline: "In this report we are know about god particle and it's true power in simple way",
-      img1: "./fav-icon/effect001.jpg",
-      img2: "./fav-icon/effect002.jpg",
-      img3: "./fav-icon/effect004.jpg",
-      link: "https://google.com/",
-      type: "Research Paper",
-      avglist: [4.4,28],
-      aboutlist: ["pdf",10,"20kb","All type","English",0,"Yes","Yes","Yes"],
-      ytlink: "https://www.youtube.com/embed/M63IdwIymiY?controls=0",
-      morepro: [["./fav-icon/effect001.jpg","Gods Particle part 2","https://drive.google.com/uc?export=download&id=1Csh6Gcqd-e4LTxR7U18vv9n7mG3HkTu_"],["./fav-icon/effect002.jpg","Gods Particle part 3","https://drive.google.com/uc?export=download&id=1jyBoxo0bWzmdgK-r0PJVRdF3iq35bxt7"]],
-      wdp: "./fav-icon/Krishdp.jpg",
-      name: "Krishnendu Mitra",
-      wabout: `“ Space is the study of everything in the universe that's beyond our own mind ”`,
-      social: [["krishnendumitra24@gmail.com"],["https://www.facebook.com/dibyendu.mitra.52090?mibextid=ZbWKwL"],["https://www.linkedin.com/in/krishnendu-mitra-b94004261"],["https://youtube.com/@whitelotus4"]],
-      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i><i class="fa fa-star"></i>`,
-      text:
-        "I like this website because here i check my city's daliy weathers and ozone history not only that but also i play here a quiz game related to nature. free free (•_•)"
-    },
-    {
-      id: 2,
-      head: "Astronomy for India",
-      dp: "./img/user(king).jpg",
-      twoline: "Astronomy is a easy subject but not in india",
-      img1: "./fav-icon/effect0025.jpg",
-      img2: "./fav-icon/effect0035.jpg",
-      img3: "./fav-icon/effect002.jpg",
-      link: "https://youtube.com/",
-      type: "PPT",
-      avglist: [3.8,53],
-      aboutlist: ["ppt",18,"50kb","Students","English",0,"No","Yes","Yes"],
-      ytlink: "https://www.youtube.com/embed/?controls=0",
-      morepro: [["./img/product(empty).png","Astronomy part 2","https://drive.google.com/uc?export=download&id=1CY0OftPkAy95pimj_qiwoD_e0FiBJgjd"]],
-      wdp: "./img/user(unknown).png",
-      name: "KING GAMER",
-      wabout: `Gamer`,
-      social: [["demo@gmail.com"],["#"],["#"],["#"]],
-      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>`,
-      text:
-        "Hello, I am a Youtuber. I think you all know me yes I am King Gamer and I love White Lotus..."
-    },
-    {
-      id: 3,
-      head: "Product Heading",
-      dp: "./img/user(anil).png",
-      twoline: "Two lines about your product is writen here..",
-      img1: "./fav-icon/effect005.jpg",
-      img2: "./fav-icon/effect001.jpg",
-      img3: "./fav-icon/effect0025.jpg",
-      link: "https://facebook.com/",
-      type: "EBook",
-      avglist: [3,3],
-      aboutlist: ["pdf",1,"20kb","All type","English",0,"No","Yes","No"],
-      ytlink: "https://www.youtube.com/embed/?controls=0",
-      morepro: [],
-      wdp: "./img/user(unknown).png",
-      name: "Dr. Anile Lama",
-      wabout: `Weather Scientists`,
-      social: [["#"],["#"],["#"],["#"]],
-      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i>`,
-      text:
-        "I voluntarily helped WHITE LOTUS with some weather report to build this website, so they always remembers me. Basically i am a weather scientists in Nepal and i am report this team at the first and they pulish it free of cost which i feel more attractive to them. This website look like very simple but it's not like that it is very informative and accurate, Thank you read this."
-    },
-    {
-      id: 4,
-      head: "Product Heading",
-      dp: "./img/user(manish).jpg",
-      twoline: "Two lines about your product is writen here..",
-      img1: "./img/product(empty).png",
-      img2: "./img/product(empty).png",
-      img3: "./img/product(empty).png",
-      link: "https://github.com/",
-      type: "loading...",
-      avglist: [0,0],
-      aboutlist: ["pdf",1,"20kb","All type","English",1,"No","Yes","No"],
-      ytlink: "https://www.youtube.com/embed/?controls=0",
-      morepro: [],
-      wdp: "./img/user(unknown).png",
-      name: "Manish Rajput",
-      wabout: `Tourist Guid`,
-      social: [["#"],["#"],["#"],["#"]],
-      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i><i class="fa fa-star"></i>`,
-      text:
-        "I am a tour guide in rajasthan, rajasthan always a high tempareture state so hot that many people die anytime so we always have to check the weather forecast. And from there I know about this site, using it helps me a lot."
-    },
-    {
-      id: 5,
-      head: "Product Heading",
-      dp: "./img/user(debosmita).jpg",
-      twoline: "Two lines about your product is writen here..",
-      img1: "./img/product(empty).png",
-      img2: "./img/product(empty).png",
-      img3: "./img/product(empty).png",
-      link: "https://google.com/",
-      type: "loading...",
-      avglist: [0,0],
-      aboutlist: ["loading..","loading..","loading..","loading..","loading..","loading..","loading..","loading.."],
-      ytlink: "https://www.youtube.com/embed/?controls=0",
-      morepro: [],
-      wdp: "./img/user(unknown).png",
-      name: "Debosmita Mitra",
-      wabout: `Nurse`,
-      social: [["#"],["#"],["#"],["#"]],
-      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i>`,
-      text:
-        "Hello everyone, my self debosmita. I didn't come here mainly to see the weather forecast or I came here to play the quiz, but then when did i like it so much that i didn't know. After that i occasionally come back to it and play quizzes, look at temperature records. Finally, its design is very good and without ads and cookies so much faster then the other app I have use."
-    },
-    {
-      id: 6,
-      head: "Product Heading",
-      dp: "https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png",
-      twoline: "Two lines about your product is writen here..",
-      img1: "./img/product(empty).png",
-      img2: "./img/product(empty).png",
-      img3: "./img/product(empty).png",
-      link: "https://google.com/",
-      type: "loading...",
-      avglist: [0,0],
-      aboutlist: ["loading..","loading..","loading..","loading..","loading..","loading..","loading..","loading.."],
-      ytlink: "https://www.youtube.com/embed/?controls=0",
-      morepro: [],
-      wdp: "./img/user(unknown).png",
-      name: "Happy038870",
-      wabout: `Driver`,
-      social: [["#"],["#"],["#"],["#"]],
-      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i>`,
-      text:
-        ""
-    },
-    {
-      id: 7,
-      head: "Product Heading",
-      dp: "./img/user(david).jpg",
-      twoline: "Two lines about your product is writen here..",
-      img1: "./img/product(empty).png",
-      img2: "./img/product(empty).png",
-      img3: "./img/product(empty).png",
-      link: "https://google.com/",
-      type: "loading...",
-      avglist: [0,0],
-      aboutlist: ["loading..","loading..","loading..","loading..","loading..","loading..","loading..","loading.."],
-      ytlink: "https://www.youtube.com/embed/?controls=0",
-      morepro: [],
-      wdp: "./img/user(unknown).png",
-      name: "David Hamsworth",
-      wabout: `Writer`,
-      social: [["#"],["#"],["#"],["#"]],
-      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i>`,
-      text:
-        "Simply the best weather app l have used which is devoid of ads.lts shows weather of my city so much faster than any other apps. Great for weather ,the zoom in detailed map works exactly  for me."
-    },
-    {
-      id: 8,
-      head: "Product",
-      dp: "./img/user(unknown).png",
-      twoline: "Two lines about your product is writen here..",
-      img1: "./img/product(empty).png",
-      img2: "./img/product(empty).png",
-      img3: "./img/product(empty).png",
-      link: "https://google.com/",
-      type: "loading...",
-      avglist: [0,0],
-      aboutlist: ["loading..","loading..","loading..","loading..","loading..","loading..","loading..","loading.."],
-      ytlink: "https://www.youtube.com/embed/?controls=0",
-      morepro: [],
-      wdp: "./img/user(unknown).png",
-      name: "Biswajit Dutta",
-      wabout: `Self Employe`,
-      social: [["#"],["#"],["#"],["#"]],
-      rateinfo: `<i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star-half-o checked"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>`,
-      text:
-        "I am not like this type of presention.. I think the graph and map is made better for show us. If you read it then go and made it better i am not understand it."
-    }
-  ];
+  const reviews = [];
+  for(let j=productTuple[0].start; j<productTuple[0].end; j++){
+    reviews[j] = product[j];
+  }
+  for(let j=0; j<reviews.length-1; j++){
+    var u = Math.floor(Math.random()*reviews.length);
+    var temp = reviews[j];
+    reviews[j] = reviews[u];
+    reviews[u] = temp; 
+  }
   const dp = document.getElementById("person-img");
   const head = document.getElementById("prohead");
   const ftline = document.getElementById("firstTwolines");
@@ -1662,6 +1672,8 @@ answers.forEach((event) => {
   const img3 = document.getElementById("img3");
   const link = document.getElementById("dlink");
   const type = document.getElementById("type");
+  const licence = document.getElementById("licence");
+  const publishDate = document.getElementById("publishDate");
   const avgrate = document.getElementById("avgrate");
   const ytlink = document.getElementById("ytvideo");
   const wimg = document.getElementById("authorimg");
@@ -1690,17 +1702,22 @@ answers.forEach((event) => {
   const s4 = document.getElementById("s4");
   const pppath = document.getElementById("pppath");
   let currentItem = 0;
+  let currentWritter = 0;
+  let currentWritterProduct = 0;
   window.addEventListener("DOMContentLoaded", () => {
     const item = reviews[currentItem];
+    writerFind(`${item.head}`);
     head.textContent = item.head;
-    dp.src = item.dp;
-    ftline.textContent = item.twoline;
-    stline.textContent = item.twoline;
+    dp.src = (currentWritterProduct.productDp).replace('.','');
+    ftline.innerHTML = item.twoline;
+    stline.innerHTML = item.twoline;
     img1.src = item.img1;
     img2.src = item.img2;
     img3.src = item.img3;
     link.href = item.link;
-    type.textContent = item.type;
+    type.textContent = currentWritterProduct.productType;
+    licence.textContent = currentWritterProduct.productLicence;
+    publishDate.textContent = currentWritterProduct.productModify;
     m1.textContent = item.head;
     m2.textContent = item.aboutlist[0];
     m3.textContent = item.aboutlist[1];
@@ -1710,28 +1727,29 @@ answers.forEach((event) => {
     m7.textContent = item.aboutlist[5];
     m8.textContent = item.aboutlist[6];
     m9.textContent = item.aboutlist[7];
-    m10.textContent = item.type;
+    m10.textContent = currentWritterProduct.productType;
     m11.textContent = item.aboutlist[8];
     ytlink.src = item.ytlink;
-    wimg.src = item.wdp;
-    author.textContent = item.name;
-    wabout.textContent = item.wabout;
-    rateinfo.innerHTML = item.rateinfo;
-    info.textContent = item.text;
-    s1.href = item.social[0];
-    s2.href = item.social[1];
-    s3.href = item.social[2];
-    s4.href = item.social[3];
+    wimg.src = (currentWritter.dp).replace('.','');
+    author.textContent = currentWritter.name;
+    wabout.textContent = `“`+currentWritter.quote+`”`;
+    info.innerHTML = item.text;
+    s1.href = 'mailto:'+currentWritter.social[0];
+    s2.href = currentWritter.social[1];
+    s3.href = currentWritter.social[2];
+    s4.href = currentWritter.social[3];
     if(item.aboutlist[5] != 0){
       item.avglist[0] = 0;
     }else{
       m7.textContent = "Free of cost";
     }
-    if(item.avglist[0] == 0 && item.avglist[1] == 0){
+    if(item.avglist.length==0){
       avgrate.innerHTML = 'Star rating is not available in this product, for more details see FAQ section.';
       rateinfo.innerHTML = `<i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i>`;
     }else{
+      item.avglist=rateChecker(item.avglist);
       avgrate.innerHTML = `${item.avglist[0]} average based on ${item.avglist[1]} reviews`;
+      rateinfo.innerHTML = rateToStarMaker(item.avglist[0]);
     }
     if(item.ytlink == 'https://www.youtube.com/embed/?controls=0'){
       ytlink.style.display = "none";
@@ -1745,7 +1763,9 @@ answers.forEach((event) => {
       document.getElementById("backup2").style.display = "none";
       proloader.style.display = "block";
       for(let i=0; i<item.morepro.length; i++){
-        proloader.innerHTML += `<div class="flo"><div class="leftpro"><img src='${item.morepro[i][0]}'alt="loading..."><h6>${item.morepro[i][1]}</h6></div><a href='${item.morepro[i][2]}'download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a></div><hr>`;
+        proloader.innerHTML += `<div class="flo"><div class="leftpro"><img src='${item.morepro[i][0]}'alt="loading..."><div><h6>${item.morepro[i][1]}</h6><span><i class="fa fa-globe"></i>Publick • ${item.morepro[i][3]} • ${item.morepro[i][4]}</span><span>${item.morepro[i][5]} • ${item.morepro[i][6]} IST</span></div></div>
+        <span class="moredownBtn"><a href="${item.morepro[i][2]}"download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a><a href="#"><button class="btn btn-primary send-button"title="I agree all terms and conditions.."onclick="parmalink();">
+        Link</button></a></span></div><hr>`;
       }
     }else{
       document.getElementById("backup2").style.display = "block";
@@ -1754,15 +1774,17 @@ answers.forEach((event) => {
   });
 function showPerson(person){
     const item = reviews[person];
+    writerFind(`${item.head}`);
     head.textContent = item.head;
-    dp.src = item.dp;
-    ftline.textContent = item.twoline;
-    stline.textContent = item.twoline;
+    dp.src = (currentWritterProduct.productDp).replace('.','');
+    ftline.innerHTML = item.twoline;
+    stline.innerHTML = item.twoline;
     img1.src = item.img1;
     img2.src = item.img2;
     img3.src = item.img3;
     link.href = item.link;
-    type.textContent = item.type;
+    type.textContent = currentWritterProduct.productType;
+    licence.textContent = currentWritterProduct.productLicence;
     m1.textContent = item.head;
     m2.textContent = item.aboutlist[0];
     m3.textContent = item.aboutlist[1];
@@ -1772,28 +1794,29 @@ function showPerson(person){
     m7.textContent = item.aboutlist[5];
     m8.textContent = item.aboutlist[6];
     m9.textContent = item.aboutlist[7];
-    m10.textContent = item.type;
+    m10.textContent = currentWritterProduct.productType;
     m11.textContent = item.aboutlist[8];
     ytlink.src = item.ytlink;
-    wimg.src = item.wdp;
-    author.textContent = item.name;
-    wabout.textContent = item.wabout;
-    rateinfo.innerHTML = item.rateinfo;
-    info.textContent = item.text;
-    s1.href = item.social[0];
-    s2.href = item.social[1];
-    s3.href = item.social[2];
-    s4.href = item.social[3];
+    wimg.src = (currentWritter.dp).replace('.','');
+    author.textContent = currentWritter.name;
+    wabout.textContent = `“`+currentWritter.quote+`”`;
+    info.innerHTML = item.text;
+    s1.href = 'mailto:'+currentWritter.social[0];
+    s2.href = currentWritter.social[1];
+    s3.href = currentWritter.social[2];
+    s4.href = currentWritter.social[3];
     if(item.aboutlist[5] != 0){
       item.avglist[0] = 0;
     }else{
       m7.textContent = "Free of cost";
     }
-    if(item.avglist[0] == 0 && item.avglist[1] == 0){
+    if(item.avglist.length==0){
       avgrate.innerHTML = 'Star rating is not available in this product, for more details see FAQ section.';
       rateinfo.innerHTML = `<i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i><i class="fa fa-star null"></i>`;
     }else{
+      item.avglist=rateChecker(item.avglist);
       avgrate.innerHTML = `${item.avglist[0]} average based on ${item.avglist[1]} reviews`;
+      rateinfo.innerHTML = rateToStarMaker(item.avglist[0]);
     }
     if(item.ytlink == 'https://www.youtube.com/embed/?controls=0'){
       ytlink.style.display = "none";
@@ -1807,7 +1830,9 @@ function showPerson(person){
       document.getElementById("backup2").style.display = "none";
       proloader.style.display = "block";
       for(let i=0; i<item.morepro.length; i++){
-        proloader.innerHTML += `<div class="flo"><div class="leftpro"><img src='${item.morepro[i][0]}'alt="loading..."><h6>${item.morepro[i][1]}</h6></div><a href='${item.morepro[i][2]}'download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a></div><hr>`;
+        proloader.innerHTML += `<div class="flo"><div class="leftpro"><img src='${item.morepro[i][0]}'alt="loading..."><div><h6>${item.morepro[i][1]}</h6><span><i class="fa fa-globe"></i>Publick • ${item.morepro[i][3]} • ${item.morepro[i][4]}</span><span>${item.morepro[i][5]} • ${item.morepro[i][6]} IST</span></div></div>
+        <span class="moredownBtn"><a href="${item.morepro[i][2]}"download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a><a href="#"><button class="btn btn-primary send-button"title="I agree all terms and conditions.."onclick="parmalink();">
+        Link</button></a></span></div><hr>`;
       }
     }else{
       document.getElementById("backup2").style.display = "block";
@@ -1821,20 +1846,20 @@ function showPerson(person){
     s = `https://whitelotus4.github.io/`+j+`#PSWL1?details=`+s+`.kid`;
     pppath.href = s;
 }
-  nextBtn.addEventListener("click", () => {
-    currentItem++;
-    if (currentItem > reviews.length - 1) {
-      currentItem = 0;
-    }
-    showPerson(currentItem);
-  });
-  prevBtn.addEventListener("click", () => {
-    currentItem--;
-    if (currentItem < 0) {
-      currentItem = reviews.length - 1;
-    }
-    showPerson(currentItem);
-  });
+  // nextBtn.addEventListener("click", () => {
+  //   currentItem++;
+  //   if (currentItem > reviews.length - 1) {
+  //     currentItem = 0;
+  //   }
+  //   showPerson(currentItem);
+  // });
+  // prevBtn.addEventListener("click", () => {
+  //   currentItem--;
+  //   if (currentItem < 0) {
+  //     currentItem = reviews.length - 1;
+  //   }
+  //   showPerson(currentItem);
+  // });
 function nextpro(){
   currentItem++;
   if(currentItem > reviews.length - 1){
@@ -1887,10 +1912,12 @@ function linkchecker(m){
     return;
   }else{
     let err=1,s=0,loc=-1;
-    let newpath = currentPath.replace(j,'');
+    let newpath = currentPath.replace('file:///D:/.vscode/Vs%20programmes/Weather/PStorebyWhiteLotus.html','');
+    newpath = newpath.replace('https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html','');
+    newpath = newpath.replace('http://localhost:2435/storage/emulated/0/My+html/Weather/PStorebyWhiteLotus.html','');
     newpath = newpath.replace(`#PSWL1?details=`,'');
     newpath = newpath.replace('file://','');
-    for(let i=0; i<reviews.length-1; i++){
+    for(let i=0; i<reviews.length; i++){
       let s = reviews[i].head;
       s=s.replaceAll(" ","%20");
       s=s+'.kid';
@@ -1903,7 +1930,7 @@ function linkchecker(m){
     if((currentPath=='https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html') ||
     (currentPath=='file:///D:/.vscode/Vs%20programmes/Weather/PStorebyWhiteLotus.html') ||
     (currentPath=='http://localhost:2435/storage/emulated/0/My+html/Weather/PStorebyWhiteLotus.html')){
-      alert("Welcome");
+      alert("Welcome user");
     }else if((err!=0) && (currentPath!=j)){
       errorpage.style.display = "block";
       document.querySelector(".urlpath").style.display="none";
@@ -1914,6 +1941,7 @@ function linkchecker(m){
       document.querySelector(".supheading").style.display="none";
       document.querySelector("#ads").style.display="none";
       document.querySelector(".containerss").style.display="none";
+      document.querySelector(".comments").style.display="none";
       setTimeout(function off(){
         alert("Product not found!, link is not real..");
       },500);
@@ -2000,5 +2028,48 @@ function ifram_act(){
 function parma_close(){
   document.querySelector(".linkload").style.display="none";
 }
+</script>
+<script>
+function writerFind(Pname){
+  var loc=-1;
+  for(let j=0; j<kilometres; j++){
+    for(let i=0; i<data[j].product.length; i++){
+      if(Pname==data[j].product[i].productName){
+        currentWritter=data[j];
+        currentWritterProduct=data[j].product[i];
+        loc++;
+        break;
+      }
+    }
+  }
+  if(loc==-1){
+    currentWritter=0;
+    currentWritterProduct=0;
+  }
+}
+let rate='';
+function starCount(c){
+  rate=c;
+}
+function commentMe(){
+  let email=document.querySelector('#viewer-email').value;
+  let message=document.querySelector('#viewer-message').value;
+  let reciver='info.WhiteLotus24@gmail.com';
+  if((email!='')&&((message!='')||(rate!=''))){
+    window.location = `mailto:${reciver}?&Subject=Comment form viwer in "${currentWritterProduct.productName}".&body=My id: ${email}, Token code: 24w9@jtYh4-${rate!=''?rate:'N8jo*awT5k'}-ofe^d7Qki0, My Message: ${message!=''?message:'__No comments now, only star rating__'}`;
+  }else{
+    alert("Error: 402! \nBad request occurred, terminated in new window");
+  }
+}
+document.onkeydown = function(event) {
+  switch (event.keyCode) {
+    case 37:
+      prevpro();
+    break;
+    case 39:
+      nextpro();
+    break;
+  }
+};
 </script>
 </html>
