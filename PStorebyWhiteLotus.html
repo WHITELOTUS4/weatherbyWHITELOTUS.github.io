@@ -1,17 +1,17 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image"content="./fav-icon/roundlogo.png"name="og:image">
-    <meta content="Creative Products in free of cost mean ultimate knowledge, like Ebook, Report, Biography/Autography, Notes, Presentation  ppt, Book pdf, Research paper, Question papers, etc.." lang="en-us" name="description">
-    <meta content="weather, WhiteLotus products, Amazing products, question papers, ozone, quiz, programs, white lotus, kidKrishkode" lang="en-us" name="keywords">
-    <title version="1.2">Product store by WhiteLotus</title>
-    <link rel="icon" href="./fav-icon/roundlogo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./origin.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image"content="./fav-icon/roundlogo.png"name="og:image">
+  <meta content="Creative Products in free of cost mean ultimate knowledge, like Ebook, Report, Biography/Autography, Notes, Presentation  ppt, Book pdf, Research paper, Question papers, etc.." lang="en-us" name="description">
+  <meta content="weather, WhiteLotus products, Amazing products, question papers, ozone, quiz, programs, white lotus, kidKrishkode" lang="en-us" name="keywords">
+  <title version="1.2">Product store by WhiteLotus</title>
+  <link rel="icon" href="./fav-icon/roundlogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./origin.css">
 </head>
 <style>
 * {
@@ -618,6 +618,7 @@ article .subheading,.comments span .subheading{
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  cursor: pointer;
 }
 .writer-about{
   width: 50%;
@@ -1232,6 +1233,7 @@ header{
               <span class="flw"><h6>Publish Store: </h6><span style="margin-left: 5px;">PSWL1</span></span>
               <span class="flw"><h6>Product licence: </h6><span style="margin-left: 5px;" id="licence">loading..</span></span>
               <span class="flw"><h6>Publish date: </h6><span style="margin-left: 5px;" id="publishDate">loading..</span></span>
+              <span class="flw"><h6>ISBN: </h6><span style="margin-left: 5px;" id="publishISBN">loading..</span></span>
               <span class="flw"><h6>Rating of this Product: </h6></span>
               <div class="prating">
                 <span style="display: flex;flex-direction: row;"id="starclient">
@@ -1273,9 +1275,9 @@ header{
                 <div class="leftpro">
                   <img src="./pic/daa.png"alt="loading...">
                   <div>
-                    <h6>Product 2</h6>
-                    <span><i class="fa fa-globe"></i>Publick • 20kb • ppt</span>
-                    <span>Research Paper • 14/02/2023 IST</span>
+                    <h6>loading..</h6>
+                    <span><i class="fa fa-globe"></i>loading.. • loading.. • loading..</span>
+                    <span>loading.. • loading..</span>
                   </div>
                 </div>
                 <span class="moredownBtn">
@@ -1286,7 +1288,7 @@ header{
             </div><br>
             <div class="subheading"style="margin-bottom: 2px;">Author</div>
           <div class="writterarea">
-            <div class="writer-img">
+            <div class="writer-img"onclick="goToProfile();">
               <img src="./fav-icon/Krishdp.jpg"id="authorimg">
             </div>
             <div class="writer-about">
@@ -1400,10 +1402,11 @@ header{
             choose correct option. First of all, register yourself with us and then you can 
             send your product to us very easily, For this you need to fill a form which will 
             help you to register with us. Register yourself with this link:<br>
-            <a href="#"><link>https://forms.gle/cKwdEskWRbk8CPHV6</link></a><br>
+            <a href="./PStorebyWhiteLotus/Form.html#googleForms?details=Register%20in%20White%20Lotus.kid">
+            <link>https://Forms.whitelotus4.github.io/Register.kid</link></a><br>
             and register your products using this link:<br>
-            <a href="https://forms.gle/cKwdEskWRbk8CPHV6">https://forms.gle/
-            cKwdEskWRbk8CPHV6</a><br>
+            <a href="./PStorebyWhiteLotus/Form.html#googleForms?details=Enlist%20product%20in%20White%20Lotus.kid">
+            https://Forms.whitelotus4.github.io/<br>Enlist_Product.kid</a><br>
             But before you fill this form, it's good to know some important points.<br>
             Your product must be completely free and non-copyrightable. And make sure other
             required point is maintain in your product.
@@ -1465,9 +1468,10 @@ header{
             <p>How to delete my product?</p> 
           </div> 
           <div class="accordion__answer"> 
-            <p>Deleting your any product process is very easy, Go to our contact page <a href="#"onclick="contactpage();">Click here</a>
-              and write a mail to WHITE LOTUS. Mention your name, product name, deleting reasons. After few time lates you got a confirmation
-              reply, when you send the confirmation back to WHITE LOTUS then your product is delete automatically in 3 days.
+            <p>Deleting your any product process is very easy, Go to our Product Delete page <a href="./PStorebyWhiteLotus/Form.html#googleForms?details=Delete%20product%20data.kid">
+              Click here</a> or write a mail to WHITE LOTUS. Mention your name, product name, deleting reasons. After few time 
+              lates you got a confirmation reply, when you send the confirmation back to WHITE LOTUS then your product is 
+              delete automatically in 3 days.
             </p> 
           </div> 
         </div>
@@ -1537,8 +1541,8 @@ sections ending for football.
             </ul>
             <ul class="box">
               <li class="link_name">Account</li>
-              <li><a href="#"onclick="notvalid();">Profile</a></li>
-              <li><a href="./PStorebyWhiteLotus/User_Login.html">My account</a></li>
+              <li><a href="./PStorebyWhiteLotus/Profile.html"title="Publick profiles">Profile</a></li>
+              <li><a href="./PStorebyWhiteLotus/User_Login.html"title="Monitor your performance, open your pannel">My account</a></li>
               <li><a href="./PStorebyWhiteLotus.html"title="prefrences inventory, products">Product/Prefrences</a></li>
               <li><a href="#"onclick="notvalid();">Purchase</a></li>
             </ul>
@@ -1579,37 +1583,37 @@ function statup(){
 }
 function errorloder(headerr,prr){
 	setTimeout(function of(){
-        document.getElementById("spinload").style.display = 'none';
-        //document.getElementById("errorpage").style.display = 'block';
-        document.getElementById("errorpage").style.height = '70%';
-    },2000);
+    document.getElementById("spinload").style.display = 'none';
+    //document.getElementById("errorpage").style.display = 'block';
+    document.getElementById("errorpage").style.height = '70%';
+  },2000);
 }
 function naveffect(){
-    if(v == 1){
-        boxa.style.opacity = "1";
-        boxa.style.zIndex = "99";
-        v = 0;
-    }else{
-        boxa.style.opacity = "-2";
-        boxa.style.zIndex = "-5";
-        v = 1;
-    }
+  if(v == 1){
+    boxa.style.opacity = "1";
+    boxa.style.zIndex = "99";
+    v = 0;
+  }else{
+    boxa.style.opacity = "-2";
+    boxa.style.zIndex = "-5";
+    v = 1;
+  }
 }
 mybutton = document.getElementById("topBtna");
 window.onscroll = function() {scrollFunction()};
 function scrollFunction(){
-    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-    	mybutton.style.display = "block";
-    }else{
-        mybutton.style.display = "none";
-    }
+  if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+    mybutton.style.display = "block";
+  }else{
+    mybutton.style.display = "none";
+  }
 }
 function topFunction(){
-   	document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 function notvalid(){
-    alert("This feature is not avalible now!");
+  alert("This feature is not avalible now!");
 }
 function mainpage(){
 	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/';
@@ -1674,6 +1678,7 @@ answers.forEach((event) => {
   const type = document.getElementById("type");
   const licence = document.getElementById("licence");
   const publishDate = document.getElementById("publishDate");
+  const publishISBN = document.getElementById("publishISBN");
   const avgrate = document.getElementById("avgrate");
   const ytlink = document.getElementById("ytvideo");
   const wimg = document.getElementById("authorimg");
@@ -1718,6 +1723,7 @@ answers.forEach((event) => {
     type.textContent = currentWritterProduct.productType;
     licence.textContent = currentWritterProduct.productLicence;
     publishDate.textContent = currentWritterProduct.productModify;
+    publishISBN.textContent = `${currentWritterProduct.productISBN==''?"Not avalible":currentWritterProduct.productISBN}`;
     m1.textContent = item.head;
     m2.textContent = item.aboutlist[0];
     m3.textContent = item.aboutlist[1];
@@ -1764,7 +1770,7 @@ answers.forEach((event) => {
       proloader.style.display = "block";
       for(let i=0; i<item.morepro.length; i++){
         proloader.innerHTML += `<div class="flo"><div class="leftpro"><img src='${item.morepro[i][0]}'alt="loading..."><div><h6>${item.morepro[i][1]}</h6><span><i class="fa fa-globe"></i>Publick • ${item.morepro[i][3]} • ${item.morepro[i][4]}</span><span>${item.morepro[i][5]} • ${item.morepro[i][6]} IST</span></div></div>
-        <span class="moredownBtn"><a href="${item.morepro[i][2]}"download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a><a href="#"><button class="btn btn-primary send-button"title="I agree all terms and conditions.."onclick="parmalink();">
+        <span class="moredownBtn"><a href="${item.morepro[i][2]}"download="${item.head}"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a><a href="#"><button class="btn btn-primary send-button"title="I agree all terms and conditions.."onclick="parmalink();parma_act();">
         Link</button></a></span></div><hr>`;
       }
     }else{
@@ -1785,6 +1791,8 @@ function showPerson(person){
     link.href = item.link;
     type.textContent = currentWritterProduct.productType;
     licence.textContent = currentWritterProduct.productLicence;
+    publishDate.textContent = currentWritterProduct.productModify;
+    publishISBN.textContent = `${currentWritterProduct.productISBN==''?"Not avalible":currentWritterProduct.productISBN}`;
     m1.textContent = item.head;
     m2.textContent = item.aboutlist[0];
     m3.textContent = item.aboutlist[1];
@@ -1831,7 +1839,7 @@ function showPerson(person){
       proloader.style.display = "block";
       for(let i=0; i<item.morepro.length; i++){
         proloader.innerHTML += `<div class="flo"><div class="leftpro"><img src='${item.morepro[i][0]}'alt="loading..."><div><h6>${item.morepro[i][1]}</h6><span><i class="fa fa-globe"></i>Publick • ${item.morepro[i][3]} • ${item.morepro[i][4]}</span><span>${item.morepro[i][5]} • ${item.morepro[i][6]} IST</span></div></div>
-        <span class="moredownBtn"><a href="${item.morepro[i][2]}"download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a><a href="#"><button class="btn btn-primary send-button"title="I agree all terms and conditions.."onclick="parmalink();">
+        <span class="moredownBtn"><a href="${item.morepro[i][2]}"download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Download</button></a><a href="#"><button class="btn btn-primary send-button"title="I agree all terms and conditions.."onclick="parmalink();parma_act();">
         Link</button></a></span></div><hr>`;
       }
     }else{
@@ -1846,20 +1854,6 @@ function showPerson(person){
     s = `https://whitelotus4.github.io/`+j+`#PSWL1?details=`+s+`.kid`;
     pppath.href = s;
 }
-  // nextBtn.addEventListener("click", () => {
-  //   currentItem++;
-  //   if (currentItem > reviews.length - 1) {
-  //     currentItem = 0;
-  //   }
-  //   showPerson(currentItem);
-  // });
-  // prevBtn.addEventListener("click", () => {
-  //   currentItem--;
-  //   if (currentItem < 0) {
-  //     currentItem = reviews.length - 1;
-  //   }
-  //   showPerson(currentItem);
-  // });
 function nextpro(){
   currentItem++;
   if(currentItem > reviews.length - 1){
@@ -1978,7 +1972,7 @@ function cplc(k){
     s=`https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html`;
     navigator.clipboard.writeText(s);
   }else{
-    s=`<iframe src="${s}"alt="loading..."id="WhiteLotus_Page"title="Visite WHITE LOTUS website"></iframe>`;
+    s=`<iframe src="${s}"alt="loading..."id="WhiteLotus_iframe_Page"width="100%"height="100%"title="Visite WHITE LOTUS website"></iframe>`;
     navigator.clipboard.writeText(s);
   }
   alert("Copied link: "+s);
@@ -2023,7 +2017,7 @@ function ifram_act(){
   document.querySelector("#parma_head1").style.background="transparent";
   document.querySelector("#parma_head2").style.background="transparent";
   document.querySelector("#parma_head3").style.background="#0c8ff0";
-  document.querySelector("#iframe").textContent=`<iframe src="${s}"alt="loading..."id="WhiteLotus_Page"title="Visite WHITE LOTUS website"></iframe>`;
+  document.querySelector("#iframe").textContent=`<iframe src="${s}"alt="loading..."id="WhiteLotus_iframe_Page"width="100%"height="100%"title="Visite WHITE LOTUS website"></iframe>`;
 }
 function parma_close(){
   document.querySelector(".linkload").style.display="none";
@@ -2047,6 +2041,9 @@ function writerFind(Pname){
     currentWritterProduct=0;
   }
 }
+function goToProfile(){
+  window.location=`./PStorebyWhiteLotus/Profile.html#account?details=${currentWritter.name.replaceAll(' ','%20')}.kid`;
+}
 let rate='';
 function starCount(c){
   rate=c;
@@ -2058,7 +2055,7 @@ function commentMe(){
   if((email!='')&&((message!='')||(rate!=''))){
     window.location = `mailto:${reciver}?&Subject=Comment form viwer in "${currentWritterProduct.productName}".&body=My id: ${email}, Token code: 24w9@jtYh4-${rate!=''?rate:'N8jo*awT5k'}-ofe^d7Qki0, My Message: ${message!=''?message:'__No comments now, only star rating__'}`;
   }else{
-    alert("Error: 402! \nBad request occurred, terminated in new window");
+    alert("Error: 400! \nBad request occurred, please fill out all fields");
   }
 }
 document.onkeydown = function(event) {
