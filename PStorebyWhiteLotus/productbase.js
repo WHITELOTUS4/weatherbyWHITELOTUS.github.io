@@ -6,7 +6,7 @@ const product = [
     img1: "./fav-icon/effect001.jpg",
     img2: "./fav-icon/effect002.jpg",
     img3: "./fav-icon/effect004.jpg",
-    link: "https://google.com/",
+    link: "C:/Users/JYOTINMOY MITRA/Documents/txt files/white.txt",
     avglist: [0,0,1,2,0,10,15],
     aboutlist: ["pdf", 10, "20kb", "All type", "English", 0, "Yes", "Yes", "Yes"],
     ytlink: "https://www.youtube.com/embed/M63IdwIymiY?controls=0",
@@ -61,15 +61,15 @@ if(milimeter % 10 == 0){
 }else{
 	var divisor = Math.floor(milimeter / 10), reminder = milimeter % 10;
 	for(let i=0; i<divisor; i++){
-        num2 = num1+9;
-        productTuple[i] = {start: num1, end: num2};
-        num1=num2+1;
-    }
-    if(productTuple[productTuple.length-1]!=undefined){
-         productTuple[productTuple.length] = {start: productTuple[productTuple.length-1]+1, end: reminder};
-    }else{
-    	productTuple[productTuple.length] = {start: 0, end: reminder};
-    }
+    num2 = num1+9;
+    productTuple[i] = {start: num1, end: num2};
+    num1=num2+1;
+  }
+  if(productTuple[productTuple.length-1]!=undefined){
+    productTuple[productTuple.length] = {start: productTuple[productTuple.length-1]+1, end: reminder};
+  }else{
+    productTuple[productTuple.length] = {start: 0, end: reminder};
+  }
 }
 function rateChecker(arr){
   let T=0,M=0;
@@ -85,39 +85,39 @@ function rateChecker(arr){
 }
 function rateToStarMaker(arr){
   let num=arr*10, counter, newnum, j,p=0.1;
-    if(num % 10 != 0){
-    	num = ((num/10).toFixed(1))*1;
-        for(j=1; j<10; j++){
-            newnum = num+p;
-            if((newnum*10) % 10 == 0){
-                counter=p;
-                num=Math.floor(num);
-                break;
-            }
-            p+=0.1;
+  if(num % 10 != 0){
+    num = ((num/10).toFixed(1))*1;
+      for(j=1; j<10; j++){
+        newnum = num+p;
+        if((newnum*10) % 10 == 0){
+          counter=p;
+          num=Math.floor(num);
+          break;
         }
-    }else{
-        counter=1;
-        num = ((num/10).toFixed(1))*1;
-    }
-    num=num*1;
-    counter=((1-counter.toFixed(1)*1).toFixed(1)*1);
-    p='';
-    for(j=0; j<num; j++){
-    	p+=`<i class="fa fa-star checked"></i>`;
-    }
-    if(counter<=0.3 && counter>0){
-    	p+=`<i class="fa fa-star-o checked"></i>`;
-        newnum=1;
-    }else if(counter<=0.9 && counter>0.3){
-    	p+=`<i class="fa fa-star-half-o checked"></i>`;
-        newnum=1;
-    }else{
-    	p+='';
-        newnum=0;
-    }
-    for(j=0; j<(5-(num+newnum)); j++){
-    	p+=`<i class="fa fa-star"></i>`;
-    }
-    return p;
+        p+=0.1;
+      }
+  }else{
+    counter=1;
+    num = ((num/10).toFixed(1))*1;
+  }
+  num=num*1;
+  counter=((1-counter.toFixed(1)*1).toFixed(1)*1);
+  p='';
+  for(j=0; j<num; j++){
+    p+=`<i class="fa fa-star checked"></i>`;
+  }
+  if(counter<=0.3 && counter>0){
+    p+=`<i class="fa fa-star-o checked"></i>`;
+    newnum=1;
+  }else if(counter<=0.9 && counter>0.3){
+    p+=`<i class="fa fa-star-half-o checked"></i>`;
+    newnum=1;
+  }else{
+    p+='';
+    newnum=0;
+  }
+  for(j=0; j<(5-(num+newnum)); j++){
+    p+=`<i class="fa fa-star"></i>`;
+  }
+  return p;
 }

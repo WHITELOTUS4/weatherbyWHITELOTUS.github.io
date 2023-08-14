@@ -13,8 +13,8 @@ const data = [
     shirt: "XL",
     alergy: 0,
     veg: 0,
-    product: [{productDp: "../pic/daa.png",productName: "God Particle",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=God%20particle.kid",productType: "Research Paper",productModify: "14/02/2023",productLicence: "Private-lotus"},
-      {productDp: "../pic/daa.png",productName: "New God particle",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Astronomy%20for%20India.kid",productType: "Research Paper",productModify: "14/02/2023",productLicence: "Publick-lotus"}
+    product: [{productDp: "../pic/daa.png",productName: "God Particle",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=God%20particle.kid",productType: "Research Paper",productModify: "14/02/2023",productLicence: "Private-lotus",productISBN: ""},
+      {productDp: "../pic/daa.png",productName: "New God particle",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Astronomy%20for%20India.kid",productType: "Research Paper",productModify: "14/02/2023",productLicence: "Publick-lotus",productISBN: "9001:1001:2007"}
     ],
     quote: "Space is the study of everything in the universe that's beyond our own mind ",
     pronouns: "He/Him",
@@ -88,7 +88,7 @@ const data = [
     shirt: "XXL",
     alergy: 0,
     veg: 1,
-    product: [{productDp: "../pic/env.png",productName: "Astronomy for India",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Astronomy%20for%20India.kid",productType: "Presentation ppt",productModify: "18/02/2023",productLicence: "Publick-lotus"}],
+    product: [{productDp: "../pic/env.png",productName: "Astronomy for India",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Astronomy%20for%20India.kid",productType: "Presentation ppt",productModify: "18/02/2023",productLicence: "Publick-lotus",productISBN: ""}],
     quote: "",
     pronouns: "Don't specify",
     text:
@@ -128,37 +128,37 @@ const googleForm = [
     id: 1,
     formname: "Register in White Lotus",
     description: '',
-    link: "https://form.goo.gle/",
+    link: "https://forms.gle/eL1wRqWBuygS5HVP9",
   },
   {
     id: 2,
-    formname: "Type-1 Product Entrey",
+    formname: "Edit profile details",
     description: '',
-    link: "https://form.goo.gle/",
+    link: "https://forms.gle/H1Jmtykv7owV7Ldu5",
   },
   {
     id: 3,
-    formname: "Type-2 Product Entrey",
+    formname: "Enlist product in white Lotus",
     description: '',
-    link: "https://forms.gle/",
+    link: "https://forms.gle/2JqpyhYVSxfL6yCN8",
   },
   {
     id: 4,
     formname: "Edit product data",
     description: '',
-    link: "https://forms.gle/cKwdEskWRbk8CPHV6",
+    link: "https://forms.gle/hHr2mghwKhsbrdqs8",
   },
   {
     id: 5,
     formname: "Delete product data",
     description: '',
-    link: "https://form.goo.gle/",
+    link: "https://forms.gle/Qh1EHuxiXwjkQUsN8",
   },
   {
     id: 6,
-    formname: "Edit profile information",
+    formname: "undefine",
     description: '',
-    link: "https://form.goo.gle/",
+    link: "https://forms.gle/",
   }
 ];
 const Licence = [

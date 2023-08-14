@@ -1,0 +1,1760 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image"content="../fav-icon/roundlogo.png"name="og:image">
+  <meta content="Publick profile for white Lotus users and there publick information to conect the world." lang="en-us" name="description">
+  <meta content="weather, WhiteLotus products, Amazing products, question papers, ozone, quiz, programs, white lotus, kidKrishkode" lang="en-us" name="keywords">
+  <title version="1.0">Profile</title>
+  <link rel="icon" href="../fav-icon/roundlogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../origin.css">
+</head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #fff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+a{
+	text-decoration: none;
+}
+.navber{
+  display: none;
+}
+#navelement{
+  width: 30%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  color: #0c8ff0;
+  font-weight: bold;
+  text-align: center;
+  padding: 2px 5px;
+  position: absolute;
+  top: 6%;
+  right: 0%;
+  z-index: -5;
+  opacity: -2;
+}
+.element{
+    margin: 8px 2px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.flp{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #0c8ff0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #212121;
+    padding: 5px 8px;
+}
+.flp span img{
+    width: 35px;
+    height: 35px;
+    margin-right: 3px;
+    cursor: progress;
+    border-radius: 50%;
+}
+.iconholder{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.rtp{
+    margin-top: 6px;
+    cursor: pointer;
+}
+#topBtna{
+	display: none;
+	width: 30px;
+	position: fixed;
+	bottom: 20px;
+	right: 40px;
+	z-index: 99;
+	border: none;
+	color: #fff;
+	background: #0c8ff0;
+	padding: 10px 8px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px #999;
+}
+#topBtna:hover{
+	color: #0c8ff0;
+	background: #fff;
+}
+@media only screen and (max-width: 900px){
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden!important;
+    }.rtp, .iconholder{
+        display: none;
+    }.flp span img{
+    	width: 45px;
+         height: 45px;
+    }.navber{
+        display: block;
+        width: 10%;
+        border: 1px solid #fff;
+    }.ber{
+        background-color: #fff;
+        width: 80%;
+        height: 5px;
+        margin: 20% 10%; 
+    }
+}
+#spinload,.linkload{
+	background: rgba(0,0,0,0.7);
+	color: #0c8ff0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	text-align: center;
+}
+#spinload I{
+	margin-top: 20%;
+}
+footer{
+  position: relative;
+  background: #212121;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+footer::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 1px;
+  width: 100%;
+  background: #AFAFB6;
+}
+footer .content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+footer .content .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.content .top .logo-details{
+  color: #fff;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.content .top .logo-details img{
+    width: 35px;
+    height: 35px;
+    margin-right: 3px;
+    cursor: progress;
+    border-radius: 50%;
+}
+.content .top .media-icons{
+  display: flex;
+}
+.content .top .media-icons a{
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 8px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.top .media-icons a:nth-child(1){
+  background: #4267B2;
+}
+.top .media-icons a:nth-child(1):hover{
+  color: #4267B2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(2){
+  background: #1DA1F2;
+}
+.top .media-icons a:nth-child(2):hover{
+  color: #1DA1F2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(3){
+  background: #E1306C;
+}
+.top .media-icons a:nth-child(3):hover{
+  color: #E1306C;
+  background: #fff;
+}
+.top .media-icons a:nth-child(4){
+  background: #0077B5;
+}
+.top .media-icons a:nth-child(4):hover{
+  color: #0077B5;
+  background: #fff;
+}
+.top .media-icons a:nth-child(5){
+  background: #FF0000;
+}
+.top .media-icons a:nth-child(5):hover{
+  color: #FF0000;
+  background: #fff;
+}
+footer .content .link-boxes{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .link-boxes .box{
+  width: calc(100% / 5 - 10px);
+}
+.content .link-boxes .box .link_name{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
+}
+.link-boxes .box .link_name::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: #fff;
+}
+.content .link-boxes .box li{
+  margin: 6px 0;
+  list-style: none;
+}
+.content .link-boxes .box li a{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease
+}
+.content .link-boxes .box li a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.content .link-boxes .input-box{
+  margin-right: 55px;
+  color: #AFAFB6;
+}
+footer .bottom-details{
+  width: 100%;
+  background: #212121;
+}
+footer .bottom-details .bottom_text{
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a{
+  margin-right: 10px;
+}
+@media (max-width: 900px) {
+  footer .content .link-boxes{
+    flex-wrap: wrap;
+  }
+  footer .content .link-boxes .input-box{
+    width: 40%;
+    margin-top: 10px;
+  }footer .bottom-details .bottom_text{
+     padding: 20px 20px;
+  }
+  #spinload I{
+	  margin-top: 60%;
+  }
+}
+@media (max-width: 700px){
+  footer{
+    position: relative;
+  }
+  .content .top .logo-details{
+    font-size: 26px;
+  }
+  .content .top .media-icons a{
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    padding-top: 10px;
+    line-height: 35px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 3 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 60%;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 12px;
+  }
+}
+@media (max-width: 520px){
+  footer::before{
+    top: 145px;
+  }
+  footer .content .top{
+    flex-direction: column;
+  }
+  .content .top .media-icons{
+    margin-top: 16px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 2 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 100%;
+  }
+}
+#errorpage{
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+	margin: 10% 0px;
+	margin-bottom: 0px;
+	display: none;
+}
+#errorpage h2{
+	color: #0c8ff0;
+  font-family: 'impact'/*,Arial, sans-serif; */
+}
+#errorpage ul{
+	background: #f6f6f6;
+	border-radius: 10px;
+	padding: 10px 15px;
+	color: #000;
+	text-align: left;
+	margin: 5px 10%;
+	width: 80%;
+	list-style-type: none;
+  line-height: 36px;
+}
+.urlpath{
+  background-color: #f6f6f6;
+  margin-bottom: 20px;
+  padding: 3px 4px;
+}.urlpath h4{
+  color: #0c8ff0;
+  font-weight: bolder;
+  margin-bottom: 0px;
+}
+.urlpath span{
+  color: #3B1540!important;
+  margin-left: 30px;
+}
+.urlpath span a{
+  color: #3B1540;
+}
+</style>
+<style>
+.top-controler{
+  width: 100%;
+  padding: 2px 10%;
+  color: #0c8ff0;
+  display: none;/*flex*/
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cbtn{
+  cursor: pointer;
+  font-weight: bold;
+}
+.containers{
+  width: 85%;
+  margin: 2px calc((100% - 85%)/2);
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0;
+  background: transparent;/* background: inherit; */
+  backdrop-filter: blur(5px);
+  padding: 5px 2px;
+}
+#prohead{
+	font-weight: bold;
+}
+.img-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+.img-container div{
+  width: 70%;
+  padding: 75px 4px;
+  background-color: transparent;
+}
+.img-container div p{
+  max-height: 120px;
+  overflow: hidden;
+}
+.img-container img{
+  width: 50%;
+  padding: 2px 2px;
+  margin-right: 2%;
+}
+#person-img{
+  width: 240px;
+  height: 230px;
+  border-radius: 50%;
+  border: 2px solid #0c8ff0;
+}
+.cloude{
+  display: none;
+  animation: cloudout 7s linear 1;
+  width: 60px;
+	height: 30px;
+	background: #d6f0fd;
+	box-shadow: -3px 3px rgba(0,0,0,0.2);
+	border-radius: 50px;
+	position: relative;
+  position: absolute;
+  top: 200px;
+  left: 18%;
+	text-align: center;
+  color: #0c8ff0;
+  font-size: 20px;
+  cursor: pointer;
+}
+.cloude .fa-check-square-o{
+  margin-top: 2px;
+  z-index: 99;
+  position: absolute;
+  right: 18px;
+}
+@keyframes cloudout{
+  from{
+    opacity: 0.1;
+  }to{
+    opacity: 1;
+  }
+}
+.cloude::after, .cloude::before{
+	content: "";
+	position: absolute;
+	display: inline-block;
+	background: inherit;
+	border-radius: inherit;
+}
+.cloude::after{
+	width: 30px;
+	height: 30px;
+	top: -18px;
+	left: 23px;
+	border-radius: 100px;
+}
+.cloude::before{
+	width: 15px;
+	height: 15px;
+	top: -10px;
+	right: 35px;
+	border-radius: 100px;
+}
+.secondline{
+  display: none;
+}
+article .subheading,.comments span .subheading{
+  margin-top: 0px;
+  margin-left: 10px;
+  color: #00ff09;
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#info,.aboutdata{
+	padding: 0px 5%;
+	text-align: justify;
+}
+#info{
+  max-height: 700px;
+  overflow: hidden;
+}
+.downarea{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  margin: 5px 2.5%;
+  padding: 5px 20px;
+  background-color: #f6f6f6;
+}
+.downarea h6{
+  padding-top: 8px;
+}
+.flw{
+  display: flex;
+  flex-direction: row;
+}
+#type{
+  margin-left: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.flw h6{
+  font-weight: bold;
+}
+.prating{
+  width: 40%;
+  padding: 4px 5%;
+  margin: 5px 30%;
+  text-align: center;
+}
+.prating .fa{
+  font-size: 25px;
+}
+.checked{
+  color: orange;
+}
+.null{
+  color: gray;
+}
+#starclient{
+  width: 100%;
+  justify-content: space-around;
+}
+.flo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.weathertable{
+	width: 45%;
+	height: auto;
+	margin: 20px 0%;
+}.tablerow{
+	display: flex;
+	flex-direction: row;
+}.tableele{
+	width: 50%;
+	height: auto;
+  background-color: #f6f6f6;
+	border: 1px solid #c8c8c8;
+	color: #16a864;
+	padding-left: 2px;
+}.m{
+	color: blueviolet;
+	text-align: center;
+}
+.tablehead{
+	width: 50%;
+	height: auto;
+	border: 1px solid #c8c8c8;
+	background: #0c8ff0;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+#ytvideo{
+  width: 45%;
+  height: 250px;
+  border: 1px solid #0c8ff0;
+  max-height: 310px;
+  max-width: 85%;
+}
+#backup{
+  display: none;
+}
+.morepro{
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  margin: 2px 5%;
+  width: 90%;
+  height: auto;
+  padding: 10px 5px;
+  max-height: 485px;
+  overflow-y: scroll;
+}
+.morepro .flo{
+  justify-content: space-between;
+}
+.leftpro{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 50%;
+}
+.leftpro img{
+  width: 140px;
+  height: 80px;
+  border-radius: 5px;
+}
+.leftpro div{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+.leftpro div h6{
+  margin-top: 5%;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 4px;
+}
+.leftpro div span{
+  color: grey;
+  font-size: 14px;
+  font-weight: 600;
+}
+.leftpro div span i{
+  margin-right: 4px;
+}
+.morepro .flo .moredownBtn{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  margin-right: 5%;
+  justify-content: space-around;
+}
+.moredownBtn a,.moredownBtn button{
+  margin-right: 4%;
+}
+.morepro hr{
+  width: 95%;
+  margin: 2px 2.5%;
+  margin-bottom: 10px;
+  background-color: #0c8ff0;
+}
+.writterarea{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 5px 10%;
+  background-color: transparent;
+}
+.writer-img{
+  width: 14%;
+  height: 130px;
+  background-color: #f6f6f6;
+  padding: 4px 4px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.writer-img img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.writer-about{
+  width: 50%;
+  background-color: #f6f6f6;
+  padding: 5px 5%;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-left: 5px;
+}
+.writer-about h4{
+  color: #0c8ff0;
+  margin-bottom: 3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.writer-about p{
+  color: #3B1540;
+  font-family: cursive;
+  height: 38px;
+  overflow-y: scroll;
+}
+.writer-about ul{
+  width: 60%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2px 5px;
+  color: #0c8ff0;
+  font-size: 20px;
+}
+.writer-about ul li{
+  cursor: pointer;
+}
+.supheading h5{
+	margin: 5px 10px;
+	font-weight: bold;
+	font-family: poppins;
+	color: #3B1540;
+}
+.tageHolder{
+  display: flex;
+  flex-direction: row;
+  max-width: 970px;
+  overflow: hidden;
+}
+.tage{
+  background: #3ca2ef9e;
+  border-radius: 50px;
+  padding: 4px 6px;
+  color: #0200FF;
+  font-weight: 600;
+  font-size: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.social-media-icons, zita{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-media-icons li{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 20px;
+}
+.social-media-icons li a{
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 5px 0;
+}
+.red{
+	color: red;
+}
+.powderblue{
+	color: #d6f0fd;
+}
+.blue{
+	color: blue;
+}
+.green{
+	color: green;
+}
+@media(max-width: 900px){
+  .containers{
+    width: 95%;
+    margin: 2px calc((100% - 95%)/2);
+    margin-top: 50px;
+  }
+  .img-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .img-container div p{
+    display: none;
+  }
+  #person-img{
+    width: 60%;
+    height: 200px;
+    padding: 0px 0px;
+    margin: -30px 20%;
+  }
+  .img-container div{
+    width: 100%;
+    padding: 0px 4px;
+    margin-top: 40px;
+    text-align: center;
+  }
+  #prohead {
+    max-height: 65px;
+    margin-bottom: 0px;
+    overflow: hidden;
+  }
+  .cloude{
+    position: absolute;
+    top: 130px;
+    left: 65%;
+  }
+  .secondline{
+    display: block;
+    line-height: 16px;
+    margin: 5px 0px;
+    padding: 2px 3px;
+    max-height: 80px;
+    overflow: hidden;
+  }
+  article .subheading,.comments span .subheading{
+    margin-top: 2px;
+  }
+  .comments .top-controler{
+    padding: 2px 2%;
+  }
+  .prating{
+    width: 85%;
+    padding: 4px 5%;
+    margin: 5px 7.5%;
+  }
+  .flo{
+    flex-direction: column;
+  }
+  .weathertable{
+    width: 100%;
+    margin: 0px 0%;
+  }
+  .tableele{
+    overflow-y: scroll;
+  }
+  #ytvideo{
+    width: 100%;
+    height: 185px;
+    max-width: 100%;
+    border: 1px solid #0c8ff0;
+    margin-bottom: 20px;
+  }
+  .leftpro{
+    width: 90%;
+  }
+  .leftpro img{
+    width: 120px;
+    height: 75px;
+  }
+  .leftpro div h6{
+    margin-top: 8%;
+    max-height: 20px;
+    max-width: 150px;
+    overflow: hidden;
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  .morepro .flo .moredownBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+  .leftpro div span{
+    font-size: 10px;
+  }
+  .writterarea{
+    padding: 5px 2%;
+  }
+  .writer-img{
+    width: 30%;
+    height: 100px;
+  }
+.writer-about{
+  width: 60%;
+  padding: 5px 2%;
+  margin-left: 5px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.writer-about h4{
+  font-size: 18px;
+}
+.writer-about p{
+  font-size: 12px;
+  height: 40px;
+  overflow-y: scroll;
+  margin-bottom: 2px;
+}
+.writer-about ul{
+  width: 80%;
+  margin: 2px 2px;
+  font-size: 14px;
+}
+  .tageHolder{
+    max-width: 280px;
+  }
+  .morepro{
+    max-height: 640px;
+  }
+}
+</style>
+<style>
+.layout { 
+  width: 100%; 
+  margin-top: 10px; 
+} 
+.accordion { 
+  padding: 10px; 
+  background: #f6f6f6; 
+  border-top: 1px solid gray;
+} 
+.accordion__question p { 
+  margin: 5px; 
+  padding: 0; 
+  font-family: Verdana; 
+  font-size: 16px; 
+  color: #3B1540;
+  font-weight: bold;
+} 
+.accordion__answer p,.accordion__answer ol{ 
+  margin: 5px; 
+  padding: 10px; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  color: grey; 
+  background: #fff; 
+  border-radius: 10px; 
+  text-align: justify;
+} 
+.accordion:hover { 
+  cursor: pointer; 
+} 
+.accordion__answer { 
+  display: none; 
+} 
+.accordion.active .accordion__answer { 
+  display: block; 
+}
+.accordion__answer ol{
+  margin: 10px 5px;
+  padding: 10px 30px;
+}
+</style>
+<style>
+.linku{
+  position: absolute;
+  right: 5%;
+  color: #00ff09;
+  margin-top: 5px;
+  font-size: 25px;
+  cursor: pointer;
+}
+#SupportingVideo iframe{
+  width: 80%;
+  height: 250px;
+  border: 1px solid #0c8ff0;
+  max-height: 310px;
+  max-width: 85%;
+}
+.containerss{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px calc(100% - 1000px);
+}
+.title{
+  margin: 10px 0px;
+}
+.title h2{
+  font-size: 40px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  color: #3B1540;
+}
+.title .underline{
+  width: 250px;
+  height: 4px;
+  background-color: #00ff09;
+  margin: 0 auto;
+}
+.circle{
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #0c8ff0;
+  opacity: 0.2;
+  z-index: -10;
+  box-shadow: 0 0 10px 7px #0c8ff0;
+  position: fixed;
+}
+#leftcir{
+  position: fixed;
+  top: 25%;
+  left: -4%;
+}
+#rightcir{
+  position: fixed;
+  top: 75%;
+  right: 1%;
+}
+.linkload section{
+  width: 60%;
+  height: auto;
+  margin: 10% 20%;
+  background-color: #fff;
+  border: 2px solid #AFAFB6;
+  border-radius: 10px;
+  color: #3B1540;
+  padding: 4px 5px;
+}
+.linkload section h3{
+  text-align: left;
+  padding-left: 12px;
+  font-family: Impact;
+}
+.linkload section .flw{
+  justify-content: space-between;
+  padding: 3px 4px;
+}
+.linkload section .flw span{
+  display: flex;
+  flex-direction: row;
+}
+.linkload section .flw i{
+  margin-top: 5px;
+  margin-right: 4px;
+}
+.linkload section .flo{
+  justify-content: start;
+  padding: 3px 4px;
+  margin-bottom: 10px;
+}
+.linkload section .flo span{
+  margin: 0px 35px 2px 2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.linkload section button{
+  margin: 2px 2px;
+}
+.linkload section p{
+  text-align: left;
+  margin: 0px 3px;
+}
+.code-wraper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  height: auto;
+  background-color: #f6f6f6;
+  margin: 5px 5% 15px 5%;
+  border-radius: 10px;
+  border: 2px solid gray;
+}
+.code-wraper span{
+  padding: 2px 4px;
+  overflow: auto;
+  color: #000;
+  text-align: left;
+}
+.code-wraper i{
+  width: 10%;
+  height: auto;
+  text-align: center;
+  background-color: #dcd9d9;
+  border-left: 2px solid gray;
+  padding: 8px 4px;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.parma-box,.linkload{
+  display: none;
+}
+.underline div{
+  background:transparent;
+  width:60px;
+  height: 3px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+@media only screen and (max-width: 900px){
+  .linku{
+    color: #00FF09;
+    font-size: 20px;
+  }
+  #SupportingVideo iframe{
+    width: 520px;
+    height: 180px;
+    border: 1px solid #0c8ff0;
+  }
+  .containerss{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 5%;
+  }
+  .title h2{
+    font-size: 32px;
+    text-transform: capitalize;
+  }
+  .circle{
+    width: 100px;
+    height: 100px;
+  }
+  .linkload section{
+    width: 90%;
+    height: auto;
+    margin: 40% 5%;
+  }
+  .linkload section h3{
+    font-size: 25px;
+  }
+  .linkload section .flo{
+    display: flex;
+    flex-direction: row;
+  }
+  .linkload section p{
+    font-size: 12px;
+  }
+}
+</style>
+<style>
+#viewer-message{
+  height: 180px;
+  max-height: 180px;
+  min-height: 180px;
+}
+.form-control{
+  background: transparent!important;
+}
+.star-widget{
+  position: relative;
+  width: 30%;
+  height: 54px;
+}
+.star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 30px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  justify-content: left;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #ffdd44;
+}
+input:checked ~ label{
+  color: #ffdd44;
+}
+input#rate-5:checked ~ label{
+  color: yellow;
+  text-shadow: 0 0 4px orange;
+}
+#rate-1:checked ~ header:before{
+  content: "63f321gl@dQh1";
+}
+#rate-2:checked ~ header:before{
+  content: "m8#aiT1o4jr2";
+}
+#rate-3:checked ~ header:before{
+  content: "K3nw$Qlf8vb3";
+}
+#rate-4:checked ~ header:before{
+  content: "0d!fGke2si4";
+}
+#rate-5:checked ~ header:before{
+  content: "p2&fi4Le2dY5";
+}
+header{
+  display: none;
+}
+@media only screen and (max-width: 900px){
+  .star-widget{
+    width: 75%;
+  }
+}
+</style>
+<body onload="statup()">
+    <div class="flp">
+        <span style="display: flex;flex-direction: row;width: 20%;">
+            <img src="../fav-icon/logo.png"alt="Error dp not loaded"><span class="rtp"style="color: white;">WHITE LOTUS</span>
+        </span>
+        <div class="iconholder">
+        	<span class="rtp" id="home" onclick="mainpage();">Main</span>
+            <span class="rtp" id="about" onclick="aboutpage();">About</span>
+            <span class="rtp" id="cont" onclick="contactpage();">Contact</span>
+            <span class="rtp" id="quizapi" onclick="myquiz();">Quiz</span>
+        </div>
+        <div class="navber"onclick="naveffect();">
+            <div class="ber"></div>
+            <div class="ber"></div>
+            <div class="ber"></div>
+        </div>
+    </div>
+    <div id="navelement">
+    	<span class="element"onclick="mainpage();">Main</span>
+        <span class="element"onclick="aboutpage();">About</span>
+        <span class="element"onclick="contactpage();">Contact</span>
+        <span class="element"onclick="myquiz();">Quiz</span>
+    </div>
+    <div id="errorpage">
+    	<h2 id="headerr">404 error!</h2>
+        <h4 id="prr">There isn't a WHITE LOTUS Pages site here</h4>
+        <ul>
+        	<h6>All possible reasons are following</h6>
+            <hr></hr>
+        	  <li>&#x26D4; Link is not complete</li>
+            <li>&#x26D4; Internet slow</li>
+            <li>&#x26D4; Device OS not updated</li>
+            <li>&#x26D4; Browser backdated</li>
+            <li>&#x26D4; Link include misspelt</li>
+            <li>&#x26D4; @media quary not work</li>
+            <li>&#x26D4; Under development</li>
+        </ul>
+    </div>
+    <section class="urlpath">
+      <h4>Path: </h4>
+      <span id="mypath"><a href="./index.html">Main</a>/<a href="./PStorebyWhiteLotus.html">PStorebyWhiteLotus</a>/<a href="./Profile.html">Profile</a>/<a href="#" id="pppath"></a></span>
+    </section>
+    <div id="pro"><h4 style="color: #0c8ff0; margin: 2px 5px; text-align: center; font-weight: 800;">Accounts</h4>
+      <div style="width:200px;height:4px;border-radius:10px;background-color:#3B1540;margin-bottom:10px;margin-left:calc((100% - 200px)/2);"></div>
+    </div>
+    <div class="top-controler">
+      <span class="cbtn" onclick="prevpro();"><i class="fa fa-chevron-left"></i>Prev</span>
+      <span class="cbtn" onclick="nextpro();">Next<i class="fa fa-chevron-right"></i></span>
+    </div>
+    <section class="containers">
+        <article class="review">
+          <i class="fa fa-link linku"title="Copy the current account link"onclick="parmalink();"></i>
+          <div class="img-container">
+            <img src="./img/user(unknown).png" alt="" id="person-img"/>
+            <div>
+              <h4 id="prohead">Account Name..</h4>
+              <p id="firstTwolines">Loading...</p>
+            </div>
+          </div>
+          <div class="cloude"title="This account is under verified"><i class="fa fa-check-square-o"></i></div>
+          <div class="secondline"><p id="secondTwolines">Loading..</p></div>
+            <div class="subheading"style="margin-bottom: 2px;">Bio</div>
+            <p id="info">
+            Loading...
+            </p>
+            <div class="subheading"style="margin-bottom: 2px;">Officials</div>
+            <div class="aboutdata">
+            	<span class="flw"><h6>Joining Date: </h6><span style="margin-left: 5px; margin-top: -2px;" id="joinDate">loading..</span></span>
+              <span class="flw"><h6 id="teamtype">loading..: </h6><span style="margin-left: 5px; margin-top: -2px;" id="teamName">loading..</span></span>
+              <span class="flw"><h6>Account Type: </h6><span style="margin-left: 5px; margin-top: -2px;" id="accType">loading..</span></span>
+              <span class="flw"><h6>Contributed Publish: </h6><span style="margin-left: 5px; margin-top: -2px;" id="publishSize">loading..</span></span>
+              <span class="flw"><h6>Tages: </h6><span style="margin-left: 5px; margin-top: -4px;" id="tages">loading..</span></span>
+            </div>
+            <div class="subheading"style="margin-bottom: 2px;">Published</div>
+            <p id="backup2"class="null"style="padding:2px 5%;">Any product is not available for this account, Try another one..</p>
+            <div class="morepro" id="proloader">
+              <div class="flo">
+                <div class="leftpro">
+                  <img src="./pic/daa.png"alt="loading...">
+                  <div>
+                    <h6>loading..</h6>
+                    <span><i class="fa fa-globe"></i>loading.. • loading.. • loading..</span>
+                    <span>loading.. • loading..</span>
+                  </div>
+                </div>
+                <span class="moredownBtn">
+                  <a href="https://google.com/"download="true"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Visite</button></a>
+                  <a href="https://google.com/"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Link</button></a>
+                  <a href="https://google.com/"><button class="btn btn-danger send-button"title="I agree all terms and conditions..">Poped</button></a>
+                </span>
+              </div><hr>
+            </div><br>
+            <div class="subheading"style="margin-bottom: 2px;">Social Media</div>
+            <ul class="social-media-icons"style="margin-bottom:2px;">
+              
+          </ul>
+        </article>
+    </section>
+    <div class="top-controler"id="top-controler">
+      <span class="cbtn" onclick="prevpro();"><i class="fa fa-chevron-left"></i>Prev</span>
+      <span class="cbtn" onclick="nextpro();">Next<i class="fa fa-chevron-right"></i></span>
+    </div><br><br>
+    <div class="comments">
+      <span class="top-controler"><div class="subheading"style="margin-bottom: 2px;">Comments</div></span>
+      <div class="container col-lg-8">
+        <form>
+          <div class="form-group">
+            <lable for="viewer-email">Email</lable>
+            <input type="email"class="form-control"id="viewer-email"placeholder="Enter your email id"aria-describedby="emailHelp"/>
+            <small id="emailHelp"class="form-text text-muted">This email will not appear with your comment, It's use only send this message</small>
+          </div>
+          <div class="form-group">
+            <lable for="viewer-message">Message</lable>
+            <textarea class="form-control"id="viewer-message"row="8"aria-describedby="commentHelp"placeholder="Enter your message here"></textarea>
+            <small id="commentHelp"class="form-text text-muted">You can @mention other users in this message</small>
+          </div>
+        </form>
+        <button class="btn btn-primary"onclick="commentMe();"title="I agree all terms and conditions..">Message Send</button>
+      </div>
+    </div><br>
+    <div class="linkload">
+      <section>
+        <head>
+          <h3>WHITE LOTUS</h3>
+        </head>
+        <hr></hr>
+        <div class="flw"><span><i class="fa fa-user-o"></i><h5 id="perma-name">Clone</h5></span><i class="fa fa-question-circle-o null"title="This area say the link of this profile"></i></div>
+        <div class="flo"><span onclick="path_act();">PATH</span><span onclick="ifram_act();">IFrame</span></div>
+        <div class="flo underline"><div id="parma_head2"></div><div id="parma_head1"></div></div>
+        <div class="parma-box"id="pathlink">
+          <div class="code-wraper"><span id="path">https://google.com/</span><i class="fa fa-copy" onclick="cplc(1);"></i></div>
+          <p class="null">Use and Share in social media or checkout our Petals using this web URL.</p>
+        </div>
+        <div class="parma-box"id="iframlink">
+          <div class="code-wraper"><span id="iframe"></span><i class="fa fa-copy" onclick="cplc(2);"></i></div>
+          <p class="null">Use and Share in social media or add this page in your website using this web URL.</p>
+        </div>
+        <hr></hr>
+        <div class="flw"><span style="font-weight:bold;"><i class="fa fa-money"></i>Cost of visit if FREE</span><button class="btn btn-primary"onclick="parma_close();">Close</button></div>
+      </section>
+    </div>
+    <section class="containerss" id="SupportingVideo">
+      <div class="title">
+        <h2>Supporting Videos</h2>
+        <div class="underline"></div>
+      </div>
+      <iframe src="https://www.youtube.com/embed/M63IdwIymiY?controls=0"alt="loading..."></iframe>
+    </section><br>
+    <div class="circle" id="leftcir"></div>
+    <div class="circle" id="rightcir"></div>
+ <!--
+sections ending for football.
+-->
+    <div class="scrolltop float-right">
+	    <i class="fa fa-arrow-up" onclick="topFunction();" id="topBtna"></i>
+    </div>
+    <div id="spinload">
+    	<I class="fa-5x fa fa-spinner fa-spin"style="color:#fff;"></I><br>
+    	<p id="spinnertext">loading...</p>
+    </div>
+    <footer id="footer-page">
+        <div class="content">
+          <div class="top">
+            <div class="logo-details">
+                <img src="../fav-icon/logo.png"alt="Error dp not loaded">
+              <span class="logo_name">WHITE LOTUS</span>
+            </div>
+            <div class="media-icons">
+              <a href="#"onclick="notvalid();"><i class="fa fa-facebook-f"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-twitter"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-instagram"></i></a>
+              <a href="#"onclick="notvalid();"><i class="fa fa-linkedin"></i></a>
+              <a href="https://youtu.be/M63IdwIymiY"><i class="fa fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="link-boxes">
+            <ul class="box">
+              <li class="link_name">Company</li>
+              <li><a href="#"onclick="mainpage();">Main</a></li>
+              <li><a href="#"onclick="contactpage();">Contact us</a></li>
+              <li><a href="#"onclick="aboutpage();">About us</a></li>
+              <li><a href="#"onclick="myquiz();">Quiz</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Services</li>
+              <li><a href="#add"onclick="feture('currentWeather');">Current Weather</a></li>
+              <li><a href="#myChart"onclick="feture('weekWeather');">6 day forecast</a></li>
+              <li><a href="#home_images"onclick="feture('ozoneForecust');">Ozone forecast</a></li>
+              <li><a href="#"onclick="myquiz();">Enviorment Quiz</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Account</li>
+              <li><a href="./Profile.html"title="Publick profile of our users">Profile</a></li>
+              <li><a href="./PStorebyWhiteLotus/User_Login.html"title="Monitor your performance, open your pannel">My account</a></li>
+              <li><a href="./PStorebyWhiteLotus.html"title="prefrences inventory, products">Product/Prefrences</a></li>
+              <li><a href="#"onclick="notvalid();">Purchase</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Offers</li>
+              <li><a href="#"onclick="notvalid();">Donation</a></li>
+              <li><a href="#"onclick="notvalid();">Advertisement</a></li>
+              <li><a href="#"onclick="notvalid();">Coupons/Tickets</a></li>
+              <li><a href="#"onclick="notvalid();">Subscription</a></li>
+            </ul>
+            <ul class="box input-box">
+              <li class="link_name">About White Lotus</li>
+              <li>First of all, it is better to say that our WHITE LOTUS was established in 14 February 2023. So it didn't take us 
+                long for this team to come into existence. <a href="./index.html#about3" onclick="future('#about3');"style="cursor: pointer;">See more..</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-details">
+          <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2023 to 2030 <a href="#">WHITE LOTUS.</a>All rights reserved</span>
+            <span class="policy_terms">
+              <a href="#"onclick="showprivacy();">Privacy policy</a>
+              <a href="#privacy-terms"onclick="showprivacy();">Terms & condition</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+</body>
+<script>
+var v = 1;
+let quip = 0;
+let boxa = document.getElementById("navelement");
+let errorpage = document.getElementById("errorpage");
+function statup(){
+  errorpage.style.display = 'none';
+	errorloder(`404 error!`,`There isn't a WHITE LOTUS Pages site here`);
+  linkchecker(0);
+}
+function errorloder(headerr,prr){
+	setTimeout(function of(){
+    document.getElementById("spinload").style.display = 'none';
+    //document.getElementById("errorpage").style.display = 'block';
+    document.getElementById("errorpage").style.height = '70%';
+    document.getElementById("headerr").textContent = headerr;
+    document.getElementById("prr").textContent = prr;
+  },2000);
+}
+function naveffect(){
+  if(v == 1){
+    boxa.style.opacity = "1";
+    boxa.style.zIndex = "99";
+    v = 0;
+  }else{
+    boxa.style.opacity = "-2";
+    boxa.style.zIndex = "-5";
+    v = 1;
+  }
+}
+mybutton = document.getElementById("topBtna");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction(){
+  if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+    mybutton.style.display = "block";
+  }else{
+    mybutton.style.display = "none";
+  }
+}
+function topFunction(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+function notvalid(){
+  alert("This feature is not avalible now!");
+}
+function mainpage(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/';
+}
+function aboutpage(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about-us';
+}
+function contactpage(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#contact-us';
+}
+function myquiz(){
+	window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myquiz';
+}
+function showprivacy(){
+  window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#privacy-terms';
+}
+function future(a){
+  if(a == 'currentWeather'){
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#add';
+  }else if(a == 'weekWeather'){
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myChart';
+  }else if(a == 'ozoneForecust'){
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#home_images';
+  }else if(a == '#about3'){
+    window.location = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about3';
+  }else{
+    console.log("Link underflow!");
+  }
+}
+</script>
+<script src="./database.js"></script>
+<script src="./productbase.js"></script>
+<script>
+  const reviews = [];
+  for(let j=0; j<kilometres; j++){
+    reviews[j] = data[j];
+  }
+  const dp = document.getElementById("person-img");
+  const head = document.getElementById("prohead");
+  const ftline = document.getElementById("firstTwolines");
+  const stline = document.getElementById("secondTwolines");
+  const avgrate = document.getElementById("avgrate");
+  const info = document.getElementById("info");
+  const bluetick = document.querySelector(".cloude");
+  const joinDate = document.getElementById("joinDate");
+  const teamName = document.getElementById("teamName");
+  const teamType = document.getElementById("teamtype");
+  const accType = document.getElementById("accType");
+  const publishSize = document.getElementById("publishSize");
+  const tages = document.getElementById("tages");
+  const social = document.querySelector(".social-media-icons");
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+//about list
+  const proloader = document.getElementById("proloader");
+  const s1 = document.getElementById("s1");
+  const s2 = document.getElementById("s2");
+  const s3 = document.getElementById("s3");
+  const s4 = document.getElementById("s4");
+  const pppath = document.getElementById("pppath");
+  let currentItem = 0;
+  let currentWritter = 0;
+function showPerson(person){
+  const item = reviews[person];
+  document.title = "Profile of "+item.name;
+  currentWritter = item.name;
+  head.textContent = item.name+" ("+item.pronouns+") ";
+  dp.src = item.dp;
+  ftline.innerHTML = item.quote;
+  stline.innerHTML = item.quote;
+  info.innerHTML = `${item.text==''?'__Not avalible__':item.text}`;
+  if(item.product.length!=0){
+    bluetick.style.display="block";
+  }else{
+    bluetick.style.display="none";
+  }
+  joinDate.textContent=item.time;
+  if(item.type==1){
+  	teamType.textContent='Team Leader Of: ';
+      teamName.innerHTML=`${item.name=='Krishnendu Mitra'?'<i class="fa fa-fire red"></i>Fire Team':item.name=='Souvik Kar'?'<i class="fa fa-leaf powderblue"></i>Air Team':item.name=='Rajanya Chakraborty'?'<i class="fa fa-tint blue"></i>Water Team':item.name=='Hritick Modak'?'<i class="fa fa-tree green"></i>Earth Team':'No team alloted'}`;
+      accType.textContent='Admin Account';
+  }else{
+  	teamType.textContent='Joining Team: ';
+      teamName.innerHTML=zodiacDept(item.time);
+      accType.textContent='User Account';
+  }
+  publishSize.textContent=`${item.product.length==0?'Nill':item.product.length}`;
+  tages.innerHTML=`<div class="tageHolder"><span class="tage" onclick="profileUrl();">@${item.name.replaceAll(' ','%20')}</span><span class="tage" onclick="profileUrl();">@Acc${item.id}</span><span class="tage" onclick="profileUrl();">@All</span>`;
+  document.querySelector('.morepro').innerHTML='';
+  if(item.product.length!=0){
+  document.querySelector('.morepro').style.display='block';
+  for(i=item.product.length-1; i>=0; i--){
+    document.querySelector('.morepro').innerHTML+=`<div class="flo"><div class="leftpro"><img src='${item.product[i].productDp}'alt="loading..."><div><h6>${item.product[i].productName}</h6><span><i class="fa fa-globe"></i>Publick • ${item.product[i].productLicence}</span><span>${item.product[i].productType} • ${item.product[i].productModify} IST</span></div></div>
+    <span class="moredownBtn"><a href="${item.product[i].productLink}"><button class="btn btn-primary send-button"title="I agree all terms and conditions..">Visite</button></a><a><button class="btn btn-primary send-button"title="I agree all terms and conditions.."onclick="getProductLink('${item.product[i].productName}','${item.product[i].productLink}');">
+    Link</button></a><a href="${item.product[i].productLink}"><button class="btn btn-danger send-button"title="Re-direct to download page">Download</button></a></span></div><hr>`;
+  }
+    document.querySelector('#backup2').style.display="none";
+  }else{
+    document.querySelector('.morepro').innerHTML='';
+    document.querySelector('.morepro').style.display="none";
+    document.querySelector('#backup2').style.display="block";
+  }
+  social.innerHTML=`<li><a href="mailto:${item.social[0]=='#'?'blank':item.social[0]}?&Subject=Message form visitor of your White Lotus Profile.&body=Hi my name is __________, My Message: " style="background: linear-gradient(45deg, #0c8ff0, aqua);"><i class="fa fa-envelope"></i></a></li><li><a href="${item.social[1]=='#'?'#blank':item.social[1]}"style="background: 
+  linear-gradient(45deg, #2911c3, #46719c);"><i class="fa fa-facebook"></i></a></li><li><a href="${item.social[3]=='#'?'#blank':item.social[3]}" style="background: linear-gradient(45deg, red, #960101);"><i class="fa fa-youtube"></i></a></li><li><a href="${item.social[2]=='#'?'#blank':item.social[2]}" style="background: linear-gradient(45deg, #0c8ff0, #260067);">
+  <i class="fa fa-linkedin"></i></a></li>`;
+  pppath.textContent = item.name;
+  var currentLink = window.location;
+  let j = currentLink['pathname'];
+  let s = reviews[currentItem].name;
+  s = s.replaceAll(" ","%20");
+  s = j+`#account?details=`+s+`.kid`;
+  pppath.href = s;
+}
+function nextpro(){
+  currentItem++;
+  if(currentItem > reviews.length - 1){
+    currentItem = 0;
+  }
+  showPerson(currentItem);
+}
+function prevpro(){
+  currentItem--;
+  if(currentItem < 0){
+    currentItem = reviews.length - 1;
+  }
+  showPerson(currentItem);
+}
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&amp;subagency=GSFC" id="_fed_an_ua_tag"></script>
+<script>
+function zodiacDept(t){
+  t = dateCraser(t);
+  if((((t[1]>=20) && (t[2]==1)) || ((t[1]<19) && (t[2]==2))) || (((t[1]>=20) && (t[2]==5)) || ((t[1]<20) && (t[2]==6))) || (((t[1]>=22) && (t[2]==9)) || ((t[1]<22) && (t[2]==10)))){
+    return `<i class="fa fa-leaf powderblue"title="Team leader Souvik Kar"></i>Air Team`;
+  }else if((((t[1]>=19) && (t[2]==2)) || ((t[1]<20) && (t[2]==3))) || (((t[1]>=20) && (t[2]==6)) || ((t[1]<22) && (t[2]==7))) || (((t[1]>=22) && (t[2]==10)) || ((t[1]<21) && (t[2]==11)))){
+    return `<i class="fa fa-tint blue"title="Team leader Rajanya Chakraborty"></i>Water Team`;
+  }else if((((t[1]>=19) && (t[2]==4)) || ((t[1]<20) && (t[2]==5))) || (((t[1]>=22) && (t[2]==8)) || ((t[1]<22) && (t[2]==9))) || (((t[1]>=21) && (t[2]==12)) || ((t[1]<19) && (t[2]==1)))){
+    return `<i class="fa fa-tree green"title="Team leader Hritick Modak"></i>Earth Team`;
+  }else if((((t[1]>=20) && (t[2]==3)) || ((t[1]<19) && (t[2]==4))) || (((t[1]>=22) && (t[2]==7)) || ((t[1]<22) && (t[2]==8))) || (((t[1]>=21) && (t[2]==11)) || ((t[1]<21) && (t[2]==12)))){
+    return `<i class="fa fa-fire red"title="Team leader Krishnendu Mitra"></i>Fire Team`;
+  }else{
+    return `<i class="fa fa-flash"title="Make your own team or join any one"></i>No team alloted`;
+  }
+}
+function dateCraser(date){
+	let First = [0,0,0,0];
+	First[0] = date;
+	First[1] = First[0][0]+First[0][1];
+	First[2] = First[0][3]+First[0][4];
+	First[3] = First[0][6]+First[0][7]+First[0][8]+First[0][9];
+	return First;
+}
+function getProductLink(Pname,Plink){
+  navigator.clipboard.writeText(Plink);
+  alert("Copied given information: \nName: "+Pname+"\nLink: "+Plink);
+}
+function profileUrl(){
+  name = currentWritter.replaceAll(' ','%20');
+  let link = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/Profile.html#account?details='+name+'.kid';
+  window.location = link;
+}
+function linkchecker(m){
+  var currentLink = window.location;
+  var currentPath = currentLink['href'];
+  let j = currentLink['pathname'];
+  currentPath=currentPath.replace(`//weatherbyWHITELOTUS.github.io`,`/weatherbyWHITELOTUS.github.io`);
+  //alert('currentpath: '+currentPath);
+  //alert('j: '+j);
+   j=`https://whitelotus4.github.io`+j;
+  if(currentPath==j){
+    return;//*block it
+  }else{
+    let err=1,s=0,loc=-1;
+    let newpath = currentPath.replace('file:///D:/.vscode/Vs%20programmes/Weather/PStorebyWhiteLotus/Profile.html','');
+    newpath = newpath.replace('https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/Profile.html','');
+    newpath = newpath.replace('http://localhost:2435/storage/emulated/0/My+html/Weather/PStorebyWhiteLotus/Profile.html','');
+    newpath = newpath.replace(`#account?details=`,'');
+    newpath = newpath.replace('file://','');
+    for(let i=0; i<reviews.length; i++){
+      let s = reviews[i].name;
+      s=s.replaceAll(" ","%20");
+      s=s+'.kid';
+      if(s==newpath){
+        err=0;
+        loc=i;
+        i=reviews.length+2;
+      }
+    }
+    if((currentPath=='https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/Profile.html') ||
+    (currentPath=='file:///D:/.vscode/Vs%20programmes/Weather/PStorebyWhiteLotus/Profile.html') ||
+    (currentPath=='http://localhost:2435/storage/emulated/0/My+html/Weather/PStorebyWhiteLotus/Profile.html')){
+      errorDisplayNone();
+      setTimeout(function off(){
+        document.title = "Error: 400!";
+        errorloder(`400 error!`,`There is a WHITE LOTUS Pages site here, but accuracy is undefine`);
+        alert("Account not found!, link is incompleted..");
+      },500);
+    }else if((err!=0) && (currentPath!=j)){
+      errorDisplayNone();
+      setTimeout(function off(){
+        document.title = "Error: 404!";
+        errorloder(`404 error!`,`There isn't a WHITE LOTUS Pages site here`);
+        alert("Account not found!, link is not real..");
+      },500);
+    }else{
+      for(let i=0; i<loc; i++){
+        nextpro();
+      }
+      if(loc==0){showPerson(0);}
+    }
+  }
+    /*
+    currentPath = https://.../#about3;
+    j = https://.../;
+    https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhite
+    Lotus.html#PSWL1?details=God%20Particle%20the%20uncompleted%20paper.kid
+
+    file:///D:/.vscode/Vs%20programmes/Weather/PStorebyWhiteLotus/Profile.html#account?details=Krishnendu%20Mitra.kid
+    file://#PSWL1?details=id2.kid
+    http://localhost:2435/storage/emulated/0/My+html/Weather/PStorebyWhiteLotus/Profile.html#account?details=Krishnendu%20Mitra.kid
+    weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Astronomy%20for%20India.kid
+    */
+}
+function errorDisplayNone(){
+  errorpage.style.display = "block";
+  document.querySelector(".urlpath").style.display="none";
+  document.querySelector(".containers").style.display="none";
+  document.querySelector(".top-controler").style.display="none";
+  document.querySelector("#top-controler").style.display="none";
+  document.querySelector("#pro").style.display="none";
+  document.querySelector(".containerss").style.display="none";
+  document.querySelector(".comments").style.display="none";
+}
+function cplc(k){
+  var currentLink = window.location;
+  let j = currentLink['pathname'];
+  let s = reviews[currentItem].head;
+  s = s.replaceAll(" ","%20");
+  s = `https://whitelotus4.github.io`+j+`#account?details=`+s+`.kid`;
+  if(k==0){
+    navigator.clipboard.writeText(s);
+    pppath.href = s;
+  }else if(k==1){
+    s=`https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/Profile.html`;
+    navigator.clipboard.writeText(s);
+  }else{
+    s=`<iframe src="${s}"alt="loading..."id="WhiteLotus_Page"title="Visite WHITE LOTUS website"></iframe>`;
+    navigator.clipboard.writeText(s);
+  }
+  alert("Copied link: "+s);
+}
+function parmalink(){
+  document.querySelector(".linkload").style.display="block";
+  document.querySelector("#perma-name").textContent=reviews[currentItem].name;
+  path_act();
+}
+function path_act(){
+  var currentLink = window.location;
+  let j = currentLink['pathname'];
+  let s = reviews[currentItem].name;
+  s = s.replaceAll(" ","%20");
+  s = `https://whitelotus4.github.io`+j+`#account?details=`+s+`.kid`;
+  document.querySelector("#pathlink").style.display="block";
+  document.querySelector("#iframlink").style.display="none";
+  document.querySelector("#parma_head1").style.background="transparent";
+  document.querySelector("#parma_head2").style.background="#0c8ff0";
+  document.querySelector("#path").textContent=`${s}`;
+}
+function ifram_act(){
+  var currentLink = window.location;
+  let j = currentLink['pathname'];
+  let s = reviews[currentItem].name;
+  s = s.replaceAll(" ","%20");
+  s = `https://whitelotus4.github.io`+j+`#account?details=`+s+`.kid`;
+  document.querySelector("#pathlink").style.display="none";
+  document.querySelector("#iframlink").style.display="block";
+  document.querySelector("#parma_head1").style.background="#0c8ff0";
+  document.querySelector("#parma_head2").style.background="transparent";
+  document.querySelector("#iframe").textContent=`<iframe src="${s}"alt="loading..."id="WhiteLotus_iframe_Page"width="100%"height="100%"title="Visite WHITE LOTUS website"></iframe>`;
+}
+function parma_close(){
+  document.querySelector(".linkload").style.display="none";
+}
+function commentMe(){
+  let email=document.querySelector('#viewer-email').value;
+  let message=document.querySelector('#viewer-message').value;
+  let reciver=`info.WhiteLotus24@gmail.com${reviews[currentItem].social[0]!='#'?(','+reviews[currentItem].social[0]):''}`;
+  if((email!='')&&(message!='')){
+    window.location = `mailto:${reciver}?&Subject=Comment form visitor at "${currentWritter}" profile.&body=My id: ${email}, My Message: ${message}`;
+  }else{
+    alert("Error: 400! \nBad request occurred, please fill out all fields");
+  }
+}
+</script>
+<script>
+// document.onkeydown = function(event) {
+//   switch (event.keyCode) {
+//     case 37:
+//       prevpro();
+//     break;
+//     case 39:
+//       nextpro();
+//     break;
+//   }
+// };
+</script>
+</html>

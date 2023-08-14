@@ -1,18 +1,18 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image"content="./fav-icon/roundlogo.png" name="og:image">
-    <meta content="Login page for user and admins, contact the world with white lotus." lang="en-us" name="description">
-    <meta content="weather, WhiteLotus products, Amazing products, question papers, ozone, quiz, programs, white lotus, kidKrishkode" lang="en-us" name="keywords">
-    <title version="1.0">User page</title>
-    <link rel="icon" href="../fav-icon/roundlogo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../origin.css">
-    <link rel="stylesheet" href="./user.css"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image"content="./fav-icon/roundlogo.png" name="og:image">
+  <meta content="Login page for user and admins, contact the world with white lotus." lang="en-us" name="description">
+  <meta content="weather, WhiteLotus products, Amazing products, question papers, ozone, quiz, programs, white lotus, kidKrishkode" lang="en-us" name="keywords">
+  <title version="1.0">User page</title>
+  <link rel="icon" href="../fav-icon/roundlogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../origin.css">
+  <link rel="stylesheet" href="./user.css"/>
 </head>
 <style id="jsStyle"></style>
 <body id="fabrick" onload="statup()">
@@ -467,7 +467,7 @@
             <span class="parma-error"style="color:red;">&#x26D4; Error! given data not satisfied us..,</span><br>
             <span class="btn btn-primary"onclick="CheckValidPuzzle('parma-user-id','parma-puzzle','parma-user-puzzle',['parma-error','parma-success','edit-form'],0);">Verify Me</span><br>
             <span class="parma-success">You are ready to edit your product click the the given button.<br>
-              <div style="display: flex;flex-direction: row;justify-content: space-between;"><span>-- ></span><a href='#'id="edit-form"><span class="btn btn-success">EDIT</span></a></div>
+              <div style="display: flex;flex-direction: row;justify-content: space-between;"><span>-- ></span><a href='./Form.html#googleForms?details=Edit%20product%20data.kid'id="edit-form"><span class="btn btn-success">EDIT</span></a></div>
             </span>
           </form>
         </div>
@@ -490,7 +490,7 @@
             <span class="delete-error"style="color:red;">&#x26D4; Error! given data not satisfied us..,</span><br>
             <span class="btn btn-primary"onclick="CheckValidPuzzle('delete-user-id','delete-puzzle','delete-user-puzzle',['delete-error','delete-success','delete-form'],1);">Verify Me</span><br>
             <span class="delete-success">You are ready to delete your product click the the given button.<br>
-              <div style="display: flex;flex-direction: row;justify-content: space-between;"><span>-- ></span><a href='#'id="delete-form"><span class="btn btn-danger">Delete</span></a></div>
+              <div style="display: flex;flex-direction: row;justify-content: space-between;"><span>-- ></span><a href='./Form.html#googleForms?details=Delete%20product%20data.kid'id="delete-form"><span class="btn btn-danger">Delete</span></a></div>
             </span>
           </form>
         </div>
@@ -921,11 +921,11 @@ function CheckValidPuzzle(got,given,get,change,choose){
   if(((currentClient.userid == u) || (currentClient.social[0] == u)) && (b==123456)){
     c2.style.display = 'block';
     c1.style.display = 'none';
-    if(choose==0){
-      c3.href = googleForm[3].link;
-    }else{
-      c3.href = googleForm[4].link;
-    }
+    // if(choose==0){
+    //   c3.href = googleForm[3].link;
+    // }else{
+    //   c3.href = googleForm[4].link;
+    // }
   }else{
     c2.style.display = 'none';
     c1.style.display = 'block';
@@ -946,7 +946,7 @@ function succRefresh(){
 		let t = dateCombineter(Today,Last);
     let zodiac = zodiacDept(currentClient.time);
 	  document.querySelector(".success-data").innerHTML =`<ul><li>Avarage base: <span title="${A}"> ${dataArrow(A,0,1,0)}</span></li><li>Current base: <span title="${dateCombineter(Today,Last)}"> ${dataArrow(t,5,10,1)}</span></li>
-      <br><li><m>Joining date:</m> <span><m>${First[0]}</m></span></li><li><m>Last product entry date:</m> <span><m>${Last[0]}</m></span></li><li><m>Total products under calculation:</m> <span><m>${A*v}</m>
+      <br><li><m>Joining date:</m> <span><m>${First[0]}</m></span></li><li><m>Last product entry date:</m> <span><m>${Last[0]}</m></span></li><li><m>Total products under calculation:</m> <span><m>${Math.round(A*v)}</m>
       </span></li><li><m>Up time:</m> <span><m>${v}days ${Today[0].getHours()}:${Today[0].getMinutes()}:${Today[0].getSeconds()}</m></span></li><li><m>Position:</m> <span><m>${set[5]==0?'You are in best 5 user':'You are not in best 5'}</m></span></li>
       <li><m>Total income:</m> <span><m>0.00/-</m></span></li><li><m>Viwer conectivity:</m> <span><m>${!currentClient.social[1].includes('#')?'Strong':'Wike'}</m></span></li><li><m>Post impresions:</m> <span><m>${A<0.1?'Low':'High'}</m></span></li>
       <li><m>Joining team type:</m> <span><m>${zodiac}</m></span></li><br><li>Last update: <span>${Today[1]}/${1+Today[2]}/${Today[3]} ${Today[0].getHours()}:${Today[0].getMinutes()}:${Today[0].getSeconds()}</span></li></ul>`;
@@ -1089,7 +1089,7 @@ function search_product(data,list,count){
   let input = document.getElementById(`${data}`).value;
   input=input.toLowerCase();
   let x = document.getElementsByClassName(`${list}`);
-  for(i = 0; i <x.length; i++){ 
+  for(i = 0; i<x.length; i++){ 
     if(!x[i].innerHTML.toLowerCase().includes(input)) {
       x[i].style.display="none";
       miss++;
@@ -1262,7 +1262,7 @@ function bestFiveCom(){
       }
     }
   }
-  console.log(Size,Name);
+  //console.log(Size,Name);
   let reminder = (maxRange(Size[0]*1)+Size[0]*1);
   document.getElementById('comparision-range').innerHTML=`<span>${reminder}</span><span>${4*(reminder)/5}</span><span>${3*(reminder)/5}</span><span>${(2*reminder)/5}</span><span>${reminder/5}</span>`;
   document.getElementById('comparision-barholder').innerHTML = '';
@@ -1338,7 +1338,7 @@ function resete(){
 }
 function myprofileUrl(name){
   name = name.replaceAll(' ','%20');
-  let link = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/Profile.html#account?details='+name+'.kid';
+  let link = 'https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/Profile.html#account?details='+name+'.kid';
   return link;
 }
 function editProfile(){

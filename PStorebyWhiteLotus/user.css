@@ -1394,7 +1394,7 @@ table tr td{
     .income-table tr th,.income-table tr td{
         font-size: 8px;
         max-height: 9px;
-        overflow: scroll;
+        overflow: hidden;
     }
     .comparision-box .lower .mid span{
         font-size: 12px;
