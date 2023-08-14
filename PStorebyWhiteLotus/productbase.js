@@ -2,20 +2,27 @@ const product = [
   {
     id: 1,
     head: "God Particle",
-    twoline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aut delectus omnis, earum repudiandae quam alias enim illo vel nulla qui soluta esse quibusdam, quis eligendi, officia placeat ab corrupti voluptate. Iure labore debitis ullam dicta error libero, illo ducimus cum obcaecati ab corporis, perspiciatis non aspernatur quidem corrupti exercitationem atque incidunt nobis veniam quo nulla sed! Exercitationem tempore laudantium quo similique asperiores ipsa obcaecati beatae modi delectus hic impedit esse quaerat, iure eius a sequi repellat quos fugit! Quisquam similique, quo atque ipsam ex officiis perspiciatis repudiandae blanditiis quos ut tenetur quis vel, esse veritatis magni! Amet libero, a ratione aut culpa officiis modi, quis enim laudantium atque eligendi quos perspiciatis. Ipsam veniam laboriosam, debitis dolores, placeat, sit eligendi ab error natus cupiditate ducimus. Unde, fugit optio.",
-    img1: "./fav-icon/effect001.jpg",
-    img2: "./fav-icon/effect002.jpg",
-    img3: "./fav-icon/effect004.jpg",
-    link: "C:/Users/JYOTINMOY MITRA/Documents/txt files/white.txt",
+    twoline: "The god particle is also known as Higgs Bosons the name of this particle is given on the name of two great scientist Peter Higgs and Satyendra Nath Bose.",
+    img1: "./pic/God_particle001.png",
+    img2: "./pic/God_particle002.png",
+    img3: "./pic/God_particle003.png",
+    link: "https://drive.google.com/file/d/1ZZDoGhI-3M-xjzhOOnrZzV6zggYBtTCE/view?usp=drivesdk",
     avglist: [0,0,1,2,0,10,15],
-    aboutlist: ["pdf", 10, "20kb", "All type", "English", 0, "Yes", "Yes", "Yes"],
+    aboutlist: ["pdf", 16, "900kb", "All type", "English", 0, "No", "No", "Yes"],
     ytlink: "https://www.youtube.com/embed/M63IdwIymiY?controls=0",
-    morepro: [["./pic/daa.png", "Gods Particle part 2", "https://drive.google.com/uc?export=download&id=1Csh6Gcqd-e4LTxR7U18vv9n7mG3HkTu_","20kb","pdf","Research Paper","16/02/2023"], ["./fav-icon/effect002.jpg", "Gods Particle part 3", "https://drive.google.com/uc?export=download&id=1jyBoxo0bWzmdgK-r0PJVRdF3iq35bxt7","50kb","pdf","Research Paper","05/04/2023"]],
+    morepro: [],
     text:
-      `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus est aut sint nisi magni adipisci quas facere quibusdam numquam perspiciatis veniam eligendi, dolorum ex, quod laboriosam harum repellendus laborum! Quidem natus soluta voluptatibus a autem dolores optio culpa iure voluptatum sequi libero, quae, provident vitae at beatae! Nulla totam modi delectus at, nisi quisquam dignissimos doloremque libero. Sit fugit, et dolore aspernatur accusantium enim saepe veritatis vel reiciendis dignissimos, rerum ut dicta incidunt esse quaerat hic eveniet impedit. Aspernatur magni tempora nisi maiores, impedit laudantium itaque alias obcaecati qui ullam illum libero quis id expedita eos? Repellat rerum perspiciatis veritatis velit. Error, itaque atque numquam maiores sint, provident impedit magnam sequi alias quae officia obcaecati non! Tenetur id consequuntur, reprehenderit laborum excepturi quod culpa quaerat omnis minus exercitationem!
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus est aut sint nisi magni adipisci quas facere quibusdam numquam perspiciatis veniam eligendi, dolorum ex, quod laboriosam harum repellendus laborum! Quidem natus soluta voluptatibus a autem dolores optio culpa iure voluptatum sequi libero, quae, provident vitae at beatae! Nulla totam modi delectus at, nisi quisquam dignissimos doloremque libero. Sit fugit, et dolore aspernatur accusantium enim saepe veritatis vel reiciendis dignissimos, rerum ut dicta incidunt esse quaerat hic eveniet impedit. Aspernatur magni tempora nisi maiores, impedit laudantium itaque alias obcaecati qui ullam illum libero quis id expedita eos? Repellat rerum perspiciatis veritatis velit. Error, itaque atque numquam maiores sint, provident impedit magnam sequi alias quae officia obcaecati non! Tenetur id consequuntur, reprehenderit laborum excepturi quod culpa quaerat omnis minus exercitationem!<br>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus est aut sint nisi magni adipisci quas facere quibusdam numquam perspiciatis veniam eligendi, dolorum ex, quod laboriosam harum repellendus laborum! Quidem natus soluta voluptatibus a autem dolores optio culpa iure voluptatum sequi libero, quae, provident vitae at beatae! Nulla totam modi delectus at, nisi quisquam dignissimos doloremque libero. Sit fugit, et dolore aspernatur accusantium enim saepe veritatis vel reiciendis dignissimos, rerum ut dicta incidunt esse quaerat hic eveniet impedit. Aspernatur magni tempora nisi maiores, impedit laudantium itaque alias obcaecati qui ullam illum libero quis id expedita eos? Repellat rerum perspiciatis veritatis velit. Error, itaque atque numquam maiores sint, provident impedit magnam sequi alias quae officia obcaecati non! Tenetur id consequuntur, reprehenderit laborum excepturi quod culpa quaerat omnis minus exercitationem!<br>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus est aut sint nisi magni adipisci quas facere quibusdam numquam perspiciatis veniam eligendi, dolorum ex, quod laboriosam harum repellendus laborum! Quidem natus soluta voluptatibus a autem dolores optio culpa iure voluptatum sequi libero, quae, provident vitae at beatae! Nulla totam modi delectus at, nisi quisquam dignissimos doloremque libero. Sit fugit, et dolore aspernatur accusantium enim saepe veritatis vel reiciendis dignissimos, rerum ut dicta incidunt esse quaerat hic eveniet impedit. Aspernatur magni tempora nisi maiores, impedit laudantium itaque alias obcaecati qui ullam illum libero quis id expedita eos? Repellat rerum perspiciatis veritatis velit. Error, itaque atque numquam maiores sint, provident impedit magnam sequi alias quae officia obcaecati non! Tenetur id consequuntur, reprehenderit laborum excepturi quod culpa quaerat omnis minus exercitationem!`
+      `The god particle is also known as Higgs Bosons the name of this particle is given on the name 
+        of two great scientist Peter Higgs  and Satyendra Nath Bose. It is discovered by peter higgs 
+        and his team of 7000 scientists approximately forms more than 40  counters on 4th July 2012. 
+        It is discovered by using LHC which is placed between two countries France-Switzerland a 
+        border near Geneva, Switzerland. It is named as God particle because it gives mass to every 
+        particle of our universe. Peter Higgs is one of six researchers who gave the theory about 
+        existence of this particle in 1964. It takes a long time about 48 years to discover this particle 
+        after the peter gives the theory. <br>
+        In this pdf we descuse about basic knowledge of God particle and history of God particle, not
+        only that but also we are give a mathematical proofs of existence of God particle and virtual
+        experiment of profe god particle using real experiment data. `
   },
   {
     id: 2,
@@ -31,21 +38,6 @@ const product = [
     morepro: [["./img/product(empty).png", "Astronomy part 2", "https://drive.google.com/uc?export=download&id=1CY0OftPkAy95pimj_qiwoD_e0FiBJgjd","10kb","ppt","Presentation ppt","18/02/2023"]],
     text:
       "Hello, I am a Youtuber. I think you all know me yes I am King Gamer and I love White Lotus..."
-  },
-  {
-    id: 3,
-    head: "New God particle",
-    twoline: "Just for checking it",
-    img1: "./fav-icon/effect005.jpg",
-    img2: "./fav-icon/effect001.jpg",
-    img3: "./fav-icon/effect0025.jpg",
-    link: "https://facebook.com/",
-    avglist: [],
-    aboutlist: ["docx", 1, "400kb", "All type", "English", 0, "No", "Yes", "No"],
-    ytlink: "https://www.youtube.com/embed/?controls=0",
-    morepro: [],
-    text:
-      "No despo please."
   }
 ];
 let milimeter = product.length;
