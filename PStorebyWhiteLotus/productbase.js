@@ -6,7 +6,7 @@ const product = [
     img1: "./pic/God_particle001.png",
     img2: "./pic/God_particle002.png",
     img3: "./pic/God_particle003.png",
-    link: "https://drive.google.com/file/d/1ZZDoGhI-3M-xjzhOOnrZzV6zggYBtTCE/view?usp=drivesdk",
+    link: "https://drive.google.com/uc?id=1ZZDoGhI-3M-xjzhOOnrZzV6zggYBtTCE&export=download",
     avglist: [0,0,1,2,0,10,15],
     aboutlist: ["pdf", 16, "900kb", "All type", "English", 0, "No", "No", "Yes"],
     ytlink: "https://www.youtube.com/embed/M63IdwIymiY?controls=0",
