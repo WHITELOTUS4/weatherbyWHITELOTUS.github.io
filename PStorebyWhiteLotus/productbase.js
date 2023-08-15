@@ -28,16 +28,20 @@ const product = [
     id: 2,
     head: "Astronomy for India",
     twoline: "Astronomy is a easy subject but not in india",
-    img1: "./fav-icon/effect0025.jpg",
-    img2: "./fav-icon/effect0035.jpg",
-    img3: "./fav-icon/effect002.jpg",
+    img1: "./pic/Astronomy_forIndia001.png",
+    img2: "./pic/Astronomy_forIndia002.png",
+    img3: "./pic/Astronomy_forIndia003.png",
     link: "https://youtube.com/",
-    avglist: [0,0,7,1,2,1,9],
-    aboutlist: ["ppt", 18, "50kb", "Students", "English", 0, "No", "Yes", "Yes"],
+    avglist: [0,0,2,0,0,0,5],
+    aboutlist: ["ppt", 8, "2.3Mb", "Students", "English", 0, "No", "Yes", "Yes"],
     ytlink: "https://www.youtube.com/embed/?controls=0",
-    morepro: [["./img/product(empty).png", "Astronomy part 2", "https://drive.google.com/uc?export=download&id=1CY0OftPkAy95pimj_qiwoD_e0FiBJgjd","10kb","ppt","Presentation ppt","18/02/2023"]],
+    morepro: [["./pic/Astronomy_part1.png", "Astronomy part 1", "https://drive.google.com/uc?export=download&id=1jyBoxo0bWzmdgK-r0PJVRdF3iq35bxt7","4.1Mb","ppt","Presentation ppt","15/05/2023"],
+                      ["./pic/Astronomy_part2.png", "Astronomy part 2", "https://drive.google.com/uc?export=download&id=1l2qnKW4VdUpcxO3XK0HWr7TmJomBHklb","4.1Mb","ppt","Presentation ppt","15/05/2023"]
+],
     text:
-      "Hello, I am a Youtuber. I think you all know me yes I am King Gamer and I love White Lotus..."
+      `Astronomy subject is very popular to students and most seriously in girls but in india that's knowledge is not publick , common people is not any idea about it but in past of India, no better then a Indian
+      in terms of astronomy knowledge and applications in real life. So we are try to provide the basic knowledge about astronomy, this doc is available for all indians not only Indians but also south Asian countries
+      and other countries also. This document divided in many parts each and every parts and required ppt /pdf are provided here , more information comes in future.`
   }
 ];
 let milimeter = product.length;
