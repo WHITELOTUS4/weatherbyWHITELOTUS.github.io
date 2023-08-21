@@ -539,12 +539,19 @@ hr{
 .countViewer p{
   padding: 0px 5px;
 }
+.countflo{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+}
 .countViewer .counter{
-  width: 320px;
+  width: 22%;
   background: #fff;
   border-radius: 5px;
   margin: 2px auto;
   box-shadow: 0px 0px 3px 1px #000;
+  cursor: pointer;
 }
 .countViewer .head{
   width: 100%;
@@ -600,10 +607,14 @@ hr{
     font-size: 34px;
     text-transform: capitalize;
   }
-  .profileHolder-component{
+  .profileHolder-component,.countflo{
     display: flex;
     flex-direction: column;
   }
+  .countViewer .counter{
+      width: 320px;
+      margin: 20px auto;
+    }
 }
 </style>
 <style>
@@ -991,12 +1002,26 @@ footer .bottom-details .bottom_text{
              <i><a href="#contact-us" onclick="contactpage();"style="color:#fff;"> Click here</a></i>.</p>
         </div>
         <div class="countViewer">
-          <h4>Viewer Queue</h4>
+          <h4>Viewer's Queue</h4>
           <div class="underline"></div>
-          <p>Total number of viewer are online or using our utilite at the same time</p>
-          <div class="counter">
-            <div class="head">Visiters</div>
-            <div class="count">0</div>
+          <p>viewers records which are using our utilite at the same time</p>
+          <div class="countflo">
+          	<div class="counter">
+                  <div class="head"title="In same devise">Your Visits</div>
+                  <div class="count count1">0</div>
+              </div>
+              <div class="counter">
+                  <div class="head">Contribution</div>
+                  <div class="count count2">0</div>
+              </div>
+              <div class="counter">
+                  <div class="head">Account Holders</div>
+                  <div class="count count3">0</div>
+              </div>
+              <div class="counter">
+                <div class="head">Countries</div>
+                <div class="count count4">0</div>
+            </div>
           </div>
         </div>
         <div class="user_rating">
@@ -1705,32 +1730,6 @@ footer .bottom-details .bottom_text{
         <div class="profileHolder">
           <div class="profileHolder-component">
             
-            <div class="profile_card"id="krish">
-              <div class="user_img">
-                <img src="../fav-icon/Krishdp.jpg" height="100" width="100" alt="profile">
-              </div>
-              <div class="user_details">
-                <h5>Krishnendu Mitra</h5>
-                <span>Fullstack Web Developer</span>
-                <div class="textarea">Ahoy hoy everyone, my self Krishnendu Mitra, and I'm a freelance web Developer with extensive experience for over 5 years. My expertise is to create and website design, thumbnails design, poster making and many more. In past I am work with world's famous companies like Alphabet and Edequ. I do my job very professionaly and smartways...</div>
-                <zita><a href="#">Profile</a><a href="#">Contact</a></zita>
-              </div>
-              <hr>
-              <ul class="social-media-icons"style="margin-bottom:2px;">
-                <li>
-                  <a href="https://www.facebook.com/dibyendu.mitra.52090?mibextid=ZbWKwL" style="background: linear-gradient(45deg, #2911c3, #46719c);">
-                  <i class="fa fa-facebook"></i></a>
-                </li>
-                <li>
-                  <a href="https://youtube.com/" style="background: linear-gradient(45deg, red, #960101);">
-                  <i class="fa fa-youtube"></i></a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/krishnendu-mitra-b94004261" style="background: linear-gradient(45deg, #0c8ff0, #260067);">
-                  <i class="fa fa-linkedin"></i></a>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
     </section>
@@ -1977,28 +1976,28 @@ function linkchecker(){
   if(currentPath == j){
     return;
   }else{
-    if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/PStore.html#about3`){
+    if((currentPath == `${j}#about3`)||(currentPath == `file://${j}#about3`)){
       aboutpage();
       href = '#about3';
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/PStore.html#privacy-terms`){
+    }else if((currentPath == `${j}#privacy-terms`) || (currentPath == `file://${j}#privacy-terms`)){
       showprivacy();
       href='#privacy-terms';
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/PStore.html#about-us`){
+    }else if((currentPath == `${j}#about-us`) || (currentPath == `file://${j}#about-us`)){
       aboutpage();
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/PStore.html#contact-us`){
+    }else if((currentPath == `${j}#Docs`) || (currentPath == `file://${j}#Docs`)){
       contactpage();
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/PStore.html#myquiz`){
+    }else if((currentPath == `${j}#community`) || (currentPath == `file://${j}#community`)){
       myquiz();
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/PStore.html#add`){
+    }else if((currentPath == `${j}#add`) || (currentPath == `file://${j}#add`)){
       mainpage();
       href = '#add';
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/PStore.html#myChart`){
+    }else if((currentPath == `${j}#myChart`) || (currentPath == `file://${j}#myChart`)){
       mainpage();
       href = '#myChart';
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/PStore.html#home_images`){
+    }else if((currentPath == `${j}#home_images`) || (currentPath == `file://${j}#home_images`)){
       mainpage();
       href = '#home_images';
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus/PStore.html#product`){
+    }else if((currentPath == `${j}#product`) || (currentPath == `file://${j}#product`)){
       window.location = "./PStorebyWhiteLotus.html";
     }else{
       console.log("Link not protected!");
@@ -2067,7 +2066,7 @@ function profileMaker(){
     bigbox +=`<div class="profile_card"id="${data[i].name}"><div class="user_img"><img src="${data[i].dp}" height="100" width="100" alt="profile"></div><div class="user_details"><h5>${data[i].name}</h5><span>${data[i].type==1?'Admin Account':'User Account'}</span>
     <div class="textarea">${data[i].text==''?'__No Description Available__':data[i].text}</div><zita><a href="./Profile.html#account?details=${data[i].name.replaceAll(' ','%20')}.kid">Profile</a><a href="mailto:${data[i].social[0]=='#'?'':data[i].social[0]}
     ?&Subject=Message form visitor of your White Lotus Profile.&body=Hi my name is __________, My Message: ">Contact</a></zita></div><hr><ul class="social-media-icons"style="margin-bottom:2px;"><li><a href="${data[i].social[1]=='#'?'#':data[i].social[1]}" 
-    style="background: linear-gradient(45deg, #2911c3, #46719c);"><i class="fa fa-facebook"></i></a></li><li><a href="${data[i].social[3]=='#'?'#':data[i].social[3]}" style="background: linear-gradient(45deg, red, #960101);"><i class="fa fa-youtube"></i></a></li>
+    style="background: linear-gradient(45deg, #2911c3, #46719c);"><i class="fa fa-facebook"></i></a></li><li><a href="${data[i].social[3]=='#'?'#':data[i].social[3]}" style="background: linear-gradient(45deg, red, #960101);"><i class="fa fa-youtube-play"></i></a></li>
     <li><a href="${data[i].social[2]=='#'?'#':data[i].social[2]}" style="background: linear-gradient(45deg, #0c8ff0, #260067);"><i class="fa fa-linkedin"></i></a></li></ul></div>`;
     l++;
     if((l==2)||((l!=2)&&(i==kilometres-1))){
@@ -2081,17 +2080,45 @@ function profileMaker(){
 </script>
 <script>
 // Check if count is stored in Local Storage
-if (localStorage.getItem('visitCount') === null) {
+ if (localStorage.getItem('visitCount') === null) {
   // If not, initialize count to 0
-  localStorage.setItem('visitCount', 0);
-}
+   localStorage.setItem('visitCount', 0);
+ }
 // Retrieve the current visit count from Local Storage
 let count = parseInt(localStorage.getItem('visitCount'));
 // Increment the visit count
 count++;
-// Update the count on the web page
-document.querySelector('.count').textContent = count;
 // Store the updated count back in Local Storage
 localStorage.setItem('visitCount', count);
+function animateValue(obj,start,end,duration){
+  let startTime=null;
+  const step = (timestamp) => {
+    if(!startTime)startTime=timestamp;
+    const progress = Math.min((timestamp - startTime)/duration, 1);
+    if(end<10){
+      obj.innerHTML = '0'+Math.floor(progress * (end - start) + start); 
+    }else{
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+    }
+    if(progress < 1){
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+function counting(){
+  c=0;
+  for(let i=0; i<milimeter; i++){
+    c++;
+    if(product[i].morepro.length!=0){
+      c+=product[i].morepro.length;
+    }
+  }
+  animateValue(document.querySelector(".count2"),0,c,4000);
+  animateValue(document.querySelector(".count3"),0,kilometres,4000);
+  animateValue(document.querySelector(".count4"),0,9,4000);
+  animateValue(document.querySelector(".count1"),0,count,4000);
+}
+counting();
 </script>
 </html>
