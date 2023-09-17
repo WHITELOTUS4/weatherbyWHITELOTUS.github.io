@@ -3569,28 +3569,28 @@ function linkchecker(){
   if(currentPath == j){
     return;
   }else{
-    if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about3`){
+    if((currentPath == `${j}#about3`)||(currentPath == `file://${j}#about3`)){
       aboutpage();
       href = '#about3';
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#privacy-terms`){
+    }else if((currentPath == `${j}#privacy-terms`) || (currentPath == `file://${j}#privacy-terms`)){
       showprivacy();
       href='#privacy-terms';
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#about-us`){
+    }else if((currentPath == `${j}#about-us`) || (currentPath == `file://${j}#about-us`)){
       aboutpage();
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#contact-us`){
+    }else if((currentPath == `${j}#contact-us`) || (currentPath == `file://${j}#contact-us`)){
       contactpage();
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myquiz`){
+    }else if((currentPath == `${j}#myquiz`) || (currentPath == `file://${j}#myquiz`)){
       myquiz();
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#add`){
+    }else if((currentPath == `${j}#add`) || (currentPath == `file://${j}#add`)){
       mainpage();
       href = '#add';
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#myChart`){
+    }else if((currentPath == `${j}#myChart`) || (currentPath == `file://${j}#myChart`)){
       mainpage();
       href = '#myChart';
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#home_images`){
+    }else if((currentPath == `${j}#home_images`) || (currentPath == `file://${j}#home_images`)){
       mainpage();
       href = '#home_images';
-    }else if(currentPath == `https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/#product`){
+    }else if((currentPath == `${j}#product`) || (currentPath == `file://${j}#product`)){
       window.location = "./PStorebyWhiteLotus.html";
     }else{
       console.log("Link not protected!");
