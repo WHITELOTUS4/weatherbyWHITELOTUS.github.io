@@ -33,6 +33,7 @@
       </div>
     </section>
     <div class="roundclose"onclick="nav();">❮ =</div>
+    <div class="refreshList"></div>
     <section id="main-contant">
       <header class="main-header">
         <div class="haderdiv-left left">
@@ -65,14 +66,37 @@
         </div>
         <div class="clear"></div>
       </div>
-      <div class="content-pro-par container" style="margin-top: 50px; margin-bottom: 15px;"id='content-pro-par'>
+      <div class="postCreat container" style="margin-top: 80px; margin-bottom: 2px;">
+      	<div class="pro-table">
+      	  <a href="./Form.html#googleForms?details=Enlist%20product%20in%20white%20Lotus.kid"><img src="../img/uploadProduct.png"alt="Upload your products"id="uploadPicture"></a>
+          <div>
+            <div class="plus">+</div>
+            <h5>Upload your creativity</h5>
+            <p class="voidSZ">enlist your all knowlage in-coded of documents or media formation on our open library</p>
+            <h3>What's in your minde, documentise it</h3><br>
+            <div class="flo flw">
+              <div class="flo"><a href="https://www.google.com/docs/about" title="Word file" style="color: #4285f4;"><i class="fa fa-file-word-o"></i></a><a href="https://www.google.com/sheets/about" title="Excel file" style="color: #0f9d58;"><i class="fa fa-file-excel-o"></i></a>
+                <a href="https://www.google.com/slides/about" title="Powerpoint file" style="color: #f4b400;"><i class="fa fa-file-powerpoint-o"></i></a><a href="https://www.adobe.com/in/acrobat/online/pdf.html" title="Pdf file" style="color: #db4437;"><i class="fa fa-file-pdf-o"></i></a>
+                <a href="https://keep.google.com/" title="Text file" style="color: #b70cb7;"><i class="fa fa-file-text-o"></i></a></div>
+              <div class="flo"><a href="https://photos.google.com/" title="Image media" style="color: #379c9c;"><i class="fa fa-file-image-o"></i></a><a href="https://youtube.com/" title="Video media" style="color: #a99e3c;"><i class="fa fa-file-movie-o"></i></a>
+                <a href="https://www.veed.io/" title="Audio media" style="color: grey;"><i class="fa fa-file-audio-o"></i></a><a href="https://github.com/" title="Code file" style="color: orange;"><i class="fa fa-file-code-o"></i></a>
+                <a href="https://www.zaechiver.pro/" title="Archive file" style="color: royalblue;"><i class="fa fa-file-archive-o"></i></a></div>
+            </div>
+            <p class="voidSZ" style="text-align: justify;">Upload your product what you want in our PStore, Ebook/ Report Paper/ Biography/ Notes/ Presentation ppt/ Book pdf/ Research Paper/ Question Paper etc in one form. Creat required information
+            or media which are need to publish them, for more information <a href="./PStore.html#Docs">Click</a> this link.</p>
+            <ul><li style="justify-content: left;">Last date of contribution: <span style="margin-left: 4px;" id="lastUpdate">No records!</span></li></ul>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="content-pro-par container" style="margin-top: 30px; margin-bottom: 15px;"id='content-pro-par'>
         <div class="pro-table">
           <div class="recent-table" style="margin-bottom: 20px;">
             <div class="rec-h">
               <h3>Your All Products</h3>
             </div>
             <div class="rec-btn">
-              <button class="reset" onclick="reseta();" title="Hard refrash">Reset</button>
+              <button class="reset" onclick="reseta();popUpR3('Reset');" title="Hard refresh">Reset</button>
             </div>
             <div class="clear"></div>
           </div>
@@ -100,7 +124,7 @@
               <h3>Your Product Ratio</h3>
             </div>
             <div class="rec-btn">
-              <button class="reset"onclick="pieRefresh();"title="Refrash the data">Refrash</button>
+              <button class="reset"onclick="pieRefresh();popUpR3('Refresh');"title="Refresh the data">Refresh</button>
             </div>
             <div class="clear"></div>
           </div>
@@ -116,7 +140,7 @@
                 <h3>Your Success Sign</h3>
               </div>
               <div class="rec-btn">
-                <button class="reset"onclick="succRefresh();"title="Refrash the data">Refrash</button>
+                <button class="reset"onclick="succRefresh();popUpR3('Refresh');"title="Refresh the data">Refresh</button>
               </div>
               <div class="clear"></div>
             </div>
@@ -130,7 +154,7 @@
                 <h3>Best 5 Users</h3>
               </div>
               <div class="rec-btn">
-                <button class="reset"title="Refrash the data"onclick="bestFiveCom();">Refrash</button>
+                <button class="reset"title="Refresh the data"onclick="bestFiveCom();popUpR3('Refresh');">Refresh</button>
               </div>
               <div class="clear"></div>
             </div>
@@ -181,7 +205,7 @@
                   <h3>Search Result(s)</h3>
                 </div>
                 <div class="rec-btn">
-                  <button class="reset" onclick="resetb();" title="Hard refrash">Reset</button>
+                  <button class="reset" onclick="resetb();popUpR3('Reset');" title="Hard refresh">Reset</button>
                 </div>
                 <div class="clear"></div>
               </div>
@@ -244,7 +268,7 @@
                   <h3>Search Result(s)</h3>
                 </div>
                 <div class="rec-btn">
-                  <button class="reset" onclick="resetc();" title="Hard refrash">Reset</button>
+                  <button class="reset" onclick="resetc();popUpR3('Reset');" title="Hard refresh">Reset</button>
                 </div>
                 <div class="clear"></div>
               </div>
@@ -293,7 +317,7 @@
                   <h3>Transaction History</h3>
                 </div>
                 <div class="rec-btn">
-                  <button class="reset" onclick="resetd();" title="Hard refrash">Reset</button>
+                  <button class="reset" onclick="resetd();popUpR3('Reset');" title="Hard refresh">Reset</button>
                 </div>
                 <div class="clear"></div>
               </div>
@@ -394,7 +418,7 @@
                   </div><br>
                   <small class="form-text text-muted">All of the fields on this page are muted and importent but some of them can be updated at any time, and
                     by filling them out, this all the information provided by you and directly manipulated your public profile. Please see our 
-                    <a href="#">Privacy statement</a> to learn more about how we use this information.
+                    <a href="./PStore.html#privacy-terms">Privacy statement</a> to learn more about how we use this information.
                   </small>
                   <button class="btn btn-success"title="Edit your publick profile"onclick="editProfile();"type="reset">Update profile</button>
                 </div>
@@ -422,7 +446,7 @@
             <span id="success"style="color:green"></span>
           </div>
           <div class="login" onclick="login();">Log In</div>
-          <u onclick="forpass();">Forgot Password ?</u>
+          <u onclick="forpass();">Forgot Password ?</u><span class="signup" style="margin-left: 15px;" onclick="signUp();">Sign-Up</span>
         </form>
       </div>
     </section>
@@ -661,7 +685,7 @@ function login(){
       document.getElementById("user_page").style.display="block";
       counting();
       userSetUp();
-    },500);    
+    },500);
   }else if((CheckValidCaptcha() == true) && (CheckValidClient() != true)){
   	document.getElementById('error').innerHTML = `&#x26D5; User information not match, try again..`;
   }else if((CheckValidCaptcha() != true) && (CheckValidClient() == true)){
@@ -738,9 +762,11 @@ function ratio(x){
   if(x.matches){
     document.querySelector(".roundclose").style.display="none";
     document.getElementById("sidebar").style.display="none";
+    document.getElementById("uploadPicture").src="../img/uploadProduct.png";
   }else{
     document.querySelector(".roundclose").style.display="none";
     document.getElementById("sidebar").style.display="block";
+    document.getElementById("uploadPicture").src="../img/uploadProductPro.png";
   }
 }
 function nav(){
@@ -946,14 +972,16 @@ function succRefresh(){
 		let t = dateCombineter(Today,Last);
     let zodiac = zodiacDept(currentClient.time);
 	  document.querySelector(".success-data").innerHTML =`<ul><li>Avarage base: <span title="${A}"> ${dataArrow(A,0,1,0)}</span></li><li>Current base: <span title="${dateCombineter(Today,Last)}"> ${dataArrow(t,5,10,1)}</span></li>
-      <br><li><m>Joining date:</m> <span><m>${First[0]}</m></span></li><li><m>Last product entry date:</m> <span><m>${Last[0]}</m></span></li><li><m>Total products under calculation:</m> <span><m>${Math.round(A*v)}</m>
+      <br><li><m>Joining date:</m> <span><m>${currentClient.time}</m></span></li><li><m>Last product entry date:</m> <span><m>${Last[0]}</m></span></li><li><m>Total products under calculation:</m> <span><m>${(A*v)==NaN?'Recently':Math.round(A*v)}</m>
       </span></li><li><m>Up time:</m> <span><m>${v}days ${Today[0].getHours()}:${Today[0].getMinutes()}:${Today[0].getSeconds()}</m></span></li><li><m>Position:</m> <span><m>${set[5]==0?'You are in best 5 user':'You are not in best 5'}</m></span></li>
       <li><m>Total income:</m> <span><m>0.00/-</m></span></li><li><m>Viwer conectivity:</m> <span><m>${!currentClient.social[1].includes('#')?'Strong':'Wike'}</m></span></li><li><m>Post impresions:</m> <span><m>${A<0.1?'Low':'High'}</m></span></li>
       <li><m>Joining team type:</m> <span><m>${zodiac}</m></span></li><br><li>Last update: <span>${Today[1]}/${1+Today[2]}/${Today[3]} ${Today[0].getHours()}:${Today[0].getMinutes()}:${Today[0].getSeconds()}</span></li></ul>`;
+    document.getElementById('lastUpdate').textContent=Last[0];
 	}else{
     document.querySelector(".success-data").innerHTML = "You don't have any product here!<br><br>";
     document.querySelector('.comparision-box').style.display = "none";
     document.querySelector('.comparision-data').innerHTML = "Comparision not possible, You don't have any product here!";
+    document.getElementById('lastUpdate').textContent=`_No Records!`;
   }
 }
 function dateCraser(date){
@@ -1006,6 +1034,7 @@ function desktop(){
   document.querySelector('.unAdmin-error').style.display = 'none';
   document.querySelector('.income-content').style.display = 'none';
   document.querySelector('.profile-content').style.display = 'none';
+  document.querySelector('.postCreat').style.display = 'block';
 }
 function alluser(){
   document.querySelector('#desktop-contant-info').style.display = 'none';
@@ -1018,6 +1047,7 @@ function alluser(){
   document.querySelector('.unAdmin-error').style.display = 'none';
   document.querySelector('.income-content').style.display = 'none';
   document.querySelector('.profile-content').style.display = 'none';
+  document.querySelector('.postCreat').style.display = 'none';
   resetc();
 }
 function profile(){
@@ -1031,6 +1061,7 @@ function profile(){
   document.querySelector('.unAdmin-error').style.display = 'none';
   document.querySelector('.income-content').style.display = 'none';
   document.querySelector('.profile-content').style.display = 'block';
+  document.querySelector('.postCreat').style.display = 'none';
   resete();
 }
 function content(){
@@ -1044,6 +1075,7 @@ function content(){
   document.querySelector('.unAdmin-error').style.display = 'none';
   document.querySelector('.income-content').style.display = 'none';
   document.querySelector('.profile-content').style.display = 'none';
+  document.querySelector('.postCreat').style.display = 'none';
   document.querySelector('#searchSelectList').innerHTML = `<option>All</option>`;
   for(let i=0; i<set2.length; i++){
     document.querySelector('#searchSelectList').innerHTML += `<option>${set2[i]}</option>`;
@@ -1060,6 +1092,7 @@ function income(){
   document.querySelector('#search-contant-pro-per').style.display = 'none';
   document.querySelector('.unAdmin-error').style.display = 'none';
   document.querySelector('.profile-content').style.display = 'none';
+  document.querySelector('.postCreat').style.display = 'none';
   if(currentClient.type==0){
     document.querySelector('.unAdmin-error').style.display = 'block';
     document.querySelector('.income-content').style.display = 'none';
@@ -1164,11 +1197,11 @@ function resetc(){
       var acctype='User';
     }
     document.querySelector(".search-user-data").innerHTML += `<li class="drops"><div class="user-card"><div class="left"><img src="${data[i].dp}"alt="loading"><span>${acctype} Account</span></div>
-      <div class="right"><div class="top"><h2>${data[i].name}</h2><p>${data[i].text}</p><span><p>${verification}</p><p>${data[i].time} IST</p></span></div><div class="bottom"><ul class="social-media-icons">
-      <li><a href="mailto:${data[i].social[0]}?&Subject=Message form another White Lotus User.&body=Hi ${data[i].name},I am a another user in white lotus like you. My Message: "style="background: linear-gradient(45deg, #0c8ff0, aqua);">
-      <i class="fa fa-envelope"></i></a></li><li><a href="${data[i].social[1]}"style="background: linear-gradient(45deg, #2911c3, #46719c);"><i class="fa fa-facebook"></i></a></li><li><a href="${data[i].social[2]}" 
-      style="background: linear-gradient(45deg, #0c8ff0, #260067);"><i class="fa fa-linkedin"></i></a></li><li><a href="${data[i].social[3]}" style="background: linear-gradient(45deg, red, #960101);"><i class=
-      "fa fa-youtube"></i></a></li><li><a href="#" style="background: linear-gradient(45deg, #00ff09, #fff);"><i class="fa fa-user-circle-o"></i></a></li></ul></div></div></div></li>`;
+    <div class="right"><div class="top"><h2>${data[i].name}</h2><p>${data[i].text}</p><span><p>${verification}</p><p>${data[i].time} IST</p></span></div><div class="bottom"><ul class="social-media-icons">
+    <li><a href="mailto:${data[i].social[0]}?&Subject=Message form another White Lotus User.&body=Hi ${data[i].name},I am a another user in white lotus like you. My Message: "style="background: linear-gradient(45deg, #0c8ff0, aqua);">
+    <i class="fa fa-envelope"></i></a></li><li><a href="${data[i].social[1]}"style="background: linear-gradient(45deg, #2911c3, #46719c);"><i class="fa fa-facebook"></i></a></li><li><a href="${data[i].social[2]}" 
+    style="background: linear-gradient(45deg, #0c8ff0, #260067);"><i class="fa fa-linkedin"></i></a></li><li><a href="${data[i].social[3]}" style="background: linear-gradient(45deg, red, #960101);"><i class=
+    "fa fa-youtube"></i></a></li><li><a href="#" style="background: linear-gradient(45deg, #00ff09, #fff);"><i class="fa fa-user-circle-o"></i></a></li></ul></div></div></div></li>`;
   }
   searchStatus(0,0,0,'','user-search-axis-value',110,10,'user-search-status-data','search-bar3','search-bar4');
 }
@@ -1342,8 +1375,7 @@ function myprofileUrl(name){
   return link;
 }
 function editProfile(){
-  let link = googleForm[5].link;
-  window.location = link;
+  window.location = './Form.html#googleForms?details=Edit%20profile%20details.kid';
 }
 function myProfile(){
   let link = myprofileUrl(currentClient.name);
@@ -1364,6 +1396,41 @@ function others_open(Pname){
 }
 function others_close(){
   document.querySelector('.othersload').style.display = 'none';
+}
+let popUpList = [],rear=0;
+function popUpR3(comment){
+  popUpList[rear] = `<div class="r3">${comment}</div>`;
+  rear += 1;
+  console.log(popUpList,rear);
+  popUpDisplay();
+  clearPopUp();
+}
+function clearPopUp(){
+  if(rear!=0){
+    popUpList[rear]=0;
+    rear--;
+  }
+  if(rear==0){
+    popUpList.length=0;
+  }
+  setTimeout(function clear(){
+    popUpDisplay();
+  },3500);
+}
+function popUpDisplay(){
+  document.querySelector('.refreshList').innerHTML='';
+  for(let i=0; i<popUpList.length; i++){
+    document.querySelector('.refreshList').style.display="block";
+    if(popUpList[i]!=0){
+      document.querySelector('.refreshList').innerHTML+=popUpList[i];
+    }
+  }
+  if(rear==0){
+    document.querySelector('.refreshList').style.display="none";
+  }
+}
+function signUp(){
+  window.location='./Form.html#googleForms?details=Register%20in%20White%20Lotus.kid';
 }
 </script>
 </html>

@@ -4,7 +4,7 @@ const data = [
     dp: "../fav-icon/Krishdp.jpg",
     name: "Krishnendu Mitra",
     userid: "PSWL?001.kid",
-    password: "@Mitra2003",
+    password: "m",
     social: [["krishnendumitra24@gmail.com"],["https://www.facebook.com/dibyendu.mitra.52090?mibextid=ZbWKwL"],["https://www.linkedin.com/in/krishnendu-mitra-b94004261"],["#"]],
     type: 1,
     time: "14/02/2023",
@@ -114,8 +114,8 @@ let kilometres=data.length;
 const pages = [
   {
     id: 1,
-    total: 11,
-    hostated: 6,
+    total: 16,
+    hostated: 8,
     store: 1,
     privet: 1,
   }
@@ -289,6 +289,16 @@ const blockChain = [
     Form: 'White Lotus',
     To: 'Krishnendu Mitra',
     Cause: 'Youtube video',
+    Amount: 0,
+    Method: 'Virtual',
+    Stack: 0
+  },
+  {
+    id: 8,
+    Date: '15/08/2023',
+    Form: 'White Lotus',
+    To: 'Krishnendu Mitra',
+    Cause: 'PStore',
     Amount: 0,
     Method: 'Virtual',
     Stack: 0
