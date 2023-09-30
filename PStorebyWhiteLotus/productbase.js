@@ -8,7 +8,7 @@ const product = [
     img3: "./pic/God_particle003.png",
     link: "https://drive.google.com/uc?id=1ZZDoGhI-3M-xjzhOOnrZzV6zggYBtTCE&export=download",
     avglist: [0,0,1,2,0,10,15],
-    aboutlist: ["pdf", 16, "900kb", "All type", "English", 0, "No", "No", "Yes"],
+    aboutlist: ["pdf", 16, "900kb", "All type", "English", 0, "No", "Yes", "No"],
     ytlink: "https://www.youtube.com/embed/M63IdwIymiY?controls=0",
     morepro: [],
     text:
@@ -19,7 +19,7 @@ const product = [
         border near Geneva, Switzerland. It is named as God particle because it gives mass to every 
         particle of our universe. Peter Higgs is one of six researchers who gave the theory about 
         existence of this particle in 1964. It takes a long time about 48 years to discover this particle 
-        after the peter gives the theory. <br>
+        after the peter gives the theory. <br><br>
         In this pdf we descuse about basic knowledge of God particle and history of God particle, not
         only that but also we are give a mathematical proofs of existence of God particle and virtual
         experiment of profe god particle using real experiment data. `
@@ -31,17 +31,56 @@ const product = [
     img1: "./pic/Astronomy_forIndia001.png",
     img2: "./pic/Astronomy_forIndia002.png",
     img3: "./pic/Astronomy_forIndia003.png",
-    link: "https://youtube.com/",
+    link: "https://drive.google.com/uc?export=download&id=1Csh6Gcqd-e4LTxR7U18vv9n7mG3HkTu_",
     avglist: [0,0,2,0,0,0,5],
     aboutlist: ["ppt", 8, "2.3Mb", "Students", "English", 0, "No", "Yes", "Yes"],
     ytlink: "https://www.youtube.com/embed/?controls=0",
     morepro: [["./pic/Astronomy_part1.png", "Astronomy part 1", "https://drive.google.com/uc?export=download&id=1jyBoxo0bWzmdgK-r0PJVRdF3iq35bxt7","4.1Mb","ppt","Presentation ppt","15/05/2023"],
-                      ["./pic/Astronomy_part2.png", "Astronomy part 2", "https://drive.google.com/uc?export=download&id=1l2qnKW4VdUpcxO3XK0HWr7TmJomBHklb","4.1Mb","ppt","Presentation ppt","15/05/2023"]
-],
+              ["./pic/Astronomy_part2.png", "Astronomy part 2", "https://drive.google.com/uc?export=download&id=1l2qnKW4VdUpcxO3XK0HWr7TmJomBHklb","4.1Mb","ppt","Presentation ppt","15/05/2023"]
+    ],
     text:
       `Astronomy subject is very popular to students and most seriously in girls but in india that's knowledge is not publick , common people is not any idea about it but in past of India, no better then a Indian
       in terms of astronomy knowledge and applications in real life. So we are try to provide the basic knowledge about astronomy, this doc is available for all indians not only Indians but also south Asian countries
       and other countries also. This document divided in many parts each and every parts and required ppt /pdf are provided here , more information comes in future.`
+  },
+  {
+    id: 3,
+    head: "Industrial Management",
+    twoline: "This is the question answer set of ca3 exam",
+    img1: "./pic/Industrial_management001.png",
+    img2: "./pic/Industrial_management002.png",
+    img3: "./pic/Industrial_management003.png",
+    link: "https://drive.google.com/uc?export=download&id=1kiS3sx37TBtm607v0RhRqOCQk5KvCF7x",
+    avglist: [0,0,1,0,0,1,2],
+    aboutlist: ["pdf", 12, "598Kb", "Students", "English", 0, "No", "Yes", "Yes"],
+    ytlink: "https://www.youtube.com/embed/?controls=0",
+    morepro: [["./pic/Artificial_Intelligence.png", "Artificial Intelligence", "https://drive.google.com/uc?export=download&id=1kvo_hf_ThiZZdZKtJmJxNnM6D7a6Pm5c","455kb","pdf","Question Paper","30/09/2023"],
+              ["./pic/Operating_System.png", "Operating System", "https://drive.google.com/uc?export=download&id=1l0N9PTN3TKdAcj95SW8a1jvVLB9sinYs","826kb","pdf","Question Paper","30/09/2023"],
+              ["./pic/Compiler_Design.png", "Compiler Design", "https://drive.google.com/uc?export=download&id=1l-RrhiMDsFE1z0m2ufHFUg4HEI09G-vt","702kb","pdf","Question Paper","30/09/2023"]
+    ],
+    text:
+      `We have prepared a valuable resource for your upcoming CA3 exams in subjects like Industrial Management, Operating Systems, Artificial Intelligence, Software Engineering, Compiler Design, and more. You'll find the exam questions 
+      and their detailed answers in PDF format attached to this post. We encourage you to download and carefully review these PDFs as they provide valuable insights into the types of questions you can expect on the main exam.
+      While the actual exam questions may vary slightly or include additional topics, this material will help you better understand the format and concepts likely to be covered. We want you to feel confident and well-prepared, so take 
+      advantage of this resource to enhance your exam readiness. Good luck with your studies and preparations!`
+  },
+  {
+    id: 4,
+    head: "Problems of Java",
+    twoline: "This is the practice set of java",
+    img1: "./pic/Problems_ofjava001.png",
+    img2: "./pic/Problems_ofjava002.png",
+    img3: "./pic/Problems_ofjava003.png",
+    link: "https://drive.google.com/uc?export=download&id=1l-RrhiMDsFE1z0m2ufHFUg4HEI09G-vt",
+    avglist: [0,0,0,2,0,5,1],
+    aboutlist: ["pdf", 33, "0.91Mb", "Students", "English", 0, "No", "Yes", "Yes"],
+    ytlink: "https://www.youtube.com/embed/?controls=0",
+    morepro: [],
+    text:
+      `We're excited to provide you with a valuable learning resource for Java programming. Attached to this post, you'll find a comprehensive PDF guide that covers Java fundamentals, including loops, conditional statements, classes, 
+      objects, and more. What sets this resource apart is its focus on real-life Java problems, allowing you to apply your knowledge in practical scenarios.
+      This PDF is a powerful tool to enhance your Java skills, whether you're a beginner or looking to deepen your understanding. It offers a chance to practice and strengthen your grasp of Java concepts in a real-world context. So, 
+      don't miss out on this opportunity to level up your Java programming skills. Download the PDF, dive into the world of Java, and embark on your journey to becoming a proficient Java developer`
   }
 ];
 let milimeter = product.length;

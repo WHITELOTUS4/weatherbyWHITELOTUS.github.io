@@ -11,7 +11,9 @@ const data = [
     shirt: "XL",
     alergy: 0,
     veg: 0,
-    product: [{productDp: "../pic/God_particle.png",productName: "God Particle",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=God%20particle.kid",productType: "Research Paper",productModify: "15/08/2023",productLicence: "Publick-lotus",productISBN: ""}
+    product: [{productDp: "../pic/God_particle.png",productName: "God Particle",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=God%20particle.kid",productType: "Research Paper",productModify: "15/08/2023",productLicence: "Publick-lotus",productISBN: ""},
+    {productDp: "../pic/Industrial_management.png",productName: "Industrial Management",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Industrial%20Management.kid",productType: "Question Paper",productModify: "30/09/2023",productLicence: "Publick-lotus",productISBN: ""},
+    {productDp: "../pic/Problems_of_java.png",productName: "Problems of Java",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Problems%20of%20Java.kid",productType: "Notes",productModify: "30/09/2023",productLicence: "Private-lotus",productISBN: ""}
     ],
     quote: "Space is the study of everything in the universe that's beyond our own mind ",
     pronouns: "He/Him",
