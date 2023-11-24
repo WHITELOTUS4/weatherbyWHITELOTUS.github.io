@@ -61,7 +61,7 @@ const product = [
     text:
       `We have prepared a valuable resource for your upcoming CA3 exams in subjects like Industrial Management, Operating Systems, Artificial Intelligence, Software Engineering, Compiler Design, and more. You'll find the exam questions 
       and their detailed answers in PDF format attached to this post. We encourage you to download and carefully review these PDFs as they provide valuable insights into the types of questions you can expect on the main exam.
-      While the actual exam questions may vary slightly or include additional topics, this material will help you better understand the format and concepts likely to be covered. We want you to feel confident and well-prepared, so take 
+      While the actual exam questions may vary slightly or include additional topics, this material will help you better understand the format and concepts likely to be covered.<br> We want you to feel confident and well-prepared, so take 
       advantage of this resource to enhance your exam readiness. Good luck with your studies and preparations!`
   },
   {
@@ -71,16 +71,36 @@ const product = [
     img1: "./pic/Problems_ofjava001.png",
     img2: "./pic/Problems_ofjava002.png",
     img3: "./pic/Problems_ofjava003.png",
-    link: "https://drive.google.com/uc?export=download&id=1l-RrhiMDsFE1z0m2ufHFUg4HEI09G-vt",
+    link: "https://drive.google.com/uc?export=download&id=1pF1XPZ2H2IS88U38NwYD9u_aQkHTe4hp",
     avglist: [0,0,0,2,0,5,1],
-    aboutlist: ["pdf", 33, "0.91Mb", "Students", "English", 0, "No", "Yes", "Yes"],
+    aboutlist: ["pdf", 33, "1.12Mb", "Students", "English", 0, "No", "Yes", "Yes"],
     ytlink: "https://www.youtube.com/embed/?controls=0",
     morepro: [],
     text:
       `We're excited to provide you with a valuable learning resource for Java programming. Attached to this post, you'll find a comprehensive PDF guide that covers Java fundamentals, including loops, conditional statements, classes, 
       objects, and more. What sets this resource apart is its focus on real-life Java problems, allowing you to apply your knowledge in practical scenarios.
-      This PDF is a powerful tool to enhance your Java skills, whether you're a beginner or looking to deepen your understanding. It offers a chance to practice and strengthen your grasp of Java concepts in a real-world context. So, 
-      don't miss out on this opportunity to level up your Java programming skills. Download the PDF, dive into the world of Java, and embark on your journey to becoming a proficient Java developer`
+      This PDF is a powerful tool to enhance your Java skills, whether you're a beginner or looking to deepen your understanding.<br> It offers a chance to practice and strengthen your grasp of Java concepts in a real-world context. So, 
+      don't miss out on this opportunity to level up your Java programming skills.<br><br> Download the PDF, dive into the world of Java, and embark on your journey to becoming a proficient Java developer`
+  },
+  {
+    id: 5,
+    head: "All About BFS",
+    twoline: "Breadth-First Search (BFS), a fundamental algorithm that plays a crucial role in computer science and is often a key topic in college, university, and even competitive exams like the GATE.",
+    img1: "./pic/All_aboutbfs001.png",
+    img2: "./pic/All_aboutbfs002.png",
+    img3: "./pic/All_aboutbfs003.png",
+    link: "https://drive.google.com/uc?export=download&id=1pHJanNVuyPE4Yg-Z0TujCWndSXe_ohpm",
+    avglist: [0,1,0,2,0,6,5],
+    aboutlist: ["pdf", 19, "644.16kb", "Students", "English", 0, "No", "Yes", "Yes"],
+    ytlink: "https://www.youtube.com/embed/?controls=0",
+    morepro: [],
+    text:
+      `Welcome to an insightful presentation on Breadth-First Search (BFS), a fundamental algorithm that plays a crucial role in computer science and is often a key topic in college, university, and even competitive exams like the GATE. 
+        In this presentation, we delve into the core aspects of BFS, offering a comprehensive understanding suitable for students at various academic levels. We cover the definition of BFS, providing a clear breakdown of the algorithm's 
+        analysis, essential examples to enhance comprehension, and a historical perspective that sheds light on its evolution and significance in the world of algorithms. Moreover, we explore practical applications of BFS, illustrating 
+        how this algorithm is not just theoretical but finds real-world use. For the aspiring programmers, we present a concise yet thorough explanation of the BFS algorithm and provide a sample program for better implementation 
+        understanding. This resource is offered entirely free of cost, aiming to assist students in preparing for their exams and building a solid foundation in computer science. Dive into the world of BFS with us, and let's make 
+        learning this concept an enriching experience together. Check out the presentation for a holistic exploration, and feel free to share it with your peers embarking on their algorithmic journey.`
   }
 ];
 let milimeter = product.length;
