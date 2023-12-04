@@ -1764,7 +1764,7 @@ answers.forEach((event) => {
       ytlink.style.display = "block";
       document.getElementById("backup1").style.display = "none";
     }
-    if(item.aboutlist[8] == "Yes"){
+    if((item.aboutlist[8] == "Yes") && (item.morepro.length!=0)){
       proloader.innerHTML = " ";
       document.getElementById("backup2").style.display = "none";
       proloader.style.display = "block";
@@ -1833,7 +1833,7 @@ function showPerson(person){
       ytlink.style.display = "block";
       document.getElementById("backup1").style.display = "none";
     }
-    if(item.aboutlist[8] == "Yes"){
+    if((item.aboutlist[8] == "Yes") && (item.morepro.length!=0)){
       proloader.innerHTML = " ";
       document.getElementById("backup2").style.display = "none";
       proloader.style.display = "block";
