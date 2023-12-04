@@ -101,6 +101,24 @@ const product = [
         how this algorithm is not just theoretical but finds real-world use. For the aspiring programmers, we present a concise yet thorough explanation of the BFS algorithm and provide a sample program for better implementation 
         understanding. This resource is offered entirely free of cost, aiming to assist students in preparing for their exams and building a solid foundation in computer science. Dive into the world of BFS with us, and let's make 
         learning this concept an enriching experience together. Check out the presentation for a holistic exploration, and feel free to share it with your peers embarking on their algorithmic journey.`
+  },
+  {
+    id: 6,
+    head: "Indian Navy SSR MCQ",
+    twoline: "Tailored for aspirants of the Indian Navy SSR division, it includes a curated set of general knowledge questions from the past decade and vital topics often encountered in viva exams.",
+    img1: "./pic/Indian_navy_ssr_mcq001.png",
+    img2: "./pic/Indian_navy_ssr_mcq002.png",
+    img3: "./pic/Indian_navy_ssr_mcq003.png",
+    link: "https://drive.google.com/uc?export=download&id=1pfiZUdxsZlXoCMUv7c3gFOMllPbrQAuE",
+    avglist: [0,0,1,0,0,1,4],
+    aboutlist: ["pdf", 6, "75.61kb", "Students", "English", 0, "No", "Yes", "Yes"],
+    ytlink: "https://www.youtube.com/embed/?controls=0",
+    morepro: [],
+    text:
+      `The "Indian Navy SSR MCQ" document is a valuable resource crafted for aspiring candidates preparing for the Indian Navy SSR (Senior Secondary Recruits) division exam. This comprehensive PDF includes over 100 Multiple 
+       Choice Questions (MCQs) along with their answers, meticulously compiled to cover general knowledge topics. The questions encompass content from the past 10 years, focusing on frequently repeated themes, ensuring a 
+       targeted and effective study guide. Additionally, the document incorporates essential general knowledge questions that hold significance for viva exams. This free resource aims to equip students with a robust understanding 
+       of topics crucial for success in the Indian Navy SSR exam, providing a structured approach to exam preparation.`
   }
 ];
 let milimeter = product.length;
