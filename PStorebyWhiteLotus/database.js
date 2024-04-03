@@ -126,7 +126,7 @@ const data = [
     shirt: "XL",
     alergy: 0,
     veg: 1,
-    product: [{productDp: "../pic/Humanoid_Brain.png",productName: "Human Brain: Controlling the Future and Evaluation of Mankind",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Human%20Brain:%20Controlling%20the%20Future%20and%20Evaluation%20of%20Mankind.kid",productType: "Research Paper",productModify: "03/04/2024",productLicence: "Publick-lotus",productISBN: ""}],
+    product: [{productDp: "../pic/Humanoid_Brain.png",productName: "Human Brain: Controlling the Future",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Human%20Brain:%20Controlling%20the%20Future.kid",productType: "Research Paper",productModify: "03/04/2024",productLicence: "Publick-lotus",productISBN: ""}],
     quote: "Hy, I am new here",
     pronouns: "He/Him",
     text:
