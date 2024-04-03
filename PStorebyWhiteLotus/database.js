@@ -15,7 +15,8 @@ const data = [
     {productDp: "../pic/Industrial_management.png",productName: "Industrial Management",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Industrial%20Management.kid",productType: "Question Paper",productModify: "30/09/2023",productLicence: "Publick-lotus",productISBN: ""},
     {productDp: "../pic/Problems_of_java.png",productName: "Problems of Java",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Problems%20of%20Java.kid",productType: "Notes",productModify: "30/09/2023",productLicence: "Private-lotus",productISBN: ""},
     {productDp: "../pic/All_aboutbfs.png",productName: "All About BFS",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=All%20About%20BFS.kid",productType: "Presentation ppt",productModify: "24/11/2023",productLicence: "Private-lotus",productISBN: ""},
-    {productDp: "../pic/Indian_navy_ssr_mcq.png",productName: "Indian Navy SSR MCQ",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Indian%20Navy%20SSR%20MCQ.kid",productType: "Question Paper",productModify: "04/12/2023",productLicence: "Publick-lotus",productISBN: ""}
+    {productDp: "../pic/Indian_navy_ssr_mcq.png",productName: "Indian Navy SSR MCQ",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Indian%20Navy%20SSR%20MCQ.kid",productType: "Question Paper",productModify: "04/12/2023",productLicence: "Publick-lotus",productISBN: ""},
+    {productDp: "../pic/God_Particle_Savior.png",productName: "God Particle, Savior or Doomsayer",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=God%20Particle,%20Savior%20or%20Doomsayer.kid",productType: "Research Paper",productModify: "04/04/2024",productLicence: "Private-lotus",productISBN: ""}
     ],
     quote: "Space is the study of everything in the universe that's beyond our own mind ",
     pronouns: "He/Him",
@@ -112,7 +113,25 @@ const data = [
     pronouns: "Don't specify",
     text:
       "",
-  }
+  },
+   {
+    id: 7,
+    dp: "../img/user(Souvik_Das_Thakur).png",
+    name: "Souvik Das Thakur",
+    userid: "PSWL?007.kid",
+    password: "@Massi14/06/1987",
+    social: [["souvikdasthakur@gmail.com"],["https://www.facebook.com/profile.php?id=100068906396298&mibextid=ZbWKwL"],["#"],["#"]],
+    type: 0,
+    time: "03/04/2024",
+    shirt: "XL",
+    alergy: 0,
+    veg: 1,
+    product: [{productDp: "../pic/Humanoid_Brain.png",productName: "Human Brain: Controlling the Future and Evaluation of Mankind",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Human%20Brain:%20Controlling%20the%20Future%20and%20Evaluation%20of%20Mankind.kid",productType: "Research Paper",productModify: "03/04/2024",productLicence: "Publick-lotus",productISBN: ""}],
+    quote: "Hy, I am new here",
+    pronouns: "He/Him",
+    text:
+      "Hy, I am new here..",
+  },
 ];
 let kilometres=data.length;
 const pages = [

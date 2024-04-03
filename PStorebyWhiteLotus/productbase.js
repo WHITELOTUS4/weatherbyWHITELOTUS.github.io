@@ -119,6 +119,36 @@ const product = [
        Choice Questions (MCQs) along with their answers, meticulously compiled to cover general knowledge topics. The questions encompass content from the past 10 years, focusing on frequently repeated themes, ensuring a 
        targeted and effective study guide. Additionally, the document incorporates essential general knowledge questions that hold significance for viva exams. This free resource aims to equip students with a robust understanding 
        of topics crucial for success in the Indian Navy SSR exam, providing a structured approach to exam preparation.`
+  },
+  {
+    id: 7,
+    head: "Human Brain: Controlling the Future and Evaluation of Mankind",
+    twoline: "Humanoid Brains is the future of humen, where we all have the powers like computers..",
+    img1: "./pic/Humanoid_Brain001.png",
+    img2: "./pic/Humanoid_Brain002.png",
+    img3: "./pic/Humanoid_Brain003.png",
+    link: "https://drive.google.com/uc?export=download&id=1auMSyt5ja2uv3kksI-4F5kPSMerq1euZ",
+    avglist: [0,0,0,0,0,0,1],
+    aboutlist: ["pdf", 20, "629.79kb", "All", "English", 0, "No", "Yes", "Yes"],
+    ytlink: "https://www.youtube.com/embed/?controls=0",
+    morepro: [],
+    text:
+      `Humanoid Brains is the future of humen, where we all have the powers like computers and body power like a super hero.`
+  },
+  {
+    id: 8,
+    head: "God Particle, Savior or Doomsayer",
+    twoline: "The God Particle, Savior or Doomsayer delves into the intricate debate surrounding the Higgs boson, ...",
+    img1: "./pic/God_Particle_Savior001.png",
+    img2: "./pic/God_Particle_Savior002.png",
+    img3: "./pic/God_Particle_Savior003.png",
+    link: "https://drive.google.com/uc?export=download&id=1auMSyt5ja2uv3kksI-4F5kPSMerq1euZ",
+    avglist: [0,0,0,0,0,1,1],
+    aboutlist: ["pdf", 25, "1.5mb", "All", "English", 0, "No", "Yes", "Yes"],
+    ytlink: "https://www.youtube.com/embed/?controls=0",
+    morepro: [],
+    text:
+      `"The God Particle, Savior or Doomsayer" delves into the intricate debate surrounding the Higgs boson, commonly referred to as the God Particle, scrutinizing its potential as a harbinger of salvation or catastrophe for humanity. `
   }
 ];
 let milimeter = product.length;
