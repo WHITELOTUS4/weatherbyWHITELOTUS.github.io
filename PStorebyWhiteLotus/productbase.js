@@ -122,7 +122,7 @@ const product = [
   },
   {
     id: 7,
-    head: "Human Brain: Controlling the Future",
+    head: "Humanoid Brain Controlling the Future",
     twoline: "Humanoid Brains is the future of humen, where we all have the powers like computers..",
     img1: "./pic/Humanoid_Brain001.png",
     img2: "./pic/Humanoid_Brain002.png",
