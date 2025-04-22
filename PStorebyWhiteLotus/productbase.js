@@ -152,7 +152,7 @@ const product = [
   },
   {
     id: 9,
-    head: "Can Machine Think Something New – The Rise of Autonomous Intelligence",
+    head: "Can Machine Think Something New, The Rise of Autonomous Intelligence",
     twoline: "The possibility of autonomous intelligence is a revolutionary change in the evolution of AI. It challenges the idea of human monopoly on creativity and critical thought and also raises issues about control, responsibility, and ethics. ...",
     img1: "./pic/Autonomus_Intelligence001.png",
     img2: "./pic/Autonomus_Intelligence002.png",
@@ -164,8 +164,8 @@ const product = [
     morepro: [],
     text:
       `The possibility of autonomous intelligence is a revolutionary change in the evolution of AI. It challenges the idea of human monopoly on creativity and critical thought and also raises issues about control, responsibility, and ethics.
-	Knowledge of whether AI can actually think and produce on its own is essential for guiding its responsible incorporation into society. This study investigates whether existing AI models display traits of independent intelligence, how much machines can produce new ideas, and what it means for AI to be superior to human cognitive boundaries.
- 	<h6>Can Machines Think Beyond Human-Designed Algorithms?</h6>
+	Knowledge of whether AI can actually think and produce on its own is essential for guiding its responsible incorporation into society. This study investigates whether existing AI models display traits of independent intelligence, how much machines can produce new ideas, and what it means for AI to be superior to human cognitive boundaries.<br>
+ 	<h6>Can Machines Think Beyond Human-Designed Algorithms?</h6><br>
 	Whether machines can effectively think beyond human-engineered algorithms has been debated since the beginning of artificial intelligence. Alan Turing, in his groundbreaking 1950 paper "Computing Machinery and Intelligence"[3], asked the question, "Can machines think?"—a question of essence that set the stage for contemporary AI and machine 
  	learning. Turing introduced the then-famous Turing Test, which is the benchmark for identifying if a machine could be seen as demonstrating intelligent behaviour indistinguishable from a human. AI, though, has come a long way but remains based on preset mathematical frameworks and training sets, questioning its potential for actual independent 
   	thought. A major breakthrough in AI’s ability to generate novel ideas came with the development of Google’s Transformer model, introduced in 2017. This architecture revolutionized deep learning by enabling AI to process sequential data more efficiently, giving rise to advanced generative models like GPT and BERT. These models can generate 
