@@ -154,23 +154,46 @@ const product = [
     id: 9,
     head: "Can Machine Think Something New, The Rise of Autonomous Intelligence",
     twoline: "The possibility of autonomous intelligence is a revolutionary change in the evolution of AI. It challenges the idea of human monopoly on creativity and critical thought and also raises issues about control, responsibility, and ethics. ...",
-    img1: "./pic/Autonomus_Intelligence001.png",
-    img2: "./pic/Autonomus_Intelligence002.png",
-    img3: "./pic/Autonomus_Intelligence003.png",
+    img1: "./pic/Autonomous_Intelligence001.png",
+    img2: "./pic/Autonomous_Intelligence002.png",
+    img3: "./pic/Autonomous_Intelligence003.png",
     link: "https://drive.google.com/uc?export=download&id=1DTQnZU-jThLL8Sn9JPRDKJf8gleXJ4Iv",
     avglist: [0,0,0,0,0,1,3],
-    aboutlist: ["pdf", 29, "884kb", "All", "English", 0, "Yes", "No", "No"],
+    aboutlist: ["pdf", 29, "884kb", "All", "English", 0, "Yes", "No", "Yes"],
     ytlink: "https://www.youtube.com/embed/?controls=0",
     morepro: [],
     text:
       `The possibility of autonomous intelligence is a revolutionary change in the evolution of AI. It challenges the idea of human monopoly on creativity and critical thought and also raises issues about control, responsibility, and ethics.
-	Knowledge of whether AI can actually think and produce on its own is essential for guiding its responsible incorporation into society. This study investigates whether existing AI models display traits of independent intelligence, how much machines can produce new ideas, and what it means for AI to be superior to human cognitive boundaries.<br>
+	Knowledge of whether AI can actually think and produce on its own is essential for guiding its responsible incorporation into society. This study investigates whether existing AI models display traits of independent intelligence, how much machines can produce new ideas, and what it means for AI to be superior to human cognitive boundaries.
+  <br>
  	<h6>Can Machines Think Beyond Human-Designed Algorithms?</h6><br>
-	Whether machines can effectively think beyond human-engineered algorithms has been debated since the beginning of artificial intelligence. Alan Turing, in his groundbreaking 1950 paper "Computing Machinery and Intelligence"[3], asked the question, "Can machines think?"—a question of essence that set the stage for contemporary AI and machine 
+	Whether machines can effectively think beyond human-engineered algorithms has been debated since the beginning of artificial intelligence. Alan Turing, in his groundbreaking 1950 paper "Computing Machinery and Intelligence", asked the question, "Can machines think?"—a question of essence that set the stage for contemporary AI and machine 
  	learning. Turing introduced the then-famous Turing Test, which is the benchmark for identifying if a machine could be seen as demonstrating intelligent behaviour indistinguishable from a human. AI, though, has come a long way but remains based on preset mathematical frameworks and training sets, questioning its potential for actual independent 
   	thought. A major breakthrough in AI’s ability to generate novel ideas came with the development of Google’s Transformer model, introduced in 2017. This architecture revolutionized deep learning by enabling AI to process sequential data more efficiently, giving rise to advanced generative models like GPT and BERT. These models can generate 
    	human-like text, compose music, and even create original artwork, yet they fundamentally rely on probability-driven pattern generation rather than true autonomy.
  	`
+  },
+  {
+    id: 10,
+    head: "The Influence of Artificial Intelligence on Moden Education World",
+    twoline: "Artificial intelligence (AI) has emerged as a revolutionary force in various fields and the education sector is not behind. With the incorporation of AI tools and technologies, the conventional educational model is changing at its core.",
+    img1: "./pic/AI_Education001.png",
+    img2: "./pic/AI_Education002.png",
+    img3: "./pic/AI_Education003.png",
+    link: "https://drive.google.com/uc?export=download&id=1DTQnZU-jThLL8Sn9JPRDKJf8gleXJ4Iv",
+    avglist: [0,0,0,0,0,0,1],
+    aboutlist: ["pdf", 20, "495kb", "All", "English", 0, "Yes", "No", "Yes"],
+    ytlink: "https://www.youtube.com/embed/?controls=0",
+    morepro: [],
+    text:
+      `Artificial intelligence (AI) has emerged as a revolutionary force in various fields and the education sector is not behind. With the incorporation of AI tools and technologies, the conventional educational model is changing at its core. From intelligent tutoring systems and automated grading to customized learning experience and administrative 
+      automation, AI has brought efficiency, accessibility, and responsiveness to classrooms. Educational institutions, teachers, and students themselves are now starting to tap the potential of AI to maximize learning outputs and streamline the delivery of instruction.
+
+      The influence of AI on the educational sector is far-reaching and interconnected. On the one hand, AI ensures personalized learning channels through data analysis of students and the customization of instruction according to the strengths and weaknesses of learners. Conversely, it also aids teachers in assessing learning gaps, planning intervention 
+      plans, and balancing classroom dynamics. Further, AI-driven platforms allow online learning and cross geographical disparities, rendering learning more accessible. Yet, despite the much-fancied use of AI for great leaps, there is anxiety over data protection, proper utilization, digital gaps, and reducing human involvement in learning.
+
+      The core problem addressed in this research stems from the duality of AI's role in education: while its application can significantly enhance teaching and learning experiences, the absence or misuse of AI can lead to inefficiencies, increased workload, and a widening gap in educational equity. Schools that choose not to adopt AI may fall behind in 
+      innovation and effectiveness, while institutions that apply it without a framework risk ethical issues and technical problems. The issue, therefore, is not just whether AI should be used or not, but also how it is used, regulated, and measured.`
   }
 ];
 let milimeter = product.length;

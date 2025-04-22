@@ -127,7 +127,9 @@ const data = [
     shirt: "XL",
     alergy: 0,
     veg: 1,
-    product: [{productDp: "../pic/Humanoid_Brain.png",productName: "Humanoid Brain Controlling the Future",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Humanoid%20Brain%20Controlling%20the%20Future.kid",productType: "Research Paper",productModify: "03/04/2024",productLicence: "Publick-lotus",productISBN: ""}],
+    product: [{productDp: "../pic/Humanoid_Brain.png",productName: "Humanoid Brain Controlling the Future",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Humanoid%20Brain%20Controlling%20the%20Future.kid",productType: "Research Paper",productModify: "03/04/2024",productLicence: "Publick-lotus",productISBN: ""},
+      {productDp: "../pic/AI_Education.png",productName: "The Influence of Artificial Intelligence on Moden Education World",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=The%20Influence%20of%20Artificial%20Intelligence%20on%20Moden%20Education%20World.kid",productType: "Research Paper",productModify: "22/04/2025",productLicence: "Publick-lotus",productISBN: ""}
+    ],
     quote: "Hy, I am new here",
     pronouns: "He/Him",
     text:
