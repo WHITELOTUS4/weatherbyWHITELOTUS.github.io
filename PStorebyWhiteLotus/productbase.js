@@ -181,33 +181,32 @@ const product = [
     img2: "./pic/AI_Education002.png",
     img3: "./pic/AI_Education003.png",
     link: "https://drive.google.com/uc?export=download&id=1DTQnZU-jThLL8Sn9JPRDKJf8gleXJ4Iv",
-    avglist: [0,0,0,0,0,0,1],
-    aboutlist: ["pdf", 20, "495kb", "All", "English", 0, "Yes", "No", "Yes"],
+    avglist: [0,0,0,0,0,0,2],
+    aboutlist: ["pdf", 20, "545kb", "All", "English", 0, "Yes", "No", "Yes"],
     ytlink: "https://www.youtube.com/embed/?controls=0",
     morepro: [],
     text:
       `Artificial intelligence (AI) has emerged as a revolutionary force in various fields and the education sector is not behind. With the incorporation of AI tools and technologies, the conventional educational model is changing at its core. From intelligent tutoring systems and automated grading to customized learning experience and administrative 
       automation, AI has brought efficiency, accessibility, and responsiveness to classrooms. Educational institutions, teachers, and students themselves are now starting to tap the potential of AI to maximize learning outputs and streamline the delivery of instruction.
-
       The influence of AI on the educational sector is far-reaching and interconnected. On the one hand, AI ensures personalized learning channels through data analysis of students and the customization of instruction according to the strengths and weaknesses of learners. Conversely, it also aids teachers in assessing learning gaps, planning intervention 
       plans, and balancing classroom dynamics. Further, AI-driven platforms allow online learning and cross geographical disparities, rendering learning more accessible. Yet, despite the much-fancied use of AI for great leaps, there is anxiety over data protection, proper utilization, digital gaps, and reducing human involvement in learning.
-
       The core problem addressed in this research stems from the duality of AI's role in education: while its application can significantly enhance teaching and learning experiences, the absence or misuse of AI can lead to inefficiencies, increased workload, and a widening gap in educational equity. Schools that choose not to adopt AI may fall behind in 
-      innovation and effectiveness, while institutions that apply it without a framework risk ethical issues and technical problems. The issue, therefore, is not just whether AI should be used or not, but also how it is used, regulated, and measured.`
+      innovation and effectiveness, while institutions that apply it without a framework risk ethical issues and technical problems. The issue, therefore, is not just whether AI should be used or not, but also how it is used, regulated, and measured.
+    `
   }
 ];
 let milimeter = product.length;
 //use pswl id to access productTuple element
 let productTuple=[];
-if(milimeter % 10 == 0){
-  var divisor = milimeter / 10,num1=0;
+if(milimeter % 11 == 0){
+  var divisor = milimeter / 11,num1=0;
   for(let i=0; i<divisor; i++){
     num2 = num1+9;
     productTuple[i] = {start: num1, end: num2};
     num1=num2+1;
   }
 }else{
-	var divisor = Math.floor(milimeter / 10), reminder = milimeter % 10;
+	var divisor = Math.floor(milimeter / 11), reminder = milimeter % 11;
 	for(let i=0; i<divisor; i++){
     num2 = num1+9;
     productTuple[i] = {start: num1, end: num2};
