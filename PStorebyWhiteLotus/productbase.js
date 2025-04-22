@@ -159,7 +159,7 @@ const product = [
     img3: "./pic/Autonomus_Intelligence003.png",
     link: "https://drive.google.com/uc?export=download&id=1DTQnZU-jThLL8Sn9JPRDKJf8gleXJ4Iv",
     avglist: [0,0,0,0,0,1,3],
-    aboutlist: ["pdf", 29, "884kb", "All", "English", 0, "No", "No", "Yes"],
+    aboutlist: ["pdf", 29, "884kb", "All", "English", 0, "Yes", "No", "No"],
     ytlink: "https://www.youtube.com/embed/?controls=0",
     morepro: [],
     text:
