@@ -198,17 +198,18 @@ const product = [
 let milimeter = product.length;
 //use pswl id to access productTuple element
 let productTuple=[];
-if(milimeter % 11 == 0){
-  var divisor = milimeter / 11,num1=0;
+let pswl_length = 11;
+if(milimeter % pswl_length == 0){
+  var divisor = milimeter / pswl_length,num1=0;
   for(let i=0; i<divisor; i++){
-    num2 = num1+9;
+    num2 = num1+(pswl_length-1);
     productTuple[i] = {start: num1, end: num2};
     num1=num2+1;
   }
 }else{
-	var divisor = Math.floor(milimeter / 11), reminder = milimeter % 11;
+	var divisor = Math.floor(milimeter / pswl_length), reminder = milimeter % pswl_length;
 	for(let i=0; i<divisor; i++){
-    num2 = num1+9;
+    num2 = num1+(pswl_length-1);
     productTuple[i] = {start: num1, end: num2};
     num1=num2+1;
   }
