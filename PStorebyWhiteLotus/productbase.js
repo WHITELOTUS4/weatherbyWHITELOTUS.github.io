@@ -193,12 +193,30 @@ const product = [
       The core problem addressed in this research stems from the duality of AI's role in education: while its application can significantly enhance teaching and learning experiences, the absence or misuse of AI can lead to inefficiencies, increased workload, and a widening gap in educational equity. Schools that choose not to adopt AI may fall behind in 
       innovation and effectiveness, while institutions that apply it without a framework risk ethical issues and technical problems. The issue, therefore, is not just whether AI should be used or not, but also how it is used, regulated, and measured.
     `
+  },
+  {
+    id: 11,
+    head: "AI Models for Predicting Disease Onset from Multi Omics Data",
+    twoline: "The advent of high-throughput sequencing technologies and systems biology has led to the generation of large volumes of biological data, collectively referred to as omics data.",
+    img1: "./pic/AI_Disease001.png",
+    img2: "./pic/AI_Disease002.png",
+    img3: "./pic/AI_Disease003.png",
+    link: "https://drive.google.com/uc?export=download&id=",
+    avglist: [0,0,0,0,0,0,2],
+    aboutlist: ["pdf", 12, "291kb", "All", "English", 0, "Yes", "No", "Yes"],
+    ytlink: "https://www.youtube.com/embed/?controls=0",
+    morepro: [],
+    text:
+      `The advent of high-throughput sequencing technologies and systems biology has led to the generation of large volumes of biological data, collectively referred to as omics data. These include genomics, transcriptomics, proteomics, metabolomics, and epigenomics—each offering a unique layer of insight into the structure, function, and regulation of 
+      biological systems. While single-omics analyses have provided valuable information for disease diagnosis and treatment, they often fail to capture the complexity and interconnectivity of molecular mechanisms involved in disease onset. Multi-omics integration, which combines multiple layers of biological data, has emerged as a powerful strategy to 
+      gain a comprehensive view of biological processes and disease phenotypes.
+    `
   }
 ];
 let milimeter = product.length;
 //use pswl id to access productTuple element
 let productTuple=[];
-let pswl_length = 11;
+let pswl_length = product.length()+1;
 if(milimeter % pswl_length == 0){
   var divisor = milimeter / pswl_length,num1=0;
   for(let i=0; i<divisor; i++){

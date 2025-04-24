@@ -148,7 +148,7 @@ const data = [
     alergy: 0,
     veg: 1,
     product: [
-      {productDp: "../pic/Humanoid_Brain.png",productName: "Humanoid Brain Controlling the Future",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Humanoid%20Brain%20Controlling%20the%20Future.kid",productType: "Research Paper",productModify: "03/04/2024",productLicence: "Publick-lotus",productISBN: ""},
+      {productDp: "../pic/AI_Disease.png",productName: "AI Models for Predicting Disease Onset from Multi-Omics Data",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=AI%20Models%20for%20Predicting%20Disease%20Onset%20from%20Multi%20Omics%20Data.kid",productType: "Research Paper",productModify: "24/04/2025",productLicence: "Publick-lotus",productISBN: ""},
     ],
     quote: "Hy, I am new here",
     pronouns: "He/Him",
