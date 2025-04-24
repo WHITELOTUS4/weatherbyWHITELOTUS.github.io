@@ -137,7 +137,7 @@ const data = [
   },
   {
     id: 8,
-    dp: "../img/user(unknown).png",
+    dp: "../img/user(Saptarshi_Pramanik).png",
     name: "Saptarshi Pramanik",
     userid: "PSWL?008.kid",
     password: "@Saptarshi24/04/2025",
