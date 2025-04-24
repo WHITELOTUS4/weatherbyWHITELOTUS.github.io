@@ -201,9 +201,9 @@ const product = [
     img1: "./pic/AI_Disease001.png",
     img2: "./pic/AI_Disease002.png",
     img3: "./pic/AI_Disease003.png",
-    link: "https://drive.google.com/uc?export=download&id=",
+    link: "https://drive.google.com/uc?export=download&id=1AqOu_BDprZcODBHWTAfj9flckykfbBjM",
     avglist: [0,0,0,0,0,0,2],
-    aboutlist: ["pdf", 12, "291kb", "All", "English", 0, "Yes", "No", "Yes"],
+    aboutlist: ["pdf", 12, "301kb", "All", "English", 0, "Yes", "No", "Yes"],
     ytlink: "https://www.youtube.com/embed/?controls=0",
     morepro: [],
     text:
