@@ -135,6 +135,26 @@ const data = [
     text:
       "Hy, I am new here..",
   },
+  {
+    id: 8,
+    dp: "../img/user(unknown).png",
+    name: "Saptarshi Pramanik",
+    userid: "PSWL?008.kid",
+    password: "@Saptarshi24/04/2025",
+    social: [["#"],["#"],["#"],["#"]],
+    type: 0,
+    time: "24/04/2025",
+    shirt: "XL",
+    alergy: 0,
+    veg: 1,
+    product: [
+      {productDp: "../pic/Humanoid_Brain.png",productName: "Humanoid Brain Controlling the Future",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=Humanoid%20Brain%20Controlling%20the%20Future.kid",productType: "Research Paper",productModify: "03/04/2024",productLicence: "Publick-lotus",productISBN: ""},
+    ],
+    quote: "Hy, I am new here",
+    pronouns: "He/Him",
+    text:
+      "",
+  }
 ];
 let kilometres=data.length;
 const pages = [
