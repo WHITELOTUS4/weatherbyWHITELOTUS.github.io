@@ -216,7 +216,7 @@ const product = [
 let milimeter = product.length;
 //use pswl id to access productTuple element
 let productTuple=[];
-let pswl_length = product.length()+1;
+let pswl_length = product.length+1;
 if(milimeter % pswl_length == 0){
   var divisor = milimeter / pswl_length,num1=0;
   for(let i=0; i<divisor; i++){
