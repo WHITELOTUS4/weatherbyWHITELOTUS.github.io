@@ -37,7 +37,7 @@ const data = [
     shirt: "XL",
     alergy: 0,
     veg: 1,
-    product: [],
+    product: [{productDp: "../pic/",productName: "The Truth About AI and Job Replacement Facts and Rumour",productLink: "https://whitelotus4.github.io/weatherbyWHITELOTUS.github.io/PStorebyWhiteLotus.html#PSWL1?details=The%20Truth%20About%20AI%20and%20Job%20Replacement%20Facts%20and%20Rumour.kid",productType: "Research Paper",productModify: "29/04/2025",productLicence: "Publick-lotus",productISBN: ""}],
     quote: "",
     pronouns: "Don't specify",
     text:

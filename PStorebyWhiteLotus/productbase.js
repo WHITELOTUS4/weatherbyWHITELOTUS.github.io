@@ -211,12 +211,29 @@ const product = [
       biological systems. While single-omics analyses have provided valuable information for disease diagnosis and treatment, they often fail to capture the complexity and interconnectivity of molecular mechanisms involved in disease onset. Multi-omics integration, which combines multiple layers of biological data, has emerged as a powerful strategy to 
       gain a comprehensive view of biological processes and disease phenotypes.
     `
+  },
+  {
+    id: 12,
+    head: "The Truth About AI and Job Replacement Facts and Rumour",
+    twoline: "The rapid advancement and increasing integration of Artificial Intelligence (AI) across various industries have ignited a global debate concerning its potential impact on the future of work, particularly regarding job displacement. This research paper critically examines the prevalent discourse surrounding AI-driven job replacement, aiming to dissect the factual evidence from the often-exaggerated rumours that permeate public and media discussions.",
+    img1: "./pic/AI_Education001.png",
+    img2: "./pic/AI_Education002.png",
+    img3: "./pic/AI_Education003.png",
+    link: "https://drive.google.com/uc?export=download&id=1AqOu_BDprZcODBHWTAfj9flckykfbBjM",
+    avglist: [0,0,0,0,0,0,2],
+    aboutlist: ["pdf", 10, "301kb", "All", "English", 0, "No", "No", "Yes"],
+    ytlink: "https://www.youtube.com/embed/?controls=0",
+    morepro: [],
+    text:
+      `The rapid advancement and increasing integration of Artificial Intelligence (AI) across various industries have ignited a global debate concerning its potential impact on the future of work, particularly regarding job displacement. This research paper critically examines the prevalent discourse surrounding AI-driven job replacement, aiming to dissect the factual evidence from the often-exaggerated rumours that permeate public and media discussions. 
+      By employing a comprehensive mixed-methods approach, this study synthesizes quantitative data from international and national labor organizations on employment trends and automation adoption rates with qualitative insights derived from industry reports, in-depth case studies of companies implementing AI solutions, and a nuanced analysis of media portrayals and public opinion surveys.
+    `
   }
 ];
 let milimeter = product.length;
 //use pswl id to access productTuple element
 let productTuple=[];
-let pswl_length = product.length+1;
+let pswl_length = product.length+4;
 if(milimeter % pswl_length == 0){
   var divisor = milimeter / pswl_length,num1=0;
   for(let i=0; i<divisor; i++){
