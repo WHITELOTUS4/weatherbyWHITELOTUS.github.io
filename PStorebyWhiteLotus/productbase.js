@@ -219,7 +219,7 @@ const product = [
     img1: "./pic/AI_Education001.png",
     img2: "./pic/AI_Education002.png",
     img3: "./pic/AI_Education003.png",
-    link: "https://drive.google.com/uc?export=download&id=1AqOu_BDprZcODBHWTAfj9flckykfbBjM",
+    link: "https://drive.google.com/uc?export=download&id=1bryhPuB0V4-GeE_n2ImBIV9Y-BknkJjO",
     avglist: [0,0,0,0,0,0,2],
     aboutlist: ["pdf", 10, "301kb", "All", "English", 0, "No", "No", "Yes"],
     ytlink: "https://www.youtube.com/embed/?controls=0",
